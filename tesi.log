@@ -1,0 +1,821 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.2)  15 SEP 2019 23:23
+entering extended mode
+**./tesi.tex
+(tesi.tex
+LaTeX2e <2018-04-01> patch level 5
+(D:\MikTeX\tex\latex\base\book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(D:\MikTeX\tex\latex\base\bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (pacchetti.tex
+(D:\MikTeX\tex\generic\babel\babel.sty
+Package: babel 2018/11/13 3.27 The Babel package
+ (D:\MikTeX\tex\generic\babel\switch.def
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+(D:\MikTeX\tex\latex\arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(D:\MikTeX\tex\latex\babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(D:\MikTeX\tex\generic\babel\babel.def
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen103
+
+(D:\MikTeX\tex\generic\babel\txtbabel.def)
+\bbl@dirlevel=\count90
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+(D:\MikTeX\tex\latex\babel-italian\italian.ldf
+Language: italian 2015/03/26 v1.3n Italian support from the babel system
+\it@lettering=\count91
+\it@doublequoteactive=\count92
+\it@ISOcompliance=\count93
+))
+(D:\MikTeX\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count94
+)
+(D:\MikTeX\tex\latex\base\inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+) (D:\MikTeX\tex\latex\base\fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(D:\MikTeX\tex\latex\base\t1enc.def
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(D:\MikTeX\tex\latex\tools\indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(D:\MikTeX\tex\latex\fancyhdr\fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
+)
+(D:\MikTeX\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(D:\MikTeX\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(D:\MikTeX\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen104
+))
+(D:\MikTeX\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+(D:\MikTeX\tex\latex\amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks17
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(D:\MikTeX\tex\latex\base\latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(D:\MikTeX\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(D:\MikTeX\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(D:\MikTeX\tex\latex\geometry\geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(D:\MikTeX\tex\latex\graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(D:\MikTeX\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(D:\MikTeX\tex\generic\oberdiek\ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(D:\MikTeX\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count107
+\Gm@cntv=\count108
+\c@Gm@tempcnt=\count109
+\Gm@bindingoffset=\dimen113
+\Gm@wd@mp=\dimen114
+\Gm@odd@mp=\dimen115
+\Gm@even@mp=\dimen116
+\Gm@layoutwidth=\dimen117
+\Gm@layoutheight=\dimen118
+\Gm@layouthoffset=\dimen119
+\Gm@layoutvoffset=\dimen120
+\Gm@dimlist=\toks22
+
+(D:\MikTeX\tex\latex\geometry\geometry.cfg))
+(D:\MikTeX\tex\latex\frontespizio\frontespizio.sty
+Package: frontespizio 2011/09/21 1.4a (Enrico Gregorio)
+
+(D:\MikTeX\tex\latex\tools\afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks23
+\AP@partial=\box28
+\AP@footins=\box29
+)
+(D:\MikTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\MikTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\MikTeX\tex\latex\graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(D:\MikTeX\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(D:\MikTeX\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
+(D:\MikTeX\tex\generic\oberdiek\atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+(D:\MikTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(D:\MikTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))
+(D:\MikTeX\tex\latex\environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(D:\MikTeX\tex\latex\trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\front@out=\write3
+\openout3 = `tesi-frn.tex'.
+
+)
+(D:\MikTeX\tex\latex\csquotes\csquotes.sty
+Package: csquotes 2019/05/10 v5.2e context-sensitive quotations (JAW)
+\csq@reset=\count110
+\csq@gtype=\count111
+\csq@glevel=\count112
+\csq@qlevel=\count113
+\csq@maxlvl=\count114
+\csq@tshold=\count115
+\csq@ltx@everypar=\toks24
+
+(D:\MikTeX\tex\latex\csquotes\csquotes.def
+File: csquotes.def 2019/05/10 v5.2e csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(D:\MikTeX\tex\latex\csquotes\csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
+Package csquotes Info: Redefining alias 'italian' -> 'italian/guillemets'.
+)
+(D:\MikTeX\tex\latex\biblatex\biblatex.sty
+Package: biblatex 2019/08/17 v3.13 programmable bibliographies (PK/MW)
+
+(D:\MikTeX\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(D:\MikTeX\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(D:\MikTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(D:\MikTeX\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(D:\MikTeX\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+)))
+(D:\MikTeX\tex\latex\logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count116
+ (D:\MikTeX\tex\latex\logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (D:\MikTeX\tex\latex\base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (D:\MikTeX\tex\latex\url\url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count117
+\c@listtotal=\count118
+\c@listcount=\count119
+\c@liststart=\count120
+\c@liststop=\count121
+\c@citecount=\count122
+\c@citetotal=\count123
+\c@multicitecount=\count124
+\c@multicitetotal=\count125
+\c@instcount=\count126
+\c@maxnames=\count127
+\c@minnames=\count128
+\c@maxitems=\count129
+\c@minitems=\count130
+\c@citecounter=\count131
+\c@maxcitecounter=\count132
+\c@savedcitecounter=\count133
+\c@uniquelist=\count134
+\c@uniquename=\count135
+\c@refsection=\count136
+\c@refsegment=\count137
+\c@maxextratitle=\count138
+\c@maxextratitleyear=\count139
+\c@maxextraname=\count140
+\c@maxextradate=\count141
+\c@maxextraalpha=\count142
+\c@abbrvpenalty=\count143
+\c@highnamepenalty=\count144
+\c@lownamepenalty=\count145
+\c@maxparens=\count146
+\c@parenlevel=\count147
+\blx@tempcnta=\count148
+\blx@tempcntb=\count149
+\blx@tempcntc=\count150
+\blx@maxsection=\count151
+\blx@maxsegment@0=\count152
+\blx@notetype=\count153
+\blx@parenlevel@text=\count154
+\blx@parenlevel@foot=\count155
+\blx@sectionciteorder@0=\count156
+\blx@entrysetcounter=\count157
+\labelnumberwidth=\skip55
+\labelalphawidth=\skip56
+\biblabelsep=\skip57
+\bibitemsep=\skip58
+\bibnamesep=\skip59
+\bibinitsep=\skip60
+\bibparsep=\skip61
+\bibhang=\skip62
+\blx@bcfin=\read1
+\blx@bcfout=\write4
+\blx@langwohyphens=\language76
+\c@mincomprange=\count158
+\c@maxcomprange=\count159
+\c@mincompwidth=\count160
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(D:\MikTeX\tex\latex\biblatex\blx-dm.def
+File: blx-dm.def 2019/08/17 v3.13 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric-comp.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count161
+\c@savedafterword=\count162
+\c@annotator=\count163
+\c@savedannotator=\count164
+\c@author=\count165
+\c@savedauthor=\count166
+\c@bookauthor=\count167
+\c@savedbookauthor=\count168
+\c@commentator=\count169
+\c@savedcommentator=\count170
+\c@editor=\count171
+\c@savededitor=\count172
+\c@editora=\count173
+\c@savededitora=\count174
+\c@editorb=\count175
+\c@savededitorb=\count176
+\c@editorc=\count177
+\c@savededitorc=\count178
+\c@foreword=\count179
+\c@savedforeword=\count180
+\c@holder=\count181
+\c@savedholder=\count182
+\c@introduction=\count183
+\c@savedintroduction=\count184
+\c@namea=\count185
+\c@savednamea=\count186
+\c@nameb=\count187
+\c@savednameb=\count188
+\c@namec=\count189
+\c@savednamec=\count190
+\c@translator=\count191
+\c@savedtranslator=\count192
+\c@shortauthor=\count193
+\c@savedshortauthor=\count194
+\c@shorteditor=\count195
+\c@savedshorteditor=\count196
+\c@labelname=\count197
+\c@savedlabelname=\count198
+\c@institution=\count199
+\c@savedinstitution=\count266
+\c@lista=\count267
+\c@savedlista=\count268
+\c@listb=\count269
+\c@savedlistb=\count270
+\c@listc=\count271
+\c@savedlistc=\count272
+\c@listd=\count273
+\c@savedlistd=\count274
+\c@liste=\count275
+\c@savedliste=\count276
+\c@listf=\count277
+\c@savedlistf=\count278
+\c@location=\count279
+\c@savedlocation=\count280
+\c@organization=\count281
+\c@savedorganization=\count282
+\c@origlocation=\count283
+\c@savedoriglocation=\count284
+\c@origpublisher=\count285
+\c@savedorigpublisher=\count286
+\c@publisher=\count287
+\c@savedpublisher=\count288
+\c@language=\count289
+\c@savedlanguage=\count290
+\c@origlanguage=\count291
+\c@savedoriglanguage=\count292
+\c@pageref=\count293
+\c@savedpageref=\count294
+\shorthandwidth=\skip63
+\shortjournalwidth=\skip64
+\shortserieswidth=\skip65
+\shorttitlewidth=\skip66
+\shortauthorwidth=\skip67
+\shorteditorwidth=\skip68
+\locallabelnumberwidth=\skip69
+\locallabelalphawidth=\skip70
+\localshorthandwidth=\skip71
+\localshortjournalwidth=\skip72
+\localshortserieswidth=\skip73
+\localshorttitlewidth=\skip74
+\localshortauthorwidth=\skip75
+\localshorteditorwidth=\skip76
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(D:\MikTeX\tex\latex\biblatex\blx-compat.def
+File: blx-compat.def 2019/08/17 v3.13 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(D:\MikTeX\tex\latex\biblatex\biblatex.def
+File: biblatex.def 2019/08/17 v3.13 biblatex compatibility (PK/MW)
+\c@textcitecount=\count295
+\c@textcitetotal=\count296
+\c@textcitemaxnames=\count297
+\c@biburlbigbreakpenalty=\count298
+\c@biburlbreakpenalty=\count299
+\c@biburlnumpenalty=\count300
+\c@biburlucpenalty=\count301
+\c@biburllcpenalty=\count302
+\biburlbigskip=\muskip12
+\biburlnumskip=\muskip13
+\biburlucskip=\muskip14
+\biburllcskip=\muskip15
+\c@smartand=\count303
+)
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(D:\MikTeX\tex\latex\biblatex\bbx\numeric-comp.bbx
+File: numeric-comp.bbx 2019/08/17 v3.13 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(D:\MikTeX\tex\latex\biblatex\bbx\numeric.bbx
+File: numeric.bbx 2019/08/17 v3.13 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(D:\MikTeX\tex\latex\biblatex\bbx\standard.bbx
+File: standard.bbx 2019/08/17 v3.13 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count304
+\c@bbx:relatedtotal=\count305
+)))
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(D:\MikTeX\tex\latex\biblatex\cbx\numeric-comp.cbx
+File: numeric-comp.cbx 2019/08/17 v3.13 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count306
+\c@cbx@tempcntb=\count307
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(D:\MikTeX\tex\latex\biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+
+Package biblatex Warning: 'babel' option is deprecated.
+(biblatex)                Please use 'autolang' instead.
+
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package biblatex Info: Trying to load language 'italian'...
+Package biblatex Info: ... file 'italian.lbx' found.
+ (D:\MikTeX\tex\latex\biblatex\lbx\italian.lbx
+File: italian.lbx 2019/08/17 v3.13 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(D:\MikTeX\tex\latex\biblatex\lbx\english.lbx
+File: english.lbx 2019/08/17 v3.13 biblatex localization (PK/MW)
+) (tesi.aux (introduzione.aux)
+(teoria.aux) (conclusioni.aux))
+\openout1 = `tesi.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Info: Redefining \it@ocap on input line 18.
+LaTeX Info: Redefining \it@ccap on input line 18.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(99.58464pt, 426.79135pt, 71.13188pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=27.31465pt
+* \topmargin=-18.78552pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=38.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(D:\MikTeX\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count308
+\scratchdimen=\dimen123
+\scratchbox=\box30
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen124
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks26
+) (D:\MikTeX\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(D:\MikTeX\tex\latex\oberdiek\grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(D:\MikTeX\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+\AtBeginShipoutBox=\box31
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `tesi.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'tesi.bbl' found.
+ (tesi.bbl)
+Package biblatex Info: Reference section=0 on input line 18.
+Package biblatex Info: Reference segment=0 on input line 18.
+<tesi-frn.pdf, id=1, 597.50829pt x 845.0471pt>
+File: tesi-frn.pdf Graphic file (type pdf)
+<use tesi-frn.pdf>
+Package pdftex.def Info: tesi-frn.pdf  used on input line 21.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+ [1
+
+
+
+ <./tesi-frn.pdf{C:/Users/utente/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.
+map}>]
+[1
+
+] (tesi.toc
+LaTeX Font Info:    Try loading font information for U+lasy on input line 9.
+ (D:\MikTeX\tex\latex\base\ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 9.
+
+(D:\MikTeX\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 9.
+ (D:\MikTeX\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write5
+\openout5 = `tesi.toc'.
+
+
+[2
+
+]
+\openout2 = `introduzione.aux'.
+
+ (introduzione.tex) [1
+
+
+
+]
+\openout2 = `teoria.aux'.
+
+ (teoria.tex
+Capitolo 1.
+<img/canali_rgb.jpg, id=48, 754.82pt x 402.50375pt>
+File: img/canali_rgb.jpg Graphic file (type jpg)
+<use img/canali_rgb.jpg>
+Package pdftex.def Info: img/canali_rgb.jpg  used on input line 26.
+(pdftex.def)             Requested size: 196.32687pt x 104.68535pt.
+<img/pixel.png, id=49, 450.483pt x 366.168pt>
+File: img/pixel.png Graphic file (type png)
+<use img/pixel.png>
+Package pdftex.def Info: img/pixel.png  used on input line 31.
+(pdftex.def)             Requested size: 196.32687pt x 159.5835pt.
+[2
+
+
+
+]
+<img/rappresentazione_tensore.png, id=65, 346.29375pt x 155.83218pt>
+File: img/rappresentazione_tensore.png Graphic file (type png)
+<use img/rappresentazione_tensore.png>
+Package pdftex.def Info: img/rappresentazione_tensore.png  used on input line 4
+0.
+(pdftex.def)             Requested size: 242.40396pt x 109.08177pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+Make it at least 14.49998pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[3 <./img/canali_rgb.jpg> <./img/pixel.png> <./img/rappresentazione_tensore.png
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--66
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
+(D:\MikTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+<img/classificatore_lineare.jpg, id=78, 1227.58624pt x 454.69875pt>
+File: img/classificatore_lineare.jpg Graphic file (type jpg)
+<use img/classificatore_lineare.jpg>
+Package pdftex.def Info: img/classificatore_lineare.jpg  used on input line 92.
+
+(pdftex.def)             Requested size: 426.79135pt x 158.0854pt.
+[5 <./img/classificatore_lineare.jpg>]
+<img/visualizz_class_lin.jpg, id=82, 708.6475pt x 519.9425pt>
+File: img/visualizz_class_lin.jpg Graphic file (type jpg)
+<use img/visualizz_class_lin.jpg>
+Package pdftex.def Info: img/visualizz_class_lin.jpg  used on input line 103.
+(pdftex.def)             Requested size: 426.79135pt x 313.15002pt.
+ [6 <./img/visualizz_class_lin.jpg>]
+
+LaTeX Warning: Reference `TODO' on page 7 undefined on input line 116.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 118.
+
+(D:\MikTeX\tex\latex\base\t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
+\T1/cmtt/m/n/10 deeplearning / examples / visualize-[]activations-[]of-[]a-[]co
+nvolutional-[]neural-[]network .
+ []
+
+<img/templates.jpg, id=86, 920.43875pt x 97.36375pt>
+File: img/templates.jpg Graphic file (type jpg)
+<use img/templates.jpg>
+Package pdftex.def Info: img/templates.jpg  used on input line 122.
+(pdftex.def)             Requested size: 426.79135pt x 45.14589pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
+
+ []
+
+[7 <./img/templates.jpg>]
+<img/bias_trick.jpg, id=92, 1340.00626pt x 477.785pt>
+File: img/bias_trick.jpg Graphic file (type jpg)
+<use img/bias_trick.jpg>
+Package pdftex.def Info: img/bias_trick.jpg  used on input line 148.
+(pdftex.def)             Requested size: 426.79135pt x 152.17256pt.
+) [8 <./img/bias_trick.jpg>]
+\openout2 = `conclusioni.aux'.
+
+
+No file conclusioni.tex.
+
+Overfull \hbox (14.6571pt too wide) in paragraph at lines 71--71
+[]\T1/cmr/m/n/12 Flavio Fo-ren-za. \T1/cmr/m/it/12 Tec-ni-che in-no-va-ti-ve di
+ Com-pu-ter Vi-sion per la Foto-Identificazione
+ []
+
+[9
+
+
+
+
+
+] (tesi.aux (introduzione.aux) (teoria.aux) (conclusioni.aux))
+
+LaTeX Warning: There were undefined references.
+
+Package logreq Info: Writing requests to 'tesi.run.xml'.
+\openout1 = `tesi.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 11740 strings out of 492969
+ 197405 string characters out of 3143812
+ 678967 words of memory out of 3000000
+ 15377 multiletter control sequences out of 15000+200000
+ 23030 words of font info for 67 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,11n,45p,895b,1333s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ectt1200.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ectt1000.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\utente\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\utente\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\
+utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk>
+ <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+cbx1728.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx2488.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\utente\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk><D:/MikTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmbx9.pf
+b><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/MikTeX/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/MikTeX/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/MikTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+<D:/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tesi.pdf (12 pages, 1124014 bytes).
+PDF statistics:
+ 493 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

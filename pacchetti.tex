@@ -1,0 +1,38 @@
+%% pacchetti usati:
+% babel, indent first, fancy headers, amssymb, amsmath, latexsym, geometry per le specifiche, parindent=1cm, frontespizio (!)
+
+\usepackage[english,italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+
+% per far vedere le etichette, da togliere quando si deve stampare
+%\usepackage{showkeys}
+
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amssymb}
+% comandi utili
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\ii}{(i)}
+\newcommand{\XX}{\mathbf{X}}
+\newcommand{\WW}{\mathbf{W}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\xii}{x_i}
+\newcommand{\xjj}{x_j}
+\newcommand{\abs}[1]{\left|#1\right|} %valore assoluto
+\usepackage[top=3cm, bottom=3cm, left=3.5cm, right=2.5cm]{geometry}
+\parindent=1cm
+\usepackage[swapnames]{frontespizio}
+
+% per le immagini
+\usepackage{graphicx}
+\graphicspath{{img/}}
+
+% per la bibliografia
+\usepackage[autostyle, italian=guillemets]{csquotes}
+\usepackage[backend=biber, style=numeric-comp, babel=hyphen, sorting=none]{biblatex}
+\usepackage{url}
+\addbibresource{biblio_tesi.bib}

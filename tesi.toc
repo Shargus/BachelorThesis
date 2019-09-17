@@ -1,0 +1,19 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Introduzione}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Teoria}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Reti neurali}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Immagini digitali}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}Supervised Learning}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Classificatore lineare}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusioni}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{9}

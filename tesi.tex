@@ -1,0 +1,74 @@
+%% INIZIO SORGENTE
+\documentclass[a4paper,12pt,oneside]{book}
+
+\input{pacchetti}
+
+% DEFINIZIONE AMBIENTE ABSTRACT
+\newenvironment{abstract}%
+{\cleardoublepage%
+\thispagestyle{empty}%
+\null \vfill\begin{center}%
+\bfseries \abstractname \end{center}}%
+{\vfill\null}
+
+%% INIZIO TESI
+\frontmatter
+\pagestyle{empty}
+
+\begin{document}
+
+%% CREAZIONE FRONTESPIZIO
+\begin{frontespizio}
+\Istituzione{POLITECNICO DI BARI}
+\Logo[5cm]{logo}
+\Dipartimento{Ingegneria Elettrica e dell'Informazione - DEI}
+\Corso[Laurea Triennale]{Ingegneria Informatica e dell'Automazione (D.M. 270/04)}
+\Titolo{ANALISI DI IMMAGINI CON RETI NEURALI CONVOLUZIONALI PER LA CLASSIFICAZIONE DEI CETACEI NEL GOLFO DI TARANTO}
+\Titoletto{Tesi di laurea in CALCOLO NUMERICO}
+\Candidato[568581]{Tommaso MONOPOLI}
+\NCandidato{Laureando}
+\Relatore{Chiar.mo Prof. Ing. Tiziano POLITI}
+\Correlatore{Dott. Ing. Vito RENÒ}
+\Annoaccademico{2018-2019}
+\Rientro{1.5cm}
+\Preambolo{\renewcommand{\frontlogosep}{10pt}}
+\end{frontespizio}
+
+%% SOMMARIO
+\begin{abstract}
+Il sistema terrestre è sempre stato soggetto alle conseguenze delle attività umane, e la biodiversità degli ecosistemi acquatici e marini è fortemente a rischio. Diversi studi cercano di capire in che modo la perdita della biodiversità possa alterare l’integrità e il funzionamento di tali ecosistemi.  Una risposta a questa domanda può essere ricercata negli studi effettuati sulla distribuzione e sullo stato di conservazione dei cetacei, oggetto di numerose ricerche negli ultimi anni.\\
+Un'attività mirata alla raccolta di informazioni rilevanti allo studio dei cetacei è la \textit{foto-identificazione degli individui} di una specie, che prevede il riconoscimento - automatico o manuale - di uno stesso individuo in diverse immagini collezionate nel tempo, mediante l’analisi di particolari segni distintivi (\emph{feature}) presenti nell'immagine.\\
+Questa attività può essere effettuata manualmente, ma con un grande costo in termini di tempo per i ricercatori, che spesso hanno a disposizione diverse migliaia o milioni di fotografie, scattate nel corso di anni. L'evidente difficoltà nell'approccio manuale alla foto-identificazione dei cetacei (tutt'oggi ancora ampiamente operata) suggerisce l’applicazione di metodologie di \emph{Computer Vision} per automatizzare tale attività.
+L’obbiettivo del presente lavoro di tesi è la creazione di classificatori binari che ricevano in input un dataset di immagini bidimensionali collezionate nei pressi delle isole Azzorre (Oceano Atlantico settentrionale) e sappiano suddividere lo stesso dataset in due classi di immagini, a seconda che in ciascuna immagine sia rilevata o meno una \emph{feature} utile ad una successiva foto-identificazione. Nel caso dei cetacei, il criterio di classificazione è la presenza nell'immagine della pinna dorsale dell'individuo.\\
+Le metodologie impiegate sono quelle del \emph{machine learning}; in particolare, si è scelto di utilizzare la tecnica del \emph{transfer learning} per il riuso e il ri-adattamento di modelli pre-addestrati, usati per risolvere task di classificazione diversi da quello in esame.
+Gli esperimenti condotti su dati reali acquisiti in mare dimostrano l’utilità di tali tecniche di Computer Vision nel campo della foto-identificazione dei cetacei.
+\end{abstract}
+
+%% INDICE GENERALE
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+%%
+%% --- MATERIALE PRINCIPALE ---
+%%
+\mainmatter
+
+%% INTRODUZIONE
+\include{introduzione}
+
+%% CAPITOLI
+\include{teoria}
+
+
+%% BIBLIOGRAFIA
+\backmatter
+
+\addcontentsline{toc}{chapter}{Conclusioni}	%aggiunge la voce non numerata "Conclusioni" all'indice
+\include{conclusioni}
+
+\nocite{*}
+\printbibliography[heading=bibintoc]		%stampa la bibliografia alla fine e la aggiunge all'indice generale
+
+
+\end{document}

@@ -1,0 +1,39 @@
+% Encoding: UTF-8
+
+@Misc{flavio,
+  author = {Flavio Forenza},
+  title  = {Tecniche innovative di Computer Vision per la Foto-Identificazione dei cetacei},
+  year   = {????},
+  note   = {Tesi di laurea triennale, a.a. 2017/2018, rel. prof. Giovanni Dimauro, correl. dr. Vito Renò},
+  school = {Università degli Studi di Bari},
+}
+
+@Book{dlbook,
+  title     = {Deep Learning},
+  publisher = {MIT Press},
+  year      = {2016},
+  author    = {Ian Goodfellow and Yoshua Bengio and Aaron Courville},
+  note      = {\url{http://www.deeplearningbook.org}},
+}
+
+@Book{cs231n,
+  title  = {Lectures of Stanford class CS231n: Convolutional Neural Networks for Visual Recognition},
+  year   = {2019},
+  author = {Andrej Karpathy},
+  note   = {Appunti del corso Stanford CS class C231n.},
+}
+
+@Book{Russell2009,
+  title     = {Artificial Intelligence: A Modern Approach},
+  publisher = {Pearson},
+  year      = {2009},
+  author    = {Stuart Russell and Peter Norvig},
+}
+
+@Article{cifar10,
+  author = {Alex Krizhevsky},
+  title  = {Learning multiple layers of features from tiny images},
+  year   = {2009},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
