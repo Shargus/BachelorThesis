@@ -31,6 +31,12 @@
 \usepackage{graphicx}
 \graphicspath{{img/}}
 
+% per le tabelle
+\usepackage{tabularx, booktabs}
+\newcommand{\acapo}[1]{%
+  \begin{tabular}{@{}c@{}}\strut#1\strut\end{tabular}%
+}
+
 % per la bibliografia
 \usepackage[autostyle, italian=guillemets]{csquotes}
 \usepackage[backend=biber, style=numeric-comp, babel=hyphen, sorting=none]{biblatex}

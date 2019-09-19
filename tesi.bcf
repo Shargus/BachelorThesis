@@ -2132,6 +2132,14 @@
     <bcf:citekey order="1">Russell2009</bcf:citekey>
     <bcf:citekey order="2">cs231n</bcf:citekey>
     <bcf:citekey order="3">cifar10</bcf:citekey>
+    <bcf:citekey order="4">alexnet</bcf:citekey>
+    <bcf:citekey order="5">imagenet2012</bcf:citekey>
+    <bcf:citekey order="6">historydl</bcf:citekey>
+    <bcf:citekey order="7">alexnet</bcf:citekey>
+    <bcf:citekey order="8">nairhinton</bcf:citekey>
+    <bcf:citekey order="9">PCA</bcf:citekey>
+    <bcf:citekey order="10">dropout</bcf:citekey>
+    <bcf:citekey order="11">alexnet</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

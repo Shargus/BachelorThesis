@@ -48,7 +48,7 @@
       \field{title}{Artificial Intelligence: A Modern Approach}
       \field{year}{2009}
     \endentry
-    \entry{cs231n}{book}{}
+    \entry{cs231n}{misc}{}
       \name{author}{1}{}{%
         {{hash=e91a4c2044bccdbef249eabc886ff988}{%
            family={Karpathy},
@@ -88,8 +88,302 @@
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Learning Multiple Layers of Features from Tiny Images}
+      \field{title}{Learning multiple layers of features from tiny images}
       \field{year}{2009}
+    \endentry
+    \entry{alexnet}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=128472f7930be2fd0645b02dc02aaeb8}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=167dfedfa64097a597226f477da22c44}{%
+           family={Burges},
+           familyi={B\bibinitperiod},
+           given={C.\bibnamedelimi J.\bibnamedelimi C.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=bbfb0f3936c83b7b099561e6f0e32ef3}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ad5ed31dbb8d37755c6cb48bedfdfe1d}{%
+           family={Weinberger},
+           familyi={W\bibinitperiod},
+           given={K.\bibnamedelimi Q.},
+           giveni={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{fullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{bibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorbibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authornamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorfullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{editorbibnamehash}{6d86a4a427d6d8717a2b98ed4d40921c}
+      \strng{editornamehash}{6d86a4a427d6d8717a2b98ed4d40921c}
+      \strng{editorfullhash}{1e8af7f2d3a244c2cf4781005a405e9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 25}
+      \field{title}{ImageNet Classification with Deep Convolutional Neural Networks}
+      \field{year}{2012}
+      \field{pages}{1097\bibrangedash 1105}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+      \endverb
+      \verb{url}
+      \verb http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+      \endverb
+    \endentry
+    \entry{imagenet2012}{misc}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labeltitlesource}{title}
+      \field{title}{ImageNet Large Scale Visual Recognition Challenge 2012 (ILSVRC2012)}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb http://image-net.org/challenges/LSVRC/2012/results
+      \endverb
+      \verb{url}
+      \verb http://image-net.org/challenges/LSVRC/2012/results
+      \endverb
+    \endentry
+    \entry{historydl}{article}{}
+      \name{author}{9}{}{%
+        {{hash=d54752a6ef578eff17af122f4c480563}{%
+           family={Alom},
+           familyi={A\bibinitperiod},
+           given={Md\bibnamedelima Zahangir},
+           giveni={M\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=1eba36f6c967b0283cdc0b4a697661b4}{%
+           family={Taha},
+           familyi={T\bibinitperiod},
+           given={Tarek\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=be66755fa65779d738ec018c88405ab9}{%
+           family={Yakopcic},
+           familyi={Y\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c08ba5b914d1403f250a0513c83a6d1e}{%
+           family={Westberg},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=828eefe080c6cc6c2e62433c8d12de35}{%
+           family={Sidike},
+           familyi={S\bibinitperiod},
+           given={Paheding},
+           giveni={P\bibinitperiod}}}%
+        {{hash=83a246b595861c7f371862945295d4a9}{%
+           family={Nasrin},
+           familyi={N\bibinitperiod},
+           given={Mst\bibnamedelima Shamima},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=284a3a6b20c5557f3384b8da4c9f4600}{%
+           family={Esesn},
+           familyi={E\bibinitperiod},
+           given={Brian\bibnamedelimb C\bibnamedelima Van},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=16c48c984f08a7e999d1513632c4641c}{%
+           family={Awwal},
+           familyi={A\bibinitperiod},
+           given={Abdul\bibnamedelimb A\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5d255b31f090ae8396664662411f569a}{%
+           family={Asari},
+           familyi={A\bibinitperiod},
+           given={Vijayan\bibnamedelima K.},
+           giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{78dc58ad02ce8bd643b07f9928adfd81}
+      \strng{fullhash}{c8d63495a130b6642e280ae858d2a809}
+      \strng{bibnamehash}{78dc58ad02ce8bd643b07f9928adfd81}
+      \strng{authorbibnamehash}{78dc58ad02ce8bd643b07f9928adfd81}
+      \strng{authornamehash}{78dc58ad02ce8bd643b07f9928adfd81}
+      \strng{authorfullhash}{c8d63495a130b6642e280ae858d2a809}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep learning has demonstrated tremendous success in variety of application domains in the past few years. This new field of machine learning has been growing rapidly and applied in most of the application domains with some new modalities of applications, which helps to open new opportunity. There are different methods have been proposed on different category of learning approaches, which includes supervised, semi-supervised and un-supervised learning. The experimental results show state-of-the-art performance of deep learning over traditional machine learning approaches in the field of Image Processing, Computer Vision, Speech Recognition, Machine Translation, Art, Medical imaging, Medical information processing, Robotics and control, Bio-informatics, Natural Language Processing (NLP), Cyber security, and many more. This report presents a brief survey on development of DL approaches, including Deep Neural Network (DNN), Convolutional Neural Network (CNN), Recurrent Neural Network (RNN) including Long Short Term Memory (LSTM) and Gated Recurrent Units (GRU), Auto-Encoder (AE), Deep Belief Network (DBN), Generative Adversarial Network (GAN), and Deep Reinforcement Learning (DRL). In addition, we have included recent development of proposed advanced variant DL techniques based on the mentioned DL approaches. Furthermore, DL approaches have explored and evaluated in different application domains are also included in this survey. We have also comprised recently developed frameworks, SDKs, and benchmark datasets that are used for implementing and evaluating deep learning approaches. There are some surveys have published on Deep Learning in Neural Networks [1, 38] and a survey on RL [234]. However, those papers have not discussed the individual advanced techniques for training large scale deep learning models and the recently developed method of generative models [1].}
+      \field{day}{3}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{month}{3}
+      \field{title}{The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb http://arxiv.org/abs/1803.01164v2
+      \endverb
+      \verb{file}
+      \verb :http\://arxiv.org/pdf/1803.01164v2:PDF
+      \endverb
+      \keyw{cs.CV}
+    \endentry
+    \entry{nairhinton}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=0719e279192084705efab5d7e0505f52}{%
+           family={Nair},
+           familyi={N\bibinitperiod},
+           given={Vinod},
+           giveni={V\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=e6019b2c2378860e64064fa7db22d500}{%
+           family={Fürnkranz},
+           familyi={F\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0e5ae7e30da87e8ba62ced27d4e6f2aa}{%
+           family={Joachims},
+           familyi={J\bibinitperiod},
+           given={Thorsten},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Omnipress}%
+      }
+      \strng{namehash}{08d64b697ddc0d522928febb8e7c119b}
+      \strng{fullhash}{08d64b697ddc0d522928febb8e7c119b}
+      \strng{bibnamehash}{08d64b697ddc0d522928febb8e7c119b}
+      \strng{authorbibnamehash}{08d64b697ddc0d522928febb8e7c119b}
+      \strng{authornamehash}{08d64b697ddc0d522928febb8e7c119b}
+      \strng{authorfullhash}{08d64b697ddc0d522928febb8e7c119b}
+      \strng{editorbibnamehash}{a5a407d84e54ce28ee94bbdd8a64e288}
+      \strng{editornamehash}{a5a407d84e54ce28ee94bbdd8a64e288}
+      \strng{editorfullhash}{a5a407d84e54ce28ee94bbdd8a64e288}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ICML}
+      \field{title}{Rectified Linear Units Improve Restricted Boltzmann Machines}
+      \field{year}{2010}
+      \field{pages}{807\bibrangedash 814}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb http://dblp.uni-trier.de/db/conf/icml/icml2010.html#NairH10
+      \endverb
+      \verb{url}
+      \verb http://dblp.uni-trier.de/db/conf/icml/icml2010.html#NairH10
+      \endverb
+      \keyw{dblp}
+    \endentry
+    \entry{PCA}{book}{}
+      \name{author}{1}{}{%
+        {{hash=17c3ac25f4c466cd890b0fea1e14d56a}{%
+           family={Bolasco},
+           familyi={B\bibinitperiod},
+           given={Sergio},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Carocci Editore}%
+      }
+      \strng{namehash}{17c3ac25f4c466cd890b0fea1e14d56a}
+      \strng{fullhash}{17c3ac25f4c466cd890b0fea1e14d56a}
+      \strng{bibnamehash}{17c3ac25f4c466cd890b0fea1e14d56a}
+      \strng{authorbibnamehash}{17c3ac25f4c466cd890b0fea1e14d56a}
+      \strng{authornamehash}{17c3ac25f4c466cd890b0fea1e14d56a}
+      \strng{authorfullhash}{17c3ac25f4c466cd890b0fea1e14d56a}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9788843014019}
+      \field{title}{Analisi multidimensionale dei dati. Metodi, strategie e criteri d'interpretazione}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb https://www.amazon.com/Analisi-multidimensionale-strategie-criteri-dinterpretazione/dp/8843014013?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=8843014013
+      \endverb
+      \verb{url}
+      \verb https://www.amazon.com/Analisi-multidimensionale-strategie-criteri-dinterpretazione/dp/8843014013?SubscriptionId=AKIAIOBINVZYXZQZ2U3A&tag=chimbori05-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=8843014013
+      \endverb
+    \endentry
+    \entry{dropout}{article}{}
+      \name{author}{5}{}{%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6a147afa4569ce6cf23c0436e65d8486}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Nitish},
+           giveni={N\bibinitperiod}}}%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1eedb5d67ab6771125689502fd082a35}{%
+           family={Salakhutdinov},
+           familyi={S\bibinitperiod},
+           given={Ruslan\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{7c3a69040c0122d64c38f463aa1410df}
+      \strng{fullhash}{08830d3157ae1f7f62929260dfb1d0c0}
+      \strng{bibnamehash}{7c3a69040c0122d64c38f463aa1410df}
+      \strng{authorbibnamehash}{7c3a69040c0122d64c38f463aa1410df}
+      \strng{authornamehash}{7c3a69040c0122d64c38f463aa1410df}
+      \strng{authorfullhash}{08830d3157ae1f7f62929260dfb1d0c0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{When a large feedforward neural network is trained on a small training set, it typically performs poorly on held-out test data. This "overfitting" is greatly reduced by randomly omitting half of the feature detectors on each training case. This prevents complex co-adaptations in which a feature detector is only helpful in the context of several other specific feature detectors. Instead, each neuron learns to detect a feature that is generally helpful for producing the correct answer given the combinatorially large variety of internal contexts in which it must operate. Random "dropout" gives big improvements on many benchmark tasks and sets new records for speech and object recognition.}
+      \field{day}{3}
+      \field{eprintclass}{cs.NE}
+      \field{eprinttype}{arXiv}
+      \field{month}{7}
+      \field{title}{Improving neural networks by preventing co-adaptation of feature detectors}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb http://arxiv.org/abs/1207.0580v1
+      \endverb
+      \verb{file}
+      \verb :http\://arxiv.org/pdf/1207.0580v1:PDF
+      \endverb
+      \keyw{cs.NE,cs.CV,cs.LG}
     \endentry
     \entry{flavio}{misc}{}
       \name{author}{1}{}{%
@@ -108,12 +402,13 @@
       \strng{authorbibnamehash}{6fa17e6ab0c8a3cc23d6c39a38dd7fc5}
       \strng{authornamehash}{6fa17e6ab0c8a3cc23d6c39a38dd7fc5}
       \strng{authorfullhash}{6fa17e6ab0c8a3cc23d6c39a38dd7fc5}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Tesi di laurea triennale, a.a. 2017/2018, rel. prof. Giovanni Dimauro, correl. dr. Vito Renò}
       \field{title}{Tecniche innovative di Computer Vision per la Foto-Identificazione dei cetacei}
+      \field{year}{????}
       \true{nocite}
     \endentry
     \entry{dlbook}{book}{}
@@ -143,8 +438,8 @@
       \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
       \strng{authornamehash}{3ae53fe582e8a815b118d26947eaa326}
       \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{http://www.deeplearningbook.org}}

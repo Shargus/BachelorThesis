@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.2)  15 SEP 2019 23:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.2)  19 SEP 2019 00:26
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -238,15 +238,55 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \openout3 = `tesi-frn.tex'.
 
 )
+(D:\MikTeX\tex\latex\tools\tabularx.sty
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+ (D:\MikTeX\tex\latex\tools\array.sty
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+\col@sep=\dimen123
+\ar@mcellbox=\box30
+\extrarowheight=\dimen124
+\NC@list=\toks24
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box31
+)
+\TX@col@width=\dimen125
+\TX@old@table=\dimen126
+\TX@old@col=\dimen127
+\TX@target=\dimen128
+\TX@delta=\dimen129
+\TX@cols=\count110
+\TX@ftn=\toks25
+)
+(D:\MikTeX\tex\latex\booktabs\booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen130
+\lightrulewidth=\dimen131
+\cmidrulewidth=\dimen132
+\belowrulesep=\dimen133
+\belowbottomsep=\dimen134
+\aboverulesep=\dimen135
+\abovetopsep=\dimen136
+\cmidrulesep=\dimen137
+\cmidrulekern=\dimen138
+\defaultaddspace=\dimen139
+\@cmidla=\count111
+\@cmidlb=\count112
+\@aboverulesep=\dimen140
+\@belowrulesep=\dimen141
+\@thisruleclass=\count113
+\@lastruleclass=\count114
+\@thisrulewidth=\dimen142
+)
 (D:\MikTeX\tex\latex\csquotes\csquotes.sty
 Package: csquotes 2019/05/10 v5.2e context-sensitive quotations (JAW)
-\csq@reset=\count110
-\csq@gtype=\count111
-\csq@glevel=\count112
-\csq@qlevel=\count113
-\csq@maxlvl=\count114
-\csq@tshold=\count115
-\csq@ltx@everypar=\toks24
+\csq@reset=\count115
+\csq@gtype=\count116
+\csq@glevel=\count117
+\csq@qlevel=\count118
+\csq@maxlvl=\count119
+\csq@tshold=\count120
+\csq@ltx@everypar=\toks26
 
 (D:\MikTeX\tex\latex\csquotes\csquotes.def
 File: csquotes.def 2019/05/10 v5.2e csquotes generic definitions (JAW)
@@ -287,7 +327,7 @@ Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 )))
 (D:\MikTeX\tex\latex\logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count116
+\lrq@indent=\count121
  (D:\MikTeX\tex\latex\logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (D:\MikTeX\tex\latex\base\ifthen.sty
@@ -296,61 +336,61 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count117
-\c@listtotal=\count118
-\c@listcount=\count119
-\c@liststart=\count120
-\c@liststop=\count121
-\c@citecount=\count122
-\c@citetotal=\count123
-\c@multicitecount=\count124
-\c@multicitetotal=\count125
-\c@instcount=\count126
-\c@maxnames=\count127
-\c@minnames=\count128
-\c@maxitems=\count129
-\c@minitems=\count130
-\c@citecounter=\count131
-\c@maxcitecounter=\count132
-\c@savedcitecounter=\count133
-\c@uniquelist=\count134
-\c@uniquename=\count135
-\c@refsection=\count136
-\c@refsegment=\count137
-\c@maxextratitle=\count138
-\c@maxextratitleyear=\count139
-\c@maxextraname=\count140
-\c@maxextradate=\count141
-\c@maxextraalpha=\count142
-\c@abbrvpenalty=\count143
-\c@highnamepenalty=\count144
-\c@lownamepenalty=\count145
-\c@maxparens=\count146
-\c@parenlevel=\count147
-\blx@tempcnta=\count148
-\blx@tempcntb=\count149
-\blx@tempcntc=\count150
-\blx@maxsection=\count151
-\blx@maxsegment@0=\count152
-\blx@notetype=\count153
-\blx@parenlevel@text=\count154
-\blx@parenlevel@foot=\count155
-\blx@sectionciteorder@0=\count156
-\blx@entrysetcounter=\count157
-\labelnumberwidth=\skip55
-\labelalphawidth=\skip56
-\biblabelsep=\skip57
-\bibitemsep=\skip58
-\bibnamesep=\skip59
-\bibinitsep=\skip60
-\bibparsep=\skip61
-\bibhang=\skip62
+\c@tabx@nest=\count122
+\c@listtotal=\count123
+\c@listcount=\count124
+\c@liststart=\count125
+\c@liststop=\count126
+\c@citecount=\count127
+\c@citetotal=\count128
+\c@multicitecount=\count129
+\c@multicitetotal=\count130
+\c@instcount=\count131
+\c@maxnames=\count132
+\c@minnames=\count133
+\c@maxitems=\count134
+\c@minitems=\count135
+\c@citecounter=\count136
+\c@maxcitecounter=\count137
+\c@savedcitecounter=\count138
+\c@uniquelist=\count139
+\c@uniquename=\count140
+\c@refsection=\count141
+\c@refsegment=\count142
+\c@maxextratitle=\count143
+\c@maxextratitleyear=\count144
+\c@maxextraname=\count145
+\c@maxextradate=\count146
+\c@maxextraalpha=\count147
+\c@abbrvpenalty=\count148
+\c@highnamepenalty=\count149
+\c@lownamepenalty=\count150
+\c@maxparens=\count151
+\c@parenlevel=\count152
+\blx@tempcnta=\count153
+\blx@tempcntb=\count154
+\blx@tempcntc=\count155
+\blx@maxsection=\count156
+\blx@maxsegment@0=\count157
+\blx@notetype=\count158
+\blx@parenlevel@text=\count159
+\blx@parenlevel@foot=\count160
+\blx@sectionciteorder@0=\count161
+\blx@entrysetcounter=\count162
+\labelnumberwidth=\skip57
+\labelalphawidth=\skip58
+\biblabelsep=\skip59
+\bibitemsep=\skip60
+\bibnamesep=\skip61
+\bibinitsep=\skip62
+\bibparsep=\skip63
+\bibhang=\skip64
 \blx@bcfin=\read1
 \blx@bcfout=\write4
 \blx@langwohyphens=\language76
-\c@mincomprange=\count158
-\c@maxcomprange=\count159
-\c@mincompwidth=\count160
+\c@mincomprange=\count163
+\c@maxcomprange=\count164
+\c@mincompwidth=\count165
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -361,88 +401,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric-comp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count161
-\c@savedafterword=\count162
-\c@annotator=\count163
-\c@savedannotator=\count164
-\c@author=\count165
-\c@savedauthor=\count166
-\c@bookauthor=\count167
-\c@savedbookauthor=\count168
-\c@commentator=\count169
-\c@savedcommentator=\count170
-\c@editor=\count171
-\c@savededitor=\count172
-\c@editora=\count173
-\c@savededitora=\count174
-\c@editorb=\count175
-\c@savededitorb=\count176
-\c@editorc=\count177
-\c@savededitorc=\count178
-\c@foreword=\count179
-\c@savedforeword=\count180
-\c@holder=\count181
-\c@savedholder=\count182
-\c@introduction=\count183
-\c@savedintroduction=\count184
-\c@namea=\count185
-\c@savednamea=\count186
-\c@nameb=\count187
-\c@savednameb=\count188
-\c@namec=\count189
-\c@savednamec=\count190
-\c@translator=\count191
-\c@savedtranslator=\count192
-\c@shortauthor=\count193
-\c@savedshortauthor=\count194
-\c@shorteditor=\count195
-\c@savedshorteditor=\count196
-\c@labelname=\count197
-\c@savedlabelname=\count198
-\c@institution=\count199
-\c@savedinstitution=\count266
-\c@lista=\count267
-\c@savedlista=\count268
-\c@listb=\count269
-\c@savedlistb=\count270
-\c@listc=\count271
-\c@savedlistc=\count272
-\c@listd=\count273
-\c@savedlistd=\count274
-\c@liste=\count275
-\c@savedliste=\count276
-\c@listf=\count277
-\c@savedlistf=\count278
-\c@location=\count279
-\c@savedlocation=\count280
-\c@organization=\count281
-\c@savedorganization=\count282
-\c@origlocation=\count283
-\c@savedoriglocation=\count284
-\c@origpublisher=\count285
-\c@savedorigpublisher=\count286
-\c@publisher=\count287
-\c@savedpublisher=\count288
-\c@language=\count289
-\c@savedlanguage=\count290
-\c@origlanguage=\count291
-\c@savedoriglanguage=\count292
-\c@pageref=\count293
-\c@savedpageref=\count294
-\shorthandwidth=\skip63
-\shortjournalwidth=\skip64
-\shortserieswidth=\skip65
-\shorttitlewidth=\skip66
-\shortauthorwidth=\skip67
-\shorteditorwidth=\skip68
-\locallabelnumberwidth=\skip69
-\locallabelalphawidth=\skip70
-\localshorthandwidth=\skip71
-\localshortjournalwidth=\skip72
-\localshortserieswidth=\skip73
-\localshorttitlewidth=\skip74
-\localshortauthorwidth=\skip75
-\localshorteditorwidth=\skip76
+\c@afterword=\count166
+\c@savedafterword=\count167
+\c@annotator=\count168
+\c@savedannotator=\count169
+\c@author=\count170
+\c@savedauthor=\count171
+\c@bookauthor=\count172
+\c@savedbookauthor=\count173
+\c@commentator=\count174
+\c@savedcommentator=\count175
+\c@editor=\count176
+\c@savededitor=\count177
+\c@editora=\count178
+\c@savededitora=\count179
+\c@editorb=\count180
+\c@savededitorb=\count181
+\c@editorc=\count182
+\c@savededitorc=\count183
+\c@foreword=\count184
+\c@savedforeword=\count185
+\c@holder=\count186
+\c@savedholder=\count187
+\c@introduction=\count188
+\c@savedintroduction=\count189
+\c@namea=\count190
+\c@savednamea=\count191
+\c@nameb=\count192
+\c@savednameb=\count193
+\c@namec=\count194
+\c@savednamec=\count195
+\c@translator=\count196
+\c@savedtranslator=\count197
+\c@shortauthor=\count198
+\c@savedshortauthor=\count199
+\c@shorteditor=\count266
+\c@savedshorteditor=\count267
+\c@labelname=\count268
+\c@savedlabelname=\count269
+\c@institution=\count270
+\c@savedinstitution=\count271
+\c@lista=\count272
+\c@savedlista=\count273
+\c@listb=\count274
+\c@savedlistb=\count275
+\c@listc=\count276
+\c@savedlistc=\count277
+\c@listd=\count278
+\c@savedlistd=\count279
+\c@liste=\count280
+\c@savedliste=\count281
+\c@listf=\count282
+\c@savedlistf=\count283
+\c@location=\count284
+\c@savedlocation=\count285
+\c@organization=\count286
+\c@savedorganization=\count287
+\c@origlocation=\count288
+\c@savedoriglocation=\count289
+\c@origpublisher=\count290
+\c@savedorigpublisher=\count291
+\c@publisher=\count292
+\c@savedpublisher=\count293
+\c@language=\count294
+\c@savedlanguage=\count295
+\c@origlanguage=\count296
+\c@savedoriglanguage=\count297
+\c@pageref=\count298
+\c@savedpageref=\count299
+\shorthandwidth=\skip65
+\shortjournalwidth=\skip66
+\shortserieswidth=\skip67
+\shorttitlewidth=\skip68
+\shortauthorwidth=\skip69
+\shorteditorwidth=\skip70
+\locallabelnumberwidth=\skip71
+\locallabelalphawidth=\skip72
+\localshorthandwidth=\skip73
+\localshortjournalwidth=\skip74
+\localshortserieswidth=\skip75
+\localshorttitlewidth=\skip76
+\localshortauthorwidth=\skip77
+\localshorteditorwidth=\skip78
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -454,19 +494,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (D:\MikTeX\tex\latex\biblatex\biblatex.def
 File: biblatex.def 2019/08/17 v3.13 biblatex compatibility (PK/MW)
-\c@textcitecount=\count295
-\c@textcitetotal=\count296
-\c@textcitemaxnames=\count297
-\c@biburlbigbreakpenalty=\count298
-\c@biburlbreakpenalty=\count299
-\c@biburlnumpenalty=\count300
-\c@biburlucpenalty=\count301
-\c@biburllcpenalty=\count302
+\c@textcitecount=\count300
+\c@textcitetotal=\count301
+\c@textcitemaxnames=\count302
+\c@biburlbigbreakpenalty=\count303
+\c@biburlbreakpenalty=\count304
+\c@biburlnumpenalty=\count305
+\c@biburlucpenalty=\count306
+\c@biburllcpenalty=\count307
 \biburlbigskip=\muskip12
 \biburlnumskip=\muskip13
 \biburlucskip=\muskip14
 \biburllcskip=\muskip15
-\c@smartand=\count303
+\c@smartand=\count308
 )
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
@@ -483,16 +523,16 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (D:\MikTeX\tex\latex\biblatex\bbx\standard.bbx
 File: standard.bbx 2019/08/17 v3.13 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count304
-\c@bbx:relatedtotal=\count305
+\c@bbx:relatedcount=\count309
+\c@bbx:relatedtotal=\count310
 )))
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
 (D:\MikTeX\tex\latex\biblatex\cbx\numeric-comp.cbx
 File: numeric-comp.cbx 2019/08/17 v3.13 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count306
-\c@cbx@tempcntb=\count307
+\c@cbx@tempcnta=\count311
+\c@cbx@tempcntb=\count312
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -529,7 +569,7 @@ Package biblatex Info: ... file 'english.lbx' found.
 (D:\MikTeX\tex\latex\biblatex\lbx\english.lbx
 File: english.lbx 2019/08/17 v3.13 biblatex localization (PK/MW)
 ) (tesi.aux (introduzione.aux)
-(teoria.aux) (conclusioni.aux))
+(teoria.aux) (alexnet.aux) (conclusioni.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -583,17 +623,17 @@ LaTeX Info: Redefining \it@ccap on input line 18.
 
 (D:\MikTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
-\scratchdimen=\dimen123
-\scratchbox=\box30
-\nofMPsegments=\count309
-\nofMParguments=\count310
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count311
-\MPscratchDim=\dimen124
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count313
+\scratchdimen=\dimen143
+\scratchbox=\box32
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen144
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks28
 ) (D:\MikTeX\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -610,7 +650,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box31
+\AtBeginShipoutBox=\box33
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -688,6 +728,10 @@ Package pdftex.def Info: img/rappresentazione_tensore.png  used on input line 4
 0.
 (pdftex.def)             Requested size: 242.40396pt x 109.08177pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 14.49998pt.
@@ -759,23 +803,75 @@ File: img/bias_trick.jpg Graphic file (type jpg)
 Package pdftex.def Info: img/bias_trick.jpg  used on input line 148.
 (pdftex.def)             Requested size: 426.79135pt x 152.17256pt.
 ) [8 <./img/bias_trick.jpg>]
-\openout2 = `conclusioni.aux'.
+\openout2 = `alexnet.aux'.
 
+ (alexnet.tex
+<img/arc_alexnet.png, id=96, 1541.76pt x 531.9875pt>
+File: img/arc_alexnet.png Graphic file (type png)
+<use img/arc_alexnet.png>
+Package pdftex.def Info: img/arc_alexnet.png  used on input line 14.
+(pdftex.def)             Requested size: 426.79135pt x 147.25893pt.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
 
-No file conclusioni.tex.
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
-Overfull \hbox (14.6571pt too wide) in paragraph at lines 71--71
-[]\T1/cmr/m/n/12 Flavio Fo-ren-za. \T1/cmr/m/it/12 Tec-ni-che in-no-va-ti-ve di
- Com-pu-ter Vi-sion per la Foto-Identificazione
  []
 
 [9
 
 
+ <./img/arc_alexnet.png (PNG copy)>] [10]
+Overfull \hbox (5.70499pt too wide) in alignment at lines 91--91
+[][][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [11] [12]
+\openout2 = `conclusioni.aux'.
+
+
+No file conclusioni.tex.
+
+Overfull \hbox (1.78664pt too wide) in paragraph at lines 72--72
+[]\T1/cmr/m/it/12 ImageNet Lar-ge Sca-le Vi-sual Re-co-gni-tion Chal-len-ge 201
+2 (IL-SVRC2012)\T1/cmr/m/n/12 . 2012.
+ []
+
+
+Overfull \hbox (16.8558pt too wide) in paragraph at lines 72--72
+\T1/cmtt/m/n/12 dinterpretazione / dp / 8843014013 ? SubscriptionId = AKIAIOBIN
+VZYXZQZ2U3A &
+ []
+
+
+Overfull \hbox (35.87628pt too wide) in paragraph at lines 72--72
+\T1/cmtt/m/n/12 tag = chimbori05 -[] 20 & linkCode = xm2 & camp = 2025 & creati
+ve = 165953 & creativeASIN =
+ []
+
+
+Overfull \hbox (14.36406pt too wide) in paragraph at lines 72--72
+[]\T1/cmr/m/n/12 Geoffrey E. Hin-ton et al.   Im-pro-ving neu-ral net-works by
+ pre-ven-ting co-adaptation
+ []
+
+
+Overfull \hbox (20.53067pt too wide) in paragraph at lines 72--72
+[]\T1/cmr/m/n/12 Flavio Fo-ren-za. \T1/cmr/m/it/12 Tec-ni-che in-no-va-ti-ve di
+ Com-pu-ter Vi-sion per la Foto-Identificazione
+ []
+
+[13
 
 
 
-] (tesi.aux (introduzione.aux) (teoria.aux) (conclusioni.aux))
+
+
+] [14] (tesi.aux (introduzione.aux) (teoria.aux) (alexnet.aux)
+(conclusioni.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -784,38 +880,42 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11740 strings out of 492969
- 197405 string characters out of 3143812
- 678967 words of memory out of 3000000
- 15377 multiletter control sequences out of 15000+200000
- 23030 words of font info for 67 fonts, out of 3000000 for 9000
+ 11945 strings out of 492969
+ 200382 string characters out of 3143812
+ 696385 words of memory out of 3000000
+ 15562 multiletter control sequences out of 15000+200000
+ 25157 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,45p,895b,1333s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,14n,48p,1996b,1333s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ectt1200.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ectt1000.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\utente\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\utente\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\
-utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk>
+n\ec\dpi600\eccc1200.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\utente\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk> <C:\Users\utente\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\
+utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk>
  <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-cbx1728.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx2488.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\utente\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk><D:/MikTeX/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmbx9.pf
-b><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/MikTeX/fonts/type1/
-public/amsfonts/cm/cmmi10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/MikTeX/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/MikTeX/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-<D:/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tesi.pdf (12 pages, 1124014 bytes).
+crm1000.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecrm0700.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\utente\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\utente\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\utente\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\ut
+ente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <
+C:\Users\utente\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
+x1200.pk><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/MikTeX/fonts/
+type1/public/amsfonts/cm/cmbx9.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cm
+csc10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/MikTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/MikTeX/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/c
+mr12.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/MikTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><D:/MikTeX/fonts/type1/public/amsfonts/cm/cms
+y8.pfb><D:/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tesi.pdf (17 pages, 1267911 bytes).
 PDF statistics:
- 493 PDF objects out of 1000 (max. 8388607)
+ 634 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
