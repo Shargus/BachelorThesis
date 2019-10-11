@@ -1,4 +1,4 @@
-\chapter{Teoria}\label{teoria}
+\chapter{Metodologie}\label{teoria}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[OL]{\rightmark}
@@ -15,7 +15,7 @@ TODO: parlare del neurone e dell'idea di replicarlo nella funzione (dopo aver pa
 \section{Immagini digitali}
 Caratterizziamo intuitivamente il concetto di "immagine" dal punto di vista informatico.
 
-Un'\textbf{immagine digitale} è una rappresentazione binaria di un'immagine (in generale a colori) a due dimensioni\footnote{Ci riferiamo in questa sede solo alle immagini di tipo raster, tipiche ad esempio delle fotografie digitali in formato jpg.}; essa può essere definita matematicamente come un tensore $\mathcal{I}\in\R^{h\times w\times c}$, dove $h$ e $w$ sono rispettivamente dette \textbf{altezza} e \textbf{larghezza} dell'immagine, la coppia $(w,h)$ \textbf{risoluzione} mentre $c$ è il numero di \emph{canali di colore}\footnote{Spesso si scrive che $\mathcal{I}$ è un immagine $w\times h\times c$, o più semplicemente $w\times h$}. Nello spazio di colore RGB, ampiamente adoperato, i canali di colore sono rosso (R, Red), verde (G, Green) e blu (B, Blue), quindi $c=3$. In mancanza di diverse indicazioni, ci si riferirà nel seguito allo spazio di colore RGB.
+Un'\textbf{immagine digitale} è una rappresentazione binaria di un'immagine (in generale a colori) a due dimensioni\footnote{Ci riferiamo in questa sede solo alle immagini di tipo raster, tipiche ad esempio delle fotografie digitali in formato jpg.}; essa può essere definita matematicamente come un tensore $\mathcal{I}\in\R^{h\times w\times c}$, dove $h$ e $w$ sono rispettivamente dette \textbf{altezza} e \textbf{larghezza} dell'immagine, la coppia $(w,h)$ \textbf{risoluzione} mentre $c$ è il numero di \emph{canali di colore}\footnote{Spesso si scrive che $\mathcal{I}$ è un immagine $w\times h\times c$, o più semplicemente $w\times h$ (assumendo $c=3$)}. Nello spazio di colore RGB, ampiamente adoperato, i canali di colore sono rosso (R, Red), verde (G, Green) e blu (B, Blue), quindi $c=3$. In mancanza di diverse indicazioni, ci si riferirà nel seguito allo spazio di colore RGB.
 
 Un \textbf{pixel} $p(i,j)$ è definito come la funzione vettoriale
 \[p(i,j)=[r(i,j),g(i,j),b(i,j)]\]
@@ -41,6 +41,8 @@ Si può immaginare il tensore immagine $\mathcal{I}$ come una "pila" di tre matr
 \caption{Rappresentazione grafica di un tensore tridimensionale; in ogni posizione compaiono gli indici del tensore}
 \label{rappresentazione_tensore}
 \end{figure}
+
+TODO inserire problema dell'object detection pag. 43 Gianvito
 
 \subsection{Supervised Learning}
 
@@ -151,3 +153,5 @@ Tale utile passaggio, noto come \textit{bias trick}, è visualizzato nella segue
 \end{figure}
 
 TODO: loss functions.
+
+TODO: valutazione delle prestazioni di una rete neurale (matrice di confusione)

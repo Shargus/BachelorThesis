@@ -2,22 +2,34 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Introduzione}{1}
+\contentsline {chapter}{\numberline {1}Introduzione}{1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Teoria}{2}
+\contentsline {chapter}{\numberline {2}Metodologie}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Reti neurali}{2}
+\contentsline {section}{\numberline {2.1}Reti neurali}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Immagini digitali}{2}
+\contentsline {section}{\numberline {2.2}Immagini digitali}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Supervised Learning}{3}
+\contentsline {subsection}{\numberline {2.2.1}Supervised Learning}{4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Classificatore lineare}{5}
+\contentsline {section}{\numberline {2.3}Classificatore lineare}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}AlexNet}{9}
+\contentsline {section}{\numberline {2.4}AlexNet}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.1}Architettura di AlexNet}{9}
+\contentsline {subsection}{\numberline {2.4.1}Architettura di AlexNet}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{13}
+\contentsline {section}{\numberline {2.5}GoogLeNet}{14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{13}
+\contentsline {chapter}{\numberline {3}Esperimenti e risultati}{15}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Dataset utilizzati}{15}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Descrizione dei dataset}{15}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Preprocessing e estrazione di feature dai dataset}{16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Descrizione di CropFin v1}{16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusioni}{21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{21}% 

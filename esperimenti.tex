@@ -1,0 +1,106 @@
+\chapter{Esperimenti e risultati}\label{esperimenti}
+In questo capitolo vengono presentati gli esperimenti condotti e si analizzano i risultati ottenuti.
+
+\section{Dataset utilizzati}
+\subsection{Descrizione dei dataset}
+Per la conduzione degli esperimenti sono stati adoperati due distinti dataset di immagini.
+
+Il primo, usato per la fase di addestramento delle reti neurali, è una collezione di fotografie di tursiopi e grampi scattate tra il 2017 e il 2018 nel \textbf{Golfo di Taranto} (mar Ionio Settentrionale). Le fotografie sono state scattate e messe a disposizione dalla \textit{Jonian Dolphin Conservation}, un'associazione di ricerca scientifica privata finalizzata allo studio dei cetacei nel Mar Ionio Settentrionale. Il dataset contiene immagini acquisite in un'area di 14000 km\textsuperscript{2} percorsa su un catamarano seguendo rotte prestabilite. Le macchine fotografiche utilizzate consistono di diversi corpi macchina (reflex) e diversi obiettivi ad essi associati.
+Il dataset acquisito contiene in totale TODO immagini, suddivise in cartelle in base alla data degli scatti.
+
+Il secondo, usato per testare le prestazioni dei classificatori binari precedentemente addestrati, consiste in un insieme di fotografie di tursiopi e grampi scattate nel mese di giugno 2018 nei pressi delle \textbf{Isole Azzorre} (Oceano Atlantico settentrionale) dall'associazione TODO.
+Questo dataset contiene in totale 5793 immagini, anche questa volta suddivise in cartelle in base alla data degli scatti.\\
+
+Entrambi i dataset contengono fotografie con una notevole risoluzione. Tuttavia, prendendo visione delle immagini in ciascuno dei due dataset ci si rende subito conto che non tutte contengono pinne dorsali di cetacei: in alcune foto sono totalmente assenti, rendendo lo scatto totalmente privo di contenuto informativo per i biologi.
+Anche laddove le pinne sono presenti, esse possono risultare sfocate o di bassa risoluzione se molto lontane. Infine, in tutte le fotografie sono inevitabilmente ritratti oggetti che non sono "informativi" ai fini dello studio delle sole pinne dorsali quali barche, persone, uccelli, terraferma (paesaggi), porzioni di cielo, boe, lo specchio d'acqua ma anche parti dei cetacei diversi dalla loro pinna dorsale, quali pinne caudali e laterali e la testa degli esemplari.
+
+Si rende perciò necessario filtrare in qualche modo le sole immagini che raffigurano al loro interno pinne dorsali di cetacei. Per far questo, i due dataset sono stati rielaborati attraverso un \textbf{algoritmo di riconoscimento e cropping} delle pinne dorsali, di seguito descritto nelle sue caratteristiche salienti.
+
+TODO spiegare che allora il classificatore binario classifica i ritagli e non le foto intere.
+
+\section{Preprocessing e estrazione di feature dai dataset}
+Per ritagliare ed estrarre dalle immagini originali le sole pinne dorsali, è stata utilizzata la routine \textit{CropFin v1} in linguaggio MATLAB sviluppata dall'ing. Gianvito Losapio \cite{gianvito} sulla base di un precedente lavoro dell'ing. Flavio Forenza \cite{flavio}.
+Si può descrivere la routine in due fasi:
+\begin{enumerate}
+\item Filtraggio e ritaglio adattivo delle regioni delle immagini che possono verosimilmente contenere una pinna
+\item Classificazione di ogni ritaglio ottenuto in due classi "Pinna" e "No Pinna", mediante una rete neurale artificiale creata \textit{ad-hoc}.
+\end{enumerate}
+
+La novità introdotta dal presente lavoro di tesi nel merito del problema di estrazione delle pinne da un'immagine riguarda l'utilizzo di un metodo di classificazione basato sul \textit{transfer learning}. In pratica, quindi, la principale differenza rispetto a CropFin v1 è nella seconda fase della routine: la classificazione avviene con l'utilizzo non più di una rete artificiale creata da zero per il problema in analisi, bensì riutilizzando un insieme di reti neurali profonde addestrate su un diverso problema di classificazione e adattate al nostro task.\\
+
+Al fine di ottenere i ritagli delle pinne, la routine adoperata attua una sequenza di operazioni di preprocessing su ciascuna immagine per poi individuare ed infine ritagliare e salvare separatamente le sole porzioni di immagini che possono eventualmente contenere pinne. Tale sequenza è implementata mediante un ciclo \verb|for| che cicla su ogni immagine del dataset. Di seguito sono descritte brevemente sinteticamente le operazioni, nell'ordine con cui vengono applicate.
+
+TODO inserire immagini in ogni subsection per visualizzare le funzioni utilizzate
+
+\subsection{Descrizione di CropFin v1}
+\subsection*{Ridimensionamento}
+L'immagine è innanzitutto ridimensionata mediante la funzione MATLAB \verb|imresize|, al fine di ottenere una nuova immagine di risoluzione più bassa ($800\times 1200$).
+Questa operazione di preprocessing è stata adottata per diminuire il costo computazionale delle operazioni successive.\footnote{Generalmente, la risoluzione di partenza delle immagini utilizzate è stata $6000\times 4000$, ottenendo una riduzione drastica di pixel del 96\%, da 24 milioni a 960 mila.}
+
+
+\subsection*{CLAHE}
+L'immagine ridimensionata è sottoposta ad una equalizzazione adattiva dell’istogramma a contrasto limitato (CLAHE). Questa operazione consente un miglioramento del contrasto dell'immagine, proprietà utile per migliorare l'efficienza della successiva operazione, la sogliatura dell'immagine secondo il metodo di Otsu.
+
+\subsection*{Segmentazione}
+L'immagine viene segmentata (cioè ogni pixel viene assegnato ad una di due classi: \textit{background} e \textit{foreground}) mediante il metodo di Otsu per la sogliatura automatica \cite{otsu}. Il metodo di Otsu viene usato nella sua versione classica a due livelli, rispetto agli istogrammi dei canali L e b. In particolare, viene applicata la sogliatura secondo Otsu separatamente al canale L e b, cioè calcolate le soglie di Otsu per i due canali, mediante la funzione \verb|multithresh|.
+Avendo a disposizione tali soglie, l’ipotesi avanzata è che le pinne dorsali possono essere
+isolate considerando le regioni di immagine che siano contemporaneamente:
+\begin{itemize}
+\item nella regione più scura del canale L, cioè a sinistra della soglia sul canale L
+\item nella regione contenente il grigio del canale b, cioè a destra della soglia sul canale b
+\end{itemize}
+L'immagine segmentata (binarizzata) finale è ottenuta quindi annerendo quei pixel dell'immagine che non verificano le seguenti condizioni (o, equivalentemente, rendendo bianchi i pixel che le verificano)\footnote{L’idea alla base di questo approccio nasce da una precisa conoscenza del dominio e da
+alcune ipotesi a priori riguardanti il contenuto delle immagini. In particolare, si suppone
+che esse contengano generalmente solo mare (background) e cetacei (foreground),
+e che queste due classi di oggetti contribuiscano alla creazione di due aree distinte e
+separabili degli istogrammi dei canali L e b. Volendo dare un’interpretazione intuitiva,
+si tratta di separare ciò che è grigio e più scuro da ciò che è blu e più chiaro. La scelta
+dello spazio di colori Lab è motivata proprio dalla possibilità di automatizzare questo
+tipo intuitivo di segmentazione.}
+\begin{itemize}
+\item valore della componente L minore della soglia di Otsu sul canale L
+\item valore della componente b maggiore della soglia di Otsu sul canale b
+\end{itemize}
+
+\subsection*{Filtraggio delle regioni connesse}
+L’immagine binaria ottenuta in seguito alla segmentazione viene filtrata in modo che siano scartate quelle regioni binarie connesse (anche dette \textit{blob}) che non presentano caratteristiche tali da poter rappresentare, verosimilmente, una pinna dorsale.
+In particolare vengono utilizzati, consecutivamente due filtri:
+\begin{enumerate}
+
+\item il primo è applicato all'intera immagine binarizzata e serve a migliorare il risultato della sogliatura secondo Otsu.
+Il filtro è configurato per mantenere, nell'ordine, le regioni connesse con le seguenti proprietà:
+\begin{itemize}
+\item prime 15 in ordine decrescente di \verb|Area| (n. di pixel che compongono la regione connessa)
+\item \verb|Area| nel range \verb|[1600, 40000]|
+\item \verb|Extent| nel range \verb|[-Inf, 0.55]| (rapporto tra \verb|Area| e il n. di pixel del più piccolo rettangolo che racchiude l'intera regione connessa, con i lati paralleli a due a due paralleli ai bordi dell'immagine)
+\end{itemize}
+
+\item il secondo è applicato come segue
+\begin{enumerate}
+\item Si ritaglia la foto originale in corrispondenza delle regioni mantenute in seguito all’applicazione del primo filtro, sulla base delle coordinate dei bounding box. Per ottenere ritagli leggermenti più larghi rispetto ai blob, al fine di non perdere eventuali parti della pinna erroneamente anneriti dopo la binarizzazione, ogni dimensione è aumentata del 20\%.
+\item Si applica nuovamente, a ciascun ritaglio ottenuto, la sogliatura basata sul metodo di Otsu. In questo caso è omesso il miglioramento del contrasto mediante CLAHE prima del calcolo dei valori di soglia.
+\item Si introduce a questo punto il secondo filtro, applicato alle regioni binarie ottenute per ciascun ritaglio. L’unico parametro utilizzato in questo caso è il seguente:
+\begin{itemize}
+\item \verb|Area| nel range \verb|[20000, 1000000]|
+\end{itemize}
+con lo scopo di isolare l’eventuale pinna (che rappresenta sicuramente la regione di area maggiore all’interno di ciascun ritaglio) in modo che possa essere sottoposta all’algoritmo di ritaglio adattivo, descritto nella sezione successiva.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{Ritaglio adattivo}
+Le regioni binarie mantenute in seguito alla fase di filtraggio sono sottoposte ad un algoritmo che consente di ottenere un ritaglio preciso in corrispondenza delle pinne.
+Tale operazione si può definire "adattiva" nella misura in cui la regione di ritaglio è ottenuta a partire da precisi punti geometrici calcolati per ciascuna regione binaria.
+Evitando di scendere nei dettagli implementativi e numerici (riportati nel par. 5.1 in \cite{gianvito}), si descrivono nell'ordine le operazioni effettuate sulle singole regioni binarie dall'algoritmo di ritaglio:
+\begin{enumerate}
+\item Si sottopone la regione binaria al riempimento dei cosiddetti \textit{holes}, cioè "buchi" anneriti racchiusi in una regione connessa, mediante la funzione \verb|imfill| con opzione \verb|'holes'|
+\item Si individuano quattro punti di interesse; nell’ordine: punto più in alto, punto medio tra questo ed il centroide, punti di estrema sinistra e destra della regione connessa all’altezza del
+punto medio
+\item Si identifica un rettangolo che racchiuda i punti precedentemente trovati
+\item Si trasla e si estende il rettangolo trovato in modo che contenga l’intera pinna, a seconda della sua orientazione.
+\end{enumerate}
+
+L'output di questa prima fase della routine sono i ritagli di quelle regioni dell'immagine originale che, verosimilmente, ritraggono una pinna dorsale.
+Tuttavia si nota, applicando la routine su un certo numero di immagini e dando una rapida occhiata all'output, che la quantità di regioni estratte che però non contengono pinne risulta, su larga scala, di gran lunga superiore a quello che contiene effettivamente pinne. Questo è ciò che primariamente motiva l’introduzione di una fase di classificazione finale in CropFin v1, che consenta di automatizzare quasi completamente la procedura di object detection.
+
+Come anticipato, in CropFin v1 si decide di effettuare la classificazione binaria "Pinna"/"No Pinna" per mezzo di una rete neurale creata ad-hoc. 
+TODO descrivere l'ensemble learning di Gianvito

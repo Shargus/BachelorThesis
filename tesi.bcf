@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.6" bltxversion="3.13" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.6" bltxversion="3.13a" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -2140,6 +2140,11 @@
     <bcf:citekey order="9">PCA</bcf:citekey>
     <bcf:citekey order="10">dropout</bcf:citekey>
     <bcf:citekey order="11">alexnet</bcf:citekey>
+    <bcf:citekey order="12">gianvito</bcf:citekey>
+    <bcf:citekey order="13">flavio</bcf:citekey>
+    <bcf:citekey order="14">otsu</bcf:citekey>
+    <bcf:citekey order="15">gianvito</bcf:citekey>
+    <bcf:citekey order="16">flavio</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
