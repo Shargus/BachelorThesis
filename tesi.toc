@@ -22,14 +22,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Esperimenti e risultati}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Dataset utilizzati}{15}% 
+\contentsline {section}{\numberline {3.1}Descrizione dei dataset utilizzati}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Descrizione dei dataset}{15}% 
+\contentsline {section}{\numberline {3.2}CropFin v1: pre-processing e estrazione di feature dai dataset}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Preprocessing e estrazione di feature dai dataset}{16}% 
+\contentsline {subsection}{\numberline {3.2.1}Descrizione di CropFin v1}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Descrizione di CropFin v1}{16}% 
+\contentsline {section}{\numberline {3.3}Classificazione mediante CNN e Transfer Learning}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{21}% 
+\contentsline {subsection}{\numberline {3.3.1}Creazione del dataset}{20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{21}% 
+\contentsline {subsection}{\numberline {3.3.2}Addestramento}{21}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusioni}{23}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{23}% 

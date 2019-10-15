@@ -1,41 +1,43 @@
 \chapter{Esperimenti e risultati}\label{esperimenti}
 In questo capitolo vengono presentati gli esperimenti condotti e si analizzano i risultati ottenuti.
 
-\section{Dataset utilizzati}
-\subsection{Descrizione dei dataset}
-Per la conduzione degli esperimenti sono stati adoperati due distinti dataset di immagini.
+\section{Descrizione dei dataset utilizzati}
+\label{dataset}
+Per la conduzione degli esperimenti sono stati adoperati due distinti dataset di immagini, di seguito descritti (TODO descrivere meglio)
 
-Il primo, usato per la fase di addestramento delle reti neurali, è una collezione di fotografie di tursiopi e grampi scattate tra il 2017 e il 2018 nel \textbf{Golfo di Taranto} (mar Ionio Settentrionale). Le fotografie sono state scattate e messe a disposizione dalla \textit{Jonian Dolphin Conservation}, un'associazione di ricerca scientifica privata finalizzata allo studio dei cetacei nel Mar Ionio Settentrionale. Il dataset contiene immagini acquisite in un'area di 14000 km\textsuperscript{2} percorsa su un catamarano seguendo rotte prestabilite. Le macchine fotografiche utilizzate consistono di diversi corpi macchina (reflex) e diversi obiettivi ad essi associati.
+\begin{itemize}
+\item Il primo, usato per la fase di addestramento delle reti neurali, è una collezione di fotografie di tursiopi e grampi scattate tra il 2017 e il 2018 nel \textbf{Golfo di Taranto} (mar Ionio Settentrionale). Le fotografie sono state scattate e messe a disposizione dalla \textit{Jonian Dolphin Conservation}, un'associazione di ricerca scientifica privata finalizzata allo studio dei cetacei nel Mar Ionio Settentrionale. Il dataset contiene immagini acquisite in un'area di 14000 km\textsuperscript{2} percorsa su un catamarano e seguendo rotte prestabilite. Le macchine fotografiche utilizzate consistono di diversi corpi macchina (reflex) e diversi obiettivi ad essi associati.
 Il dataset acquisito contiene in totale TODO immagini, suddivise in cartelle in base alla data degli scatti.
+\item Il secondo, usato per testare le prestazioni dei classificatori binari precedentemente addestrati, consiste in un insieme di fotografie di tursiopi e grampi scattate nel mese di giugno 2018 nei pressi delle \textbf{Isole Azzorre} (Oceano Atlantico settentrionale) dall'associazione TODO.
+Questo dataset contiene in totale 5793 immagini, anche questa volta suddivise in cartelle in base alla data degli scatti.
+\end{itemize}
 
-Il secondo, usato per testare le prestazioni dei classificatori binari precedentemente addestrati, consiste in un insieme di fotografie di tursiopi e grampi scattate nel mese di giugno 2018 nei pressi delle \textbf{Isole Azzorre} (Oceano Atlantico settentrionale) dall'associazione TODO.
-Questo dataset contiene in totale 5793 immagini, anche questa volta suddivise in cartelle in base alla data degli scatti.\\
-
-Entrambi i dataset contengono fotografie con una notevole risoluzione. Tuttavia, prendendo visione delle immagini in ciascuno dei due dataset ci si rende subito conto che non tutte contengono pinne dorsali di cetacei: in alcune foto sono totalmente assenti, rendendo lo scatto totalmente privo di contenuto informativo per i biologi.
+Entrambi i dataset contengono fotografie con una notevole risoluzione TODO. Tuttavia, prendendo visione delle immagini in ciascuno dei due dataset ci si rende subito conto che non tutte contengono pinne dorsali di cetacei: in alcune foto sono totalmente assenti, rendendo lo scatto totalmente privo di contenuto informativo per i biologi.
 Anche laddove le pinne sono presenti, esse possono risultare sfocate o di bassa risoluzione se molto lontane. Infine, in tutte le fotografie sono inevitabilmente ritratti oggetti che non sono "informativi" ai fini dello studio delle sole pinne dorsali quali barche, persone, uccelli, terraferma (paesaggi), porzioni di cielo, boe, lo specchio d'acqua ma anche parti dei cetacei diversi dalla loro pinna dorsale, quali pinne caudali e laterali e la testa degli esemplari.
 
-Si rende perciò necessario filtrare in qualche modo le sole immagini che raffigurano al loro interno pinne dorsali di cetacei. Per far questo, i due dataset sono stati rielaborati attraverso un \textbf{algoritmo di riconoscimento e cropping} delle pinne dorsali, di seguito descritto nelle sue caratteristiche salienti.
+Si rende perciò necessario filtrare in qualche modo le sole immagini che raffigurano al loro interno pinne dorsali di cetacei; è utile inoltre ritagliare da queste immagini filtrate le sole regioni in cui è effettivamente presente una pinna (si vuole cioè isolare l'informazione utile dal resto dal dato originale). Per far questo, i due dataset sono stati rielaborati attraverso un \textbf{algoritmo di riconoscimento e cropping} delle pinne dorsali, di seguito descritto nelle sue caratteristiche salienti.
 
 TODO spiegare che allora il classificatore binario classifica i ritagli e non le foto intere.
 
-\section{Preprocessing e estrazione di feature dai dataset}
+\section{CropFin v1: pre-processing e estrazione di feature dai dataset}
 Per ritagliare ed estrarre dalle immagini originali le sole pinne dorsali, è stata utilizzata la routine \textit{CropFin v1} in linguaggio MATLAB sviluppata dall'ing. Gianvito Losapio \cite{gianvito} sulla base di un precedente lavoro dell'ing. Flavio Forenza \cite{flavio}.
 Si può descrivere la routine in due fasi:
 \begin{enumerate}
-\item Filtraggio e ritaglio adattivo delle regioni delle immagini che possono verosimilmente contenere una pinna
-\item Classificazione di ogni ritaglio ottenuto in due classi "Pinna" e "No Pinna", mediante una rete neurale artificiale creata \textit{ad-hoc}.
+\item Segmentazione, filtraggio e ritaglio adattivo delle regioni delle immagini che possono verosimilmente contenere una pinna
+\item Classificazione di ogni ritaglio ottenuto in due classi 'Pinna' e 'No Pinna', mediante una rete neurale artificiale creata \textit{ad-hoc}.
 \end{enumerate}
 
-La novità introdotta dal presente lavoro di tesi nel merito del problema di estrazione delle pinne da un'immagine riguarda l'utilizzo di un metodo di classificazione basato sul \textit{transfer learning}. In pratica, quindi, la principale differenza rispetto a CropFin v1 è nella seconda fase della routine: la classificazione avviene con l'utilizzo non più di una rete artificiale creata da zero per il problema in analisi, bensì riutilizzando un insieme di reti neurali profonde addestrate su un diverso problema di classificazione e adattate al nostro task.\\
+La novità introdotta dal presente lavoro di tesi in merito al problema di estrazione delle pinne da un'immagine riguarda l'utilizzo di un metodo di classificazione basato sul \textit{transfer learning}. In pratica, quindi, la principale differenza rispetto a CropFin v1 è nella seconda fase della routine: la classificazione avviene con l'utilizzo non più di una rete artificiale creata da zero per il problema in analisi, bensì riutilizzando un insieme di reti neurali profonde addestrate su un diverso problema di classificazione e adattate al nostro task. Questo nuovo modello è descritto dettagliatamente nel par. \ref{esperimentoTL}.\\
 
-Al fine di ottenere i ritagli delle pinne, la routine adoperata attua una sequenza di operazioni di preprocessing su ciascuna immagine per poi individuare ed infine ritagliare e salvare separatamente le sole porzioni di immagini che possono eventualmente contenere pinne. Tale sequenza è implementata mediante un ciclo \verb|for| che cicla su ogni immagine del dataset. Di seguito sono descritte brevemente sinteticamente le operazioni, nell'ordine con cui vengono applicate.
+Al fine di ottenere i ritagli delle pinne, la routine adoperata attua una sequenza di operazioni di preprocessing su ciascuna immagine per poi individuare ed infine ritagliare e salvare separatamente le sole porzioni di immagini che possono eventualmente contenere pinne. Tale sequenza è implementata mediante un ciclo \verb|for| che cicla su ogni immagine del dataset. Di seguito sono descritte sinteticamente le operazioni, nell'ordine in cui vengono applicate.
 
 TODO inserire immagini in ogni subsection per visualizzare le funzioni utilizzate
 
 \subsection{Descrizione di CropFin v1}
+\label{descrizioneCropFin}
 \subsection*{Ridimensionamento}
 L'immagine è innanzitutto ridimensionata mediante la funzione MATLAB \verb|imresize|, al fine di ottenere una nuova immagine di risoluzione più bassa ($800\times 1200$).
-Questa operazione di preprocessing è stata adottata per diminuire il costo computazionale delle operazioni successive.\footnote{Generalmente, la risoluzione di partenza delle immagini utilizzate è stata $6000\times 4000$, ottenendo una riduzione drastica di pixel del 96\%, da 24 milioni a 960 mila.}
+Questa operazione di preprocessing è stata adottata per diminuire il costo computazionale delle operazioni successive.\footnote{La risoluzione di partenza delle immagini utilizzate è stata $6000\times 4000$, ottenendo una riduzione drastica di pixel del 96\%, da 24 milioni a 960 mila.}
 
 
 \subsection*{CLAHE}
@@ -99,8 +101,77 @@ punto medio
 \item Si trasla e si estende il rettangolo trovato in modo che contenga l’intera pinna, a seconda della sua orientazione.
 \end{enumerate}
 
-L'output di questa prima fase della routine sono i ritagli di quelle regioni dell'immagine originale che, verosimilmente, ritraggono una pinna dorsale.
-Tuttavia si nota, applicando la routine su un certo numero di immagini e dando una rapida occhiata all'output, che la quantità di regioni estratte che però non contengono pinne risulta, su larga scala, di gran lunga superiore a quello che contiene effettivamente pinne. Questo è ciò che primariamente motiva l’introduzione di una fase di classificazione finale in CropFin v1, che consenta di automatizzare quasi completamente la procedura di object detection.
+L'output di questa prima fase della routine sono i ritagli di quelle regioni dell'immagine originale che, verosimilmente, ritraggono una pinna dorsale. Questa ipotesi sul contenuto dei ritagli è sostenuta solamente sulla base del processo di segmentazione e filtraggio appena descritto.
 
-Come anticipato, in CropFin v1 si decide di effettuare la classificazione binaria "Pinna"/"No Pinna" per mezzo di una rete neurale creata ad-hoc. 
-TODO descrivere l'ensemble learning di Gianvito
+La routine CropFin v1, nella sua prima fase di ritaglio adattivo, è stata applicata ai dataset degli scatti di Taranto e delle Azzorre. In tabella \ref{risultatiCrop} è riportato il numero di ritagli (\textit{crops}) prodotti da CropFin v1 con input i dataset sopracitati.
+
+\begin{table}[h]
+
+  \centering
+  \begin{tabular}{c c c c c}
+  \hline
+  Dataset&N. foto&N. crop&di cui 'Pinna'&di cui 'No Pinna'\\
+  \hline
+  Taranto&10194&15228&4033&11195\\
+  Azzorre&11290&20395& TODO & TODO \\
+  \hline
+  \end{tabular}
+  
+  \caption{Output della prima fase di CropFin v1}
+  \label{risultatiCrop}
+
+\end{table}
+
+\subsection*{Classificazione mediante rete ad hoc}
+È evidente da una rapida ispezione dell'output che la quantità di regioni estratte che però non contengono pinne risulta, su larga scala, superiore a quello che contiene effettivamente pinne. Numericamente questo fatto è evidenziato in tab. \ref{risultatiCrop}, dopo una fase di etichettatura a mano dei ritagli prodotti, nelle classi 'Pinna' e 'No Pinna' (spiegata nel seguito del paragrafo).
+
+Questa osservazione è ciò che primariamente motiva l’introduzione di una fase di classificazione finale in CropFin v1, che consenta di automatizzare completamente la procedura di object detection.
+
+Come anticipato, in CropFin v1 si decide di effettuare la classificazione binaria 'Pinna'/'No Pinna' per mezzo di una rete neurale creata ad-hoc. In particolare, CropFin v1 prevede l'utilizzo di cinque classificatori binari, addestrati con la tecnica della \textit{5-fold cross-validation}\footnote{Si rimanda al par. \ref{crossval} per i dettagli implementativi della tecnica \textit{k-fold cross-validation}}
+sui ritagli restituiti da CropFin v1 sul solo dataset con gli scatti di Taranto (descritto in \ref{dataset}).
+
+Per consentire l'addestramento del classificatore si è reso necessario un lavoro di etichettatura manuale dei 15228 ritagli, attribuendo a ciascuno la classe 'Pinna' e 'No Pinna'. I risultati di questa etichettatura manuale sono presenti nella tab. \ref{risultatiCrop}.
+Si precisa che, nella fase di etichettatura manuale, sono stati attribuiti alla classe 'Pinna' tutti e soli i ritagli contenenti una sola pinna in primo piano, intera o leggermente tagliata, escludendo invece quelli con pinne multiple e quelli con una presenza preponderante del dorso dei delfini. I ritagli con tali caratteristiche, infatti, sono considerati maggiormente affidabili ai fini di una successiva foto-identificazione automatica delle pinne (ad esempio con il metodo basato sul metodo \textit{SIFT} sviluppato e descritto in \cite{emanuele}). Inoltre, questa scelta è stata anche motivata dall’intenzione di creare un "concetto univoco" utile a semplificare sia la selezione manuale sia l’apprendimento del classificatore.
+
+Le cinque reti risultanti lavorano in sinergia per classificare ciascun ritaglio, utilizzando un metodo di \textit{major voting} (par. \ref{ensemble}) "ibrido", che rende la classificazione finale ternaria: se le classificazioni 'Pinna' prodotte dalle cinque reti
+\begin{itemize}
+\item sono maggiori o uguali a 4, la classificazione finale è 'Pinna'
+\item sono pari a 2 o 3, la classificazione finale è 'Incerta'
+\item sono minori o uguali a 1, la classificazione finale è 'No Pinna'
+\end{itemize}
+L'analisi delle prestazioni di questo tipo di classificazione è descritta nel par. 4.5 di \cite{gianvito}.\footnote{Qualora fosse necessario attenersi a un problema di classificazione strettamente binario, ad esempio per effettuare un confronto con altri metodi di classificazione binaria per il problema in esame, si possono ad esempio ricondurre i ritagli di classe 'Incerta' alla classe 'No Pinna'. Questa è la scelta effettuata nel par. TODO per il confronto}
+
+
+
+TODO dopo quando faccio il confronto con la rete di Gianvito sui 500 campioni devo scrivere "Per consentire il confronto del classificatore \textit{ensemble} di CropFin descritto nel par. \ref{classCropFin} e il classificatore \textit{ensemble} creato nel presente lavoro di tesi si è scelto di ritenere le pinne 'Incerta' come 'No Pinna'."
+
+\section{Classificazione mediante CNN e Transfer Learning}
+\label{esperimentoTL}
+Nel par. \ref{transferlearning} sono stati descritti molteplici motivazioni per le quali per risolvere un problema di classificazione (in particolare di \textit{image captioning}) può essere meglio usare la tecnica del \textit{transfer learning}, adattando al task in esame una rete neurale pre-addestrata piuttosto che creare una rete da zero.
+Il nucleo principale di questo lavoro di tesi è quindi dedicato alla creazione di un nuovo modello di classificazione, basato su \textit{transfer learning}, che possa migliorare la fase di classificazione di CropFin v1. Questi "miglioramenti" sono da valutare con rigore ingegneristico sulla base di alcuni parametri, che consentono un confronto di prestazioni con il classificatore di CropFin v1; l'analisi delle prestazioni e quindi il confronto è svolto nel par. \ref{prestazioni}.
+
+\subsection{Creazione del dataset}
+\label{creazioneDataset}
+Il dataset utilizzato per l'addestramento del nuovo classificatore binario è lo stesso usato in \cite{gianvito} per l'addestramento del classificatore di CropFin v1 composto dai ritagli, opportunamente etichettati a mano, prodotti a partire dagli scatti collezionati nel Golfo di Taranto.
+
+\subsection{Addestramento}
+Sono state riutilizzate ed adattate mediante la tecnica del \textit{transfer learning} quattro reti neurali convoluzionali (\textit{CNN}) sviluppate nell'ambito della \textit{ImageNet Large Scale Visual Recognition Challenge (ILSVRC)} ed addestrate sul dataset ImageNet (par. \ref{imagenet}). Esse sono di seguito elencate e, per ciascuna, ne viene motivata la scelta.
+
+\begin{itemize}
+
+\item \textbf{AlexNet} (par. \ref{alexnet})\\
+La sua vittoria nella \textit{ILSVRC 2012} con un grado di accuratezza del 16.4\% ha di fatto dimostrato alla comunità scientifica la straordinaria efficienza delle reti neurali convoluzionali nell'ambito dei problemi di \textit{computer vision}.
+
+\item \textbf{GoogLeNet} (par. \ref{googlenet})\\
+Grazie all'introduzione del modulo \textit{Inception}, GoogLeNet è una rete profonda ma incredibilmente leggera e semplice da addestrare, se paragonata alle precedenti reti fino ad allora esistenti (tra tutte, AlexNet).
+
+\item \textbf{ResNet-18} (par. \ref{resnet})\\
+ResNet rappresenta lo stato dell'arte nell'ambito delle reti neurali convoluzionali; l'introduzione dei \textit{residual blocks} ha permesso di avere reti con un grandissimo numero di layer, attenuando di molto i problemi legati all'estrema profondità dell'architettura.
+
+\item \textbf{ResNet-50} (par. \ref{resnet})\\
+Una variante di ResNet-18, più profonda e con migliori prestazioni sul dataset \textit{ImageNet}.
+
+\end{itemize}
+
+
+
