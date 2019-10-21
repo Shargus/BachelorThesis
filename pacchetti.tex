@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{indentfirst}
 \usepackage{fancyhdr}
+\usepackage[titletoc]{appendix} %appendici
 
 % per far vedere le etichette, da togliere quando si deve stampare
 %\usepackage{showkeys}
@@ -29,15 +30,20 @@
 
 % per le immagini
 \usepackage{graphicx}
-\graphicspath{{img/}}
+\graphicspath{{img/}{img_esperimenti/}{img_appendice/}{img_esperimenti/foto_azzorre/}{img_esperimenti/foto_taranto/}{img_introduzione/}}
+\usepackage{subcaption}
+
 
 % per le tabelle
-\usepackage{caption}
+\usepackage{caption} %vale anche per le immagini
+\captionsetup{aboveskip=10pt}
+\captionsetup{belowskip=0pt}
 \captionsetup[table]{position=bottom}
 \usepackage{tabularx, booktabs}
 \newcommand{\acapo}[1]{%
   \begin{tabular}{@{}c@{}}\strut#1\strut\end{tabular}%
 }
+\usepackage{adjustbox}
 
 % per il codice sorgente
 \usepackage{verbatim}
@@ -46,4 +52,5 @@
 \usepackage[autostyle, italian=guillemets]{csquotes}
 \usepackage[backend=biber, style=numeric-comp, babel=hyphen, sorting=none]{biblatex}
 \usepackage{url}
+\usepackage{fancyvrb}
 \addbibresource{biblio_tesi.bib}

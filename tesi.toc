@@ -24,16 +24,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Descrizione dei dataset utilizzati}{15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}CropFin v1: pre-processing e estrazione di feature dai dataset}{16}% 
+\contentsline {section}{\numberline {3.2}CropFin v1}{16}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Descrizione di CropFin v1}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Classificazione mediante CNN e Transfer Learning}{20}% 
+\contentsline {section}{\numberline {3.3}Classificazione mediante CNN e Transfer Learning}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Creazione del dataset}{20}% 
+\contentsline {subsection}{\numberline {3.3.1}Creazione del dataset}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Addestramento}{21}% 
+\contentsline {subsection}{\numberline {3.3.2}Scelta delle CNN}{24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{23}% 
+\contentsline {subsection}{\numberline {3.3.3}Addestramento}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{23}% 
+\contentsline {subsection}{\numberline {3.3.4}Classificatore ensemble}{30}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendice Figure}{33}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Addestramento delle CNN mediante transfer learning e calcolo delle prestazioni}{34}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.1}AlexNet}{34}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.2}GoogLeNet}{35}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.3}ResNet-18}{36}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.4}ResNet-50}{37}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1.5}Ensemble (Alexnet + GoogLeNet + ResNet-18)}{38}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Conclusioni}{33}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{39}% 

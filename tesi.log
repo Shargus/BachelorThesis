@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.9.13)  15 OCT 2019 19:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.9.13)  21 OCT 2019 02:56
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -92,6 +92,11 @@ s
 \f@nch@O@erf=\skip49
 \f@nch@O@olf=\skip50
 \f@nch@O@orf=\skip51
+) (appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count95
+\c@@ppsavesec=\count96
+\c@@ppsaveapp=\count97
 )
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
 y"
@@ -119,13 +124,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 "
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count95
+\inf@bad=\count98
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count96
-\leftroot@=\count97
+\uproot@=\count99
+\leftroot@=\count100
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count98
-\DOTSCASE@=\count99
+\classnum@=\count101
+\DOTSCASE@=\count102
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
@@ -134,15 +139,15 @@ LaTeX Info: Redefining \cdots on input line 606.
 \big@size=\dimen106
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count100
-\c@MaxMatrixCols=\count101
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
 \dotsspace@=\muskip10
-\c@parentequation=\count102
-\dspbrk@lvl=\count103
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
 \tag@help=\toks17
-\row@=\count104
-\column@=\count105
-\maxfields@=\count106
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
 \andhelp@=\toks18
 \eqnshift@=\dimen107
 \alignsep@=\dimen108
@@ -197,9 +202,9 @@ Package ifvtex Info: VTeX not detected.
 sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count107
-\Gm@cntv=\count108
-\c@Gm@tempcnt=\count109
+\Gm@cnth=\count110
+\Gm@cntv=\count111
+\c@Gm@tempcnt=\count112
 \Gm@bindingoffset=\dimen113
 \Gm@wd@mp=\dimen114
 \Gm@odd@mp=\dimen115
@@ -271,6 +276,10 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \openout3 = `tesi-frn.tex'.
 
 )
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption
+.sty"
+Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
+
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
 y"
 Package: caption 2019/09/01 v3.3d Customizing captions (AR)
@@ -287,8 +296,11 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen128
 \caption@hangindent=\dimen129
 )
-\c@caption@flags=\count110
-\c@ContinuedFloat=\count111
+\c@caption@flags=\count113
+\c@ContinuedFloat=\count114
+)
+\c@subfigure=\count115
+\c@subtable=\count116
 )
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\tabularx.sty
 "
@@ -308,7 +320,7 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \TX@old@col=\dimen134
 \TX@target=\dimen135
 \TX@delta=\dimen136
-\TX@cols=\count112
+\TX@cols=\count117
 \TX@ftn=\toks25
 )
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.
@@ -324,31 +336,95 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen144
 \cmidrulekern=\dimen145
 \defaultaddspace=\dimen146
-\@cmidla=\count113
-\@cmidlb=\count114
+\@cmidla=\count118
+\@cmidlb=\count119
 \@aboverulesep=\dimen147
 \@belowrulesep=\dimen148
-\@thisruleclass=\count115
-\@lastruleclass=\count116
+\@thisruleclass=\count120
+\@lastruleclass=\count121
 \@thisrulewidth=\dimen149
 )
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\adjustbo
+x.sty"
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.st
+y"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.
+tex"
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils
+.tex"
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+)
+\XKV@depth=\count122
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\adjcalc.
+sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\trimclip
+.sty"
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/collectbox\collect
+box.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box33
+)
+\tc@llx=\dimen150
+\tc@lly=\dimen151
+\tc@urx=\dimen152
+\tc@ury=\dimen153
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\tc-pdfte
+x.def"
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen154
+\adjbox@Height=\dimen155
+\adjbox@Depth=\dimen156
+\adjbox@Totalheight=\dimen157
+\adjbox@pwidth=\dimen158
+\adjbox@pheight=\dimen159
+\adjbox@pdepth=\dimen160
+\adjbox@ptotalheight=\dimen161
+
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifoddpage\ifoddpag
+e.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count123
+)
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/varwidth\varwidth.
+sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box34
+\sift@deathcycles=\count124
+\@vwid@loff=\dimen162
+\@vwid@roff=\dimen163
+))
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.sty
 "
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks26
-\verbatim@line=\toks27
+\every@verbatim=\toks28
+\verbatim@line=\toks29
 \verbatim@in@stream=\read1
 )
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquotes.
 sty"
 Package: csquotes 2019/05/10 v5.2e context-sensitive quotations (JAW)
-\csq@reset=\count117
-\csq@gtype=\count118
-\csq@glevel=\count119
-\csq@qlevel=\count120
-\csq@maxlvl=\count121
-\csq@tshold=\count122
-\csq@ltx@everypar=\toks28
+\csq@reset=\count125
+\csq@gtype=\count126
+\csq@glevel=\count127
+\csq@qlevel=\count128
+\csq@maxlvl=\count129
+\csq@tshold=\count130
+\csq@ltx@everypar=\toks30
 
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquotes.
 def"
@@ -397,7 +473,7 @@ Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 )))
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count123
+\lrq@indent=\count131
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
@@ -407,47 +483,47 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count124
-\c@listtotal=\count125
-\c@listcount=\count126
-\c@liststart=\count127
-\c@liststop=\count128
-\c@citecount=\count129
-\c@citetotal=\count130
-\c@multicitecount=\count131
-\c@multicitetotal=\count132
-\c@instcount=\count133
-\c@maxnames=\count134
-\c@minnames=\count135
-\c@maxitems=\count136
-\c@minitems=\count137
-\c@citecounter=\count138
-\c@maxcitecounter=\count139
-\c@savedcitecounter=\count140
-\c@uniquelist=\count141
-\c@uniquename=\count142
-\c@refsection=\count143
-\c@refsegment=\count144
-\c@maxextratitle=\count145
-\c@maxextratitleyear=\count146
-\c@maxextraname=\count147
-\c@maxextradate=\count148
-\c@maxextraalpha=\count149
-\c@abbrvpenalty=\count150
-\c@highnamepenalty=\count151
-\c@lownamepenalty=\count152
-\c@maxparens=\count153
-\c@parenlevel=\count154
-\blx@tempcnta=\count155
-\blx@tempcntb=\count156
-\blx@tempcntc=\count157
-\blx@maxsection=\count158
-\blx@maxsegment@0=\count159
-\blx@notetype=\count160
-\blx@parenlevel@text=\count161
-\blx@parenlevel@foot=\count162
-\blx@sectionciteorder@0=\count163
-\blx@entrysetcounter=\count164
+\c@tabx@nest=\count132
+\c@listtotal=\count133
+\c@listcount=\count134
+\c@liststart=\count135
+\c@liststop=\count136
+\c@citecount=\count137
+\c@citetotal=\count138
+\c@multicitecount=\count139
+\c@multicitetotal=\count140
+\c@instcount=\count141
+\c@maxnames=\count142
+\c@minnames=\count143
+\c@maxitems=\count144
+\c@minitems=\count145
+\c@citecounter=\count146
+\c@maxcitecounter=\count147
+\c@savedcitecounter=\count148
+\c@uniquelist=\count149
+\c@uniquename=\count150
+\c@refsection=\count151
+\c@refsegment=\count152
+\c@maxextratitle=\count153
+\c@maxextratitleyear=\count154
+\c@maxextraname=\count155
+\c@maxextradate=\count156
+\c@maxextraalpha=\count157
+\c@abbrvpenalty=\count158
+\c@highnamepenalty=\count159
+\c@lownamepenalty=\count160
+\c@maxparens=\count161
+\c@parenlevel=\count162
+\blx@tempcnta=\count163
+\blx@tempcntb=\count164
+\blx@tempcntc=\count165
+\blx@maxsection=\count166
+\blx@maxsegment@0=\count167
+\blx@notetype=\count168
+\blx@parenlevel@text=\count169
+\blx@parenlevel@foot=\count170
+\blx@sectionciteorder@0=\count171
+\blx@entrysetcounter=\count172
 \labelnumberwidth=\skip57
 \labelalphawidth=\skip58
 \biblabelsep=\skip59
@@ -459,9 +535,9 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read2
 \blx@bcfout=\write4
 \blx@langwohyphens=\language82
-\c@mincomprange=\count165
-\c@maxcomprange=\count166
-\c@mincompwidth=\count167
+\c@mincomprange=\count173
+\c@maxcomprange=\count174
+\c@mincompwidth=\count175
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -473,74 +549,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric-comp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count168
-\c@savedafterword=\count169
-\c@annotator=\count170
-\c@savedannotator=\count171
-\c@author=\count172
-\c@savedauthor=\count173
-\c@bookauthor=\count174
-\c@savedbookauthor=\count175
-\c@commentator=\count176
-\c@savedcommentator=\count177
-\c@editor=\count178
-\c@savededitor=\count179
-\c@editora=\count180
-\c@savededitora=\count181
-\c@editorb=\count182
-\c@savededitorb=\count183
-\c@editorc=\count184
-\c@savededitorc=\count185
-\c@foreword=\count186
-\c@savedforeword=\count187
-\c@holder=\count188
-\c@savedholder=\count189
-\c@introduction=\count190
-\c@savedintroduction=\count191
-\c@namea=\count192
-\c@savednamea=\count193
-\c@nameb=\count194
-\c@savednameb=\count195
-\c@namec=\count196
-\c@savednamec=\count197
-\c@translator=\count198
-\c@savedtranslator=\count199
-\c@shortauthor=\count266
-\c@savedshortauthor=\count267
-\c@shorteditor=\count268
-\c@savedshorteditor=\count269
-\c@labelname=\count270
-\c@savedlabelname=\count271
-\c@institution=\count272
-\c@savedinstitution=\count273
-\c@lista=\count274
-\c@savedlista=\count275
-\c@listb=\count276
-\c@savedlistb=\count277
-\c@listc=\count278
-\c@savedlistc=\count279
-\c@listd=\count280
-\c@savedlistd=\count281
-\c@liste=\count282
-\c@savedliste=\count283
-\c@listf=\count284
-\c@savedlistf=\count285
-\c@location=\count286
-\c@savedlocation=\count287
-\c@organization=\count288
-\c@savedorganization=\count289
-\c@origlocation=\count290
-\c@savedoriglocation=\count291
-\c@origpublisher=\count292
-\c@savedorigpublisher=\count293
-\c@publisher=\count294
-\c@savedpublisher=\count295
-\c@language=\count296
-\c@savedlanguage=\count297
-\c@origlanguage=\count298
-\c@savedoriglanguage=\count299
-\c@pageref=\count300
-\c@savedpageref=\count301
+\c@afterword=\count176
+\c@savedafterword=\count177
+\c@annotator=\count178
+\c@savedannotator=\count179
+\c@author=\count180
+\c@savedauthor=\count181
+\c@bookauthor=\count182
+\c@savedbookauthor=\count183
+\c@commentator=\count184
+\c@savedcommentator=\count185
+\c@editor=\count186
+\c@savededitor=\count187
+\c@editora=\count188
+\c@savededitora=\count189
+\c@editorb=\count190
+\c@savededitorb=\count191
+\c@editorc=\count192
+\c@savededitorc=\count193
+\c@foreword=\count194
+\c@savedforeword=\count195
+\c@holder=\count196
+\c@savedholder=\count197
+\c@introduction=\count198
+\c@savedintroduction=\count199
+\c@namea=\count266
+\c@savednamea=\count267
+\c@nameb=\count268
+\c@savednameb=\count269
+\c@namec=\count270
+\c@savednamec=\count271
+\c@translator=\count272
+\c@savedtranslator=\count273
+\c@shortauthor=\count274
+\c@savedshortauthor=\count275
+\c@shorteditor=\count276
+\c@savedshorteditor=\count277
+\c@labelname=\count278
+\c@savedlabelname=\count279
+\c@institution=\count280
+\c@savedinstitution=\count281
+\c@lista=\count282
+\c@savedlista=\count283
+\c@listb=\count284
+\c@savedlistb=\count285
+\c@listc=\count286
+\c@savedlistc=\count287
+\c@listd=\count288
+\c@savedlistd=\count289
+\c@liste=\count290
+\c@savedliste=\count291
+\c@listf=\count292
+\c@savedlistf=\count293
+\c@location=\count294
+\c@savedlocation=\count295
+\c@organization=\count296
+\c@savedorganization=\count297
+\c@origlocation=\count298
+\c@savedoriglocation=\count299
+\c@origpublisher=\count300
+\c@savedorigpublisher=\count301
+\c@publisher=\count302
+\c@savedpublisher=\count303
+\c@language=\count304
+\c@savedlanguage=\count305
+\c@origlanguage=\count306
+\c@savedoriglanguage=\count307
+\c@pageref=\count308
+\c@savedpageref=\count309
 \shorthandwidth=\skip65
 \shortjournalwidth=\skip66
 \shortserieswidth=\skip67
@@ -568,19 +644,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
 def"
 File: biblatex.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
-\c@textcitecount=\count302
-\c@textcitetotal=\count303
-\c@textcitemaxnames=\count304
-\c@biburlbigbreakpenalty=\count305
-\c@biburlbreakpenalty=\count306
-\c@biburlnumpenalty=\count307
-\c@biburlucpenalty=\count308
-\c@biburllcpenalty=\count309
+\c@textcitecount=\count310
+\c@textcitetotal=\count311
+\c@textcitemaxnames=\count312
+\c@biburlbigbreakpenalty=\count313
+\c@biburlbreakpenalty=\count314
+\c@biburlnumpenalty=\count315
+\c@biburlucpenalty=\count316
+\c@biburllcpenalty=\count317
 \biburlbigskip=\muskip12
 \biburlnumskip=\muskip13
 \biburlucskip=\muskip14
 \biburllcskip=\muskip15
-\c@smartand=\count310
+\c@smartand=\count318
 )
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
@@ -600,8 +676,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\stand
 ard.bbx"
 File: standard.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count311
-\c@bbx:relatedtotal=\count312
+\c@bbx:relatedcount=\count319
+\c@bbx:relatedtotal=\count320
 )))
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
@@ -609,8 +685,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\numer
 ic-comp.cbx"
 File: numeric-comp.cbx 2019/08/31 v3.13a biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count313
-\c@cbx@tempcntb=\count314
+\c@cbx@tempcnta=\count321
+\c@cbx@tempcntb=\count322
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -634,6 +710,17 @@ File: biblatex.cfg
 Package biblatex Warning: 'babel' option is deprecated.
 (biblatex)                Please use 'autolang' instead.
 
+)
+("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvrb\fancyvrb.
+sty"
+Package: fancyvrb 2019/01/15
+ Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
+\FV@CodeLineNo=\count323
+\FV@InFile=\read3
+\FV@TabBox=\box35
+\c@FancyVerbLine=\count324
+\FV@StepNumber=\count325
+\FV@OutFile=\write5
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -651,7 +738,7 @@ Package biblatex Info: ... file 'english.lbx' found.
 sh.lbx"
 File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 ) (tesi.aux (introduzione.aux) (teoria.aux) (alexnet.aux) (googlenet.aux) (espe
-rimenti.aux) (conclusioni.aux))
+rimenti.aux) (conclusioni.aux) (appendice.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -707,17 +794,17 @@ LaTeX Info: Redefining \it@ccap on input line 18.
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count315
-\scratchdimen=\dimen150
-\scratchbox=\box33
-\nofMPsegments=\count316
-\nofMParguments=\count317
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count318
-\MPscratchDim=\dimen151
-\MPnumerator=\count319
-\makeMPintoPDFobject=\count320
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count326
+\scratchdimen=\dimen164
+\scratchbox=\box36
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen165
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks32
 )
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
 base.sty"
@@ -738,7 +825,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\AtBeginShipoutBox=\box34
+\AtBeginShipoutBox=\box37
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -780,8 +867,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-\tf@toc=\write5
-\openout5 = `tesi.toc'.
+\tf@toc=\write6
+\openout6 = `tesi.toc'.
 
  [5] [6
 
@@ -941,21 +1028,407 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  (esperimenti.tex
 Capitolo 3.
+
+LaTeX Warning: Reference `contesto' on page 15 undefined on input line 10.
+
+
+LaTeX Warning: Reference `contesto' on page 15 undefined on input line 13.
+
 [15
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+<img_esperimenti/foto_taranto/t1.jpg, id=133, 1445.4pt x 963.6pt>
+File: img_esperimenti/foto_taranto/t1.jpg Graphic file (type jpg)
+<use img_esperimenti/foto_taranto/t1.jpg>
+Package pdftex.def Info: img_esperimenti/foto_taranto/t1.jpg  used on input lin
+e 25.
+(pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
+<img_esperimenti/foto_taranto/t2.jpg, id=134, 1445.4pt x 963.6pt>
+File: img_esperimenti/foto_taranto/t2.jpg Graphic file (type jpg)
+<use img_esperimenti/foto_taranto/t2.jpg>
+Package pdftex.def Info: img_esperimenti/foto_taranto/t2.jpg  used on input lin
+e 27.
+(pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
+<img_esperimenti/foto_taranto/t3.jpg, id=135, 5203.44pt x 3468.96pt>
+File: img_esperimenti/foto_taranto/t3.jpg Graphic file (type jpg)
+<use img_esperimenti/foto_taranto/t3.jpg>
+Package pdftex.def Info: img_esperimenti/foto_taranto/t3.jpg  used on input lin
+e 29.
+(pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
+<img_esperimenti/foto_taranto/t6.jpg, id=136, 1445.4pt x 963.6pt>
+File: img_esperimenti/foto_taranto/t6.jpg Graphic file (type jpg)
+<use img_esperimenti/foto_taranto/t6.jpg>
+Package pdftex.def Info: img_esperimenti/foto_taranto/t6.jpg  used on input lin
+e 31.
+(pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
+<img_esperimenti/foto_azzorre/a1.jpg, id=137, 1445.4pt x 963.6pt>
+File: img_esperimenti/foto_azzorre/a1.jpg Graphic file (type jpg)
+<use img_esperimenti/foto_azzorre/a1.jpg>
+Package pdftex.def Info: img_esperimenti/foto_azzorre/a1.jpg  used on input lin
+e 38.
+(pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
+<img_esperimenti/foto_azzorre/a2.jpg, id=138, 1445.4pt x 963.6pt>
+File: img_esperimenti/foto_azzorre/a2.jpg Graphic file (type jpg)
+<use img_esperimenti/foto_azzorre/a2.jpg>
+Package pdftex.def Info: img_esperimenti/foto_azzorre/a2.jpg  used on input lin
+e 40.
+(pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
+<img_esperimenti/foto_azzorre/a3.jpg, id=139, 1445.4pt x 963.6pt>
+File: img_esperimenti/foto_azzorre/a3.jpg Graphic file (type jpg)
+<use img_esperimenti/foto_azzorre/a3.jpg>
+Package pdftex.def Info: img_esperimenti/foto_azzorre/a3.jpg  used on input lin
+e 42.
+(pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
+<img_esperimenti/foto_azzorre/a4.jpg, id=140, 1445.4pt x 963.6pt>
+File: img_esperimenti/foto_azzorre/a4.jpg Graphic file (type jpg)
+<use img_esperimenti/foto_azzorre/a4.jpg>
+Package pdftex.def Info: img_esperimenti/foto_azzorre/a4.jpg  used on input lin
+e 44.
+(pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+[16 <./img_esperimenti/foto_taranto/t1.jpg> <./img_esperimenti/foto_taranto/t2.
+jpg> <./img_esperimenti/foto_taranto/t3.jpg> <./img_esperimenti/foto_taranto/t6
+.jpg> <./img_esperimenti/foto_azzorre/a1.jpg> <./img_esperimenti/foto_azzorre/a
+2.jpg> <./img_esperimenti/foto_azzorre/a3.jpg> <./img_esperimenti/foto_azzorre/
+a4.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+
+ []
+
+<img_esperimenti/immagineDaProcessare.png, id=145, 693.18974pt x 461.92575pt>
+File: img_esperimenti/immagineDaProcessare.png Graphic file (type png)
+<use img_esperimenti/immagineDaProcessare.png>
+Package pdftex.def Info: img_esperimenti/immagineDaProcessare.png  used on inpu
+t line 79.
+(pdftex.def)             Requested size: 202.72849pt x 135.08983pt.
+File: img_esperimenti/immagineDaProcessare.png Graphic file (type png)
+<use img_esperimenti/immagineDaProcessare.png>
+Package pdftex.def Info: img_esperimenti/immagineDaProcessare.png  used on inpu
+t line 84.
+(pdftex.def)             Requested size: 40.54507pt x 27.01656pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+[17 <./img_esperimenti/immagineDaProcessare.png>]
+<img_esperimenti/primaClahe.jpg, id=150, 380.16pt x 170.676pt>
+File: img_esperimenti/primaClahe.jpg Graphic file (type jpg)
+<use img_esperimenti/primaClahe.jpg>
+Package pdftex.def Info: img_esperimenti/primaClahe.jpg  used on input line 103
+.
+(pdftex.def)             Requested size: 179.25157pt x 80.47554pt.
+<img_esperimenti/dopoClahe.jpg, id=151, 380.16pt x 170.676pt>
+File: img_esperimenti/dopoClahe.jpg Graphic file (type jpg)
+<use img_esperimenti/dopoClahe.jpg>
+Package pdftex.def Info: img_esperimenti/dopoClahe.jpg  used on input line 108.
+
+(pdftex.def)             Requested size: 179.25157pt x 80.47554pt.
+<img_esperimenti/primaOtsu.jpg, id=152, 225.522pt x 148.896pt>
+File: img_esperimenti/primaOtsu.jpg Graphic file (type jpg)
+<use img_esperimenti/primaOtsu.jpg>
+Package pdftex.def Info: img_esperimenti/primaOtsu.jpg  used on input line 145.
+
+(pdftex.def)             Requested size: 162.1777pt x 107.07552pt.
+<img_esperimenti/dopoOtsu.jpg, id=153, 252.83965pt x 168.55977pt>
+File: img_esperimenti/dopoOtsu.jpg Graphic file (type jpg)
+<use img_esperimenti/dopoOtsu.jpg>
+Package pdftex.def Info: img_esperimenti/dopoOtsu.jpg  used on input line 149.
+(pdftex.def)             Requested size: 162.1777pt x 108.12221pt.
+<img_esperimenti/otsu.jpg, id=154, 168.80583pt x 173.37767pt>
+File: img_esperimenti/otsu.jpg Graphic file (type jpg)
+<use img_esperimenti/otsu.jpg>
+Package pdftex.def Info: img_esperimenti/otsu.jpg  used on input line 157.
+(pdftex.def)             Requested size: 213.39568pt x 219.18452pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18 <./img_esperimenti/primaClahe.jpg> <./img_esperimenti/dopoClahe.jpg>]
+[19 <./img_esperimenti/primaOtsu.jpg> <./img_esperimenti/dopoOtsu.jpg> <./img_e
+sperimenti/otsu.jpg>]
+<img_esperimenti/dopoFiltroFoto.jpg, id=162, 294.9796pt x 196.65306pt>
+File: img_esperimenti/dopoFiltroFoto.jpg Graphic file (type jpg)
+<use img_esperimenti/dopoFiltroFoto.jpg>
+Package pdftex.def Info: img_esperimenti/dopoFiltroFoto.jpg  used on input line
+ 197.
+(pdftex.def)             Requested size: 341.43437pt x 227.62859pt.
+<img_esperimenti/ritaglioBlob.png, id=163, 234.27525pt x 416.15475pt>
+File: img_esperimenti/ritaglioBlob.png Graphic file (type png)
+<use img_esperimenti/ritaglioBlob.png>
+Package pdftex.def Info: img_esperimenti/ritaglioBlob.png  used on input line 2
+04.
+(pdftex.def)             Requested size: 121.63637pt x 216.06516pt.
+<img_esperimenti/dopoOtsuBlob.png, id=164, 227.6505pt x 413.1435pt>
+File: img_esperimenti/dopoOtsuBlob.png Graphic file (type png)
+<use img_esperimenti/dopoOtsuBlob.png>
+Package pdftex.def Info: img_esperimenti/dopoOtsuBlob.png  used on input line 2
+09.
+(pdftex.def)             Requested size: 121.63637pt x 220.74274pt.
+
+Underfull \hbox (badness 6141) in paragraph at lines 210--210
+[]\T1/cmr/m/n/10.95 (c) |Ap-pli-ca-zio-ne ri-pe-tu-
+ []
+
+<img_esperimenti/dopoFiltroBlob.png, id=165, 233.673pt x 416.757pt>
+File: img_esperimenti/dopoFiltroBlob.png Graphic file (type png)
+<use img_esperimenti/dopoFiltroBlob.png>
+Package pdftex.def Info: img_esperimenti/dopoFiltroBlob.png  used on input line
+ 213.
+(pdftex.def)             Requested size: 121.63637pt x 216.93745pt.
+
+Underfull \hbox (badness 2158) in paragraph at lines 214--214
+[]\T1/cmr/m/n/10.95 (d) |Ap-pli-ca-zio-ne del se-
+ []
+
+
+Underfull \hbox (badness 1371) in paragraph at lines 214--214
+\T1/cmr/m/n/10.95 con-do fil-tro sul-le re-gio-ni
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
+
+ []
+
+<img_esperimenti/ritaglio1.jpg, id=169, 168.80818pt x 56.55449pt>
+File: img_esperimenti/ritaglio1.jpg Graphic file (type jpg)
+<use img_esperimenti/ritaglio1.jpg>
+Package pdftex.def Info: img_esperimenti/ritaglio1.jpg  used on input line 242.
+
+(pdftex.def)             Requested size: 192.59143pt x 64.52626pt.
+<img_esperimenti/ritaglio2.jpg, id=170, 168.80818pt x 56.55449pt>
+File: img_esperimenti/ritaglio2.jpg Graphic file (type jpg)
+<use img_esperimenti/ritaglio2.jpg>
+Package pdftex.def Info: img_esperimenti/ritaglio2.jpg  used on input line 246.
+
+(pdftex.def)             Requested size: 192.59143pt x 64.52626pt.
+<img_esperimenti/ritaglio3.jpg, id=171, 253.27565pt x 84.55118pt>
+File: img_esperimenti/ritaglio3.jpg Graphic file (type jpg)
+<use img_esperimenti/ritaglio3.jpg>
+Package pdftex.def Info: img_esperimenti/ritaglio3.jpg  used on input line 253.
+
+(pdftex.def)             Requested size: 298.75264pt x 99.7424pt.
+<img_esperimenti/ritaglio4.jpg, id=172, 253.1818pt x 78.14253pt>
+File: img_esperimenti/ritaglio4.jpg Graphic file (type jpg)
+<use img_esperimenti/ritaglio4.jpg>
+Package pdftex.def Info: img_esperimenti/ritaglio4.jpg  used on input line 260.
+
+(pdftex.def)             Requested size: 298.75264pt x 92.21571pt.
+<img_esperimenti/ritaglio5.jpg, id=173, 253.23027pt x 81.58902pt>
+File: img_esperimenti/ritaglio5.jpg Graphic file (type jpg)
+<use img_esperimenti/ritaglio5.jpg>
+Package pdftex.def Info: img_esperimenti/ritaglio5.jpg  used on input line 267.
+
+(pdftex.def)             Requested size: 298.75264pt x 96.25925pt.
+<img_esperimenti/ritaglio6.jpg, id=174, 168.80818pt x 56.55449pt>
+File: img_esperimenti/ritaglio6.jpg Graphic file (type jpg)
+<use img_esperimenti/ritaglio6.jpg>
+Package pdftex.def Info: img_esperimenti/ritaglio6.jpg  used on input line 274.
+
+(pdftex.def)             Requested size: 192.59143pt x 64.52626pt.
+<img_esperimenti/ritaglio7.jpg, id=175, 126.53174pt x 59.47466pt>
+File: img_esperimenti/ritaglio7.jpg Graphic file (type jpg)
+<use img_esperimenti/ritaglio7.jpg>
+Package pdftex.def Info: img_esperimenti/ritaglio7.jpg  used on input line 278.
+
+(pdftex.def)             Requested size: 192.59143pt x 90.52489pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21 <./img_esperimenti/dopoFiltroFoto.jpg> <./img_esperimenti/ritaglioBlob.png>
+ <./img_esperimenti/dopoOtsuBlob.png> <./img_esperimenti/dopoFiltroBlob.png>]
+
+LaTeX Warning: Text page 22 contains only floats.
+
+
+Overfull \vbox (7.5436pt too high) has occurred while \output is active []
+
+
+[22 <./img_esperimenti/ritaglio1.jpg> <./img_esperimenti/ritaglio2.jpg> <./img_
+esperimenti/ritaglio3.jpg> <./img_esperimenti/ritaglio4.jpg> <./img_esperimenti
+/ritaglio5.jpg> <./img_esperimenti/ritaglio6.jpg> <./img_esperimenti/ritaglio7.
+jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
 
-Underfull \vbox (badness 1383) has occurred while \output is active []
+LaTeX Warning: Reference `crossval' on page 23 undefined on input line 310.
 
- [16]
 
-LaTeX Warning: Citation 'otsu' on page 17 undefined on input line 47.
+LaTeX Warning: Reference `ensemble' on page 23 undefined on input line 318.
+
+[23]
+
+LaTeX Warning: Reference `transferlearning' on page 24 undefined on input line 
+332.
+
+
+LaTeX Warning: Reference `imagenet' on page 24 undefined on input line 340.
+
+[24]
+
+LaTeX Warning: Reference `resnet' on page 25 undefined on input line 350.
+
+
+LaTeX Warning: Reference `resnet' on page 25 undefined on input line 353.
+
+
+LaTeX Warning: Reference `sorgenti' on page 25 undefined on input line 360.
+
+
+Overfull \hbox (22.16705pt too wide) in paragraph at lines 379--382
+[]\T1/cmr/m/n/12 Un og-get-to [][]\T1/cmtt/m/n/12 augmentedImageDatastore []\T1
+/cmr/m/n/12 pa-ra-me-triz-za-to con l'[][]\T1/cmtt/m/n/12 imageDataAugmenter
+ []
+
+[25]
+<img_esperimenti/augmentation.png, id=197, 526.96875pt x 395.22656pt>
+File: img_esperimenti/augmentation.png Graphic file (type png)
+<use img_esperimenti/augmentation.png>
+Package pdftex.def Info: img_esperimenti/augmentation.png  used on input line 3
+85.
+(pdftex.def)             Requested size: 320.0935pt x 240.08072pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+
+LaTeX Warning: Reference `imagenet' on page 26 undefined on input line 396.
+
+
+LaTeX Warning: Reference `transferlearning' on page 26 undefined on input line 
+396.
+
+[26 <./img_esperimenti/augmentation.png (PNG copy)>]
+
+LaTeX Warning: Reference `sorgenti' on page 27 undefined on input line 409.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--410
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 430--430
+[][]\T1/cmr/m/n/10 come evi-den-zia-to in $\T1/cmtt/m/n/10 https : / / it . mat
+hworks . com / help / deeplearning / examples /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--434
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+
+ []
+
+[28]
+
+LaTeX Warning: Reference `trainingTaranto' on page 29 undefined on input line 4
+74.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
+
+ []
+
+[29]
+
+LaTeX Warning: Reference `ensemble' on page 30 undefined on input line 506.
+
+
+LaTeX Warning: Reference `ensemble' on page 30 undefined on input line 508.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 560--561
+
+ []
+
+[31]) [32]
+\openout2 = `conclusioni.aux'.
+
+
+No file conclusioni.tex.
+\openout2 = `appendice.aux'.
+
+(appendice.tex [33
+
+
+
+
+
+
+]
+<img_appendice/TrainingAlexNet.png, id=224, 1306.12968pt x 691.83469pt>
+File: img_appendice/TrainingAlexNet.png Graphic file (type png)
+<use img_appendice/TrainingAlexNet.png>
+Package pdftex.def Info: img_appendice/TrainingAlexNet.png  used on input line 
+18.
+(pdftex.def)             Requested size: 426.79135pt x 226.0576pt.
+<img_appendice/confMatAlexNet.jpg, id=225, 1204.5pt x 677.53125pt>
+File: img_appendice/confMatAlexNet.jpg Graphic file (type jpg)
+<use img_appendice/confMatAlexNet.jpg>
+Package pdftex.def Info: img_appendice/confMatAlexNet.jpg  used on input line 2
+8.
+(pdftex.def)             Requested size: 192.0548pt x 108.02469pt.
+<img_appendice/confMatAzzorrealexnet.png, id=226, 578.16pt x 325.215pt>
+File: img_appendice/confMatAzzorrealexnet.png Graphic file (type png)
+<use img_appendice/confMatAzzorrealexnet.png>
+Package pdftex.def Info: img_appendice/confMatAzzorrealexnet.png  used on input
+ line 32.
+(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
+ [34 <./img_appendice/TrainingAlexNet.png> <./img_appendice/confMatAlexNet.jpg>
+ <./img_appendice/confMatAzzorrealexnet.png (PNG copy)>]
+<img_appendice/TrainingGoogLeNet.png, id=230, 1306.8825pt x 691.83469pt>
+File: img_appendice/TrainingGoogLeNet.png Graphic file (type png)
+<use img_appendice/TrainingGoogLeNet.png>
+Package pdftex.def Info: img_appendice/TrainingGoogLeNet.png  used on input lin
+e 47.
+(pdftex.def)             Requested size: 426.79135pt x 225.93092pt.
+<img_appendice/confMatGoogLeNet.jpg, id=231, 1204.5pt x 677.53125pt>
+File: img_appendice/confMatGoogLeNet.jpg Graphic file (type jpg)
+<use img_appendice/confMatGoogLeNet.jpg>
+Package pdftex.def Info: img_appendice/confMatGoogLeNet.jpg  used on input line
+ 57.
+(pdftex.def)             Requested size: 192.0548pt x 108.02469pt.
+<img_appendice/confMatAzzorregooglenet.png, id=232, 578.16pt x 325.215pt>
+File: img_appendice/confMatAzzorregooglenet.png Graphic file (type png)
+<use img_appendice/confMatAzzorregooglenet.png>
+Package pdftex.def Info: img_appendice/confMatAzzorregooglenet.png  used on inp
+ut line 61.
+(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
+
+Underfull \hbox (badness 1983) in paragraph at lines 65--65
+[]\T1/cmr/m/n/12 Figura 11: |Ma-tri-ce di con-fu-sio-ne re-la-ti-va al-l'im-pie
+-go di Goo-gLe-Net nel-la
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
@@ -963,73 +1436,96 @@ Make it at least 27.11469pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[17] [18]
+[35 <./img_appendice/TrainingGoogLeNet.png> <./img_appendice/confMatGoogLeNet.j
+pg> <./img_appendice/confMatAzzorregooglenet.png (PNG copy)>]
+<img_appendice/TrainingResNet18.png, id=236, 1305.37688pt x 691.08188pt>
+File: img_appendice/TrainingResNet18.png Graphic file (type png)
+<use img_appendice/TrainingResNet18.png>
+Package pdftex.def Info: img_appendice/TrainingResNet18.png  used on input line
+ 76.
+(pdftex.def)             Requested size: 426.79135pt x 225.94872pt.
+<img_appendice/confMatResNet18.jpg, id=237, 1204.5pt x 677.53125pt>
+File: img_appendice/confMatResNet18.jpg Graphic file (type jpg)
+<use img_appendice/confMatResNet18.jpg>
+Package pdftex.def Info: img_appendice/confMatResNet18.jpg  used on input line 
+86.
+(pdftex.def)             Requested size: 192.0548pt x 108.02469pt.
+<img_appendice/confMatAzzorreresnet18.png, id=238, 578.16pt x 325.215pt>
+File: img_appendice/confMatAzzorreresnet18.png Graphic file (type png)
+<use img_appendice/confMatAzzorreresnet18.png>
+Package pdftex.def Info: img_appendice/confMatAzzorreresnet18.png  used on inpu
+t line 90.
+(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
 
-LaTeX Warning: Reference `crossval' on page 19 undefined on input line 130.
-
-
-LaTeX Warning: Citation 'emanuele' on page 19 undefined on input line 134.
-
-[19]
-
-LaTeX Warning: Reference `ensemble' on page 20 undefined on input line 136.
-
-
-LaTeX Warning: Reference `classCropFin' on page 20 undefined on input line 146.
-
-
-
-LaTeX Warning: Reference `transferlearning' on page 20 undefined on input line 
-150.
-
-
-LaTeX Warning: Reference `prestazioni' on page 20 undefined on input line 151.
-
-
-LaTeX Warning: Reference `imagenet' on page 20 undefined on input line 158.
-
-[20]
-
-LaTeX Warning: Reference `googlenet' on page 21 undefined on input line 165.
-
-
-LaTeX Warning: Reference `resnet' on page 21 undefined on input line 168.
-
-
-LaTeX Warning: Reference `resnet' on page 21 undefined on input line 171.
-
-) [21] [22
-
-
-]
-\openout2 = `conclusioni.aux'.
-
-
-No file conclusioni.tex.
-
-Overfull \hbox (1.78664pt too wide) in paragraph at lines 78--78
-[]\T1/cmr/m/it/12 ImageNet Lar-ge Sca-le Vi-sual Re-co-gni-tion Chal-len-ge 201
-2 (IL-SVRC2012)\T1/cmr/m/n/12 . 2012.
+Underfull \hbox (badness 2671) in paragraph at lines 94--94
+[]\T1/cmr/m/n/12 Figura 13: |Ma-tri-ce di con-fu-sio-ne re-la-ti-va al-l'im-pie
+-go di ResNet-18 nel-la
  []
 
-
-Overfull \hbox (14.36406pt too wide) in paragraph at lines 78--78
+[36 <./img_appendice/TrainingResNet18.png> <./img_appendice/confMatResNet18.jpg
+> <./img_appendice/confMatAzzorreresnet18.png (PNG copy)>]
+<img_appendice/TrainingResNet50.png, id=242, 1444.64719pt x 783.67781pt>
+File: img_appendice/TrainingResNet50.png Graphic file (type png)
+<use img_appendice/TrainingResNet50.png>
+Package pdftex.def Info: img_appendice/TrainingResNet50.png  used on input line
+ 105.
+(pdftex.def)             Requested size: 426.79135pt x 231.51776pt.
+<img_appendice/confMatResNet50.jpg, id=243, 1606.0pt x 1003.75pt>
+File: img_appendice/confMatResNet50.jpg Graphic file (type jpg)
+<use img_appendice/confMatResNet50.jpg>
+Package pdftex.def Info: img_appendice/confMatResNet50.jpg  used on input line 
+115.
+(pdftex.def)             Requested size: 192.0548pt x 120.03127pt.
+<img_appendice/confMatAzzorreresnet50.png, id=244, 578.16pt x 325.215pt>
+File: img_appendice/confMatAzzorreresnet50.png Graphic file (type png)
+<use img_appendice/confMatAzzorreresnet50.png>
+Package pdftex.def Info: img_appendice/confMatAzzorreresnet50.png  used on inpu
+t line 119.
+(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
+ [37 <./img_appendice/TrainingResNet50.png> <./img_appendice/confMatResNet50.jp
+g> <./img_appendice/confMatAzzorreresnet50.png (PNG copy)>]
+<img_appendice/confMatAzzorreSMV.png, id=249, 578.16pt x 325.215pt>
+File: img_appendice/confMatAzzorreSMV.png Graphic file (type png)
+<use img_appendice/confMatAzzorreSMV.png>
+Package pdftex.def Info: img_appendice/confMatAzzorreSMV.png  used on input lin
+e 135.
+(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
+<img_appendice/confMatAzzorreHMVT.png, id=250, 578.16pt x 325.215pt>
+File: img_appendice/confMatAzzorreHMVT.png Graphic file (type png)
+<use img_appendice/confMatAzzorreHMVT.png>
+Package pdftex.def Info: img_appendice/confMatAzzorreHMVT.png  used on input li
+ne 139.
+(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
+) [38 <./img_appendice/confMatAzzorreSMV.png (PNG copy)> <./img_appendice/confM
+atAzzorreHMVT.png (PNG copy)>]
+Overfull \hbox (14.36406pt too wide) in paragraph at lines 79--79
 []\T1/cmr/m/n/12 Geoffrey E. Hin-ton et al.   Im-pro-ving neu-ral net-works by
  pre-ven-ting co-adaptation
  []
 
 
-Overfull \hbox (20.53067pt too wide) in paragraph at lines 78--78
+Overfull \hbox (20.53067pt too wide) in paragraph at lines 79--79
 []\T1/cmr/m/n/12 Flavio Fo-ren-za. \T1/cmr/m/it/12 Tec-ni-che in-no-va-ti-ve di
  Com-pu-ter Vi-sion per la Foto-Identificazione
  []
 
-[23
+
+Overfull \hbox (2.47537pt too wide) in paragraph at lines 79--79
+[]\T1/cmr/m/n/12 Nobuyuki Otsu.   A Th-re-shold Se-lec-tion Me-thod from Gray-
+Level Hi-sto-grams.
+ []
+
+[39
 
 
+]
+Overfull \hbox (1.78664pt too wide) in paragraph at lines 79--79
+[]\T1/cmr/m/it/12 ImageNet Lar-ge Sca-le Vi-sual Re-co-gni-tion Chal-len-ge 201
+2 (IL-SVRC2012)\T1/cmr/m/n/12 . 2012.
+ []
 
-] (tesi.aux (introduzione.aux) (teoria.aux) (alexnet.aux) (googlenet.aux)
-(esperimenti.aux) (conclusioni.aux))
+[40] (tesi.aux (introduzione.aux) (teoria.aux) (alexnet.aux) (googlenet.aux)
+(esperimenti.aux) (conclusioni.aux) (appendice.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1043,49 +1539,53 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13122 strings out of 492895
- 229029 string characters out of 3123735
- 718141 words of memory out of 3000000
- 16759 multiletter control sequences out of 15000+200000
- 25157 words of font info for 70 fonts, out of 3000000 for 9000
+ 14910 strings out of 492895
+ 262429 string characters out of 3123735
+ 749635 words of memory out of 3000000
+ 18448 multiletter control sequences out of 15000+200000
+ 28015 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,14n,63p,1996b,1425s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,14n,79p,1396b,1615s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 eccc1200.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ectt1200.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\tommy\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\tommy\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\tommy\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Us
-ers\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.
+ec/dpi600\ecbi1200.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbi1440.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\tommy\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\tommy\AppData\Lo
+cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\tommy\
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Us
+ers\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.
 pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm0700.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecrm0800.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\font
-s/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\tommy\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\tommy\AppData\L
-ocal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\tommy
-\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Us
-ers/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmbx9.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/tommy/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tommy/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Use
-rs/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr12.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tommy/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tommy/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/tomm
-y/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb>
-Output written on tesi.pdf (29 pages, 1301211 bytes).
+\ectt1000.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
+/ec/dpi600\ecbx1000.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\font
+s/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\tommy\AppData\Local\MiKTe
+X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\tommy\AppData\L
+ocal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\tommy
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\U
+sers\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488
+.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecti1200.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ecrm1200.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecbx1200.pk><C:/Users/tommy/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tommy/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/tommy/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Us
+ers/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex
+10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/tommy/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tommy/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/
+tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tesi.pdf (46 pages, 91901883 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
+ 928 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
