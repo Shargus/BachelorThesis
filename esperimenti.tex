@@ -401,11 +401,11 @@ Le quattro reti, come visto nei rispettivi paragrafi, sono in origine state adde
 \item adattare la nuova rete così creata al problema di classificazione binaria delle pinne grazie al ri-addestramento della rete sul nuovo dataset dei ritagli, descritto in precedenza
 \end{itemize}
 
-Si noti che per la scelta di quanti e quali layer parametrizzati "congelare" non esistono regole o criteri generali; questa scelta porta ad un nuovo set di iperparametri della rete, da trovare risolvendo uno specifico problema di ottimizzazione degli iperparametri. Poiché per ottimizzare questi iperparametri sarebbe necessario addestrare un gran numero di volte ciascuna delle quattro reti, con un notevole impiego di tempo, tale problema di ottimizzazione non è stato risolto in questa sede e si è preferito scegliere manualmente i layer da congelare.
+Si noti che per la scelta di quanti e quali layer parametrizzati "congelare" non esistono regole o criteri generali; questa scelta è un nuovo set di iperparametri della rete, da trovare risolvendo uno specifico problema di ottimizzazione degli iperparametri. Poiché per ottimizzare questi iperparametri sarebbe necessario addestrare un gran numero di volte ciascuna delle quattro reti, con un notevole impiego di tempo, tale problema di ottimizzazione non è stato risolto in questa sede e si è preferito scegliere manualmente i layer da congelare.
 
 Per garantire un buon \textit{trade-off} tra capacità di generalizzazione sul nuovo dataset e velocità di addestramento della rete, si è scelto di congelare uno, due o tre layer convoluzionali iniziali di ciascuna rete, nell'ordine in cui sono presenti nell'architettura della rete.
-Tale scelta è motivata anche dal fatto che il dataset \textit{ImageNet} e quello dei ritagli delle pinne hanno alcune caratteristiche in comune: nel primo ci sono almeno una decina di classi diverse di cetacei, come 'gray whale' (balena grigia) e 'killer whale' (orca).
-Mutuando un'idea discussa in \cite{howtransferable}, si è quindi avanzata la plausibile ipotesi che tutte le reti abbiano imparato, nei livelli più bassi, ad estrarre \textit{feature} abbastanza generali utili per il riconoscimento di una variegata classe di animali marini e delle loro parti del corpo, e pertanto questi primi layer possono essere riutilizzati senza modifiche.
+Tale scelta è motivata anche dal fatto che il dataset \textit{ImageNet} e quello dei ritagli delle pinne hanno alcune caratteristiche in comune: nel primo ci sono almeno una decina di classi diverse di cetacei, come ad esempio 'gray whale' (balena grigia) e 'killer whale' (orca).
+Mutuando un'idea discussa in \cite{howtransferable}, si è quindi avanzata la plausibile ipotesi che tutte le reti abbiano imparato, nei livelli più bassi, ad estrarre \textit{features} abbastanza generali utili per il riconoscimento di una variegata classe di animali marini e delle loro parti del corpo, e pertanto questi primi layer possono essere riutilizzati senza modifiche.
 Per ulteriori dettagli sull'implementazione in Matlab riferirsi al cap. \ref{sorgenti}.\\
 
 Per ogni classificatore, l’addestramento è stato eseguito con il metodo \textit{stochastic gradient descent with momentum}, con dimensione del \textit{minibatch} pari a 20, numero di epoche pari a 6 e \textit{learning rate} globale pari a 0.0003.
@@ -438,7 +438,7 @@ TL_net = trainNetwork(cropAugmentedTrain,layers,options)
 \end{verbatim}
 specificando il \textit{training set} sottoposto ad \textit{augmentation}, l’architettura della rete (array di tipo \verb|Layer| nel caso di AlexNet e di tipo \verb|LayerGraph| per le restanti reti) e le opzioni per l'addestramento.\\
 
-\noindent Nella tabella \ref{prestazioniReti} sono riassunte le principali informazioni e i risultati globali (accuratezza e dati della matrice di confusione) di ciascuna rete così addestrata. I grafici che mostrano l'andamento dell'addestramento e le matrici di confusione relative alle quattro reti sono mostrati in Appendice.
+\noindent Nella tabella \ref{prestazioniReti} sono riassunte le principali informazioni e i risultati globali (accuratezza sul \textit{validation set} e dati della matrice di confusione) di ciascuna rete così addestrata. Nelle figure dalla \ref{graficoAlexnet} alla \ref{graficoResnet50} sono riportati i grafici che mostrano l'andamento temporale dei quattro addestramenti.
 L'addestramento è avvenuto nella modalità a singolo processore grafico su due diverse macchine:
 
 \begin{itemize}
@@ -470,6 +470,42 @@ L'addestramento è avvenuto nella modalità a singolo processore grafico su due 
   \label{prestazioniReti}
 
 \end{table}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.88\textwidth]{TrainingAlexNet.png}
+  
+  \caption{Grafico del ri-addestramento di AlexNet}
+  \label{graficoAlexnet}
+
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.88\textwidth]{TrainingGoogLeNet.png}
+  
+  \caption{Grafico del ri-addestramento di GoogLeNet}
+  \label{graficoGooglenet}
+
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.88\textwidth]{TrainingResNet18.png}
+  
+  \caption{Grafico del ri-addestramento di ResNet-18}
+  \label{graficoResnet18}
+
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.88\textwidth]{TrainingResNet50.png}
+  
+  \caption{Grafico del ri-addestramento di ResNet-50.  Si noti che la \textit{training accuracy} è prossima al 100\% mentre la \textit{validation accuracy} si attesta al 90\%, chiaro sintomo di \textit{overfitting} al training set}
+  \label{graficoResnet50}
+
+\end{figure}
 
 Con la sola esclusione di ResNet-50, i valori di accuratezza ottenuti, calcolati sul \textit{validation set}, sono molto elevati. Il successo ottenuto da questi classificatori nel risolvere il problema di classificazione delle pinne è dovuto probabilmente alla facilità con cui la rete riesce ad adattarsi al nuovo dominio di applicazione (d'altronde, è una classificazione binaria abbastanza semplice, a maggior ragione per reti molto profonde in grado di risolvere problemi di classificazione ben più complessi). Diverso è il caso di ResNet-50: per quanto comunque alta, l'accuratezza raggiunta del 90.30\% non è paragonabile a quella delle rimanenti tre reti. Si avanza quindi l'ipotesi di \textit{overfitting} della rete al \textit{training set}. Questa ipotesi è corroborata dal fatto che l'accuratezza valutata sul \textit{training set} è invece prossima al 100\%, come si nota in figura \ref{trainingTaranto}. Questa mancata capacità di generalizzazione può essere conseguenza dell'eccessiva profondità della rete (nonostante l'impiego di \textit{residual blocks}), in rapporto ad un \textit{training set} relativamente piccolo.\\
 
@@ -507,7 +543,14 @@ Al fine di migliorare ulteriormente l'accuratezza della classificazione, si è s
 
 Come già descritto nel par. \ref{ensemble}, l'efficacia dei metodi ensemble è dovuta al fatto che, solitamente, differenti modelli  addestrati per risolvere uno stesso problema di classificazione non faranno tutti gli stessi errori sul \textit{test set} (gli errori si possono cioè considerare, in buona sostanza, incorrelati). Se lo schema di consenso applicato è il \textit{major voting}, si dimostra che l'ensemble di classificatori ha sempre prestazioni migliori o almeno uguali a quelle di ciascuna rete dell'ensemble presa singolarmente; il miglioramento delle prestazioni è tanto migliore quanto più gli errori commessi dalle reti dell'ensemble sono tra loro incorrelati.\cite{dlbook}\cite{ensembles}\\
 
-\noindent L'ensemble utilizzato è costituito dalle reti AlexNet, GoogLeNet e ResNet-18, addestrate sul dataset dei ritagli di Taranto.
+\noindent L'ensemble utilizzato è costituito dalle reti AlexNet, GoogLeNet e ResNet-18, addestrate sul dataset dei ritagli di Taranto. Uno schema dell'ensemble è raffigurato in fig. \ref{fig:ensemble}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{ensemble.png}
+\caption{Schema del classificatore ensemble creato}
+\label{fig:ensemble}
+\end{figure}
 
 Sono stati effettuati due esperimenti che adottano due diversi schemi di consenso, di seguito elencati:
 
@@ -520,6 +563,9 @@ Sono stati effettuati due esperimenti che adottano due diversi schemi di consens
 \end{itemize}
 
 Gli esperimenti consistono nella classificazione del \textit{test set} contenente i ritagli delle Azzorre da parte del classificatore ensemble. Questi esperimenti hanno come scopo la misurazione delle prestazioni del classificatore ensemble, e consentono il confronto di prestazioni tra questo nuovo modello e quello di CropFin v1, descritto in \cite{gianvito} (e provato sullo stesso \textit{test set}). I risultati dei due esperimenti sono riportati in tabella \ref{prestazioniEnsemble}, assieme a quello relativo al classificatore nativo in CropFin v1.
+Gli stessi dati riportati nella tabella \ref{prestazioniEnsemble} sono mostrati sotto forma di matrici di confusione in fig. \ref{fig:confMatEnsemble}.
+In figura \ref{testHMVT} si riportano infine alcuni campioni di ritagli classificati dall'ensemble.\\
+
 
 \begin{table}[h]
 
@@ -539,24 +585,55 @@ Gli esperimenti consistono nella classificazione del \textit{test set} contenent
   
   \caption{Prestazioni di differenti modelli di classificazione, valutate sul dataset dei ritagli delle Azzorre. Abbreviazioni: SMV = \textit{soft major voting}, HMVT = \textit{hard major voting} con soglia (\textit{threshold}) sulla probabilità media}
   \label{prestazioniEnsemble}
+  \vspace{10mm}
 
 \end{table}
 
+
+
+\begin{figure}[h!]
+
+  \centering
+  
+  \begin{subfigure}[b]{0.45\textwidth}
+  \raggedright
+    \includegraphics[width=\textwidth]{confMatAzzorreSMV.png}
+    \caption{}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+  \raggedleft
+    \includegraphics[width=\textwidth]{confMatAzzorreHMVT.png}
+    \caption{}
+  \end{subfigure}
+  
+  \caption{Matrici di confusione relative alle predizioni del nuovo ensemble sui ritagli delle Azzorre, con schema di consenso (a) \textit{soft major voting}, (b) \textit{hard major voting} con soglia.}
+  \label{fig:confMatEnsemble}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{testHMVT.png}
+\caption{Alcune predizioni proposte dall'ensemble con schema di consenso HMVT. Si noti ad esempio quella centrale in alto: compaiono tre pinne di cui addirittura due sovrapposte, ma il classificatore restituisce 'Pinna'. Sebbene il classificatore sia riuscito a confermare la presenza di una pinna, l'etichetta corretta era 'No Pinna' (per i criteri di etichettatura adottati sui ritagli con pinne multiple). Evidentemente nel training set con i ritagli di Taranto non erano presenti molti ritagli con pinne multiple, quindi il classificatore ha avuto difficoltà ad attribuire la classe 'No Pinna' a questo tipo di ritagli.}
+\label{testHMVT}
+\end{figure}
+
+
 Confrontando le prestazioni ottenute dal classificatore di CropFin v1 (che si ricorda essere un \textit{ensemble} di 5 reti neurali create \textit{from scratch} secondo la tecnica della \textit{5-fold cross-validation}, che classifica secondo una strategia di \textit{(hard) major voting}) e i due classificatori ensemble creati sfruttando il principio del \textit{transfer learning} è evidente la maggiore efficienza di questi ultimi, in tutti i parametri messi a confronto.
 
-Si fa notare infine che lo schema di consenso di tipo HMVT ha fatto registrare un miglioramento del parametro di \textit{specificity} che, come spiegato in precedenza, è un parametro fondamentale in quanto dà una misura di quanto i ritagli classificati come 'Pinna' sono "sporcati" da ritagli 'No Pinna' erroneamente classificati come 'Pinna', un errore che l'utente finale vorrebbe evitare. Si può verificare che alzando la soglia sopra il 97\% la \textit{specificity} aumenta ancora, ma a scapito della \textit{sensitivity}, che decresce con una velocità purtroppo maggiore della \textit{specificity}. Tuttavia questo non costituisce un grosso problema nel caso in cui, come spesso avviene, ci sia una discreta ridondanza nella presenza di uno stesso esemplare in più foto di una stessa spedizione in mare, come descritto in precedenza.
+Si fa notare infine che lo schema di consenso di tipo HMVT ha fatto registrare un miglioramento del parametro di \textit{specificity} che, come spiegato in precedenza, è un parametro fondamentale in quanto dà una misura di quanto i ritagli classificati come 'Pinna' sono "sporcati" da ritagli 'No Pinna' erroneamente classificati come 'Pinna', un errore che l'utente finale vorrebbe evitare. Si può verificare che alzando la soglia sopra il 97\% la \textit{specificity} aumenta ancora, ma a scapito della \textit{sensitivity}, che decresce con una velocità purtroppo maggiore della \textit{specificity}. Tuttavia questo non costituisce un grosso problema nel caso in cui, come spesso avviene, ci sia una discreta ridondanza nella presenza di uno stesso esemplare in più foto di una stessa spedizione in mare, come descritto in precedenza\footnote{In questo caso, infatti, è meno probabile che in un dataset di ritagli da scatti avvenuti in una specifica spedizione vengano scartati \emph{tutti} i ritagli relativi alla pinna di un certo esemplare}.
 
 In conclusione, quindi, si può affermare che adattare al nostro task di classificazione di ritagli di pinne un'opportuna rete neurale convoluzionale pre-addestrata con il metodo del \textit{transfer learning} piuttosto che costruirne una \textit{from scratch} è risultato vantaggioso in termini di prestazioni offerte ed è quindi servito a migliorare la fase di classificazione di CropFin v1. Inoltre, si è verificato che le prestazioni aumentano ulteriormente costruendo un classificatore di tipo \textit{ensemble} che raccolga diverse reti ri-addestrate che lavorino in sinergia attraverso uno schema di consenso di \textit{major voting}.
 Il miglioramento della fase di classificazione, e soprattutto del parametro della \textit{specificity}, è fondamentale in vista di una successiva applicazione di un algoritmo di foto-identificazione delle pinne, ad esempio quello descritto in \cite{emanuele}.
 Per i motivi descritti, questo nuovo classificatore è preferibile a quello di CropFin v1.
 
-
-
 Il tempo di addestramento è risultato molto più alto di quello del classificatore di CropFin v1, pur avendo disposto di capacità di calcolo di gran lunga superiore.
-Inoltre, l'occupazione di memoria del nuovo ensemble (\~263 MB) è più di 8 volte superiore a quella del classificatore \textit{ad-hoc} di CropFin v1 (\~31,2).
+Inoltre, l'occupazione di memoria del nuovo ensemble ($\sim$263 MB) è più di 8 volte superiore a quella del classificatore \textit{ad-hoc} di CropFin v1 ($\sim$31,2 MB).
 Il tempo di addestramento e l'occupazione di memoria elevati sono comunque "ripagati" dalle alte prestazioni dell'ensemble di reti.
 Tuttavia non c'è un criterio oggettivo per valutare quantitativamente l'utilità di questo miglioramento di prestazioni in rapporto all'allungamento del tempo di addestramento e all'aumento di occupazione di memoria del classificatore.
 
-Si è infine potuto verificare che il tempo che l'ensemble impiega per effettuare una predizione su un ritaglio è leggermente più alto a quello impiegato dal classificatore di CropFin v1, problema quasi ininfluente su una macchina dal discreto potere computazionale.\\
+Si è infine potuto verificare che il tempo che l'ensemble impiega per effettuare una predizione su un ritaglio è leggermente più alto a quello impiegato dal classificatore di CropFin v1.
+
+I problemi evidenziati sono però quasi ininfluenti su una macchina dal discreto potere computazionale.\\
 
 \noindent I motivi sopracitati rendono il nuovo classificatore ensemble preferibile a quello nativo di CropFin v1.

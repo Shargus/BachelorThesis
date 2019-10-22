@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.9.13)  21 OCT 2019 02:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.9.13)  21 OCT 2019 19:25
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -738,7 +738,7 @@ Package biblatex Info: ... file 'english.lbx' found.
 sh.lbx"
 File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 ) (tesi.aux (introduzione.aux) (teoria.aux) (alexnet.aux) (googlenet.aux) (espe
-rimenti.aux) (conclusioni.aux) (appendice.aux))
+rimenti.aux) (conclusioni.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -1141,11 +1141,11 @@ File: img_esperimenti/dopoOtsu.jpg Graphic file (type jpg)
 <use img_esperimenti/dopoOtsu.jpg>
 Package pdftex.def Info: img_esperimenti/dopoOtsu.jpg  used on input line 149.
 (pdftex.def)             Requested size: 162.1777pt x 108.12221pt.
-<img_esperimenti/otsu.jpg, id=154, 168.80583pt x 173.37767pt>
+<img_esperimenti/otsu.jpg, id=154, 168.80583pt x 191.31328pt>
 File: img_esperimenti/otsu.jpg Graphic file (type jpg)
 <use img_esperimenti/otsu.jpg>
 Package pdftex.def Info: img_esperimenti/otsu.jpg  used on input line 157.
-(pdftex.def)             Requested size: 213.39568pt x 219.18452pt.
+(pdftex.def)             Requested size: 213.39568pt x 241.85878pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1342,190 +1342,140 @@ Underfull \hbox (badness 10000) in paragraph at lines 439--440
  []
 
 [28]
+<img_appendice/TrainingAlexNet.png, id=207, 1306.12968pt x 691.83469pt>
+File: img_appendice/TrainingAlexNet.png Graphic file (type png)
+<use img_appendice/TrainingAlexNet.png>
+Package pdftex.def Info: img_appendice/TrainingAlexNet.png  used on input line 
+476.
+(pdftex.def)             Requested size: 375.57846pt x 198.9273pt.
+<img_appendice/TrainingGoogLeNet.png, id=208, 1306.8825pt x 691.83469pt>
+File: img_appendice/TrainingGoogLeNet.png Graphic file (type png)
+<use img_appendice/TrainingGoogLeNet.png>
+Package pdftex.def Info: img_appendice/TrainingGoogLeNet.png  used on input lin
+e 485.
+(pdftex.def)             Requested size: 375.57846pt x 198.82175pt.
+<img_appendice/TrainingResNet18.png, id=209, 1305.37688pt x 691.08188pt>
+File: img_appendice/TrainingResNet18.png Graphic file (type png)
+<use img_appendice/TrainingResNet18.png>
+Package pdftex.def Info: img_appendice/TrainingResNet18.png  used on input line
+ 494.
+(pdftex.def)             Requested size: 375.57846pt x 198.83739pt.
 
-LaTeX Warning: Reference `trainingTaranto' on page 29 undefined on input line 4
-74.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img_appendice/TrainingResNet50.png, id=210, 1444.64719pt x 783.67781pt>
+File: img_appendice/TrainingResNet50.png Graphic file (type png)
+<use img_appendice/TrainingResNet50.png>
+Package pdftex.def Info: img_appendice/TrainingResNet50.png  used on input line
+ 503.
+(pdftex.def)             Requested size: 375.57846pt x 203.73946pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
+LaTeX Warning: Reference `trainingTaranto' on page 29 undefined on input line 5
+10.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--511
 
  []
 
-[29]
+[29 <./img_appendice/TrainingAlexNet.png> <./img_appendice/TrainingGoogLeNet.pn
+g>] [30 <./img_appendice/TrainingResNet18.png> <./img_appendice/TrainingResNet5
+0.png>]
 
-LaTeX Warning: Reference `ensemble' on page 30 undefined on input line 506.
+LaTeX Warning: Reference `ensemble' on page 31 undefined on input line 542.
 
 
-LaTeX Warning: Reference `ensemble' on page 30 undefined on input line 508.
+LaTeX Warning: Reference `ensemble' on page 31 undefined on input line 544.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 508--509
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
+
+ []
+
+[31]
+<img_esperimenti/ensemble.png, id=221, 798.5835pt x 251.13824pt>
+File: img_esperimenti/ensemble.png Graphic file (type png)
+<use img_esperimenti/ensemble.png>
+Package pdftex.def Info: img_esperimenti/ensemble.png  used on input line 550.
+(pdftex.def)             Requested size: 341.43437pt x 107.3742pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--568
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
+<img_appendice/confMatAzzorreSMV.png, id=222, 462.528pt x 260.172pt>
+File: img_appendice/confMatAzzorreSMV.png Graphic file (type png)
+<use img_appendice/confMatAzzorreSMV.png>
+Package pdftex.def Info: img_appendice/confMatAzzorreSMV.png  used on input lin
+e 600.
+(pdftex.def)             Requested size: 192.0548pt x 108.03287pt.
+<img_appendice/confMatAzzorreHMVT.png, id=223, 462.528pt x 260.172pt>
+File: img_appendice/confMatAzzorreHMVT.png Graphic file (type png)
+<use img_appendice/confMatAzzorreHMVT.png>
+Package pdftex.def Info: img_appendice/confMatAzzorreHMVT.png  used on input li
+ne 605.
+(pdftex.def)             Requested size: 192.0548pt x 108.03287pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img_esperimenti/testHMVT.png, id=224, 1145.7204pt x 582.978pt>
+File: img_esperimenti/testHMVT.png Graphic file (type png)
+<use img_esperimenti/testHMVT.png>
+Package pdftex.def Info: img_esperimenti/testHMVT.png  used on input line 616.
+(pdftex.def)             Requested size: 426.79135pt x 217.16624pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[32 <./img_esperimenti/ensemble.png>] [33 <./img_appendice/confMatAzzorreSMV.pn
+g (PNG copy)> <./img_appendice/confMatAzzorreHMVT.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 
  []
 
-[31]) [32]
+) [34 <./img_esperimenti/testHMVT.png (PNG copy)>]
 \openout2 = `conclusioni.aux'.
 
 
 No file conclusioni.tex.
-\openout2 = `appendice.aux'.
 
-(appendice.tex [33
-
-
-
-
-
-
-]
-<img_appendice/TrainingAlexNet.png, id=224, 1306.12968pt x 691.83469pt>
-File: img_appendice/TrainingAlexNet.png Graphic file (type png)
-<use img_appendice/TrainingAlexNet.png>
-Package pdftex.def Info: img_appendice/TrainingAlexNet.png  used on input line 
-18.
-(pdftex.def)             Requested size: 426.79135pt x 226.0576pt.
-<img_appendice/confMatAlexNet.jpg, id=225, 1204.5pt x 677.53125pt>
-File: img_appendice/confMatAlexNet.jpg Graphic file (type jpg)
-<use img_appendice/confMatAlexNet.jpg>
-Package pdftex.def Info: img_appendice/confMatAlexNet.jpg  used on input line 2
-8.
-(pdftex.def)             Requested size: 192.0548pt x 108.02469pt.
-<img_appendice/confMatAzzorrealexnet.png, id=226, 578.16pt x 325.215pt>
-File: img_appendice/confMatAzzorrealexnet.png Graphic file (type png)
-<use img_appendice/confMatAzzorrealexnet.png>
-Package pdftex.def Info: img_appendice/confMatAzzorrealexnet.png  used on input
- line 32.
-(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
- [34 <./img_appendice/TrainingAlexNet.png> <./img_appendice/confMatAlexNet.jpg>
- <./img_appendice/confMatAzzorrealexnet.png (PNG copy)>]
-<img_appendice/TrainingGoogLeNet.png, id=230, 1306.8825pt x 691.83469pt>
-File: img_appendice/TrainingGoogLeNet.png Graphic file (type png)
-<use img_appendice/TrainingGoogLeNet.png>
-Package pdftex.def Info: img_appendice/TrainingGoogLeNet.png  used on input lin
-e 47.
-(pdftex.def)             Requested size: 426.79135pt x 225.93092pt.
-<img_appendice/confMatGoogLeNet.jpg, id=231, 1204.5pt x 677.53125pt>
-File: img_appendice/confMatGoogLeNet.jpg Graphic file (type jpg)
-<use img_appendice/confMatGoogLeNet.jpg>
-Package pdftex.def Info: img_appendice/confMatGoogLeNet.jpg  used on input line
- 57.
-(pdftex.def)             Requested size: 192.0548pt x 108.02469pt.
-<img_appendice/confMatAzzorregooglenet.png, id=232, 578.16pt x 325.215pt>
-File: img_appendice/confMatAzzorregooglenet.png Graphic file (type png)
-<use img_appendice/confMatAzzorregooglenet.png>
-Package pdftex.def Info: img_appendice/confMatAzzorregooglenet.png  used on inp
-ut line 61.
-(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
-
-Underfull \hbox (badness 1983) in paragraph at lines 65--65
-[]\T1/cmr/m/n/12 Figura 11: |Ma-tri-ce di con-fu-sio-ne re-la-ti-va al-l'im-pie
--go di Goo-gLe-Net nel-la
- []
-
-
-Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
-Make it at least 27.11469pt.
-We now make it that large for the rest of the document.
-This may cause the page layout to be inconsistent, however.
-
-[35 <./img_appendice/TrainingGoogLeNet.png> <./img_appendice/confMatGoogLeNet.j
-pg> <./img_appendice/confMatAzzorregooglenet.png (PNG copy)>]
-<img_appendice/TrainingResNet18.png, id=236, 1305.37688pt x 691.08188pt>
-File: img_appendice/TrainingResNet18.png Graphic file (type png)
-<use img_appendice/TrainingResNet18.png>
-Package pdftex.def Info: img_appendice/TrainingResNet18.png  used on input line
- 76.
-(pdftex.def)             Requested size: 426.79135pt x 225.94872pt.
-<img_appendice/confMatResNet18.jpg, id=237, 1204.5pt x 677.53125pt>
-File: img_appendice/confMatResNet18.jpg Graphic file (type jpg)
-<use img_appendice/confMatResNet18.jpg>
-Package pdftex.def Info: img_appendice/confMatResNet18.jpg  used on input line 
-86.
-(pdftex.def)             Requested size: 192.0548pt x 108.02469pt.
-<img_appendice/confMatAzzorreresnet18.png, id=238, 578.16pt x 325.215pt>
-File: img_appendice/confMatAzzorreresnet18.png Graphic file (type png)
-<use img_appendice/confMatAzzorreresnet18.png>
-Package pdftex.def Info: img_appendice/confMatAzzorreresnet18.png  used on inpu
-t line 90.
-(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
-
-Underfull \hbox (badness 2671) in paragraph at lines 94--94
-[]\T1/cmr/m/n/12 Figura 13: |Ma-tri-ce di con-fu-sio-ne re-la-ti-va al-l'im-pie
--go di ResNet-18 nel-la
- []
-
-[36 <./img_appendice/TrainingResNet18.png> <./img_appendice/confMatResNet18.jpg
-> <./img_appendice/confMatAzzorreresnet18.png (PNG copy)>]
-<img_appendice/TrainingResNet50.png, id=242, 1444.64719pt x 783.67781pt>
-File: img_appendice/TrainingResNet50.png Graphic file (type png)
-<use img_appendice/TrainingResNet50.png>
-Package pdftex.def Info: img_appendice/TrainingResNet50.png  used on input line
- 105.
-(pdftex.def)             Requested size: 426.79135pt x 231.51776pt.
-<img_appendice/confMatResNet50.jpg, id=243, 1606.0pt x 1003.75pt>
-File: img_appendice/confMatResNet50.jpg Graphic file (type jpg)
-<use img_appendice/confMatResNet50.jpg>
-Package pdftex.def Info: img_appendice/confMatResNet50.jpg  used on input line 
-115.
-(pdftex.def)             Requested size: 192.0548pt x 120.03127pt.
-<img_appendice/confMatAzzorreresnet50.png, id=244, 578.16pt x 325.215pt>
-File: img_appendice/confMatAzzorreresnet50.png Graphic file (type png)
-<use img_appendice/confMatAzzorreresnet50.png>
-Package pdftex.def Info: img_appendice/confMatAzzorreresnet50.png  used on inpu
-t line 119.
-(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
- [37 <./img_appendice/TrainingResNet50.png> <./img_appendice/confMatResNet50.jp
-g> <./img_appendice/confMatAzzorreresnet50.png (PNG copy)>]
-<img_appendice/confMatAzzorreSMV.png, id=249, 578.16pt x 325.215pt>
-File: img_appendice/confMatAzzorreSMV.png Graphic file (type png)
-<use img_appendice/confMatAzzorreSMV.png>
-Package pdftex.def Info: img_appendice/confMatAzzorreSMV.png  used on input lin
-e 135.
-(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
-<img_appendice/confMatAzzorreHMVT.png, id=250, 578.16pt x 325.215pt>
-File: img_appendice/confMatAzzorreHMVT.png Graphic file (type png)
-<use img_appendice/confMatAzzorreHMVT.png>
-Package pdftex.def Info: img_appendice/confMatAzzorreHMVT.png  used on input li
-ne 139.
-(pdftex.def)             Requested size: 192.0548pt x 108.0309pt.
-) [38 <./img_appendice/confMatAzzorreSMV.png (PNG copy)> <./img_appendice/confM
-atAzzorreHMVT.png (PNG copy)>]
-Overfull \hbox (14.36406pt too wide) in paragraph at lines 79--79
+Overfull \hbox (14.36406pt too wide) in paragraph at lines 78--78
 []\T1/cmr/m/n/12 Geoffrey E. Hin-ton et al.   Im-pro-ving neu-ral net-works by
  pre-ven-ting co-adaptation
  []
 
 
-Overfull \hbox (20.53067pt too wide) in paragraph at lines 79--79
+Overfull \hbox (20.53067pt too wide) in paragraph at lines 78--78
 []\T1/cmr/m/n/12 Flavio Fo-ren-za. \T1/cmr/m/it/12 Tec-ni-che in-no-va-ti-ve di
  Com-pu-ter Vi-sion per la Foto-Identificazione
  []
 
 
-Overfull \hbox (2.47537pt too wide) in paragraph at lines 79--79
+Overfull \hbox (2.47537pt too wide) in paragraph at lines 78--78
 []\T1/cmr/m/n/12 Nobuyuki Otsu.   A Th-re-shold Se-lec-tion Me-thod from Gray-
 Level Hi-sto-grams.
  []
 
-[39
+[35
+
+
+
 
 
 ]
-Overfull \hbox (1.78664pt too wide) in paragraph at lines 79--79
+Overfull \hbox (1.78664pt too wide) in paragraph at lines 78--78
 []\T1/cmr/m/it/12 ImageNet Lar-ge Sca-le Vi-sual Re-co-gni-tion Chal-len-ge 201
 2 (IL-SVRC2012)\T1/cmr/m/n/12 . 2012.
  []
 
-[40] (tesi.aux (introduzione.aux) (teoria.aux) (alexnet.aux) (googlenet.aux)
-(esperimenti.aux) (conclusioni.aux) (appendice.aux))
+[36] (tesi.aux (introduzione.aux) (teoria.aux) (alexnet.aux) (googlenet.aux)
+(esperimenti.aux) (conclusioni.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1539,10 +1489,10 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14910 strings out of 492895
- 262429 string characters out of 3123735
- 749635 words of memory out of 3000000
- 18448 multiletter control sequences out of 15000+200000
+ 14876 strings out of 492895
+ 261097 string characters out of 3123735
+ 747189 words of memory out of 3000000
+ 18427 multiletter control sequences out of 15000+200000
  28015 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,14n,79p,1396b,1615s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1583,9 +1533,9 @@ tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
 cm/cmsy10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmsy8.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tesi.pdf (46 pages, 91901883 bytes).
+Output written on tesi.pdf (42 pages, 92414666 bytes).
 PDF statistics:
- 928 PDF objects out of 1000 (max. 8388607)
+ 898 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

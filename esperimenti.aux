@@ -33,20 +33,34 @@
 \newlabel{fig:augmentation}{{3.7}{26}}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Risultati del ri-addestramento delle quattro reti secondo la tecnica del \textit  {transfer learning}\relax }}{29}\protected@file@percent }
 \newlabel{prestazioniReti}{{3.2}{29}}
-\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Prestazioni valutate sul dataset dei ritagli delle Azzorre, usato come \textit  {test set}\relax }}{29}\protected@file@percent }
-\newlabel{prestazioniRetiAzzorre}{{3.3}{29}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Classificatore ensemble}{30}\protected@file@percent }
-\newlabel{classEnsemble}{{3.3.4}{30}}
-\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Prestazioni di differenti modelli di classificazione, valutate sul dataset dei ritagli delle Azzorre. Abbreviazioni: SMV = \textit  {soft major voting}, HMVT = \textit  {hard major voting} con soglia (\textit  {threshold}) sulla probabilit\IeC {\`a} media\relax }}{31}\protected@file@percent }
-\newlabel{prestazioniEnsemble}{{3.4}{31}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Grafico del ri-addestramento di AlexNet\relax }}{29}\protected@file@percent }
+\newlabel{graficoAlexnet}{{3.8}{29}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Grafico del ri-addestramento di GoogLeNet\relax }}{29}\protected@file@percent }
+\newlabel{graficoGooglenet}{{3.9}{29}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Grafico del ri-addestramento di ResNet-18\relax }}{30}\protected@file@percent }
+\newlabel{graficoResnet18}{{3.10}{30}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Grafico del ri-addestramento di ResNet-50. Si noti che la \textit  {training accuracy} \IeC {\`e} prossima al 100\% mentre la \textit  {validation accuracy} si attesta al 90\%, chiaro sintomo di \textit  {overfitting} al training set\relax }}{30}\protected@file@percent }
+\newlabel{graficoResnet50}{{3.11}{30}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Prestazioni valutate sul dataset dei ritagli delle Azzorre, usato come \textit  {test set}\relax }}{31}\protected@file@percent }
+\newlabel{prestazioniRetiAzzorre}{{3.3}{31}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Classificatore ensemble}{31}\protected@file@percent }
+\newlabel{classEnsemble}{{3.3.4}{31}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Schema del classificatore ensemble creato\relax }}{32}\protected@file@percent }
+\newlabel{fig:ensemble}{{3.12}{32}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Prestazioni di differenti modelli di classificazione, valutate sul dataset dei ritagli delle Azzorre. Abbreviazioni: SMV = \textit  {soft major voting}, HMVT = \textit  {hard major voting} con soglia (\textit  {threshold}) sulla probabilit\IeC {\`a} media\relax }}{33}\protected@file@percent }
+\newlabel{prestazioniEnsemble}{{3.4}{33}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Matrici di confusione relative alle predizioni del nuovo ensemble sui ritagli delle Azzorre, con schema di consenso (a) \textit  {soft major voting}, (b) \textit  {hard major voting} con soglia.\relax }}{33}\protected@file@percent }
+\newlabel{fig:confMatEnsemble}{{3.13}{33}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Alcune predizioni proposte dall'ensemble con schema di consenso HMVT. Si noti ad esempio quella centrale in alto: compaiono tre pinne di cui addirittura due sovrapposte, ma il classificatore restituisce 'Pinna'. Sebbene il classificatore sia riuscito a confermare la presenza di una pinna, l'etichetta corretta era 'No Pinna' (per i criteri di etichettatura adottati sui ritagli con pinne multiple). Evidentemente nel training set con i ritagli di Taranto non erano presenti molti ritagli con pinne multiple, quindi il classificatore ha avuto difficolt\IeC {\`a} ad attribuire la classe 'No Pinna' a questo tipo di ritagli.\relax }}{34}\protected@file@percent }
+\newlabel{testHMVT}{{3.14}{34}}
 \@setckpt{esperimenti}{
-\setcounter{page}{33}
+\setcounter{page}{35}
 \setcounter{equation}{0}
 \setcounter{enumi}{4}
 \setcounter{enumii}{3}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{5}
+\setcounter{footnote}{6}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{3}
@@ -55,7 +69,7 @@
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{7}
+\setcounter{figure}{14}
 \setcounter{table}{4}
 \setcounter{@pps}{0}
 \setcounter{@ppsavesec}{0}

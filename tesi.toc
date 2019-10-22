@@ -36,22 +36,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.3}Addestramento}{25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.4}Classificatore ensemble}{30}% 
+\contentsline {subsection}{\numberline {3.3.4}Classificatore ensemble}{31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Appendice Figure}{33}% 
+\contentsline {chapter}{Conclusioni}{35}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Addestramento delle CNN mediante transfer learning e calcolo delle prestazioni}{34}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.1}AlexNet}{34}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.2}GoogLeNet}{35}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.3}ResNet-18}{36}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.4}ResNet-50}{37}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1.5}Ensemble (Alexnet + GoogLeNet + ResNet-18)}{38}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusioni}{33}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{39}% 
+\contentsline {chapter}{Bibliografia}{35}% 
