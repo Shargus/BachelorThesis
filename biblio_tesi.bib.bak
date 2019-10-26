@@ -59,12 +59,6 @@
   year   = {2018},
 }
 
-@Misc{imagenet2012,
-  title = {ImageNet Large Scale Visual Recognition Challenge 2012 (ILSVRC2012)},
-  year  = {2012},
-  url   = {http://image-net.org/challenges/LSVRC/2012/results},
-}
-
 @Book{PCA,
   title     = {Analisi multidimensionale dei dati. Metodi, strategie e criteri d'interpretazione},
   publisher = {Carocci Editore},
@@ -138,6 +132,65 @@
   abstract      = {The Risso’s dolphin is a widely distributed species, found in deep temperate and tropical waters. Estimates of its abundance are available in a few regions, details of its distribution are lacking, and its status in the Mediterranean Sea is ranked as Data Deficient by the IUCN Red List. In this paper, a synergy between bio-ecological analysis and innovative strategies has been applied to construct a digital platform, DolFin. It contains a collection of sighting data and geo-referred photos of Grampus griseus, acquired from 2013 to 2016 in the Gulf of Taranto (Northern Ionian Sea, North-eastern Central Mediterranean Sea), and the first automated tool for Smart Photo Identification of the Risso’s dolphin (SPIR). This approach provides the capability to collect and analyse significant amounts of data acquired over wide areas and extended periods of time. This effort establishes the baseline for future large-scale studies, essential to providing further information on the distribution of G. griseus. Our data and analysis results corroborate the hypothesis of a resident Risso’s dolphin population in the Gulf of Taranto, showing site fidelity in a relatively restricted area characterized by a steep slope to around 800 m in depth, north of the Taranto Valley canyon system.},
   refid         = {Maglietta2018},
   url           = {https://doi.org/10.1038/s41598-018-35492-3},
+}
+
+@Article{imagenet,
+  author  = {Olga Russakovsky and Jia Deng and Hao Su and Jonathan Krause and Sanjeev Satheesh and Sean Ma and Zhiheng Huang and Andrej Karpathy and Aditya Khosla and Michael Bernstein and Alexander C. Berg and Li Fei-Fei},
+  title   = {ImageNet Large Scale Visual Recognition Challenge},
+  journal = {arXiv},
+  year    = {2014},
+}
+
+@Article{googlenet,
+  author     = {Christian Szegedy and Wei Liu and Yangqing Jia and Pierre Sermanet and Scott Reed and Dragomir Anguelov and Dumitru Erhan and Vincent Vanhoucke and Andrew Rabinovich},
+  title      = {Going Deeper with Convolutions},
+  year       = {2014},
+  eprinttype = {arXiv},
+}
+
+@Article{NiN,
+  author     = {Min Lin and Qiang Chen and Shuicheng Yan},
+  title      = {Network In Network},
+  year       = {2013},
+  eprinttype = {arXiv},
+}
+
+@Article{photometric,
+  author     = {Andrew G. Howard},
+  title      = {Some Improvements on Deep Convolutional Neural Network Based Image Classification},
+  year       = {2013},
+  eprinttype = {arXiv},
+}
+
+@Article{resnet,
+  author     = {Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
+  title      = {Deep Residual Learning for Image Recognition},
+  eprinttype = {arXiv},
+}
+
+@Article{verydeep,
+  author     = {Karen Simonyan and Andrew Zisserman},
+  title      = {Very Deep Convolutional Networks for Large-Scale Image Recognition},
+  eprinttype = {arXiv},
+}
+
+@Article{highway,
+  author     = {Rupesh Kumar Srivastava and Klaus Greff and Jürgen Schmidhuber},
+  title      = {Highway Networks},
+  eprinttype = {arXiv},
+}
+
+@Article{batchNorm,
+  author     = {Sergey Ioffe and Christian Szegedy},
+  title      = {Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift},
+  eprinttype = {arXiv},
+}
+
+@Article{realBatchNorm,
+  author  = {Santurkar, Shibani and Tsipras, Dimitris and Ilyas, Andrew and M ˛adry, Aleksander},
+  title   = {How Does Batch Normalization Help Optimization?},
+  journal = {NeurIPS},
+  year    = {2018},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

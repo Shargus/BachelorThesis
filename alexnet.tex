@@ -1,7 +1,7 @@
 \section{AlexNet}\label{alexnet}
-AlexNet è una CNN creata tra il 2011 e il 2012 da Alex Krizhevsky, in collaborazione con Ilya Sutskever e Geoffrey Hinton \cite{alexnet}. La vittoria di AlexNet nella ImageNet Large Scale Visual Recognition Challenge (ILSVRC) \cite{imagenet}, ottenuta con un netto distacco nei confronti degli altri concorrenti, ha segnato l'inizio dell'enorme successo ottenuto dalle reti neurali profonde in svariati domini di applicazione \cite{historydl}
+AlexNet è una CNN creata tra il 2011 e il 2012 da Alex Krizhevsky, in collaborazione con Ilya Sutskever e Geoffrey Hinton \cite{alexnet}. La vittoria di AlexNet nella \textit{ImageNet Large Scale Visual Recognition Challenge (ILSVRC)} (par. \ref{imagenet})\footnote{\url{http://image-net.org/challenges/LSVRC/2012/results}}, ottenuta con un netto distacco nei confronti degli altri concorrenti, ha segnato l'inizio dell'enorme successo ottenuto dalle reti neurali profonde in svariati domini di applicazione \cite{historydl}.
 
-Il risultato principale di AlexNet, così come dichiarato dai suoi creatori nell'articolo originale, è il fatto che la profondità del modello è stato essenziale per conferirgli prestazioni così alte. L'alto costo computazionale dell'addestramento di AlexNet, reso oneroso appunto dalla profondità del modello (e quindi dal grande numero di parametri - circa 62.3 milioni) è stato affrontato con l'impiego di schede grafiche (GPU), che cominciavano in quegli anni a raggiungere notevoli potenze di calcolo.
+Il risultato principale di AlexNet, così come dichiarato dai suoi creatori nell'articolo originale, è il fatto che la profondità del modello è stato essenziale per conferirgli prestazioni così alte. Il costo computazionale dell'addestramento di AlexNet, reso oneroso appunto dalla profondità del modello (e quindi dal grande numero di parametri - circa 62.3 milioni), è stato affrontato con l'impiego di schede grafiche (GPU), che cominciavano in quegli anni a raggiungere notevoli potenze di calcolo.
 
 \subsection{Architettura di AlexNet}
 L'architettura di AlexNet è riportata schematicamente nella figura \ref{arc_alexnet} e con maggiore dettaglio in tabella \ref{tab_arc_alexnet}.
@@ -22,10 +22,10 @@ Queste GPU si prestano bene a lavorare in parallelo, poiché possono leggere e s
 
 Sono di seguito passate in rassegna le principali scelte architetturali introdotte in AlexNet, ed alcuni dettagli relativi al suo addestramento.
 
-\subsection*{Funzione di attivazione ReLU}
+\subsection{Funzione di attivazione ReLU}
 Dopo ogni strato parametrizzato, i valori delle attivazioni sono passati alla funzione attivatrice "rettificatore": $f(x)=x^{+}=\max(0,x)$ \cite{nairhinton}. Questa funzione attivatrice non-lineare e non soggetta a saturazione permette un addestramento molto più veloce delle reti convoluzionali profonde, in confronto a funzioni attivatrici fino ad allora più utilizzate come la funzione sigmoidea $f(x)=(1+\exp^{-x})^{-1}$ e la funzione tangente iperbolica $f(x)=\tanh(x)$.
 
-\subsection*{Local Response Normalization}
+\subsection{Local Response Normalization}
 È stato verificato che la seguente normalizzazione delle attivazioni, \textit{Local Response Normalization}, aumenta lievemente la capacità di generalizzazione del modello:
 
 \[b_{x,y}^{i}=a_{x,y}^{i}/\left(k+\alpha \sum_{j=\max(0,i-n/2)}^{\min(N-1,i+n/2)}(a_{x,y}^{j})^{2}\right)^{\beta}\]
@@ -34,25 +34,26 @@ dove $a_{x,y}^{i}$ è l'attivazione del neurone ottenuto applicando il kernel $i
 
 Questa normalizzazione è adoperata solamente nel primo e nel secondo layer convoluzionale.
 
-\subsection*{Overlapping Max Pooling}
-La funzione di max pooling in AlexNet è stata caratterizzata dalla scelta di una dimensione del filtro di pooling $3\times 3$ e uno stride di $2$. È stato osservato durante la fase di training che questa funzione di \textit{max pooling con sovrapposizione} ha attenuato lievemente l'\textit{overfitting} della rete.
+\subsection{Overlapping Max Pooling}
+La funzione di max pooling in AlexNet è stata caratterizzata dalla scelta di una dimensione del filtro di pooling $3\times 3$ e uno stride di $2$ (producendo quindi una sovrapposizione, o \textit{overlap}, tra le regioni sottoposte a pooling). È stato osservato durante la fase di training che questa funzione di \textit{max pooling con sovrapposizione} ha attenuato lievemente l'\textit{overfitting} della rete.
 
-\subsection*{Data Augmentation}
+\subsection{Data Augmentation}
 Una delle difficoltà che si incontrano spesso quando si vuole addestrare una rete neurale con moltissimi parametri avendo a disposizione un dataset relativamente piccolo è il rischio del sovradattamento (\textit{overfitting}) della rete al training set, che compromette anche seriamente le prestazioni della rete quando le vengono presentati nuovi dati.
 In AlexNet l'overfitting è stato ridotto grazie a tecniche di \textit{data augmentation}. In particolare, dopo aver ridimensionato a $256\times 256$ tutte le immagini del training set, quest'ultimo è stato "arricchito" con le seguenti immagini:
 \begin{itemize}
-\item Estrazione casuale di ritagli $224\times 224$ dalle immagini
+\item Estrazione casuale di ritagli $224\times 224$\footnote{Le immagini vengono portate a $227\times 227$, cioè la risoluzione di input, attraverso uno \textit{zero-padding} (3 pixel aggiuntivi ai bordi)} dalle immagini
 \item Riflessione orizzontale ("a specchio") delle immagini
 \item Somma di un'immagine e le sue componenti principali (PCA)\footnote{L'\textit{analisi delle componenti principali} (PCA, principal component analysis) è una tecnica per la semplificazione dei dati utilizzata nell'ambito della statistica multivariata. In questa sede ci limitiamo a specificare che il suo utilizzo nell'ambito della data augmentation è di evidenziare una importante proprietà delle immagini naturali, e cioè che l'identità di un oggetto è invariante rispetto ai cambi d'intensità e di colori nella sua illuminazione. Si rimanda ad esempio a \cite{PCA} per approfondimenti sulla PCA.}
 \end{itemize}
 
-\subsection*{Dropout}
+\subsection{Dropout}
+\label{dropout}
 Un altro modo per ridurre il problema del sovradattamento è l'impiego di tecniche di regolarizzazione dei parametri. AlexNet utilizza la tecnica del \textit{dropout} \cite{dropout}. Questa tecnica consiste nel settare a zero l'attivazione di ciascun neurone di un layer intermedio con probabilità $p$ (AlexNet impiega un dropout con $p=0.5$. I neuroni "azzerati" sono essenzialmente eliminati dalla rete e non contribuiscono né alla propagazione all'indietro del gradiente né al calcolo delle attivazioni nello strato finale (in fase di addestramento). Questa tecnica riduce il \textit{co-adattamento} tra neuroni: ogni neurone non può fare affidamento sulla presenza di altri neuroni, ed è costretto ad apprendere feature utili in congiunzione con diversi sottoinsiemi casuali degli altri neuroni, e non con un solo particolare sottoinsieme, migliorando la generalizzazione su nuovi dati.
 
 In AlexNet, il dropout dei neuroni è utilizzato nei primi due layer completamente connessi. In fase di test, i neuroni di questi due strati sono moltiplicati per 0.5 per tenere conto dell'impiego del dropout in addestramento.
 
-\subsection*{Addestramento di AlexNet}
-Nella sua forma originale, AlexNet fu addestrato usando la discesa stocastica del gradiente con momento$=0.9$, mini-batch$=128$ e decadimento dei pesi (weight decay) $=0.0005$. Dettagli più specifici sulla fase di addestramento di AlexNet possono essere trovati nel paper originale \cite{alexnet}.
+\subsection{Addestramento di AlexNet}
+Nella sua forma originale, AlexNet fu addestrato usando la discesa stocastica del gradiente con momento$=0.9$, mini-batch$=128$ e decadimento dei pesi (weight decay) $=0.0005$. Il training set è ovviamente quello di ImageNet. Dettagli più specifici sulla fase di addestramento di AlexNet possono essere trovati nel paper originale \cite{alexnet}.
 
 \begin{table}[h]
 \caption{Architettura originale di AlexNet}

@@ -183,6 +183,7 @@
 @Article{batchNorm,
   author     = {Sergey Ioffe and Christian Szegedy},
   title      = {Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift},
+  year       = {2},
   eprinttype = {arXiv},
 }
 

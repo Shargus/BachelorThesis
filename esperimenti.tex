@@ -63,8 +63,9 @@ La novità introdotta dal presente lavoro di tesi in merito al problema di estra
 
 Al fine di ottenere i ritagli delle pinne, la routine adoperata attua una sequenza di operazioni di preprocessing su ciascuna immagine per poi individuare ed infine ritagliare e salvare separatamente le sole porzioni di immagini che possono eventualmente contenere pinne. Tale sequenza è implementata mediante un ciclo \verb|for| che cicla su ogni immagine del dataset. Di seguito sono descritte sinteticamente le operazioni, nell'ordine in cui vengono applicate. Le figure esplicative per ogni fase provengono dalla tesi triennale dell'ing. Losapio \cite{gianvito}, a cui vanno i crediti.
 
-\subsection{Descrizione di CropFin v1}
-\label{descrizioneCropFin}
+\subsection{Fase di ritaglio}
+\label{faseRitaglio}
+
 \subsection*{Ridimensionamento}
 L'immagine è innanzitutto ridimensionata mediante la funzione MATLAB \verb|imresize| con un fattore di scale $\times 0.2$, al fine di ottenere una nuova immagine di risoluzione più bassa ($1200\times 800$).
 Questa operazione di preprocessing è stata adottata per diminuire il costo computazionale delle operazioni successive.\footnote{La risoluzione di partenza delle immagini utilizzate è stata $6000\times 4000$, ottenendo una riduzione drastica di pixel del 96\%, da 24 milioni a 960 mila.}\\
@@ -302,39 +303,71 @@ La routine CropFin v1, nella sua prima fase di ritaglio adattivo, è stata appli
 
 \end{table}
 
-\subsection*{Classificazione mediante rete \textit{ad-hoc}}
-È evidente da una rapida ispezione dell'output che la quantità di regioni estratte che però non contengono pinne risulta, su larga scala, superiore a quello che contiene effettivamente pinne. Numericamente questo fatto è evidenziato in tab. \ref{risultatiCrop}, compilata dopo una fase di etichettatura a mano dei ritagli prodotti, nelle classi 'Pinna' e 'No Pinna' (spiegata nel seguito del paragrafo). I ritagli della classe 'No Pinna' ottenuti sono l’esito "fallimentare" della procedura di segmentazione, filtraggio e ritaglio adattivo adottati in CropFin v1.
+\subsection{Fase di classificazione}
+\label{faseClassificazione}
+
+È evidente da una rapida ispezione dell'output che la quantità di regioni estratte che però non contengono pinne risulta, su larga scala, superiore a quella che contiene effettivamente pinne. Numericamente questo fatto è evidenziato in tab. \ref{risultatiCrop}, compilata dopo una fase di etichettatura a mano dei ritagli prodotti, nelle classi 'Pinna' e 'No Pinna' (motivata e spiegata nel seguito del sottoparagrafo). I ritagli della classe 'No Pinna' ottenuti sono l’esito "fallimentare" della procedura di segmentazione, filtraggio e ritaglio adattivo adottati in CropFin v1.
 
 Questa osservazione è ciò che primariamente motiva l’introduzione di una fase di classificazione finale in CropFin v1, che consenta di automatizzare completamente la procedura di object detection.\\
 
-Come anticipato, in CropFin v1 si decide di effettuare la classificazione binaria 'Pinna'/'No Pinna' per mezzo di una rete neurale creata ad-hoc. In particolare, la fase di classificazione di CropFin v1 prevede l'utilizzo di cinque classificatori binari, ottenuti addestrando il classificatore binario \textit{ad-hoc} sopracitato con la tecnica della \textit{5-fold cross-validation}\footnote{Si rimanda al par. \ref{crossval} per i dettagli sulla tecnica \textit{k-fold cross-validation}}
-sui ritagli restituiti da CropFin v1 sul solo dataset con gli scatti di Taranto (descritto in \ref{dataset}).
+La fase di classificazione prevede l'impiego di un classificatore binario che sappia discriminare un ritaglio in 'Pinna' o 'No Pinna'. L'addestramento di un tale classificatore (a prescindere dalle sue caratteristiche) può essere fatto mediante tecniche di supervised learning (par. \ref{supervisedLearning}), avendo a disposizione molti esempi "etichettati" di entrambe le classi da predire.
 
-Per i dettagli sull'architettura della rete neurale convoluzionale \textit{ad-hoc} si rimanda al par. 4.4.2 di \cite{gianvito}.
+\subsection*{Creazione del training set}
 
-Per consentire l'addestramento del classificatore si è reso necessario un lavoro di etichettatura manuale dei 15228 ritagli, attribuendo a ciascuno la classe 'Pinna' e 'No Pinna'. I risultati di questa etichettatura manuale sono presenti nella tab. \ref{risultatiCrop}.
+Per consentire l'addestramento del classificatore si rende quindi necessario un lavoro di etichettatura manuale dei ritagli, attribuendo a ciascuno la classe 'Pinna' e 'No Pinna'. Questa operazione è stata svolta per entrambi i dataset a nostra disposizione; i risultati di questa etichettatura manuale sono presenti nella tab. \ref{risultatiCrop}.\\
+
 Si precisa che, nella fase di etichettatura manuale, sono stati attribuiti alla classe 'Pinna' tutti e soli i ritagli contenenti una sola pinna in primo piano, intera o leggermente tagliata, escludendo invece quelli con pinne multiple e quelli con una presenza preponderante del dorso dei delfini. I ritagli con tali caratteristiche, infatti, sono considerati maggiormente affidabili ai fini di una successiva foto-identificazione automatica delle pinne (ad esempio con la routine "\textit{SPIR}" sviluppata e descritta in \cite{maglietta} e migliorata in \cite{emanuele}). Inoltre, questa scelta è stata anche motivata dall’intenzione di creare un "concetto univoco" utile a semplificare sia la selezione manuale sia l’apprendimento del classificatore.
+In fig. \ref{fig:esempiPinnaNoPinna} sono riportati alcuni esempi di etichettatura dei ritagli.
 
-Le cinque reti risultanti lavorano in sinergia per classificare ciascun ritaglio, utilizzando una strategia di \textit{major voting} (par. \ref{ensemble}) "ibrida", che rende la classificazione finale non più binaria ma ternaria: se le classificazioni 'Pinna' prodotte dalle cinque reti
+\begin{figure}[h!]
 
-\begin{itemize}
+  \centering
+  
+  \begin{subfigure}[b]{0.7\textwidth}
+    \includegraphics[width=0.19\textwidth]{p1.jpg}
+    \hfill
+    \includegraphics[width=0.19\linewidth]{p2.jpg}
+    \hfill
+    \includegraphics[width=0.19\linewidth]{p3.jpg}
+    \hfill
+    \includegraphics[width=0.19\linewidth]{p4.jpg}
+    \hfill
+    \includegraphics[width=0.19\linewidth]{p5.jpg}
+    \caption{}
+  \end{subfigure}
+  
+  \vspace{5mm}
+  
+  \begin{subfigure}[b]{0.7\textwidth}
+    \includegraphics[width=0.19\textwidth]{np1.jpg}
+    \hfill
+    \includegraphics[width=0.19\linewidth]{np2.jpg}
+    \hfill
+    \includegraphics[width=0.19\linewidth]{np3.jpg}
+    \hfill
+    \includegraphics[width=0.19\linewidth]{np4.jpg}
+    \hfill
+    \includegraphics[width=0.19\linewidth]{np5.jpg}
+    \caption{}
+  \end{subfigure}
+  
+  \caption{Alcuni ritagli etichettati manualmente come appartenenti alla classe (a) 'Pinna, (b) 'No Pinna'}
+  \label{fig:esempiPinnaNoPinna}
+\end{figure}
 
-\item sono maggiori o uguali a 4, la classificazione finale è 'Pinna'
-\item sono pari a 2 o 3, la classificazione finale è 'Incerta'
-\item sono minori o uguali a 1, la classificazione finale è 'No Pinna'
+I due dataset così etichettati si prestano bene ad essere usati per addestrare un classificatore in grado di risolvere il task in esame.
 
-\end{itemize}
+\subsection*{Classificazione mediante rete \textit{ad-hoc}}
+Tra i vari modelli di classificazione adottabili, in CropFin v1 si decide di progettare una rete neurale convoluzionale creata \textit{ad-hoc}, costruita cioè appositamente per risolvere il task in questione, da zero (\textit{from scratch}). L'addestramento del classificatore è avvenuto con i 15228 ritagli del dataset di Taranto.
+Per i dettagli sull'architettura, l'addestramento e le prestazioni di questo classificatore \textit{ad-hoc} si rimanda al par. 4.4.2 di \cite{gianvito}.\\
 
-L'analisi delle prestazioni di questo tipo di classificazione è descritta nel par. 4.5 di \cite{gianvito}.\footnote{Qualora fosse necessario attenersi a un problema di classificazione strettamente binario, ad esempio per effettuare un confronto con altri metodi di classificazione binaria per il problema in esame, si possono ad esempio ricondurre i ritagli di classe 'Incerta' alla classe 'No Pinna'. Questa è la scelta effettuata nel par. \ref{classEnsemble} per il confronto}
+In questo lavoro di tesi si è tentato un approccio diverso alla classificazione: si è provato a risolvere il task mediante il riutilizzo di CNN pre-addestrate, con la tecnica del \textit{Transfer Learning}.
+
 
 \section{Classificazione mediante CNN e Transfer Learning}
 \label{esperimentoTL}
 Nel par. \ref{transferlearning} sono stati descritti molteplici motivazioni per le quali per risolvere un problema di classificazione (in particolare di \textit{image captioning}) può essere meglio usare la tecnica del \textit{transfer learning}, adattando al task in esame una rete neurale pre-addestrata piuttosto che creare una rete da zero.
 Il nucleo principale di questo lavoro di tesi è quindi dedicato alla creazione di un nuovo modello di classificazione, basato su \textit{transfer learning}, che possa migliorare la fase di classificazione di CropFin v1. Questi "miglioramenti" sono da valutare con rigore ingegneristico sulla base di alcuni parametri, che consentono un confronto di prestazioni con il classificatore di CropFin v1; l'analisi delle prestazioni e quindi il confronto è svolto nel par. \ref{classEnsemble}.
-
-\subsection{Creazione del dataset}
-\label{creazioneDataset}
-Il dataset utilizzato per l'addestramento del nuovo classificatore binario è lo stesso usato in \cite{gianvito} per l'addestramento del classificatore di CropFin v1 composto dai ritagli, opportunamente etichettati a mano, prodotti con la routine di ritaglio a partire dagli scatti collezionati nel Golfo di Taranto.
 
 \subsection{Scelta delle CNN}
 Sono state riutilizzate ed adattate mediante la tecnica del \textit{transfer learning} quattro reti neurali convoluzionali (\textit{CNN}) sviluppate nell'ambito della \textit{ImageNet Large Scale Visual Recognition Challenge (ILSVRC)} ed addestrate sul dataset ImageNet (par. \ref{imagenet}). La loro scelta è stata motivata dal loro successo e prestigio nell'ambito del problema di \textit{object classification} proposto nella \textit{ILSVRC}. La scelta di queste reti è stata altresì motivata da un interesse puramente didattico, cioè studiare il funzionamento di CNN diverse per scelte architetturali e prestazioni, a prescindere dalla risoluzione del problema in esame. Esse sono di seguito elencate
@@ -357,9 +390,11 @@ Una variante di ResNet, più profonda e con migliori prestazioni sul dataset \te
 
 \subsection{Addestramento}
 \label{addestramento}
-L'ambiente di sviluppo nel quale sono state addestrate le quattro reti è il software Matlab R2019a, esteso con il pacchetto \textit{Deep Learning Toolbox}. Tutto il codice sorgente Matlab creato è riportato nel cap. \ref{sorgenti}.
+L'ambiente di sviluppo nel quale sono state addestrate le quattro reti è il software Matlab R2019a, esteso con il pacchetto \textit{Deep Learning Toolbox}. Tutto il codice sorgente Matlab creato è riportato nel cap. \ref{sorgenti}.\\
 
-Il dataset, di dimensione $n=15228$, è rappresentato in Matlab da un oggetto \verb|imageDatastore|, ed è stato suddiviso (\textit{splitted}) in maniera casuale in due ulteriori oggetti \textit{imageDatastore}:
+Il dataset utilizzato per l'addestramento è quello con gli $n=15228$ ritagli che CropFin ha prodotto dagli scatti di Taranto (vd. tab. \ref{risultatiCrop}) e in seguito opportunamente etichettati a mano (come descritto nel par. \ref{faseClassificazione}). Questo dataset è di fatto lo stesso usato per l'addestramento del classificatore \textit{ad-hoc} in \cite{gianvito}.
+
+Il dataset dei ritagli è rappresentato in Matlab da un oggetto \verb|imageDatastore|, ed è stato suddiviso (\textit{splitted}) in maniera casuale in due ulteriori oggetti \textit{imageDatastore}:
 
 \begin{itemize}
 \item \begin{frame}\space \verb|cropTrain|\end{frame}, un \textit{training set} contenente il 70\% dei ritagli (10659 ritagli), cioè il 70\% dei ritagli 'No Pinna' (7836) più il 70\% dei ritagli 'Pinna' (2823)
@@ -377,8 +412,7 @@ $[-60, 60]$ pixel.
 \end{itemize}
 
 Un oggetto \verb|augmentedImageDatastore| parametrizzato con l'\verb|imageDataAugmenter|  sopra descritto e l'\verb|inputSize| della rete è creato per rappresentare la versione "aumentata" di \verb|cropTrain|.
-Le operazioni applicate contribuiscono in maniera casuale ad ottenere ulteriore variabilità del dataset impiegato per la fase di addestramento; i ritagli vengono inoltre ridimensionati all'input size della rete da addestrare. Si è ritenuto opportuno impiegare poche trasformazioni ad effetto limitato: le uniche che non alterassero eccessivamente il contenuto dei ritagli di classe Pinna rispetto al problema in esame ed
-al dataset a disposizione (già di per sè contenente grande variabilità relativa alla classe Pinna).
+Le operazioni applicate in maniera casuale contribuiscono ad ottenere ulteriore variabilità del dataset impiegato per la fase di addestramento; i ritagli vengono inoltre ridimensionati all'input size della rete da addestrare. Si è ritenuto opportuno impiegare poche trasformazioni ad effetto limitato: le uniche che non alterassero eccessivamente il contenuto dei ritagli di classe Pinna rispetto al problema in esame ed al dataset a disposizione (già di per sè contenente grande variabilità relativa alla classe Pinna).
 
 \begin{figure}[h!]
   \centering
@@ -389,7 +423,7 @@ al dataset a disposizione (già di per sè contenente grande variabilità relati
 
 Un secondo oggetto \verb|augmentedImageDatastore| è usato per rappresentare \verb|cropValidation|, ma in questo caso parametrizzato solo con \verb|inputSize|, viene cioè effettuato solamente un ridimensionamento dei ritagli all'input size della rete da addestrare, senza operazioni di augmentation.
 
-Si noti che i due dataset "aumentati" hanno le stesse dimensioni dei loro omologhi dataset "non aumentati": l'unica differenza è appunto l'applicazione (a \textit{runtime}) delle operazioni di ridimensionamento e augmentation a ciascun ritaglio.\\
+Si noti che i due dataset "aumentati" hanno le stesse dimensioni dei loro omologhi dataset "non aumentati", nel senso che ogni ritaglio del dataset originale è presente esattamente una volta nel relativo dataset aumentato: l'unica differenza tra il ritaglio originale e quello nel dataset aumentato è appunto l'applicazione (a \textit{runtime}) delle operazioni di ridimensionamento e (nel caso del \textit{training set}) augmentation a ciascun ritaglio. Si tratta quindi di una semplice "perturbazione" dei due dataset, senza eliminazione di suoi elementi o aggiunta di nuovi.\\
 
 L'inizializzazione delle quattro CNN all'interno dell'ambiente Matlab è particolarmente semplice, e può essere effettuato richiamando la rete col suo nome (\verb|alexnet|, \verb|googlenet|, \verb|resnet18|, \verb|resnet50|) assegnandola ad una variabile, avendo cura di scaricare il relativo \textit{add-on} dall'\textit{add-on explorer} integrato di Matlab, estendendo il \textit{Deep Learning Toolbox}.
 
@@ -430,7 +464,7 @@ options = trainingOptions('sgdm', ...
 Il numero di epoche di addestramento, relativamente basso, è accettabile in quanto utilizzando il transfer learning per ri-addestrare una rete pre-addestrata tipicamente sono necessarie poche iterazioni sull'intero dataset per ottenere un buon adattamento della rete al nuovo task di classificazione\footnote{come evidenziato in \url{https://it.mathworks.com/help/deeplearning/examples/transfer-learning-using-alexnet.html}}; inoltre un numero basso di epoche, assieme alle operazioni di augmentation, garantisce una discreta robustezza contro l'\textit{overfitting}, problema in cui si può facilmente incappare in presenza di un dataset di dimensioni relativamente ridotte come in questo caso.
 
 Per quanto riguarda gli altri iperparametri (\textit{learning rate} globale e dimensione del \textit{minibatch}), i loro valori sono stati scelti empiricamente, sulla base di alcune \textit{best practices} generali presenti in letteratura\textsuperscript{5}, che funzionano bene con un'ampia classe di reti neurali convoluzionali e di dataset.
-A rigore, i valori migliori per questi iperparametri possono essere trovati con la risoluzione di un preciso problema di ottimizzazione, ma tale approccio richiederebbe - ancora una volta - molti addestramenti delle reti, con un eccessivo dispendio di tempo (pertanto non è praticato in questa sede, ma viene citato tra i possibili sviluppi futuri per migliorare le prestazioni della classificazione). \\
+A rigore, i valori migliori per questi iperparametri possono essere trovati con la risoluzione di un preciso problema di ottimizzazione (che richiederebbe numerosi ri-addestramenti per ogni rete, con notevole dispendio di tempo). Tuttavia, come sarà evidente al momento della presentazione dei risultati, le prestazioni registrate dalle reti con questi iperparametri sono eccellenti, e non è necessario cercarne di migliori (un tale sforzo computazionale e di tempo non giustificherebbe un leggerissimo aumento dell'accuratezza).\\
 
 \noindent L’addestramento di ciascuna rete è stato lanciato mediante la funzione
 \begin{verbatim}
@@ -507,9 +541,9 @@ L'addestramento è avvenuto nella modalità a singolo processore grafico su due 
 
 \end{figure}
 
-Con la sola esclusione di ResNet-50, i valori di accuratezza ottenuti, calcolati sul \textit{validation set}, sono molto elevati. Il successo ottenuto da questi classificatori nel risolvere il problema di classificazione delle pinne è dovuto probabilmente alla facilità con cui la rete riesce ad adattarsi al nuovo dominio di applicazione (d'altronde, è una classificazione binaria abbastanza semplice, a maggior ragione per reti molto profonde in grado di risolvere problemi di classificazione ben più complessi). Diverso è il caso di ResNet-50: per quanto comunque alta, l'accuratezza raggiunta del 90.30\% non è paragonabile a quella delle rimanenti tre reti. Si avanza quindi l'ipotesi di \textit{overfitting} della rete al \textit{training set}. Questa ipotesi è corroborata dal fatto che l'accuratezza valutata sul \textit{training set} è invece prossima al 100\%, come si nota in figura \ref{trainingTaranto}. Questa mancata capacità di generalizzazione può essere conseguenza dell'eccessiva profondità della rete (nonostante l'impiego di \textit{residual blocks}), in rapporto ad un \textit{training set} relativamente piccolo.\\
+Con la sola esclusione di ResNet-50, i valori di accuratezza ottenuti, calcolati sul \textit{validation set}, sono molto elevati. Il successo ottenuto da questi classificatori nel risolvere il problema di classificazione delle pinne è dovuto probabilmente alla facilità con cui la rete riesce ad adattarsi al nuovo dominio di applicazione (d'altronde, è una classificazione binaria abbastanza semplice, a maggior ragione per reti molto profonde in grado di risolvere problemi di classificazione ben più complessi). Diverso è il caso di ResNet-50: per quanto comunque alta, l'accuratezza raggiunta del 90.30\% non è paragonabile a quella delle rimanenti tre reti. Si avanza quindi l'ipotesi di \textit{overfitting} della rete al \textit{training set}. Questa ipotesi è corroborata dal fatto che l'accuratezza valutata sul \textit{training set} è invece prossima al 100\%, come si nota in figura \ref{trainingTaranto}. Questa mancata capacità di generalizzazione può essere conseguenza dell'eccessiva complessità della rete (n. di parametri inutilmente elevato), in rapporto ad un \textit{training set} relativamente piccolo\footnote{Delle considerazioni simili sono state fatte anche nel paper originale di ResNet \cite{resnet}.}.\\
 
-Le performance delle quattro reti sono state, inoltre, misurate sul dataset dei ritagli ottenuti con CropFin v1 dal dataset degli scatti nelle Azzorre, di dimensione $n=20395$. Per la fase di etichettatura manuale di questi ritagli valgono gli stessi criteri adottati per l'etichettatura dei ritagli di Taranto, precedentemente descritti. I risultati sono riassunti in tabella \ref{prestazioniRetiAzzorre}.
+Le performance delle quattro reti sono state, inoltre, misurate sul dataset dei ritagli ottenuti con CropFin v1 dal dataset degli scatti nelle Azzorre, di dimensione $n=20395$ (usato quindi come \textit{test set}). Si ricorda che questi ritagli erano stati in precedenza etichettati manualmente, come descritto nel par. \ref{faseClassificazione}. I risultati sono riassunti in tabella \ref{prestazioniRetiAzzorre}.
 
 \begin{table}[h]
 
@@ -585,7 +619,7 @@ In figura \ref{testHMVT} si riportano infine alcuni campioni di ritagli classifi
   
   \caption{Prestazioni di differenti modelli di classificazione, valutate sul dataset dei ritagli delle Azzorre. Abbreviazioni: SMV = \textit{soft major voting}, HMVT = \textit{hard major voting} con soglia (\textit{threshold}) sulla probabilità media}
   \label{prestazioniEnsemble}
-  \vspace{10mm}
+  %\vspace{10mm}
 
 \end{table}
 
@@ -619,7 +653,7 @@ In figura \ref{testHMVT} si riportano infine alcuni campioni di ritagli classifi
 \end{figure}
 
 
-Confrontando le prestazioni ottenute dal classificatore di CropFin v1 (che si ricorda essere un \textit{ensemble} di 5 reti neurali create \textit{from scratch} secondo la tecnica della \textit{5-fold cross-validation}, che classifica secondo una strategia di \textit{(hard) major voting}) e i due classificatori ensemble creati sfruttando il principio del \textit{transfer learning} è evidente la maggiore efficienza di questi ultimi, in tutti i parametri messi a confronto.
+Confrontando le prestazioni ottenute dal classificatore di CropFin v1 e i due classificatori ensemble creati sfruttando il principio del \textit{transfer learning} è evidente la maggiore efficienza di questi ultimi, in tutti i parametri messi a confronto.
 
 Si fa notare infine che lo schema di consenso di tipo HMVT ha fatto registrare un miglioramento del parametro di \textit{specificity} che, come spiegato in precedenza, è un parametro fondamentale in quanto dà una misura di quanto i ritagli classificati come 'Pinna' sono "sporcati" da ritagli 'No Pinna' erroneamente classificati come 'Pinna', un errore che l'utente finale vorrebbe evitare. Si può verificare che alzando la soglia sopra il 97\% la \textit{specificity} aumenta ancora, ma a scapito della \textit{sensitivity}, che decresce con una velocità purtroppo maggiore della \textit{specificity}. Tuttavia questo non costituisce un grosso problema nel caso in cui, come spesso avviene, ci sia una discreta ridondanza nella presenza di uno stesso esemplare in più foto di una stessa spedizione in mare, come descritto in precedenza\footnote{In questo caso, infatti, è meno probabile che in un dataset di ritagli da scatti avvenuti in una specifica spedizione vengano scartati \emph{tutti} i ritagli relativi alla pinna di un certo esemplare}.
 
@@ -634,6 +668,6 @@ Tuttavia non c'è un criterio oggettivo per valutare quantitativamente l'utilit�
 
 Si è infine potuto verificare che il tempo che l'ensemble impiega per effettuare una predizione su un ritaglio è leggermente più alto a quello impiegato dal classificatore di CropFin v1.
 
-I problemi evidenziati sono però quasi ininfluenti su una macchina dal discreto potere computazionale.\\
+I problemi evidenziati, soprattutto per quanto concerne le dimensioni del classificatore e il tempo necessario alla predizione (parametri molto "sentiti" dall'utilizzatore finale) sono però quasi ininfluenti su una macchina dal discreto potere computazionale e memoria disponibile.\\
 
 \noindent I motivi sopracitati rendono il nuovo classificatore ensemble preferibile a quello nativo di CropFin v1.
