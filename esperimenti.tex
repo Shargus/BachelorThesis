@@ -52,6 +52,7 @@ Anche laddove le pinne sono presenti, esse possono risultare sfocate o di bassa 
 Si rende perciò necessario filtrare in qualche modo le sole immagini che raffigurano al loro interno pinne dorsali di cetacei; è utile inoltre ritagliare da queste immagini filtrate le sole regioni in cui è effettivamente presente una pinna (si vuole cioè isolare l'informazione utile dal resto del dato originale). Per far questo, i due dataset sono stati rielaborati attraverso un \textbf{algoritmo di riconoscimento e cropping} delle pinne dorsali, di seguito descritto nelle sue caratteristiche salienti.
 
 \section{CropFin v1}
+\label{cropFin}
 Per ritagliare ed estrarre dalle immagini originali le sole pinne dorsali, è stata utilizzata la routine \textit{CropFin v1} in linguaggio MATLAB sviluppata dall'ing. Gianvito Losapio nel suo lavoro di tesi triennale \cite{gianvito} sulla base di un precedente lavoro di tesi dell'ing. Flavio Forenza \cite{flavio}.
 Si può descrivere la routine in due fasi:
 \begin{enumerate}
@@ -351,7 +352,7 @@ In fig. \ref{fig:esempiPinnaNoPinna} sono riportati alcuni esempi di etichettatu
     \caption{}
   \end{subfigure}
   
-  \caption{Alcuni ritagli etichettati manualmente come appartenenti alla classe (a) 'Pinna, (b) 'No Pinna'}
+  \caption{Alcuni ritagli etichettati manualmente come appartenenti alla classe (a) 'Pinna', (b) 'No Pinna'}
   \label{fig:esempiPinnaNoPinna}
 \end{figure}
 
@@ -401,7 +402,7 @@ Il dataset dei ritagli è rappresentato in Matlab da un oggetto \verb|imageDatas
 \item \begin{frame}\space \verb|cropValidation|\end{frame}, un \textit{validation set} contenente il rimanente 30\% dei ritagli (4569 ritagli di cui 3359 'No Pinna' e 1210 'Pinna')
 \end{itemize}
 
-Il training set è sottoposto ad operazioni di \textit{image augmentation} durante la fase di addestramento.
+Il training set è sottoposto ad operazioni di \textit{image augmentation} durante la fase di addestramento, per migliorare la capacità di generalizzazione del classificatore da addestrare ed evitare quindi l'\textit{overfitting}.
 A ciascuna immagine del set sono applicate le seguenti trasformazioni, rappresentate in un opportuno oggetto \verb|imageDataAugmenter|:
 
 \begin{itemize}

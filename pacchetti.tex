@@ -16,10 +16,14 @@
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{stackengine}
 
 % comandi utili
+\newcommand{\eqdef}{\stackrel{\mathclap{\normalfont\mbox{def}}}{=}}
+\newcommand\oast{\stackMath\mathbin{\stackinset{c}{0ex}{c}{0ex}{\ast}{\bigcirc}}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{N}}
 \newcommand{\ii}{(i)}
 \newcommand{\XX}{\mathbf{X}}
 \newcommand{\WW}{\mathbf{W}}
@@ -36,6 +40,7 @@
 \usepackage{graphicx}
 \graphicspath{{img/}{img_esperimenti/}{img_appendice/}{img_esperimenti/foto_azzorre/}{img_esperimenti/foto_taranto/}{img_introduzione/}{img/googlenet/}{img/alexnet/}{img/resnet/}}
 \usepackage{subcaption}
+\usepackage{float}
 
 
 % per le tabelle

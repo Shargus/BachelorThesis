@@ -38,11 +38,12 @@ Questa normalizzazione è adoperata solamente nel primo e nel secondo layer conv
 La funzione di max pooling in AlexNet è stata caratterizzata dalla scelta di una dimensione del filtro di pooling $3\times 3$ e uno stride di $2$ (producendo quindi una sovrapposizione, o \textit{overlap}, tra le regioni sottoposte a pooling). È stato osservato durante la fase di training che questa funzione di \textit{max pooling con sovrapposizione} ha attenuato lievemente l'\textit{overfitting} della rete.
 
 \subsection{Data Augmentation}
+\label{augmentationAlexnet}
 Una delle difficoltà che si incontrano spesso quando si vuole addestrare una rete neurale con moltissimi parametri avendo a disposizione un dataset relativamente piccolo è il rischio del sovradattamento (\textit{overfitting}) della rete al training set, che compromette anche seriamente le prestazioni della rete quando le vengono presentati nuovi dati.
-In AlexNet l'overfitting è stato ridotto grazie a tecniche di \textit{data augmentation}. In particolare, dopo aver ridimensionato a $256\times 256$ tutte le immagini del training set, quest'ultimo è stato "arricchito" con le seguenti immagini:
+In AlexNet l'overfitting è stato ridotto grazie a tecniche di \textit{data augmentation}. In particolare, dopo aver ridimensionato a $256\times 256$ tutte le immagini del training set (scalando prima in modo tale che il lato più corto dell'immagine sia di 256 e in seguito ritagliando un quadrato centrale $256\times 256$ dall'immagine risultante) e sottraendo l'\textit{immagine media} da ciascuna immagine del training set (par. \ref{preprocessing}), il training set così ottenuto è stato "arricchito" con le seguenti immagini:
 \begin{itemize}
 \item Estrazione casuale di ritagli $224\times 224$\footnote{Le immagini vengono portate a $227\times 227$, cioè la risoluzione di input, attraverso uno \textit{zero-padding} (3 pixel aggiuntivi ai bordi)} dalle immagini
-\item Riflessione orizzontale ("a specchio") delle immagini
+\item Riflessione orizzontale ("a specchio") delle immagini (50\% di probabilità)
 \item Somma di un'immagine e le sue componenti principali (PCA)\footnote{L'\textit{analisi delle componenti principali} (PCA, principal component analysis) è una tecnica per la semplificazione dei dati utilizzata nell'ambito della statistica multivariata. In questa sede ci limitiamo a specificare che il suo utilizzo nell'ambito della data augmentation è di evidenziare una importante proprietà delle immagini naturali, e cioè che l'identità di un oggetto è invariante rispetto ai cambi d'intensità e di colori nella sua illuminazione. Si rimanda ad esempio a \cite{PCA} per approfondimenti sulla PCA.}
 \end{itemize}
 
@@ -53,11 +54,12 @@ Un altro modo per ridurre il problema del sovradattamento è l'impiego di tecnic
 In AlexNet, il dropout dei neuroni è utilizzato nei primi due layer completamente connessi. In fase di test, i neuroni di questi due strati sono moltiplicati per 0.5 per tenere conto dell'impiego del dropout in addestramento.
 
 \subsection{Addestramento di AlexNet}
-Nella sua forma originale, AlexNet fu addestrato usando la discesa stocastica del gradiente con momento$=0.9$, mini-batch$=128$ e decadimento dei pesi (weight decay) $=0.0005$. Il training set è ovviamente quello di ImageNet. Dettagli più specifici sulla fase di addestramento di AlexNet possono essere trovati nel paper originale \cite{alexnet}.
+Nella sua forma originale, AlexNet fu addestrato usando la discesa stocastica del gradiente con momento = 0.9, mini-batch = 128 e decadimento dei pesi (weight decay) = 0.0005. Il training set è ovviamente quello di ImageNet.
+I pesi in ogni layer sono stati inizializzati con valori aleatori provenienti da una distribuzione gaussiana a media nulla e deviazione standard 0.01. I bias del secondo, quarto e quinto layer convoluzionale e dei tre layer completamente connessi sono stati inizializzati a 1; questa inizializzazione accelera le prime iterazioni dell'addestramento facendo in modo che alle funzioni di attivazione ReLU siano forniti input positivi. Nei rimanenti layer, i bias sono stati inizializzati a 0. Il \textit{learning rate} iniziale è stato 0.01 ed è stato sottoposto ad una strategia di \textit{annealing} che ha previsto la riduzione del learning rate di un fattore 10 ogniqualvolta il \textit{validation error} si stabilizzava (questa regolazione è stata manuale durante l'addestramento). Questa regolazione è avvenuta tre volte durante l'addestramento della rete.
+
+Ulteriori dettagli sulla fase di addestramento di AlexNet possono essere trovati nel paper originale \cite{alexnet}.
 
 \begin{table}[h]
-\caption{Architettura originale di AlexNet}
-\label{tab_arc_alexnet}
 \begin{tabularx}{\textwidth}{@{}llll@{}}
 \toprule
 N & Layer           & Attivazioni & Parametri \\ \midrule
@@ -88,7 +90,9 @@ $(227\times 227\times 3)$ &
 22 & DROPOUT         & --            &   --        \\ \midrule
 23 & FULLY CONNECTED &$1000$&\acapo{Pesi: $2\times 4096$\\Bias: $2$}\\
 24 & SOFTMAX         & --            &    --       \\
-25 & CROSS-ENTROPY LOSS  & --            &   --     \\ \bottomrule                 
+25 & CROSS-ENTROPY LOSS  & --            &   --     \\ \bottomrule
 \end{tabularx}
+\caption{Architettura originale di AlexNet}
+\label{tab_arc_alexnet}
 \end{table}
 

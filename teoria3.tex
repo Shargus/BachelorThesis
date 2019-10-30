@@ -1,0 +1,66 @@
+\section{Reti Neurali}
+\label{ANN}
+
+Le reti neurali artificiali (ANN, \textit{artificial neural networks}), costituiscono i modelli di deep learning per eccellenza.
+
+Una rete neurale può essere interpretata come un insieme di strati (\textit{layer}) composti
+ciascuno da un certo numero di unità computazionali, dette neuroni, in grado di fornire una nuova rappresentazione dell'input, secondo il paradigma del representation learning. Le funzioni sono composte a formare una catena di rappresentazioni sconosciute (per questo dette \textit{hidden layers}), nel senso che ciascun layer calcola una funzione dell'output del layer precedente: a partire da rappresentazioni più semplici, esse vengono raggruppate fino ad un livello di "arbitraria" complessità
+\begin{equation*}
+\mathcal{F}(\mathbf{x})=f^{(d)}\underbrace{(\dots(\mathbf{h}^{(3)}(\mathbf{h}^{(2)}(\mathbf{h}^{(1)}(\mathbf{x})))))}
+\end{equation*}
+in cui
+\begin{itemize}
+\item $d$ è la profondità della rete, cioè il numero di layers che la compongono;
+\item $\mathbf{h}^{(1)}$ è il primo (hidden) layer, $\mathbf{h}^{(2)}$ il secondo, e così via. Ciascuno di essi rappresenta una trasformazione parametrica in generale non lineare delle feature relative ad un input $\mathbf{x}$: ogni hidden layer $\mathbf{h}$ accetta un vettore in input $\mathbf{x}$, calcola una
+trasformazione affine $\mathbf{z}=\mathbf{W}\mathbf{x}+\mathbf{b}$, quindi applica una funzione non lineare $g(\mathbf{z})$
+elemento per elemento, detta \textbf{funzione di attivazione}. Si ottiene così:
+\begin{equation*}
+\text{Layer 1:   } \mathbf{h}^{(1)}=g^{(1)}\left(\mathbf{W}^{(1)}\mathbf{x}+\mathbf{b}^{(1)}\right)
+
+\text{Layer 2:   } \mathbf{h}^{(2)}=g^{(2)}\left(\mathbf{W}^{(2)}\mathbf{h}^{(1)}+\mathbf{b}^{(2)}\right)
+
+\text{Layer 3:   } \mathbf{h}^{(3)}=g^{(3)}\left(\mathbf{W}^{(3)}\mathbf{h}^{(2)}+\mathbf{b}^{(3)}\right)
+\end{equation*}
+fino a giungere all'output layer:
+\begin{equation*}
+\text{Layer d:   } \mathbf{f}^{(d)}=g^{(d)}\left(\mathbf{W}^{(d)}\mathbf{h}^{(d-1)}+\mathbf{b}^{(d)}\right)
+\end{equation*}
+
+\item $f^{(d)}$ è l'output layer, che ha il ruolo di fornire un'ultima trasformazione al fine di completare il task che la rete deve eseguire. Le scelte solitamente sono:
+\begin{itemize}
+\item Layer di output lineare: viene calcolata una ulteriore trasformazione affine, del tipo
+\begin{equation*}
+\mathbf{\widehat{y}}=\mathbf{W}\mathbf{h}^{(d-1)+\mathbf{b}
+\end{equation*}
+\item Layer di output sigmoide: viene applicata una trasformazione affine, quindi usata la funzione sigmoide $\sigma$ per convertire il risultato in una probabilità:
+\begin{equation*}
+\widehat{y}=\sigma\left(\mathbf{W}\mathbf{h}^{(d-1)+\mathbf{b}\right)
+\end{equation*}
+Questo approccio è usato nel caso di classificazione binaria, come descritto al par. \ref{classificazione}.
+\item Layer di output softmax: viene calcolata una trasformazione affine
+\begin{equation*}
+\mathbf{z}=\mathbf{W}\mathbf{h}^{(d-1)+\mathbf{b}
+\end{equation*}
+e viene quindi applicata la funzione softmax (par. \ref{classificazione})
+\begin{equation*}
+\mathbf{\widehat{y}}=\text{softmax}(\mathbf{z})_i=frac{e^{z_i}}{\sum\nolimits_{j}e^{z_j}}
+\end{equation*}
+Grazie alla funzione softmax, l'output $\mathbf{\widehat{y}}$ è la distribuzione di probabilità che $\mathbf{x}$ appartenga alla classe $i$:
+\begin{equation*}
+\widehat{y_i}=p(y=i|\mathbf{x})
+\end{equation*}
+\end{itemize}
+\end{itemize}
+
+La funzione di attivazione più utilizzata nell'ambito delle ANN è la seguente \textbf{ReLU} (Rectified Linear Unit), anche detta \textbf{rettificatore}:
+\[\text{ReLU}(x)=x^{+}=\max(0,x)\]
+Il rettificatore è la funzione di attivazione usata in tutte le reti neurali presentate in questo lavoro di tesi (par. \ref{alexnet},\ref{googlenet},\ref{resnet}).
+Altre possibilità sono la sigmoide $g(x)=\sigma(x)$ oppure la tangente iperbolica $g(x)=\tanh(x)$.\\
+
+Anziché pensare ad un layer come ad una singola funzione vettoriale, possiamo pensare il layer costituito da tante unità computazionali che agiscono in parallelo,
+ognuna delle quali calcola la propria funzione scalare: esegue una somma pesata
+degli input con i pesi ed applica un bias (fig. \ref{fig:modelloHebb}) nella misura in cui riceve input da molte altre unità (dendriti) e calcola una
+funzione di attivazione trasmessa come output ad altre unità del layer successivo (assone).
+La scelta delle funzioni f(i)(x) è generalmente legata ad una rappresentazione
+molto semplificata della funzione che il neurone biologico calcola.
+

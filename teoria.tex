@@ -4,27 +4,39 @@
 \fancyhead[OL]{\rightmark}
 \cfoot{\thepage}
 
-Come già anticipato, l'approccio più efficace alla risoluzione del problema della classificazione delle immagini consiste nell'impiego delle reti neurali convoluzionali (CNN, \emph{convolutional neural networks}). In questo capitolo saranno introdotti progressivamente i presupposti teorici matematici e informatici su cui si fondano le reti neurali, partendo dalle definizioni preliminari fino a costruire il modello generale di una CNN.
+Nel corso di questo capitolo saranno introdotti progressivamente i concetti principali su cui si fonda la \textit{computer vision} (visione artificiale) e il \textit{machine learning} (apprendimento automatico). Questi presupposti teorici permetteranno di comprendere da un punto di vista teorico quanto descritto nella sezione sperimentale della tesi (cap. \ref{esperimenti}.
 
+Per i primi paragrafi, dedicati all'\textit{image processing}, le principali fonti seguite sono \cite{gianvito} e \cite{computerVision}.
 
+Per i paragrafi dedicati al \textit{machine} e \textit{deep learning} le fonti di riferimento sono \cite{dlbook} e soprattutto \cite{cs231n}.
 
-\section{Reti neurali}
-
-TODO: parlare del neurone e dell'idea di replicarlo nella funzione (dopo aver parlato dei classificatori lineari, perché bisogna parlare anche 
 
 \section{Immagini digitali}
 Caratterizziamo intuitivamente il concetto di "immagine" dal punto di vista informatico.
 
-Un'\textbf{immagine digitale} è una rappresentazione binaria di un'immagine (in generale a colori) a due dimensioni\footnote{Ci riferiamo in questa sede solo alle immagini di tipo raster, tipiche ad esempio delle fotografie digitali in formato jpg.}; essa può essere definita matematicamente come un tensore $\mathcal{I}\in\R^{h\times w\times c}$, dove $h$ e $w$ sono rispettivamente dette \textbf{altezza} e \textbf{larghezza} dell'immagine, la coppia $(w,h)$ \textbf{risoluzione} mentre $c$ è il numero di \emph{canali di colore}\footnote{Spesso si scrive che $\mathcal{I}$ è un immagine $w\times h\times c$, o più semplicemente $w\times h$ (assumendo $c=3$)}. Nello spazio di colore RGB, ampiamente adoperato, i canali di colore sono rosso (R, Red), verde (G, Green) e blu (B, Blue), quindi $c=3$. In mancanza di diverse indicazioni, ci si riferirà nel seguito allo spazio di colore RGB.
+Un'\textbf{immagine digitale} è una rappresentazione binaria di un'immagine (in generale a colori) a due dimensioni\footnote{Ci riferiamo in questa sede solo alle immagini di tipo raster, quelle cioè con risoluzione e numero di canali di colore fissati a priori, come ad esempio le immagini digitali in formato jpg.}; essa può essere definita matematicamente come un tensore $\mathcal{I}\in\{0,\dots,255\}^{h\times w\times c}$, dove $h$ e $w$ sono rispettivamente dette \textbf{altezza} e \textbf{larghezza} dell'immagine, la coppia $(w,h)$ \textbf{risoluzione} mentre $c$ è il numero di \emph{canali di colore}\footnote{Spesso si scrive che $\mathcal{I}$ è un immagine $w\times h\times c$, o più semplicemente $w\times h$ (assumendo $c=3$)}. Nello \textbf{spazio di colore sRGB} (standard RGB, d'ora in avanti abbreviato in RGB), ampiamente adoperato, i canali di colore sono rosso (R, Red), verde (G, Green) e blu (B, Blue), quindi $c=3$. In mancanza di diverse indicazioni, ci si riferirà nel seguito allo spazio di colore RGB.
 
 Un \textbf{pixel} $p(i,j)$ è definito come la funzione vettoriale
 \[p(i,j)=[r(i,j),g(i,j),b(i,j)]\]
-essendo $r,g,b:\{0,\dots,h\}\times\{0,\dots,w\}\to\{0,\dots,255\}$ le funzioni scalari che associano ad ogni posizione bidimensionale $i,j$ dell'immagine un valore intero di \emph{intensità luminosa} compreso tra 0 e 255, uno per ciascuno dei tre canali RGB. Ogni pixel definisce univocamente un colore nello spazio RGB, il quale può rappresentare in tutto $256^{3}$ colori diversi, cioè circa 17 milioni.
+essendo $r,g,b:\{0,\dots,h\}\times\{0,\dots,w\}\to\{0,\dots,255\}$ le funzioni scalari che associano ad ogni posizione bidimensionale $i,j$ dell'immagine un valore intero di \textbf{intensità luminosa} compreso tra 0 e 255, uno per ciascuno dei tre canali RGB.
+Ogni pixel definisce univocamente un colore nello spazio RGB, il quale può quindi rappresentare in tutto $256^{3}$ colori diversi, cioè circa 17 milioni.
 
-\begin{figure}
+Si può immaginare il tensore immagine $\mathcal{I}$ come una "pila" di tre matrici, una per ogni canale di colore, come mostrato in figura \ref{fig:rappresentazione_tensore}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{rappresentazione_tensore}
+\caption{Rappresentazione grafica di un tensore tridimensionale; in ogni posizione compaiono gli indici del tensore}
+\label{fig:rappresentazione_tensore}
+\end{figure}
+
+Un esempio di immagine digitale, scomposta nelle sue componenti RGB, è mostrato in figura \ref{fig:canali_rgb}.
+
+\begin{figure}[h]
   \begin{minipage}[b]{0.46\textwidth}
     \includegraphics[width=\textwidth]{canali_rgb}
     \caption{Canali RGB di un'immagine}
+    \label{fig:canali_rgb}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.46\textwidth}
@@ -33,125 +45,285 @@ essendo $r,g,b:\{0,\dots,h\}\times\{0,\dots,w\}\to\{0,\dots,255\}$ le funzioni s
   \end{minipage}
 \end{figure}
 
-Si può immaginare il tensore immagine $\mathcal{I}$ come una "pila" di tre matrici, una per ogni canale di colore, come mostrato in figura \ref{rappresentazione_tensore}.
+In Matlab un'immagine digitale può essere rappresentata con il tipo di dato \verb|multidimensional-array| con tre dimensioni (corrispondenti ai tre canali di colore RGB), in cui ciascun elemento è di tipo \verb|uint8| (ma può appartenere anche ad altri tipi di dato\footnote{\url{https://it.mathworks.com/help/matlab/ref/image.html?s_tid=doc_ta#buqdlnb-C}}).
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.7]{rappresentazione_tensore}
-\caption{Rappresentazione grafica di un tensore tridimensionale; in ogni posizione compaiono gli indici del tensore}
-\label{rappresentazione_tensore}
-\end{figure}
+È possibile importare un'immagine RGB con la funzione:
+\begin{verbatim}
+im = imread("immagine.jpg");
+\end{verbatim}
+I canali Rosso \verb|R|, Verde \verb|G| e blu \verb|B| possono essere ottenuti come:
+\begin{verbatim}
+R = im(:,:,1);
+G = im(:,:,2);
+B = im(:,:,3);
+\end{verbatim}
+Il pixel di posizione $(i,j)$ è quindi:
+\begin{verbatim}
+p = [im(i,j,1) im(i,j,2) im(i,j,3)];
+\end{verbatim}
 
-TODO inserire problema dell'object detection pag. 43 Gianvito
+\subsection{Spazio di colore Lab}
+Oltre al modello RGB descritto al paragrafo precedente, esistono ulteriori spazi di colore che consentono di ottenere una differente rappresentazione delle medesime tonalità dei pixel.
+Nel presente lavoro di tesi (par. \ref{faseRitaglio}) si utilizza una conversione delle immagini dallo spazio di colore iniziale RGB allo spazio di colore \textbf{CIE 1976 L*a*b*} (nel seguito abbreviato come Lab).
+Nello spazio Lab le tonalità sono ancora espresse da triplette di valori (L*, a* e b*), ma con un significato diverso rispetto a RGB: il valore L* rappresenta la luminanza
+(variazione di luminosità), mentre le altre due rappresentano la crominanza (variazione
+di colore), rispettivamente una scala verde-rosso (a*) ed una scala blu-giallo (b*).
 
-\subsection{Supervised Learning}
+A partire dall’immagine \verb|im| è possibile convertire lo spazio di colori da RGB a Lab, ottenendo una nuova immagine \verb|im_lab|:
+\begin{verbatim}
+im_lab = rgb2lab(im);
+\end{verbatim}
+I dettagli sulla conversione di spazio di colore possono essere letti al par. 2.1.1 di \cite{gianvito}.
 
-Il paradigma dell'\textbf{apprendimento supervisionato} (\textit{supervised learning}) si basa sulla creazione di un algoritmo in grado di apprendere una funzione che mappi un input all'output corretto, sulla base di una serie di esempi ideali costituiti da coppie di input e dei relativi output attesi, che gli vengono inizialmente forniti per addestrarlo \cite{Russell2009}.
-Un algoritmo di apprendimento supervisionato analizza i dati di addestramento e inferisce una funzione che può essere usata per mappare nuovi input ai corretti output. Ciò richiede all'algoritmo la capacità di trovare una funzione che sappia generalizzare efficacemente dai dati di training, al fine di adattarsi bene a nuovi dati (per poterne mappare correttamente quanti più possibile).\\
+\subsection{Collezioni di immagini in Matlab}
+Una delle necessità principali del lavoro affrontato è stata la gestione di grandi quantità di immagini. Si riportano i tipi di dato messi a dispozione da Matlab e utilizzati negli esperimenti del presente lavoro di tesi:
 
-Molti problemi pratici, come ad esempio la regressione e la classificazione, possono essere formulati ricorrendo ad una funzione matematica
-\[\mathcal{F}:X\to Y\]
-che associa ad ogni elemento nello spazio degli input $X$ (dataset) uno ed un solo elemento dello spazio degli output.
-Il concetto di funzione implica l'esistenza di un solo elemento di $Y$ a cui ogni elemento di $X$ è correttamente associato. Il problema consiste allora nel cercare una funzione $\mathcal{F}$ in grado di ottenere esattamente tale associazione, per quanti più elementi di $X$ possibile.
-
-È evidente che questo tipo di problemi ben si presta ad essere approcciato con algoritmi di apprendimento supervisionato.
-
-Prima di analizzare in dettaglio il problema di classificazione delle immagini oggetto della presente tesi, è necessario inquadrare il problema partendo da alcune definizioni preliminari.\\
-
-Un \textbf{dataset} X è una generica collezione di $N$ dati
-\[X=\{\mathbf{x}^{(1)},\mathbf{x}^{(2)},\dots,\mathbf{x}^{(N)}\}\]
-Ogni dato $\mathbf{x}^{(i)}$ è chiamato \textbf{esempio} (o \textbf{data point}).
-I data point possono essere anche non omogenei tra loro (cioè avere dimensioni differenti).
-Ciascun esempio si può caratterizzare come un vettore $\mathbf{x}^{(i)}\in\R^{D}$, in cui ciascun elemento $x_i$ è detto \textbf{feature} e rappresenta una caratteristica di un oggetto o un evento misurato. $D$ è il numero di feature in ogni esempio, o \textbf{dimensione} dell'esempio.
-In caso di esempi omogenei (cioè aventi stessa dimensione $D$) un dataset può essere descritto attraverso una matrice detta \textbf{design matrix}, in cui ogni riga corrisponde ad un particolare esempio e ogni colonna corrisponde ad una precisa feature.
-Un dataset di cardinalità $N$ e in cui ogni esempio ha $D$ feature ha quindi una design matrix di dimensione $N\times D$. \\
-
-In un problema di classificazione delle immagini orientato all'\textit{object recognition} (riconoscimento di un oggetto in un immagine), sussiste la seguente caratterizzazione:
 \begin{itemize}
-\item $X$: un insieme di $N$ immagini digitali
-\item $Y$: un insieme di $K$ classi predefinite di oggetti che possono essere individuati all'interno di un'immagine (possono essere dei "descrittori" testuali o, equivalentemente, dei numeri interi)
+
+\item \verb|imageDatastore|: oggetto progettato appositamente per gestire ed elaborare rapidamente una grande quantità di immagini. Per istanziare un oggetto \verb|imageDatastore| bisogna specificare l'argomento \verb|path| che indica il percorso della collezione di immagini da importare. Altri argomenti (coppie argomento-valore) opzionali per l'inizializzazione di questo oggetto sono:
+\begin{itemize}
+\item \verb|’IncludeSubfolders’,true|\\
+Include le immagini contenute nelle sottocartelle di \verb|path| 
+\item \verb|’LabelSource’,’foldernames’|\\
+Assegna a ciascuna immagine un’etichetta
+data dal nome della cartella in cui è contenuta
 \end{itemize}
-Un elemento di $Y$ è solitamente chiamato \textbf{etichetta} o \textbf{categoria} (in inglese \textbf{label} o \textbf{class}); si dice quindi che ogni immagine $\mathbf{x}^{(i)}\in X$ può essere \textit{descritta da un'etichetta} (o \textit{associata ad una categoria}) $\mathbf{y}^{(i)}\in Y$ tramite una funzione di associazione $f$.\footnote{Teoricamente una stessa immagine potrebbe essere descritta da più di un'etichetta o addirittura da nessuna, coerentemente col fatto che in essa potrebbero essere presenti più oggetti o nessun oggetto tra quelli previsti in $Y$. Tuttavia nella presente tesi questa ambiguità non può sussistere: la classificazione riduce qualsiasi immagine ad una di due categorie mutualmente esclusive e di cui almeno una deve essere ammessa, cioè la presenza o meno di una pinna nell'immagine.}\\
-Nella pratica, TODO f non può essere trovata esattamente. (vd gianvito)
+Quindi, per creare l'oggetto:
+\begin{verbatim}
+imds = imageDatastore(path,’IncludeSubfolders’,true,...
+’LabelSource’,’foldernames’);
+\end{verbatim}
+L’elenco delle immagini è restituito nel campo \verb|imds.Files|.
 
-TODO: scrivere ora o in un paragrafo a parte i tipi di dato per gestire le immagini messi a disposizione da matlab.
+\item \verb|augmentedImageDatastore|: oggetto creato a partire da un \verb|imageDatastore| applicando operazioni di preprocessing specificate in un oggetto \verb|imageDataAugmenter|. La sintassi di questo oggetto verrà approfondita nel par. \ref{augmentation}. TODO
 
-
-\section{Classificatore lineare}
-Il classificatore lineare è una tra le più semplici funzioni di classificazione.\footnote{La fonte principale per gli argomenti trattati in questo paragrafo è \cite{cs231n}}
-Ipotizziamo di avere un insieme di $N$ immagini $\mathbf{x}^{(i)}$ (\textit{data points}), ciascuna con risoluzione fissa $w\times h$ e in formato RGB ($c=3$), e un insieme di $K$ distinte categorie di oggetti  (\textit{labels}). Un \textbf{classificatore lineare} è definito dalla funzione
-\begin{equation} \label{eq_class_lin}
-f(\mathbf{x}^{(i)};\mathbf{W},\mathbf{b})=\mathbf{W}\mathbf{x}^{(i)}+\mathbf{b}
-\end{equation}
-In questa espressione stiamo assumendo che $\mathbf{x}^{(i)}$ sia un vettore colonna di dimensione $D=hwc$ ottenuto incolonnando una ad una le righe dell'$i$-esima immagine di tutti e tre i canali di colore, $\mathbf{W}$ una matrice detta \textbf{matrice dei pesi} (\textit{weights matrix}) di dimensione $K\times D$ e $\mathbf{b}$ un vettore colonna detto \textbf{vettore dei bias} (\textit{bias vector}) di dimensione $K$. I pesi e i bias sono parametri della funzione $f$.
-
-Ogni riga $j$-esima di $W$ e il relativo $j$-esimo valore di $\mathbf{b}$ serve a calcolare la combinazione (lineare a meno del bias) $\mathbf{w}_j\cdot \mathbf{x}^{(i)}+b_j$. Ognuna delle $K$ combinazioni calcolate è un numero reale che si può interpretare come un "punteggio" registrato dall'$i$-esima immagine in ogni classe di oggetti in $Y$ (\textit{class score}): l'$i$-esima immagine è classificata con l'etichetta $\mathbf{y}_j\in Y$ se l'elemento $j$-esimo del vettore output $f(\mathbf{x}^{(i)};\mathbf{W},\mathbf{b})$ è il massimo del medesimo vettore.\\
-
-L'esempio in figura \ref{class_lin} mostra la classificazione di un'immagine di un gatto con $\abs{Y}=3$ classi (\textit{gatto}, \textit{cane}, \textit{barca}). Per semplicità, l'immagine input è ipotizzata $2\times 2$ e composta da un unico canale di colore ($c=1$) (quindi $\mathbf{x}$, scritta come vettore colonna, è $4\times 1$).
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth ,keepaspectratio]{classificatore_lineare}
-\caption{Mappatura di un'immagine ai punteggi di ogni classe mediante un classificatore lineare. Si noti che i pesi di $\mathbf{W}$ non costituiscono un buon set di parametri: il punteggio assegnato alla classe "cane" (sbagliata) è alto e quello totalizzato dalla classe "gatto" (corretta) è basso. Il classificatore "è convinto" di aver classificato l'immagine di un cane.}
-\label{class_lin}
-\end{figure}
-
-\subsection*{Interpretare un classificatore lineare}
-
-Poiché le immagini possono essere memorizzate come vettori colonna $hwc$-dimensionali, si possono immaginare le immagini di un dataset come dei punti nello spazio $\R^{hwc}$. Di conseguenza, il dataset può essere pensato come una collezione di punti multidimensionali. Ovviamente non possiamo visualizzare spazi con più dimensioni di $\R^{3}$, ma se immaginiamo di "comprimere" tutte le $hwc$ dimensioni in sole due dimensioni otteniamo una visualizzazione del tipo in figura \ref{visual_class_lin}.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth ,keepaspectratio]{visualizz_class_lin}
-\caption{Visualizzazione di tre righe di un classificatore lineare, una per ciascuna delle classi "aereo", "auto", "cervo".}
-\label{visual_class_lin}
-\end{figure}
-
-Le rette in figura devono in realtà essere pensate come degli iperpiani $(hwc-1)$-dimensionali, associati a ciascuna classe di $Y$ (cioè a ciascuna riga di $\mathbf{W}$ e $\mathbf{b}$), e il piano come lo spazio $\R^{hwc}$. Sussistono le seguenti interpretazioni geometriche:
-\begin{itemize}
-\item Le immagini sono dei punti nel piano. Ogni retta è il luogo dei punti che totalizzano un punteggio nullo per la classe associata a quella retta (la classe è scritta in figura accanto ad ogni retta). La freccia nella figura indica la direzione seguendo la quale i punti del piano aumentano (linearmente) il punteggio realizzato per quella classe.
-\item Modificare i pesi di $\mathbf{W}$ significa regolare l'inclinazione delle rette (cioè ruotarle rispetto al punto di intercetta).
-\item Modificare i bias di $\mathbf{b}$ significa regolare l'intercetta delle rette (cioè traslarle verticalmente).
 \end{itemize}
 
-Un altro modo di interpretare i pesi $\mathbf{W}$ può essere quello di far corrispondere ogni riga di $\mathbf{W}$ a un \textbf{prototipo} (in inglese \textbf{template}) per una delle classi. In questa interpretazione, il punteggio realizzato per ogni classe da un'immagine è ottenuto attraverso l'operazione di prodotto matriciale tra il prototipo della classe $j$ ($\mathbf{w}_j$) e l'immagine da classificare ($\mathbf{x}^{(i)}$).
-Usando la terminologia introdotta, possiamo affermare che ciò che sta facendo il classificatore lineare è un'operazione di \textit{template matching}, dove i \textit{templates} sono oggetto di apprendimento da parte del classificatore\footnote{Si introdurranno gli algoritmi di apprendimento (supervisionato) nel capitolo \ref{TODO}.}.
+\section{Trasformazioni}
+Si riportano le operazioni fondamentali che hanno consentito, nel presente lavoro di tesi, di trasformare le immagini in una forma maggiormente adatta ad un’analisi successiva, una strategia chiamata \textit{image augmentation} (par. \ref{augmentation}).
 
-Ad esempio, analizziamo il dataset \textit{CIFAR-10} \cite{cifar10}. Esso contiene immagini $32\times 32$ ciascuna appartenente ad una di 10 classi. Visualizzando\footnote{TODO Per i dettagli su come "visualizzare" i pesi si veda \url{https://it.mathworks.com/help/deeplearning/examples/visualize-activations-of-a-convolutional-neural-network.html}.} i pesi (e quindi i 10 templates) di un classificatore lineare addestrato su CIFAR-10 si ottengono i risultati in figura seguente:
+\subsection{Ridimensionamento}
+Il ridimensionamento consente, in generale, di ottenere una nuova immagine a risoluzione differente, riducendo o aumentando il numero di pixel utilizzati per rappresentarla.
+Nel caso del presente lavoro, le dimensioni delle immagini sono state ridotte (par. \ref{faseRitaglio}), per diminuire il costo computazionale delle operazioni successive.
+Per ridimensionare un'immagine \verb|im| in Matlab si può usare la funzione \verb|imresize|\footnote{La funzione imresize attua, per lo scopo, una tecnica avanzata di calcolo numerico: l’interpolazione bicubica. (TODO ? par. 2.2.1 di \cite{gianvito} per i dettagli.)}, specificando la nuova lunghezza \verb|w'| e la nuova altezza \verb|h'|:
+\begin{verbatim}
+im_res = imresize(im,[h' w']);
+\end{verbatim}
+
+\subsection{Rotazione}
+La rotazione di un'immagine digitale può essere effettuata calcolando per ogni suo pixel $(x,y)$ il prodotto matriciale
+\begin{equation*}
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix} = 
+\begin{bmatrix}
+\cos\alpha & -\sin\alpha \\
+\sin\alpha & \cos\alpha
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+\end{equation*}
+in cui $\alpha$ è l’angolo di rotazione misurato in senso antiorario rispetto all’asse x e $(x',y')$ le coordinate del pixel trasformato. L'immagine ruotata è l'insieme dei pixel $(x',y')$ calcolati.
+
+In Matlab, la rotazione di un'immagine \verb|im| di un angolo \verb|a| può essere effettuata con
+\begin{verbatim}
+rotated = imrotate(im, a);
+\end{verbatim}
+
+\subsection{Riflessione}
+La riflessione rispetto all’asse x di un'immagine digitale può essere effettuata calcolando per ogni suo pixel $(x,y)$ il prodotto matriciale
+\begin{equation*}
+\begin{bmatrix}
+x' \\
+y'
+\end{bmatrix} = 
+\begin{bmatrix}
+1 & 0 \\
+0 & -1
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+\end{equation*}
+dove $(x',y')$ sono le coordinate del pixel trasformato. L'immagine riflessa è l'insieme dei pixel $(x',y')$ calcolati.
+
+In Matlab, la riflessione di un'immagine \verb|im| rispetto all'asse x può essere effettuata con
+\begin{verbatim}
+flipped = flipdim(im, 2);
+\end{verbatim}
+
+\subsection{Traslazione}
+La traslazione orizzontale, a differenza delle precedenti operazioni, è una trasformazione affine ma non lineare, quindi
+la rappresentazione con le matrici richiede il passaggio ad un diverso tipo di coordinate
+dette omogenee:
+\begin{equation*}
+\begin{bmatrix}
+x&y
+\end{bmatrix}^\top \mapsto
+\begin{bmatrix}
+x&y&1
+\end{bmatrix}^\top
+\end{equation*}
+A questo punto, è possibile ottenere le nuove coordinate traslate $(x', y')$ calcolando:
+
+\begin{equation*}
+\begin{bmatrix}
+x'\\y'\\1
+\end{bmatrix} = 
+\begin{bmatrix}
+1 & 0 & t_x \\0 & 1 & t_y \\0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y \\ 1
+\end{bmatrix}
+\end{equation*}
+
+In Matlab, la traslazione orizzontale di \verb|t| pixel di un'immagine \verb|im| può essere effettuata con
+\begin{verbatim}
+translated = imtranslate(im,[t 0]);
+\end{verbatim}
+dove \verb|t|>0 implica una traslazione verso destra, \verb|t|<0 verso sinistra.\\
+
+I risultati delle quattro trasformazioni finora viste sono visualizzate in figura \ref{fig:trasformazioni}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth ,keepaspectratio]{templates}
-\caption{Visualizzazione dei templates di un classificatore addestrato sul dataset CIFAR-10}
-\label{templates}
+
+\begin{subfigure}[b]{\textwidth}
+\centering
+\includegraphics[width=0.24\textwidth]{pinnaOriginale}
+\caption{Immagine originale}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.24\textwidth}
+\centering
+\includegraphics[width=0.4\textwidth]{pinnaOriginale}
+\caption{Ridimensionata}
+\end{subfigure}
+\begin{subfigure}[b]{0.24\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pinnaRuotata}
+\caption{Ruotata di 20$^\circ$}
+\end{subfigure}
+\begin{subfigure}[b]{0.24\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pinnaRiflessa}
+\caption{Riflessa}
+\end{subfigure}
+\begin{subfigure}[b]{0.24\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pinnaTraslata}
+\caption{Traslata di -100px}
+\end{subfigure}
+
+\caption{Trasformazioni applicate ad un'immagine digitale}
+\label{fig:trasformazioni}
 \end{figure}
 
-Si possono fare alcune interessanti osservazioni.
+\subsection{Convoluzione}
+Nell’ambito dell’\textit{image processing} esiste una quantità notevole di operatori definiti "locali", che operano cioè non su un singolo pixel ma su un gruppo di pixel contigui.
+L’operatore locale maggiormente usato è l’operatore di convoluzione. Nell'ambito del presente lavoro, esso ha un'importanza centrale per la \textit{feature extraction} delle immagini, all'interno delle reti neurali convoluzionali (par. \ref{CNN}), e più specificamente nei layer convoluzionali (par. \ref{convLayer}).
 
-Ad esempio, il prototipo della classe "barca" è composto da molti pixel blu disposti perlopiù lungo i margini, come ci si potrebbe aspettare dal momento che molte immagini di barche in CIFAR-10 raffigurano queste in mare aperto. Questo template allora assegnerà un punteggio alto quando l'immagine che si vuole classificare (cioè \textit{raffrontare al template}) è una barca in mare aperto. In altre parole, un'immagine realizzerà un punteggio tanto più alto in una certa classe quanto più essa è \textit{simile} al template che il classificatore lineare \textit{ha imparato} per quella classe.
 
-Il prototipo per la classe "cavallo" sembra essere l'immagine di un cavallo a due teste; similmente, quello per la classe "auto" sembra una miscela di rappresentazioni di un'auto vista da più direzioni diverse. Ciò è coerente col fatto che il classificatore lineare è stato addestrato su immagini di cavalli visti rispetto a entrambi i profili e su immagini
-di auto raffigurate in tante direzioni diverse. Inoltre, il template per l'auto sembra rappresentare un'auto di colore rosso: evidentemente in CIFAR-10 la maggior parte delle automobili rappresentate sono di quel colore.\\
+Nel seguito si presenta, pertanto, una definizione rigorosa dell'operazione di convoluzione e si forniscono semplici esempi di implementazione.
 
-Come si vedrà nel seguito, questa operazione di \textit{template matching} presenta una forte analogia con il funzionamento di un \textit{Fully Connected Layer} di una rete neurale convoluzionale.
+Dati due segnali discreti $x(k)$ e $w(k)$, si definisce \textbf{(somma di) convoluzione tra $x$ e $w$} una nuova funzione $s(k)$ definita come \begin{equation*}
+s(k)=x(k)\ast w(k)\eqdef \sum_{i=-\infty}^{+\infty}x(i)w(k-i), i\in\Z
+\end{equation*}
 
-\subsection*{Bias trick}
-Concludiamo questo capitolo menzionando un "trucco" matematico molto utilizzato per rappresentare $\mathbf{W}$ e $\mathbf{b}$ come un'unica matrice, semplificando la notazione \ref{eq_class_lin}.
-Possiamo aggiungere il vettore dei bias in coda alla matrice dei pesi e aggiungere un "1" in coda al vettore che rappresenta l'immagine. In questo modo, il classificatore lineare è rappresentato dalla funzione di associazione
-\begin{equation} \label{eq_bias_trick}
-f(\mathbf{x}^{(i)};\mathbf{W})=\mathbf{W}\mathbf{x}^{(i)}
-\end{equation}
+Si dimostra che questa operazione gode della proprietà commutativa, associativa e distributiva rispetto alla somma.
 
-In questa maniera, $f$ calcola solo combinazioni lineari (un singolo prodotto matriciale), poiché il vettore dei bias è stato eliminato.
-Tale utile passaggio, noto come \textit{bias trick}, è visualizzato nella seguente figura
+Nell'ambito della \textit{computer vision} si utilizza una versione multidimensionale dell'operazione di convoluzione, utilizzando la seguente terminologia:
+\begin{itemize}
+\item il primo segnale $x$ è detto \textbf{input}, generalmente costituito da un'immagine od una sua elaborazione;
+\item il secondo segnale $w$ è detto \textbf{filtro} o \textbf{kernel}, solitamente costituito da una matrice
+di dimensioni ridotte rispetto all'input;
+\item il risultato $s$ è detto \textbf{feature map}, poiché l'operazione di filtraggio è spesso utilizzata per l'estrazione di feature a partire dall'input (par. \ref{TODO}).
+\end{itemize}
+È ovvio che la somma di infiniti termini prevista dalla definizione di convoluzione con segnali discreti si riduce ad una somma limitata alle dimensioni dell'immagine. Nel caso in cui l'input sia una matrice bidimensionale, ad esempio un'immagine in scala di grigi $I\in\R^{h\times w}$, anche il kernel impiegato è solitamente una matrice bidimensionale di dimensioni ridotte $K\in\R^{a\times b}$, ottenendo l’operazione:
+\begin{equation*}
+s(i,j)=(I\ast K)(i,j)=\sum_{k=1}^a\sum_{r=1}^b I(i+k-1,j+r-1)K(l-k+1,w-r+1)
+\end{equation*}
+
+Molte librerie, in realtà, implementano la convoluzione attraverso la funzione di crosscorrelazione (indicata con $\oast$).
+In tal caso ciascun elemento della feature map si ottiene come
+\begin{equation*}
+s(i,j)=(I\oast K)(i,j)=\sum_{k=1}^a\sum_{r=1}^b\mathcal{I}(i+k-1,j+r-1)K(k,r)
+\end{equation*}
+L'operazione appena esposta - che si dimostra essere equivalente ad una convoluzione tra $I$ e $K$ - ha una semplice interpretazione, visualizzata in fig. \ref{fig:interpretazioneConvoluzione}. Convolvere un'immagine con un kernel equivale a far scorrere la matrice che rappresenta il kernel lungo l'immagine, e sviluppare i prodotti \textit{element-wise} (termine a termine) e sommarli tra loro, ottenendo l'elemento della feature map.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\textwidth ,keepaspectratio]{bias_trick}
-\caption{Bias trick}
-\label{bias_trick}
+\includegraphics[width=0.5\textwidth]{interpretazioneConvoluzione}
+\caption{Un esempio di cross-correlazione (ovvero convoluzione discreta 2-D senza il
+ribaltamento del kernel)}
+\label{fig:interpretazioneConvoluzione}
 \end{figure}
 
-TODO: loss functions.
+Nel caso (più comune) in cui l’input sia un tensore (ad esempio un’immagine a colori) $\mathcal{I}\in\R^{h\times w\times c}$ si richiede che il kernel abbia lo stesso numero $c$ di livelli, ad esempio $\mathcal{K}\in\R^{a\times b\times c}$. L'operazione viene così ridefinita.
+\begin{equation*}
+s(i,j)=(\mathcal{I}\oast\mathcal{K})(i,j,k)=\sum_{k=1}^a\sum_{r=1}^b\sum_{s=1}^c\mathcal{I}(i+s-1,j+r-1,k)K(r,s,k)
+\end{equation*}
+Come si nota, la feature map ottenuta sarà sempre bidimensionale (a prescindere dalla profondità $c$ del tensore in input).
 
-TODO: valutazione delle prestazioni di una rete neurale (matrice di confusione)
+Completeremo la trattazione sulla convoluzione nel par. \ref{convLayer} sul layer convoluzionale di una CNN.
+
+\section{Problemi di \textit{Computer Vision}}
+In questa sezione si riportano alcuni problemi caratteristici della \textit{computer vision}, affrontati nel corso del lavoro e finalizzati ad una comprensione di alto livello del contenuto delle immagini (e dei video) da parte del computer. Il nome italiano della disciplina, "visione artificiale", richiama in questo senso l'obiettivo di rendere artificiali i compiti svolti dal sistema visivo umano.
+
+TODO TODO TODO vd 2.3 gianvito
+
+\subsection{Segmentazione}
+TODO
+\paragraph*{Soglia di Otsu}
+TODO
+\paragraph*{Regioni connesse}
+TODO
+\paragraph*{Riempimento degli \textit{holes}}
+TODO
+
+\subsection{Object recognition}
+\label{objectRecognition}
+L'\textbf{\textit{object recognition}} (in italiano: riconoscimento di oggetti) nell'ambito della visione artificiale è il problema di assegnare una descrizione testuale o una o più etichette ad un'immagine, tipicamente sulla base di uno o più determinati oggetti che un computer riesce a riconoscere all'interno di essa.
+
+Ogni categoria esistente di oggetti ha delle caratteristiche fondamentali che la differenziano da qualunque altra categoria di oggetti. Attraverso tecniche di \textit{machine learning} è possibile ricavare una descrizione di una certa categoria addestrando la macchina a riconoscere le caratteristiche (\textit{features}) fondamentali di quella categoria di oggetti, a partire da un insieme di immagini campione afferenti a quella categoria.
+
+Per rendere affidabile il riconoscimento, è importante che l'insieme di caratteristiche estratte da ogni immagine campione sia insensibile a variazioni del punto di vista, di scala, delle condizioni di illuminazione, alle distorsioni geometriche, all'occlusione dell'oggetto, al \textit{clutter} (ingombro) di altri oggetti non informativi sullo sfondo, alle variazioni intra-classe dell'oggetto, come mostrato in fig. \ref{fig:variabilita}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{variabilita}
+\caption{I principali "ostacoli" al riconoscimento automatico degli oggetti} 
+\label{fig:variabilita}
+\end{figure}
+
+L'uomo riconosce una moltitudine di oggetti in immagini con poco sforzo, nonostante i fattori di variabilità descritti. Questo compito è ancora una sfida aperta per la computer vision in generale.\\
+
+Il problema dell'\textbf{\textit{image classification}} è uno specifico problema di \textit{object recognition} che consiste nell'assegnare una singola etichetta (o una distribuzione di probabilità su più etichette) ad un'immagine da un insieme fisso di etichette (anche dette "categorie" o "classi"). In fig. \ref{fig:imageClassification} è visualizzato il problema in esame.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{imageClassification}
+\caption{Il task della \textit{image classification} consiste in questo caso nel calcolare una distribuzione di probabilità su quattro etichette (gatto, cane, cappello, tazza) per un'immagine digitale.} 
+\label{fig:imageClassification}
+\end{figure}
+
+In letteratura sono stati proposti numerosi metodi per la risoluzione efficiente dei task di \textit{object recognition}, attraverso l'impiego di diverse tecniche di \textit{machine learning} (ad esempio l'algoritmo di clustering \textit{k-Nearest Neighbor}). Negli ultimi anni i risultati più promettenti sono stati offerti dalle \textit{reti neurali convoluzionali}, di cui parleremo diffusamente nel seguito del capitolo (par. \ref{CNN}) e che verranno impiegate negli esperimenti (par. \ref{faseClassificazione}).
+
+\section{Object detection}
+Un altro importante problema di \textit{computer vision} è l'\textbf{\textit{object detection}} (in italiano: rilevamento di oggetti). Esso consiste nella localizzazione di oggetti di categorie stabilite a priori ed in seguito (o talvolta in contemporanea) la loro classificazione, per mezzo di un opportuno modello di classificazione.
+
+Il compito si rivela, evidentemente, più difficile di quello della semplice classificazione di oggetti, essendo la localizzazione degli oggetti all'interno dell'immagine un problema anch'esso non banale.\\
+
+L'obiettivo di questo lavoro di tesi è la risoluzione di una particolare istanza (\textit{task} di \textit{object detection}: si vogliono identificare, localizzare e conseguentemente ritagliare, le eventuali porzioni di un'immagine contenenti pinne dorsali di delfini. La classe di oggetti di interesse è quindi una sola.
+
+Grazie al dominio ristretto del problema in esame, il task di rilevamento è risolto con un approccio in due fasi:
+\begin{itemize}
+\item dapprima, si localizzano e si ritagliano le eventuali pinne presenti nell'immagine, sfruttando una forma di conoscenza di alto livello direttamente disponibile nella rappresentazione delle immagini: il colore\footnote{L'idea di sfruttare il colore per isolare le pinne dei cetacei deriva proprio dalla differenza di tonalità tra l'acqua (tendente al blu e al verde) e le pinne (tendenti al grigio)};
+\item in seguito, i ritagli sono sottoposti ad una fase di classificazione, che ne conferma la natura di 'Pinna' o ne smentisce il contenuto informativo ('No pinna').
+\end{itemize}
+Si rimanda direttamente al cap. \ref{esperimenti} per la descrizione degli esperimenti condotti.
