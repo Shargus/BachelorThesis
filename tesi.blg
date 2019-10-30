@@ -1,19 +1,19 @@
 [0] Config.pm:304> INFO - This is Biber 2.13
-[0] Config.pm:307> INFO - Logfile is 'tesi.blg'
-[23] biber-MSWIN64:315> INFO - === 
-[40] Biber.pm:375> INFO - Reading 'tesi.bcf'
-[122] Biber.pm:902> INFO - Using all citekeys in bib section 0
-[136] Biber.pm:4196> INFO - Processing section 0
-[137] Utils.pm:75> INFO - Globbing data source 'biblio_tesi.bib'
-[145] Utils.pm:91> INFO - Globbed data source 'biblio_tesi.bib' to biblio_tesi.bib
-[156] Biber.pm:4373> INFO - Looking for bibtex format file 'biblio_tesi.bib' for section 0
-[159] bibtex.pm:1462> INFO - LaTeX decoding ...
-[186] bibtex.pm:1281> INFO - Found BibTeX data source 'biblio_tesi.bib'
-[260] Utils.pm:300> WARN - I didn't find a database entry for crossref 'conf/icml/2010' in entry 'nairhinton' - ignoring (section 0)
-[275] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[275] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[275] Biber.pm:4024> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'it-IT'
-[275] Biber.pm:4030> INFO - No sort tailoring available for locale 'it-IT'
-[289] bbl.pm:648> INFO - Writing 'tesi.bbl' with encoding 'UTF-8'
-[297] bbl.pm:751> INFO - Output to tesi.bbl
-[301] Biber.pm:110> INFO - WARNINGS: 1
+[1] Config.pm:307> INFO - Logfile is 'tesi.blg'
+[83] biber-MSWIN64:315> INFO - === 
+[206] Biber.pm:375> INFO - Reading 'tesi.bcf'
+[446] Biber.pm:902> INFO - Using all citekeys in bib section 0
+[479] Biber.pm:4196> INFO - Processing section 0
+[552] Utils.pm:75> INFO - Globbing data source 'biblio_tesi.bib'
+[608] Utils.pm:91> INFO - Globbed data source 'biblio_tesi.bib' to biblio_tesi.bib
+[659] Biber.pm:4373> INFO - Looking for bibtex format file 'biblio_tesi.bib' for section 0
+[681] bibtex.pm:1462> INFO - LaTeX decoding ...
+[776] bibtex.pm:1281> INFO - Found BibTeX data source 'biblio_tesi.bib'
+[1241] Utils.pm:300> WARN - I didn't find a database entry for crossref 'conf/icml/2010' in entry 'nairhinton' - ignoring (section 0)
+[1324] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1324] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1324] Biber.pm:4024> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'it-IT'
+[1325] Biber.pm:4030> INFO - No sort tailoring available for locale 'it-IT'
+[1436] bbl.pm:648> INFO - Writing 'tesi.bbl' with encoding 'UTF-8'
+[1488] bbl.pm:751> INFO - Output to tesi.bbl
+[1496] Biber.pm:110> INFO - WARNINGS: 1
