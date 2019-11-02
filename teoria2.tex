@@ -1,7 +1,7 @@
-\subsection{Machine Learning e Deep Learning}
-Il \textit{machine learning} è una branca dell'intelligenza artificiale (AI) che si occupa in generale di fornire ad una macchina la capacità di apprendere automaticamente dall'esperienza, essendo esplicitamente programmata su "come imparare" ma non su "cosa imparare".
+\section{Machine Learning e Deep Learning}
+Il \textbf{\textit{machine learning}} è una branca dell'intelligenza artificiale (AI) che si occupa in generale di fornire ad una macchina la capacità di apprendere automaticamente dall'esperienza, essendo esplicitamente programmata su "come imparare" ma non su "cosa imparare".
 
-Questa capacità è fornita da un algoritmo di machine learning, di cui T. Mitchell fornisce una celebre ed elegante definizione:
+Questa capacità è fornita da un certo algoritmo di machine learning, di cui T. Mitchell fornisce una celebre ed elegante definizione:
 \begin{quote}
 Si dice che un programma per computer impara dall’esperienza E rispetto ad una qualche classe di compiti T ed una misura di performance P se le sue prestazioni nei compiti in T, misurate attraverso P, migliorano con l’esperienza E.
 \end{quote}
@@ -13,7 +13,7 @@ Quasi tutti gli algoritmi di machine learning sono costruiti combinando almeno q
 building blocks fondamentali: un dataset, un modello, una funzione costo ed un
 metodo di ottimizzazione.\\
 
-Il \textit{deep learning} è un tipo specifico di machine learning, che negli ultimi anni ha dato una svolta decisiva alla più vasta branca dell’intelligenza artificiale.
+Il \textbf{\textit{deep learning}} è un tipo specifico di machine learning, che negli ultimi anni ha dato una svolta decisiva alla più vasta branca dell’intelligenza artificiale.
 
 Un algoritmo di deep learning si basa su diversi livelli di rappresentazione dei dati, che corrispondono a differenti livelli di astrazione; questi livelli formano una gerarchia di concetti, in cui i concetti di più alto livello sono definiti sulla base di quelli di livello più basso.
 
@@ -80,7 +80,7 @@ Nella pratica, l'espressione analitica di $f$ non può essere trovata esattament
 \label{overfitting}
 La sfida principale dell'apprendimento automatico è quella di rendere l'algoritmo di machine learning performante su nuovi input, diversi da quelli su cui il modello è stato addestrato. Questa abilità è chiamata \textbf{generalizzazione}.\\
 
-Tipicamente, dopo l'addestramento di un modello di machine learning con un \textit{training set} possiamo misurare le performance del modello con un parametro detto \textit{training error}, definito come il rapporto tra il numero di esempi del dataset che alla fine dell'addestramento l'algoritmo associa al giusto output, $\left|X_{corrette}\right|<\left|X\right|$, e la dimensione del \textit{training set}, $\left|X\right|$:
+Tipicamente, dopo l'addestramento di un modello di machine learning con un \textit{training set} possiamo misurare le performance del modello con un parametro detto \textit{training error}, definito come il rapporto tra il numero di esempi del training set che alla fine dell'addestramento l'algoritmo associa al giusto output, $\left|X_{corrette}\right|<\left|X\right|$, e la dimensione del \textit{training set}, $\left|X\right|$:
 \[\text{Training Error}=\frac{\left|X_{corrette}\right|}{\left|X\right|}\]
 Ovviamente, con l'addestramento si vuole minimizzare questo rapporto. Quello descritto è un problema di ottimizzazione.\\
 
@@ -112,6 +112,7 @@ Gli algoritmi di machine learning performeranno generalmente bene quando la loro
 Negli esperimenti condotti una delle reti neurali utilizzate (ResNet-50) ha sofferto di overfitting a causa della sua enorme capacità di rappresentazione e del training set relativamente ristretto usato per il suo addestramento (par. \ref{addestramento}).
 
 \section{Classificazione}
+\label{classificazione}
 In un problema di classificazione l’insieme delle classi $Y$ è discreto e finito.
 Sulla base del numero di classi $|Y|$ si distinguono due tipi di classificazione: binaria ($|Y|=2$) o multiclasse ($|Y|>2$).
 
@@ -125,6 +126,7 @@ TODO magari lo inserisco direttamente nel capitolo sulle reti neurali.
 
 
 \section{Classificatore lineare}
+\label{classificatoreLineare}
 Il classificatore lineare è uno tra i più semplici modelli di classificazione.
 Ipotizziamo di avere un insieme di $N$ immagini $\mathbf{x}^{(i)}$ (\textit{data points}), ciascuna con risoluzione fissa $w\times h$ e in formato RGB ($c=3$), e un insieme di $K$ distinte categorie di oggetti  (\textit{labels}). Un \textbf{classificatore lineare} è definito dalla funzione
 \begin{equation} \label{eq_class_lin}
@@ -136,12 +138,14 @@ Ogni riga $j$-esima di $W$ e il relativo $j$-esimo valore di $\mathbf{b}$ serve 
 
 L'esempio in figura \ref{class_lin} mostra la classificazione di un'immagine di un gatto con $\abs{Y}=3$ classi (\textit{gatto}, \textit{cane}, \textit{barca}). Per semplicità, l'immagine input è ipotizzata $2\times 2$ e composta da un unico canale di colore ($c=1$) (quindi $\mathbf{x}$, scritta come vettore colonna, è $4\times 1$).
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth ,keepaspectratio]{classificatore_lineare}
 \caption{Mappatura di un'immagine ai punteggi di ogni classe mediante un classificatore lineare. Si noti che i pesi di $\mathbf{W}$ non costituiscono un buon set di parametri: il punteggio assegnato alla classe "cane" (sbagliata) è alto e quello totalizzato dalla classe "gatto" (corretta) è basso. Il classificatore "è convinto" di aver classificato l'immagine di un cane.}
 \label{class_lin}
 \end{figure}
+
+Come si vedrà nel par. \ref{neuroni}, nelle reti neurali il classificatore lineare sarà utilizzato come un singolo "blocco da costruzione" per costruire una rete più grande.
 
 \subsection*{Interpretare un classificatore lineare}
 
@@ -162,7 +166,7 @@ Le rette in figura devono in realtà essere pensate come degli iperpiani $(hwc-1
 \end{itemize}
 
 Un altro modo di interpretare i pesi $\mathbf{W}$ può essere quello di far corrispondere ogni riga di $\mathbf{W}$ a un \textbf{prototipo} (in inglese \textbf{template}) per una delle classi. In questa interpretazione, il punteggio realizzato per ogni classe da un'immagine è ottenuto attraverso l'operazione di prodotto matriciale tra il prototipo della classe $j$ ($\mathbf{w}_j$) e l'immagine da classificare ($\mathbf{x}^{(i)}$).
-Usando la terminologia introdotta, possiamo affermare che ciò che sta facendo il classificatore lineare è un'operazione di \textit{template matching}, dove i \textit{templates} sono oggetto di apprendimento da parte del classificatore\footnote{Si introdurranno gli algoritmi di apprendimento (supervisionato) nel capitolo \ref{TODO}.}.
+Usando la terminologia introdotta, possiamo affermare che ciò che sta facendo il classificatore lineare è un'operazione di \textit{template matching}, dove i \textit{templates} sono oggetto di apprendimento da parte del classificatore\footnote{Si introdurranno gli algoritmi di apprendimento (supervisionato) nel paragrafo \ref{supervisedLearning}.}.
 
 Ad esempio, analizziamo il dataset \textit{CIFAR-10} \cite{cifar10}. Esso contiene immagini $32\times 32$ ciascuna appartenente ad una di 10 classi. Visualizzando\footnote{TODO Per i dettagli su come "visualizzare" i pesi si veda \url{https://it.mathworks.com/help/deeplearning/examples/visualize-activations-of-a-convolutional-neural-network.html}.} i pesi (e quindi i 10 templates) di un classificatore lineare addestrato su CIFAR-10 si ottengono i risultati in figura seguente:
 

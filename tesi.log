@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.9.13)  30 OCT 2019 02:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.9.13)  2 NOV 2019 01:05
 entering extended mode
 **./tesi.tex
 (tesi.tex
@@ -812,8 +812,8 @@ Package biblatex Info: ... file 'english.lbx' found.
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\engli
 sh.lbx"
 File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
-) (tesi.aux (introduzione.aux) (teoria.aux) (teoria2.aux) (alexnet.aux)
-(googlenet.aux) (resnet.aux) (esperimenti.aux) (conclusioni.aux))
+) (tesi.aux (introduzione.aux) (teoria.aux) (teoria2.aux) (teoria3.aux)
+(alexnet.aux) (googlenet.aux) (resnet.aux) (esperimenti.aux) (conclusioni.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -830,7 +830,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Info: Redefining \it@ocap on input line 18.
 LaTeX Info: Redefining \it@ccap on input line 18.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -993,25 +992,13 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 48.
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [4 <./img/rappresentazione_tensore.png> <./img/canali_rgb.jpg> <./img/pixel.p
 ng>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 84.
 
 ("C:\Users\tommy\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
-
-
-LaTeX Warning: Reference `augmentation' on page 5 undefined on input line 98.
-
-
-Overfull \hbox (37.92694pt too wide) in paragraph at lines 98--99
-[]\T1/cmr/m/n/12 ap-pli-can-do ope-ra-zio-ni di pre-pro-ces-sing spe-ci-fi-ca-t
-e in un og-get-to [][]\T1/cmtt/m/n/12 imageDataAugmenter[]\T1/cmr/m/n/12 .
- []
-
-
-LaTeX Warning: Reference `augmentation' on page 5 undefined on input line 103.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1020,87 +1007,79 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [5]
-Underfull \hbox (badness 1057) in paragraph at lines 108--108
+Underfull \hbox (badness 1057) in paragraph at lines 110--110
 [][]\T1/cmr/m/n/10 La fun-zio-ne im-re-si-ze at-tua, per lo sco-po, una tec-ni-
 ca avan-za-ta di cal-co-lo nu-me-ri-co:
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 <img/pinnaOriginale.jpg, id=95, 126.74057pt x 89.21164pt>
 File: img/pinnaOriginale.jpg Graphic file (type jpg)
 <use img/pinnaOriginale.jpg>
-Package pdftex.def Info: img/pinnaOriginale.jpg  used on input line 198.
+Package pdftex.def Info: img/pinnaOriginale.jpg  used on input line 200.
 (pdftex.def)             Requested size: 102.43227pt x 72.10448pt.
 File: img/pinnaOriginale.jpg Graphic file (type jpg)
 <use img/pinnaOriginale.jpg>
-Package pdftex.def Info: img/pinnaOriginale.jpg  used on input line 204.
+Package pdftex.def Info: img/pinnaOriginale.jpg  used on input line 206.
 (pdftex.def)             Requested size: 40.97227pt x 28.8396pt.
 <img/pinnaRuotata.jpg, id=96, 126.56743pt x 96.69751pt>
 File: img/pinnaRuotata.jpg Graphic file (type jpg)
 <use img/pinnaRuotata.jpg>
-Package pdftex.def Info: img/pinnaRuotata.jpg  used on input line 209.
+Package pdftex.def Info: img/pinnaRuotata.jpg  used on input line 211.
 (pdftex.def)             Requested size: 102.43227pt x 78.25961pt.
 <img/pinnaRiflessa.jpg, id=97, 126.63145pt x 84.24435pt>
 File: img/pinnaRiflessa.jpg Graphic file (type jpg)
 <use img/pinnaRiflessa.jpg>
-Package pdftex.def Info: img/pinnaRiflessa.jpg  used on input line 214.
+Package pdftex.def Info: img/pinnaRiflessa.jpg  used on input line 216.
 (pdftex.def)             Requested size: 102.43227pt x 68.14755pt.
 <img/pinnaTraslata.jpg, id=98, 126.63145pt x 84.24435pt>
 File: img/pinnaTraslata.jpg Graphic file (type jpg)
 <use img/pinnaTraslata.jpg>
-Package pdftex.def Info: img/pinnaTraslata.jpg  used on input line 219.
+Package pdftex.def Info: img/pinnaTraslata.jpg  used on input line 221.
 (pdftex.def)             Requested size: 102.43227pt x 68.14755pt.
 
-LaTeX Warning: Reference `CNN' on page 7 undefined on input line 229.
-
-
-LaTeX Warning: Reference `convLayer' on page 7 undefined on input line 229.
+LaTeX Warning: Reference `convLayer' on page 7 undefined on input line 232.
 
 [7 <./img/pinnaOriginale.jpg> <./img/pinnaRuotata.jpg> <./img/pinnaRiflessa.jpg
 > <./img/pinnaTraslata.jpg>]
-
-LaTeX Warning: Reference `TODO' on page 8 undefined on input line 245.
-
 <img/interpretazioneConvoluzione.jpg, id=104, 210.80675pt x 200.1856pt>
 File: img/interpretazioneConvoluzione.jpg Graphic file (type jpg)
 <use img/interpretazioneConvoluzione.jpg>
 Package pdftex.def Info: img/interpretazioneConvoluzione.jpg  used on input lin
-e 261.
+e 264.
 (pdftex.def)             Requested size: 213.39568pt x 202.65013pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `convLayer' on page 8 undefined on input line 273.
+LaTeX Warning: Reference `convLayer' on page 8 undefined on input line 276.
 
 [8] [9 <./img/interpretazioneConvoluzione.jpg>]
 <img/variabilita.jpg, id=114, 479.34184pt x 169.44385pt>
 File: img/variabilita.jpg Graphic file (type jpg)
 <use img/variabilita.jpg>
-Package pdftex.def Info: img/variabilita.jpg  used on input line 299.
+Package pdftex.def Info: img/variabilita.jpg  used on input line 303.
 (pdftex.def)             Requested size: 384.1096pt x 135.78535pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
 <img/imageClassification.jpg, id=115, 406.99422pt x 284.51558pt>
 File: img/imageClassification.jpg Graphic file (type jpg)
 <use img/imageClassification.jpg>
-Package pdftex.def Info: img/imageClassification.jpg  used on input line 310.
+Package pdftex.def Info: img/imageClassification.jpg  used on input line 314.
 (pdftex.def)             Requested size: 298.75264pt x 208.85812pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `CNN' on page 10 undefined on input line 315.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
@@ -1111,9 +1090,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--321
 Underfull \hbox (badness 10000) in paragraph at lines 12--15
 
  []
-
-
-LaTeX Warning: Reference `ANN' on page 12 undefined on input line 20.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
@@ -1168,9 +1144,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
-
-LaTeX Warning: Reference `ANN' on page 16 undefined on input line 101.
-
 <img/capacity.png, id=137, 432.4155pt x 211.38976pt>
 File: img/capacity.png Graphic file (type png)
 <use img/capacity.png>
@@ -1180,34 +1153,34 @@ Package pdftex.def Info: img/capacity.png  used on input line 107.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 <img/classificatore_lineare.jpg, id=141, 1227.58624pt x 454.69875pt>
 File: img/classificatore_lineare.jpg Graphic file (type jpg)
 <use img/classificatore_lineare.jpg>
-Package pdftex.def Info: img/classificatore_lineare.jpg  used on input line 141
+Package pdftex.def Info: img/classificatore_lineare.jpg  used on input line 143
 .
 (pdftex.def)             Requested size: 426.79135pt x 158.0854pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17 <./img/capacity.png>]
 <img/visualizz_class_lin.jpg, id=145, 708.6475pt x 519.9425pt>
 File: img/visualizz_class_lin.jpg Graphic file (type jpg)
 <use img/visualizz_class_lin.jpg>
-Package pdftex.def Info: img/visualizz_class_lin.jpg  used on input line 152.
+Package pdftex.def Info: img/visualizz_class_lin.jpg  used on input line 156.
 (pdftex.def)             Requested size: 426.79135pt x 313.15002pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `TODO' on page 18 undefined on input line 165.
+LaTeX Warning: Reference `TODO' on page 18 undefined on input line 169.
 
 [18 <./img/classificatore_lineare.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
 \T1/cmtt/m/n/10 deeplearning / examples / visualize-[]activations-[]of-[]a-[]co
 nvolutional-[]neural-[]network .
  []
@@ -1215,26 +1188,263 @@ nvolutional-[]neural-[]network .
 <img/templates.jpg, id=149, 920.43875pt x 97.36375pt>
 File: img/templates.jpg Graphic file (type jpg)
 <use img/templates.jpg>
-Package pdftex.def Info: img/templates.jpg  used on input line 171.
+Package pdftex.def Info: img/templates.jpg  used on input line 175.
 (pdftex.def)             Requested size: 426.79135pt x 45.14589pt.
-[19 <./img/visualizz_class_lin.jpg> <./img/templates.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 180--182
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19 <./img/visualizz_class_lin.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
 <img/bias_trick.jpg, id=155, 1340.00626pt x 477.785pt>
 File: img/bias_trick.jpg Graphic file (type jpg)
 <use img/bias_trick.jpg>
-Package pdftex.def Info: img/bias_trick.jpg  used on input line 197.
+Package pdftex.def Info: img/bias_trick.jpg  used on input line 201.
 (pdftex.def)             Requested size: 426.79135pt x 152.17256pt.
-) [20 <./img/bias_trick.jpg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [20 <./img/templates.jpg>] [21 <./img/bias_trick.jpg>]
+\openout2 = `teoria3.aux'.
+
+ (teoria3.tex [22
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
+
+ []
+
+<img/neuroneBiologico.jpg, id=165, 295.47768pt x 151.88548pt>
+File: img/neuroneBiologico.jpg Graphic file (type jpg)
+<use img/neuroneBiologico.jpg>
+Package pdftex.def Info: img/neuroneBiologico.jpg  used on input line 68.
+(pdftex.def)             Requested size: 204.85802pt x 105.30632pt.
+<img/neuroneComputazionale.jpg, id=166, 253.32942pt x 144.54pt>
+File: img/neuroneComputazionale.jpg Graphic file (type jpg)
+<use img/neuroneComputazionale.jpg>
+Package pdftex.def Info: img/neuroneComputazionale.jpg  used on input line 74.
+(pdftex.def)             Requested size: 204.85802pt x 116.88266pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+[23]
+<img/esempioANN.jpg, id=171, 793.96625pt x 389.455pt>
+File: img/esempioANN.jpg Graphic file (type jpg)
+<use img/esempioANN.jpg>
+Package pdftex.def Info: img/esempioANN.jpg  used on input line 92.
+(pdftex.def)             Requested size: 298.75264pt x 146.54443pt.
+ [24 <./img/neuroneBiologico.jpg> <./img/neuroneComputazionale.jpg> <./img/esem
+pioANN.jpg>]
+
+LaTeX Warning: Reference `esempioANN' on page 25 undefined on input line 102.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+[25]
+<img/convnet.jpeg, id=180, 1259.70625pt x 603.25375pt>
+File: img/convnet.jpeg Graphic file (type jpg)
+<use img/convnet.jpeg>
+Package pdftex.def Info: img/convnet.jpeg  used on input line 146.
+(pdftex.def)             Requested size: 298.75264pt x 143.06253pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26]
+<img/volume.png, id=184, 277.035pt x 227.04825pt>
+File: img/volume.png Graphic file (type png)
+<use img/volume.png>
+Package pdftex.def Info: img/volume.png  used on input line 158.
+(pdftex.def)             Requested size: 170.71393pt x 139.91272pt.
+ [27 <./img/convnet.jpeg> <./img/volume.png>]
+<img/CR.jpg, id=189, 1288.0622pt x 590.205pt>
+File: img/CR.jpg Graphic file (type jpg)
+<use img/CR.jpg>
+Package pdftex.def Info: img/CR.jpg  used on input line 197.
+(pdftex.def)             Requested size: 298.75264pt x 136.88802pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (30.27477pt too wide) in paragraph at lines 202--203
+[]\T1/cmr/m/n/12 In Ma-tlab, la crea-zio-ne del layer av-vie-ne at-tra-ver-so l
+a fun-zio-ne [][]\T1/cmtt/m/n/12 convolution2dLayer[]\T1/cmr/m/n/12 : 
+ []
+
+[28]
+<img/CA.jpg, id=193, 1151.80313pt x 529.22719pt>
+File: img/CA.jpg Graphic file (type jpg)
+<use img/CA.jpg>
+Package pdftex.def Info: img/CA.jpg  used on input line 222.
+(pdftex.def)             Requested size: 298.75264pt x 137.26472pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/dilation.jpg, id=194, 126.3126pt x 121.29898pt>
+File: img/dilation.jpg Graphic file (type jpg)
+<use img/dilation.jpg>
+Package pdftex.def Info: img/dilation.jpg  used on input line 240.
+(pdftex.def)             Requested size: 128.0387pt x 122.96999pt.
+[29 <./img/CR.jpg>]
+<img/padding.jpg, id=198, 396.48125pt x 450.68375pt>
+File: img/padding.jpg Graphic file (type jpg)
+<use img/padding.jpg>
+Package pdftex.def Info: img/padding.jpg  used on input line 251.
+(pdftex.def)             Requested size: 128.0387pt x 145.5421pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/channels.jpg, id=199, 1376.14125pt x 553.31718pt>
+File: img/channels.jpg Graphic file (type jpg)
+<use img/channels.jpg>
+Package pdftex.def Info: img/channels.jpg  used on input line 266.
+(pdftex.def)             Requested size: 298.75264pt x 120.11755pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30 <./img/CA.jpg> <./img/dilation.jpg>]
+Overfull \hbox (10.03384pt too wide) in paragraph at lines 279--280
+[][][]\T1/cmtt/m/n/12 'WeightsInitializer','glorot'|'he'| 'narrow-normal'|'zero
+s'|'ones' 
+ []
+
+[31 <./img/padding.jpg> <./img/channels.jpg>]
+<img/pool.jpg, id=207, 515.9275pt x 407.5225pt>
+File: img/pool.jpg Graphic file (type jpg)
+<use img/pool.jpg>
+Package pdftex.def Info: img/pool.jpg  used on input line 334.
+(pdftex.def)             Requested size: 204.85802pt x 161.8122pt.
+<img/pooling.jpg, id=208, 1255.69125pt x 612.03656pt>
+File: img/pooling.jpg Graphic file (type jpg)
+<use img/pooling.jpg>
+Package pdftex.def Info: img/pooling.jpg  used on input line 340.
+(pdftex.def)             Requested size: 204.85802pt x 99.84232pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+[32]
+Overfull \hbox (2.12209pt too wide) in paragraph at lines 359--360
+\T1/cmr/m/n/12 Le pro-prie-tà di que-sto layer so-no del tut-to ana-lo-ghe a qu
+el-le del [][]\T1/cmtt/m/n/12 convolution2dLayer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+[33 <./img/pool.jpg> <./img/pooling.jpg>]
+<img/fc.jpg, id=215, 1398.72563pt x 673.01437pt>
+File: img/fc.jpg Graphic file (type jpg)
+<use img/fc.jpg>
+Package pdftex.def Info: img/fc.jpg  used on input line 380.
+(pdftex.def)             Requested size: 298.75264pt x 143.74022pt.
+ [34 <./img/fc.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
+
+ []
+
+
+Overfull \hbox (42.08586pt too wide) in paragraph at lines 430--432
+[]\T1/cmr/m/n/12 In Ma-tlab è pos-si-bi-le au-men-ta-re un da-ta-set con un og-
+get-to [][]\T1/cmtt/m/n/12 augmentedImageDatastore[]\T1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--432
+
+ []
+
+[35]
+<img/augmentationTraining.png, id=222, 861.2175pt x 329.73187pt>
+File: img/augmentationTraining.png Graphic file (type png)
+<use img/augmentationTraining.png>
+Package pdftex.def Info: img/augmentationTraining.png  used on input line 435.
+(pdftex.def)             Requested size: 384.1096pt x 147.06479pt.
+ [36 <./img/augmentationTraining.png>] [37]
+Overfull \hbox (0.41219pt too wide) in paragraph at lines 489--490
+[]\T1/cmr/m/n/12 Applica una tra-sla-zio-ne oriz-zon-ta-le ([][]\T1/cmtt/m/n/12
+ X[]\T1/cmr/m/n/12 ) op-pu-re ver-ti-ca-le ([][]\T1/cmtt/m/n/12 Y[]\T1/cmr/m/n/
+12 ) al-l'im-ma-gi-ne. L'en-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--495
+
+ []
+
+[38] [39]
+<img/vallata.png, id=239, 3042.94737pt x 2266.99579pt>
+File: img/vallata.png Graphic file (type png)
+<use img/vallata.png>
+Package pdftex.def Info: img/vallata.png  used on input line 549.
+(pdftex.def)             Requested size: 341.43437pt x 254.35149pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 559--561
+
+ []
+
+
+LaTeX Warning: Reference `fig:gdConfronto' on page 41 undefined on input line 5
+62.
+
+<img/gd.png, id=243, 394.47375pt x 164.41425pt>
+File: img/gd.png Graphic file (type png)
+<use img/gd.png>
+Package pdftex.def Info: img/gd.png  used on input line 567.
+(pdftex.def)             Requested size: 204.85802pt x 85.383pt.
+<img/sgd.png, id=244, 376.40625pt x 148.1535pt>
+File: img/sgd.png Graphic file (type png)
+<use img/sgd.png>
+Package pdftex.def Info: img/sgd.png  used on input line 572.
+(pdftex.def)             Requested size: 204.85802pt x 80.63467pt.
+[41 <./img/vallata.png> <./img/gd.png> <./img/sgd.png>] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
+
+ []
+
+<img/sgdm.png, id=252, 662.475pt x 264.99pt>
+File: img/sgdm.png Graphic file (type png)
+<use img/sgdm.png>
+Package pdftex.def Info: img/sgdm.png  used on input line 618.
+(pdftex.def)             Requested size: 213.39568pt x 85.35652pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--630
+
+ []
+
+) [43 <./img/sgdm.png>] [44]
 \openout2 = `alexnet.aux'.
 
  (alexnet.tex
 
-LaTeX Warning: Reference `imagenet' on page 21 undefined on input line 2.
+LaTeX Warning: Reference `imagenet' on page 45 undefined on input line 2.
 
-<img/alexnet/arc_alexnet.png, id=159, 1850.915pt x 648.4225pt>
+<img/alexnet/arc_alexnet.png, id=261, 1850.915pt x 648.4225pt>
 File: img/alexnet/arc_alexnet.png Graphic file (type png)
 <use img/alexnet/arc_alexnet.png>
 Package pdftex.def Info: img/alexnet/arc_alexnet.png  used on input line 14.
@@ -1246,23 +1456,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[21
+[45
 
 
- <./img/alexnet/arc_alexnet.png (PNG copy)>]
+ <./img/alexnet/arc_alexnet.png (PNG copy)>] [46]
+<img/dropout.jpg, id=269, 616.3025pt x 329.23pt>
+File: img/dropout.jpg Graphic file (type jpg)
+<use img/dropout.jpg>
+Package pdftex.def Info: img/dropout.jpg  used on input line 56.
+(pdftex.def)             Requested size: 298.75264pt x 159.59598pt.
 
-LaTeX Warning: Reference `preprocessing' on page 22 undefined on input line 43.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22] [23]
-Overfull \hbox (5.705pt too wide) in alignment at lines 94--94
+[47]
+Overfull \hbox (5.705pt too wide) in alignment at lines 101--101
 [][][][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [24] [25]
+) [48 <./img/dropout.jpg>] [49]
 \openout2 = `googlenet.aux'.
 
  (googlenet.tex
@@ -1270,25 +1485,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<img/googlenet/cani.png, id=178, 802.79926pt x 280.6485pt>
+<img/googlenet/cani.png, id=280, 802.79926pt x 280.6485pt>
 File: img/googlenet/cani.png Graphic file (type png)
 <use img/googlenet/cani.png>
 Package pdftex.def Info: img/googlenet/cani.png  used on input line 19.
 (pdftex.def)             Requested size: 384.1096pt x 134.28151pt.
-[26
+
+Overfull \hbox (0.4467pt too wide) in paragraph at lines 24--26
+\T1/cmr/m/n/12 Questo pro-ble-ma è ri-sol-to con l'in-tro-du-zio-ne dei mo-du-l
+i \T1/cmr/m/it/12 in-cep-tion \T1/cmr/m/n/12 (par. 2.12.2[]). 
+ []
+
+[50
 
 
  <./img/googlenet/cani.png>]
 
-LaTeX Warning: Reference `vanishingGradient' on page 27 undefined on input line
+LaTeX Warning: Reference `vanishingGradient' on page 51 undefined on input line
  27.
 
-<img/googlenet/1x1conv.png, id=183, 472.164pt x 215.00325pt>
+<img/googlenet/1x1conv.png, id=285, 472.164pt x 215.00325pt>
 File: img/googlenet/1x1conv.png Graphic file (type png)
 <use img/googlenet/1x1conv.png>
 Package pdftex.def Info: img/googlenet/1x1conv.png  used on input line 39.
 (pdftex.def)             Requested size: 277.41176pt x 126.32262pt.
-<img/googlenet/inception.jpg, id=184, 694.595pt x 367.3725pt>
+<img/googlenet/inception.jpg, id=286, 694.595pt x 367.3725pt>
 File: img/googlenet/inception.jpg Graphic file (type jpg)
 <use img/googlenet/inception.jpg>
 Package pdftex.def Info: img/googlenet/inception.jpg  used on input line 55.
@@ -1296,42 +1517,37 @@ Package pdftex.def Info: img/googlenet/inception.jpg  used on input line 55.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27 <./img/googlenet/1x1conv.png>]
+[51 <./img/googlenet/1x1conv.png>]
 
-LaTeX Warning: Reference `vanishingGradientProblem' on page 28 undefined on inp
-ut line 76.
+LaTeX Warning: Reference `vanishingGradient' on page 52 undefined on input line
+ 76.
 
-[28 <./img/googlenet/inception.jpg>]
-<img/googlenet/FCvsGAP.png, id=193, 756.8275pt x 295.1025pt>
+[52 <./img/googlenet/inception.jpg>]
+<img/googlenet/FCvsGAP.png, id=295, 756.8275pt x 295.1025pt>
 File: img/googlenet/FCvsGAP.png Graphic file (type png)
 <use img/googlenet/FCvsGAP.png>
 Package pdftex.def Info: img/googlenet/FCvsGAP.png  used on input line 88.
 (pdftex.def)             Requested size: 298.75264pt x 116.4899pt.
-
-
-LaTeX Warning: Reference `dataAugmentation' on page 29 undefined on input line 
-95.
-
-[29 <./img/googlenet/FCvsGAP.png (PNG copy)>]
-<img/googlenet/tabellaGooglenet.png, id=197, 1162.3425pt x 754.82pt>
+ [53 <./img/googlenet/FCvsGAP.png (PNG copy)>]
+<img/googlenet/tabellaGooglenet.png, id=299, 1162.3425pt x 754.82pt>
 File: img/googlenet/tabellaGooglenet.png Graphic file (type png)
 <use img/googlenet/tabellaGooglenet.png>
 Package pdftex.def Info: img/googlenet/tabellaGooglenet.png  used on input line
  103.
 (pdftex.def)             Requested size: 384.1096pt x 249.4369pt.
-<img/googlenet/GoogLeNet.png, id=198, 693.792pt x 1558.623pt>
+<img/googlenet/GoogLeNet.png, id=300, 693.792pt x 1558.623pt>
 File: img/googlenet/GoogLeNet.png Graphic file (type png)
 <use img/googlenet/GoogLeNet.png>
 Package pdftex.def Info: img/googlenet/GoogLeNet.png  used on input line 110.
-(pdftex.def)             Requested size: 300.16678pt x 674.33302pt.
+(pdftex.def)             Requested size: 297.17082pt x 667.60254pt.
 
 
-LaTeX Warning: Float too large for page by 24.50269pt on input line 113.
+LaTeX Warning: Float too large for page by 17.7722pt on input line 113.
 
 
-LaTeX Warning: Reference `imagenet' on page 30 undefined on input line 119.
+LaTeX Warning: Reference `imagenet' on page 54 undefined on input line 119.
 
-) [30 <./img/googlenet/tabellaGooglenet.png (PNG copy)>] [31 <./img/googlenet/G
+) [54 <./img/googlenet/tabellaGooglenet.png (PNG copy)>] [55 <./img/googlenet/G
 oogLeNet.png>]
 \openout2 = `resnet.aux'.
 
@@ -1341,18 +1557,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
  []
 
 
-LaTeX Warning: Reference `imagenet' on page 32 undefined on input line 6.
+LaTeX Warning: Reference `imagenet' on page 56 undefined on input line 6.
 
 
-LaTeX Warning: Reference `vanishingGradientProblem' on page 32 undefined on inp
+LaTeX Warning: Reference `vanishingGradientProblem' on page 56 undefined on inp
 ut line 7.
 
-<img/resnet/degradation.png, id=207, 407.121pt x 296.90926pt>
+<img/resnet/degradation.png, id=309, 407.121pt x 296.90926pt>
 File: img/resnet/degradation.png Graphic file (type png)
 <use img/resnet/degradation.png>
 Package pdftex.def Info: img/resnet/degradation.png  used on input line 18.
 (pdftex.def)             Requested size: 213.39568pt x 155.63051pt.
-[32
+[56
 
 
  <./img/resnet/degradation.png>]
@@ -1365,8 +1581,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-[33]
-<img/resnet/residualBlock.png, id=215, 352.31625pt x 215.6055pt>
+[57]
+<img/resnet/residualBlock.png, id=317, 352.31625pt x 215.6055pt>
 File: img/resnet/residualBlock.png Graphic file (type png)
 <use img/resnet/residualBlock.png>
 Package pdftex.def Info: img/resnet/residualBlock.png  used on input line 65.
@@ -1381,11 +1597,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-[34 <./img/resnet/residualBlock.png>]
+[58 <./img/resnet/residualBlock.png>]
 
-LaTeX Warning: Reference `imagenet' on page 35 undefined on input line 80.
+LaTeX Warning: Reference `imagenet' on page 59 undefined on input line 80.
 
-<img/resnet/residualBlockResnet18.png, id=219, 139.722pt x 105.996pt>
+<img/resnet/residualBlockResnet18.png, id=321, 139.722pt x 105.996pt>
 File: img/resnet/residualBlockResnet18.png Graphic file (type png)
 <use img/resnet/residualBlockResnet18.png>
 Package pdftex.def Info: img/resnet/residualBlockResnet18.png  used on input li
@@ -1396,8 +1612,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-[35 <./img/resnet/residualBlockResnet18.png>]
-<img/resnet/residualBlockResnet50.png, id=223, 128.27925pt x 109.00725pt>
+[59 <./img/resnet/residualBlockResnet18.png>]
+<img/resnet/residualBlockResnet50.png, id=325, 128.27925pt x 109.00725pt>
 File: img/resnet/residualBlockResnet50.png Graphic file (type png)
 <use img/resnet/residualBlockResnet50.png>
 Package pdftex.def Info: img/resnet/residualBlockResnet50.png  used on input li
@@ -1408,28 +1624,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-[36 <./img/resnet/residualBlockResnet50.png>]
+[60 <./img/resnet/residualBlockResnet50.png>]
 
-LaTeX Warning: Reference `conv1x1' on page 37 undefined on input line 130.
+LaTeX Warning: Reference `conv1x1' on page 61 undefined on input line 130.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-<img/resnet/architetturaResnet.png, id=227, 332.442pt x 272.217pt>
+<img/resnet/architetturaResnet.png, id=329, 332.442pt x 272.217pt>
 File: img/resnet/architetturaResnet.png Graphic file (type png)
 <use img/resnet/architetturaResnet.png>
 Package pdftex.def Info: img/resnet/architetturaResnet.png  used on input line 
 136.
 (pdftex.def)             Requested size: 384.11118pt x 314.5258pt.
-<img/resnet/architetturaResnet18.png, id=228, 183.084pt x 764.8575pt>
+<img/resnet/architetturaResnet18.png, id=330, 183.084pt x 764.8575pt>
 File: img/resnet/architetturaResnet18.png Graphic file (type png)
 <use img/resnet/architetturaResnet18.png>
 Package pdftex.def Info: img/resnet/architetturaResnet18.png  used on input lin
 e 144.
 (pdftex.def)             Requested size: 161.4217pt x 674.36046pt.
-<img/resnet/architetturaResnet50.png, id=229, 143.3355pt x 988.8945pt>
+<img/resnet/architetturaResnet50.png, id=331, 143.3355pt x 988.8945pt>
 File: img/resnet/architetturaResnet50.png Graphic file (type png)
 <use img/resnet/architetturaResnet50.png>
 Package pdftex.def Info: img/resnet/architetturaResnet50.png  used on input lin
@@ -1444,66 +1660,66 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./img/resnet/architetturaResnet.png>]) [38] [39 <./img/resnet/architettur
+ [61 <./img/resnet/architetturaResnet.png>]) [62] [63 <./img/resnet/architettur
 aResnet18.png> <./img/resnet/architetturaResnet50.png>]
 \openout2 = `esperimenti.aux'.
 
- (esperimenti.tex [40
+ (esperimenti.tex [64
 
 
 
 ]
 Capitolo 3.
 
-LaTeX Warning: Reference `contesto' on page 41 undefined on input line 10.
+LaTeX Warning: Reference `contesto' on page 65 undefined on input line 10.
 
 
-LaTeX Warning: Reference `contesto' on page 41 undefined on input line 13.
+LaTeX Warning: Reference `contesto' on page 65 undefined on input line 13.
 
-[41]
-<img_esperimenti/foto_taranto/t1.jpg, id=248, 6022.5pt x 4015.0pt>
+[65]
+<img_esperimenti/foto_taranto/t1.jpg, id=350, 6022.5pt x 4015.0pt>
 File: img_esperimenti/foto_taranto/t1.jpg Graphic file (type jpg)
 <use img_esperimenti/foto_taranto/t1.jpg>
 Package pdftex.def Info: img_esperimenti/foto_taranto/t1.jpg  used on input lin
 e 25.
 (pdftex.def)             Requested size: 102.43227pt x 68.24797pt.
-<img_esperimenti/foto_taranto/t2.jpg, id=249, 6022.5pt x 4015.0pt>
+<img_esperimenti/foto_taranto/t2.jpg, id=351, 6022.5pt x 4015.0pt>
 File: img_esperimenti/foto_taranto/t2.jpg Graphic file (type jpg)
 <use img_esperimenti/foto_taranto/t2.jpg>
 Package pdftex.def Info: img_esperimenti/foto_taranto/t2.jpg  used on input lin
 e 27.
 (pdftex.def)             Requested size: 102.43227pt x 68.24797pt.
-<img_esperimenti/foto_taranto/t3.jpg, id=250, 5203.44pt x 3468.96pt>
+<img_esperimenti/foto_taranto/t3.jpg, id=352, 5203.44pt x 3468.96pt>
 File: img_esperimenti/foto_taranto/t3.jpg Graphic file (type jpg)
 <use img_esperimenti/foto_taranto/t3.jpg>
 Package pdftex.def Info: img_esperimenti/foto_taranto/t3.jpg  used on input lin
 e 29.
 (pdftex.def)             Requested size: 102.43227pt x 68.28227pt.
-<img_esperimenti/foto_taranto/t6.jpg, id=251, 6022.5pt x 4015.0pt>
+<img_esperimenti/foto_taranto/t6.jpg, id=353, 6022.5pt x 4015.0pt>
 File: img_esperimenti/foto_taranto/t6.jpg Graphic file (type jpg)
 <use img_esperimenti/foto_taranto/t6.jpg>
 Package pdftex.def Info: img_esperimenti/foto_taranto/t6.jpg  used on input lin
 e 31.
 (pdftex.def)             Requested size: 102.43227pt x 68.24797pt.
-<img_esperimenti/foto_azzorre/a1.jpg, id=252, 6022.5pt x 4015.0pt>
+<img_esperimenti/foto_azzorre/a1.jpg, id=354, 6022.5pt x 4015.0pt>
 File: img_esperimenti/foto_azzorre/a1.jpg Graphic file (type jpg)
 <use img_esperimenti/foto_azzorre/a1.jpg>
 Package pdftex.def Info: img_esperimenti/foto_azzorre/a1.jpg  used on input lin
 e 38.
 (pdftex.def)             Requested size: 102.43227pt x 68.24797pt.
-<img_esperimenti/foto_azzorre/a2.jpg, id=253, 6022.5pt x 4015.0pt>
+<img_esperimenti/foto_azzorre/a2.jpg, id=355, 6022.5pt x 4015.0pt>
 File: img_esperimenti/foto_azzorre/a2.jpg Graphic file (type jpg)
 <use img_esperimenti/foto_azzorre/a2.jpg>
 Package pdftex.def Info: img_esperimenti/foto_azzorre/a2.jpg  used on input lin
 e 40.
 (pdftex.def)             Requested size: 102.43227pt x 68.24797pt.
-<img_esperimenti/foto_azzorre/a3.jpg, id=254, 6022.5pt x 4015.0pt>
+<img_esperimenti/foto_azzorre/a3.jpg, id=356, 6022.5pt x 4015.0pt>
 File: img_esperimenti/foto_azzorre/a3.jpg Graphic file (type jpg)
 <use img_esperimenti/foto_azzorre/a3.jpg>
 Package pdftex.def Info: img_esperimenti/foto_azzorre/a3.jpg  used on input lin
 e 42.
 (pdftex.def)             Requested size: 102.43227pt x 68.24797pt.
-<img_esperimenti/foto_azzorre/a4.jpg, id=255, 6022.5pt x 4015.0pt>
+<img_esperimenti/foto_azzorre/a4.jpg, id=357, 6022.5pt x 4015.0pt>
 File: img_esperimenti/foto_azzorre/a4.jpg Graphic file (type jpg)
 <use img_esperimenti/foto_azzorre/a4.jpg>
 Package pdftex.def Info: img_esperimenti/foto_azzorre/a4.jpg  used on input lin
@@ -1514,7 +1730,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-[42 <./img_esperimenti/foto_taranto/t1.jpg> <./img_esperimenti/foto_taranto/t2.
+[66 <./img_esperimenti/foto_taranto/t1.jpg> <./img_esperimenti/foto_taranto/t2.
 jpg> <./img_esperimenti/foto_taranto/t3.jpg> <./img_esperimenti/foto_taranto/t6
 .jpg> <./img_esperimenti/foto_azzorre/a1.jpg> <./img_esperimenti/foto_azzorre/a
 2.jpg> <./img_esperimenti/foto_azzorre/a3.jpg> <./img_esperimenti/foto_azzorre/
@@ -1523,7 +1739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
 
-<img_esperimenti/immagineDaProcessare.png, id=259, 693.18974pt x 461.92575pt>
+<img_esperimenti/immagineDaProcessare.png, id=361, 693.18974pt x 461.92575pt>
 File: img_esperimenti/immagineDaProcessare.png Graphic file (type png)
 <use img_esperimenti/immagineDaProcessare.png>
 Package pdftex.def Info: img_esperimenti/immagineDaProcessare.png  used on inpu
@@ -1539,31 +1755,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-[43 <./img_esperimenti/immagineDaProcessare.png>]
-<img_esperimenti/primaClahe.jpg, id=264, 380.16pt x 170.676pt>
+[67 <./img_esperimenti/immagineDaProcessare.png>]
+<img_esperimenti/primaClahe.jpg, id=366, 380.16pt x 170.676pt>
 File: img_esperimenti/primaClahe.jpg Graphic file (type jpg)
 <use img_esperimenti/primaClahe.jpg>
 Package pdftex.def Info: img_esperimenti/primaClahe.jpg  used on input line 105
 .
 (pdftex.def)             Requested size: 179.25157pt x 80.47554pt.
-<img_esperimenti/dopoClahe.jpg, id=265, 380.16pt x 170.676pt>
+<img_esperimenti/dopoClahe.jpg, id=367, 380.16pt x 170.676pt>
 File: img_esperimenti/dopoClahe.jpg Graphic file (type jpg)
 <use img_esperimenti/dopoClahe.jpg>
 Package pdftex.def Info: img_esperimenti/dopoClahe.jpg  used on input line 110.
 
 (pdftex.def)             Requested size: 179.25157pt x 80.47554pt.
-<img_esperimenti/primaOtsu.jpg, id=266, 225.522pt x 148.896pt>
+<img_esperimenti/primaOtsu.jpg, id=368, 225.522pt x 148.896pt>
 File: img_esperimenti/primaOtsu.jpg Graphic file (type jpg)
 <use img_esperimenti/primaOtsu.jpg>
 Package pdftex.def Info: img_esperimenti/primaOtsu.jpg  used on input line 147.
 
 (pdftex.def)             Requested size: 162.1777pt x 107.07552pt.
-<img_esperimenti/dopoOtsu.jpg, id=267, 252.83965pt x 168.55977pt>
+<img_esperimenti/dopoOtsu.jpg, id=369, 252.83965pt x 168.55977pt>
 File: img_esperimenti/dopoOtsu.jpg Graphic file (type jpg)
 <use img_esperimenti/dopoOtsu.jpg>
 Package pdftex.def Info: img_esperimenti/dopoOtsu.jpg  used on input line 151.
 (pdftex.def)             Requested size: 162.1777pt x 108.12221pt.
-<img_esperimenti/otsu.jpg, id=268, 168.80583pt x 191.31328pt>
+<img_esperimenti/otsu.jpg, id=370, 168.80583pt x 191.31328pt>
 File: img_esperimenti/otsu.jpg Graphic file (type jpg)
 <use img_esperimenti/otsu.jpg>
 Package pdftex.def Info: img_esperimenti/otsu.jpg  used on input line 159.
@@ -1572,22 +1788,22 @@ Package pdftex.def Info: img_esperimenti/otsu.jpg  used on input line 159.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[44 <./img_esperimenti/primaClahe.jpg> <./img_esperimenti/dopoClahe.jpg>]
-[45 <./img_esperimenti/primaOtsu.jpg> <./img_esperimenti/dopoOtsu.jpg> <./img_e
+[68 <./img_esperimenti/primaClahe.jpg> <./img_esperimenti/dopoClahe.jpg>]
+[69 <./img_esperimenti/primaOtsu.jpg> <./img_esperimenti/dopoOtsu.jpg> <./img_e
 sperimenti/otsu.jpg>]
-<img_esperimenti/dopoFiltroFoto.jpg, id=275, 294.9796pt x 196.65306pt>
+<img_esperimenti/dopoFiltroFoto.jpg, id=377, 294.9796pt x 196.65306pt>
 File: img_esperimenti/dopoFiltroFoto.jpg Graphic file (type jpg)
 <use img_esperimenti/dopoFiltroFoto.jpg>
 Package pdftex.def Info: img_esperimenti/dopoFiltroFoto.jpg  used on input line
  199.
 (pdftex.def)             Requested size: 341.43437pt x 227.62859pt.
-<img_esperimenti/ritaglioBlob.png, id=276, 234.27525pt x 416.15475pt>
+<img_esperimenti/ritaglioBlob.png, id=378, 234.27525pt x 416.15475pt>
 File: img_esperimenti/ritaglioBlob.png Graphic file (type png)
 <use img_esperimenti/ritaglioBlob.png>
 Package pdftex.def Info: img_esperimenti/ritaglioBlob.png  used on input line 2
 06.
 (pdftex.def)             Requested size: 121.63637pt x 216.06516pt.
-<img_esperimenti/dopoOtsuBlob.png, id=277, 227.6505pt x 413.1435pt>
+<img_esperimenti/dopoOtsuBlob.png, id=379, 227.6505pt x 413.1435pt>
 File: img_esperimenti/dopoOtsuBlob.png Graphic file (type png)
 <use img_esperimenti/dopoOtsuBlob.png>
 Package pdftex.def Info: img_esperimenti/dopoOtsuBlob.png  used on input line 2
@@ -1598,7 +1814,7 @@ Underfull \hbox (badness 6141) in paragraph at lines 212--212
 []\T1/cmr/m/n/10.95 (c) |Ap-pli-ca-zio-ne ri-pe-tu-
  []
 
-<img_esperimenti/dopoFiltroBlob.png, id=278, 233.673pt x 416.757pt>
+<img_esperimenti/dopoFiltroBlob.png, id=380, 233.673pt x 416.757pt>
 File: img_esperimenti/dopoFiltroBlob.png Graphic file (type png)
 <use img_esperimenti/dopoFiltroBlob.png>
 Package pdftex.def Info: img_esperimenti/dopoFiltroBlob.png  used on input line
@@ -1622,48 +1838,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
-[46]
+[70]
 Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-<img_esperimenti/ritaglio1.jpg, id=282, 168.80818pt x 56.55449pt>
+<img_esperimenti/ritaglio1.jpg, id=384, 168.80818pt x 56.55449pt>
 File: img_esperimenti/ritaglio1.jpg Graphic file (type jpg)
 <use img_esperimenti/ritaglio1.jpg>
 Package pdftex.def Info: img_esperimenti/ritaglio1.jpg  used on input line 244.
 
 (pdftex.def)             Requested size: 192.59143pt x 64.52626pt.
-<img_esperimenti/ritaglio2.jpg, id=283, 168.80818pt x 56.55449pt>
+<img_esperimenti/ritaglio2.jpg, id=385, 168.80818pt x 56.55449pt>
 File: img_esperimenti/ritaglio2.jpg Graphic file (type jpg)
 <use img_esperimenti/ritaglio2.jpg>
 Package pdftex.def Info: img_esperimenti/ritaglio2.jpg  used on input line 248.
 
 (pdftex.def)             Requested size: 192.59143pt x 64.52626pt.
-<img_esperimenti/ritaglio3.jpg, id=284, 253.27565pt x 84.55118pt>
+<img_esperimenti/ritaglio3.jpg, id=386, 253.27565pt x 84.55118pt>
 File: img_esperimenti/ritaglio3.jpg Graphic file (type jpg)
 <use img_esperimenti/ritaglio3.jpg>
 Package pdftex.def Info: img_esperimenti/ritaglio3.jpg  used on input line 255.
 
 (pdftex.def)             Requested size: 298.75264pt x 99.7424pt.
-<img_esperimenti/ritaglio4.jpg, id=285, 253.1818pt x 78.14253pt>
+<img_esperimenti/ritaglio4.jpg, id=387, 253.1818pt x 78.14253pt>
 File: img_esperimenti/ritaglio4.jpg Graphic file (type jpg)
 <use img_esperimenti/ritaglio4.jpg>
 Package pdftex.def Info: img_esperimenti/ritaglio4.jpg  used on input line 262.
 
 (pdftex.def)             Requested size: 298.75264pt x 92.21571pt.
-<img_esperimenti/ritaglio5.jpg, id=286, 253.23027pt x 81.58902pt>
+<img_esperimenti/ritaglio5.jpg, id=388, 253.23027pt x 81.58902pt>
 File: img_esperimenti/ritaglio5.jpg Graphic file (type jpg)
 <use img_esperimenti/ritaglio5.jpg>
 Package pdftex.def Info: img_esperimenti/ritaglio5.jpg  used on input line 269.
 
 (pdftex.def)             Requested size: 298.75264pt x 96.25925pt.
-<img_esperimenti/ritaglio6.jpg, id=287, 168.80818pt x 56.55449pt>
+<img_esperimenti/ritaglio6.jpg, id=389, 168.80818pt x 56.55449pt>
 File: img_esperimenti/ritaglio6.jpg Graphic file (type jpg)
 <use img_esperimenti/ritaglio6.jpg>
 Package pdftex.def Info: img_esperimenti/ritaglio6.jpg  used on input line 276.
 
 (pdftex.def)             Requested size: 192.59143pt x 64.52626pt.
-<img_esperimenti/ritaglio7.jpg, id=288, 126.53174pt x 59.47466pt>
+<img_esperimenti/ritaglio7.jpg, id=390, 126.53174pt x 59.47466pt>
 File: img_esperimenti/ritaglio7.jpg Graphic file (type jpg)
 <use img_esperimenti/ritaglio7.jpg>
 Package pdftex.def Info: img_esperimenti/ritaglio7.jpg  used on input line 280.
@@ -1672,16 +1888,16 @@ Package pdftex.def Info: img_esperimenti/ritaglio7.jpg  used on input line 280.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[47 <./img_esperimenti/dopoFiltroFoto.jpg> <./img_esperimenti/ritaglioBlob.png>
+[71 <./img_esperimenti/dopoFiltroFoto.jpg> <./img_esperimenti/ritaglioBlob.png>
  <./img_esperimenti/dopoOtsuBlob.png> <./img_esperimenti/dopoFiltroBlob.png>]
 
-LaTeX Warning: Text page 48 contains only floats.
+LaTeX Warning: Text page 72 contains only floats.
 
 
 Overfull \vbox (7.5436pt too high) has occurred while \output is active []
 
 
-[48 <./img_esperimenti/ritaglio1.jpg> <./img_esperimenti/ritaglio2.jpg> <./img_
+[72 <./img_esperimenti/ritaglio1.jpg> <./img_esperimenti/ritaglio2.jpg> <./img_
 esperimenti/ritaglio3.jpg> <./img_esperimenti/ritaglio4.jpg> <./img_esperimenti
 /ritaglio5.jpg> <./img_esperimenti/ritaglio6.jpg> <./img_esperimenti/ritaglio7.
 jpg>]
@@ -1694,52 +1910,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
-<img_esperimenti/p1.jpg, id=299, 275.0275pt x 266.9975pt>
+<img_esperimenti/p1.jpg, id=401, 275.0275pt x 266.9975pt>
 File: img_esperimenti/p1.jpg Graphic file (type jpg)
 <use img_esperimenti/p1.jpg>
 Package pdftex.def Info: img_esperimenti/p1.jpg  used on input line 328.
 (pdftex.def)             Requested size: 56.76372pt x 55.10558pt.
-<img_esperimenti/p2.jpg, id=300, 532.99126pt x 751.80875pt>
+<img_esperimenti/p2.jpg, id=402, 532.99126pt x 751.80875pt>
 File: img_esperimenti/p2.jpg Graphic file (type jpg)
 <use img_esperimenti/p2.jpg>
 Package pdftex.def Info: img_esperimenti/p2.jpg  used on input line 330.
 (pdftex.def)             Requested size: 56.76372pt x 80.06073pt.
-<img_esperimenti/p3.jpg, id=301, 818.05624pt x 546.04pt>
+<img_esperimenti/p3.jpg, id=403, 818.05624pt x 546.04pt>
 File: img_esperimenti/p3.jpg Graphic file (type jpg)
 <use img_esperimenti/p3.jpg>
 Package pdftex.def Info: img_esperimenti/p3.jpg  used on input line 332.
 (pdftex.def)             Requested size: 56.76372pt x 37.88509pt.
-<img_esperimenti/p4.jpg, id=302, 783.92876pt x 686.565pt>
+<img_esperimenti/p4.jpg, id=404, 783.92876pt x 686.565pt>
 File: img_esperimenti/p4.jpg Graphic file (type jpg)
 <use img_esperimenti/p4.jpg>
 Package pdftex.def Info: img_esperimenti/p4.jpg  used on input line 334.
 (pdftex.def)             Requested size: 56.76372pt x 49.7092pt.
-<img_esperimenti/p5.jpg, id=303, 636.3775pt x 514.92375pt>
+<img_esperimenti/p5.jpg, id=405, 636.3775pt x 514.92375pt>
 File: img_esperimenti/p5.jpg Graphic file (type jpg)
 <use img_esperimenti/p5.jpg>
 Package pdftex.def Info: img_esperimenti/p5.jpg  used on input line 336.
 (pdftex.def)             Requested size: 56.76372pt x 45.9247pt.
-<img_esperimenti/np1.jpg, id=304, 816.04875pt x 893.3375pt>
+<img_esperimenti/np1.jpg, id=406, 816.04875pt x 893.3375pt>
 File: img_esperimenti/np1.jpg Graphic file (type jpg)
 <use img_esperimenti/np1.jpg>
 Package pdftex.def Info: img_esperimenti/np1.jpg  used on input line 343.
 (pdftex.def)             Requested size: 56.76372pt x 62.13107pt.
-<img_esperimenti/np2.jpg, id=305, 4249.8775pt x 2038.61626pt>
+<img_esperimenti/np2.jpg, id=407, 4249.8775pt x 2038.61626pt>
 File: img_esperimenti/np2.jpg Graphic file (type jpg)
 <use img_esperimenti/np2.jpg>
 Package pdftex.def Info: img_esperimenti/np2.jpg  used on input line 345.
 (pdftex.def)             Requested size: 56.76372pt x 27.21838pt.
-<img_esperimenti/np3.jpg, id=306, 873.2625pt x 392.46625pt>
+<img_esperimenti/np3.jpg, id=408, 873.2625pt x 392.46625pt>
 File: img_esperimenti/np3.jpg Graphic file (type jpg)
 <use img_esperimenti/np3.jpg>
 Package pdftex.def Info: img_esperimenti/np3.jpg  used on input line 347.
 (pdftex.def)             Requested size: 56.76372pt x 25.5052pt.
-<img_esperimenti/np4.jpg, id=307, 591.20876pt x 171.64125pt>
+<img_esperimenti/np4.jpg, id=409, 591.20876pt x 171.64125pt>
 File: img_esperimenti/np4.jpg Graphic file (type jpg)
 <use img_esperimenti/np4.jpg>
 Package pdftex.def Info: img_esperimenti/np4.jpg  used on input line 349.
 (pdftex.def)             Requested size: 56.76372pt x 16.47893pt.
-<img_esperimenti/np5.jpg, id=308, 924.45375pt x 982.67125pt>
+<img_esperimenti/np5.jpg, id=410, 924.45375pt x 982.67125pt>
 File: img_esperimenti/np5.jpg Graphic file (type jpg)
 <use img_esperimenti/np5.jpg>
 Package pdftex.def Info: img_esperimenti/np5.jpg  used on input line 351.
@@ -1747,37 +1963,37 @@ Package pdftex.def Info: img_esperimenti/np5.jpg  used on input line 351.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[49]
+[73]
 Underfull \hbox (badness 10000) in paragraph at lines 362--364
 
  []
 
 
-LaTeX Warning: Reference `transferlearning' on page 50 undefined on input line 
+LaTeX Warning: Reference `transferlearning' on page 74 undefined on input line 
 370.
 
 
-LaTeX Warning: Reference `imagenet' on page 50 undefined on input line 374.
+LaTeX Warning: Reference `imagenet' on page 74 undefined on input line 374.
 
-[50 <./img_esperimenti/p1.jpg> <./img_esperimenti/p2.jpg> <./img_esperimenti/p3
+[74 <./img_esperimenti/p1.jpg> <./img_esperimenti/p2.jpg> <./img_esperimenti/p3
 .jpg> <./img_esperimenti/p4.jpg> <./img_esperimenti/p5.jpg> <./img_esperimenti/
 np1.jpg> <./img_esperimenti/np2.jpg> <./img_esperimenti/np3.jpg> <./img_esperim
 enti/np4.jpg> <./img_esperimenti/np5.jpg>]
 
-LaTeX Warning: Reference `sorgenti' on page 51 undefined on input line 394.
+LaTeX Warning: Reference `sorgenti' on page 75 undefined on input line 394.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
  []
 
-[51]
+[75]
 Overfull \hbox (22.16705pt too wide) in paragraph at lines 415--417
 []\T1/cmr/m/n/12 Un og-get-to [][]\T1/cmtt/m/n/12 augmentedImageDatastore []\T1
 /cmr/m/n/12 pa-ra-me-triz-za-to con l'[][]\T1/cmtt/m/n/12 imageDataAugmenter
  []
 
-<img_esperimenti/augmentation.png, id=319, 526.96875pt x 395.22656pt>
+<img_esperimenti/augmentation.png, id=421, 526.96875pt x 395.22656pt>
 File: img_esperimenti/augmentation.png Graphic file (type png)
 <use img_esperimenti/augmentation.png>
 Package pdftex.def Info: img_esperimenti/augmentation.png  used on input line 4
@@ -1788,23 +2004,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
-[52 <./img_esperimenti/augmentation.png (PNG copy)>]
+[76 <./img_esperimenti/augmentation.png (PNG copy)>]
 
-LaTeX Warning: Reference `imagenet' on page 53 undefined on input line 431.
+LaTeX Warning: Reference `imagenet' on page 77 undefined on input line 431.
 
 
-LaTeX Warning: Reference `transferlearning' on page 53 undefined on input line 
+LaTeX Warning: Reference `transferlearning' on page 77 undefined on input line 
 431.
 
 
-LaTeX Warning: Reference `sorgenti' on page 53 undefined on input line 444.
+LaTeX Warning: Reference `sorgenti' on page 77 undefined on input line 444.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 441--445
 
  []
 
-[53]
+[77]
 Underfull \hbox (badness 10000) in paragraph at lines 465--465
 [][]\T1/cmr/m/n/10 come evi-den-zia-to in $\T1/cmtt/m/n/10 https : / / it . mat
 hworks . com / help / deeplearning / examples /
@@ -1815,12 +2031,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 467--469
 
  []
 
-[54]
+[78]
 Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
  []
 
-<img_appendice/TrainingAlexNet.png, id=329, 1306.12968pt x 691.83469pt>
+<img_appendice/TrainingAlexNet.png, id=431, 1306.12968pt x 691.83469pt>
 File: img_appendice/TrainingAlexNet.png Graphic file (type png)
 <use img_appendice/TrainingAlexNet.png>
 Package pdftex.def Info: img_appendice/TrainingAlexNet.png  used on input line 
@@ -1829,7 +2045,7 @@ Package pdftex.def Info: img_appendice/TrainingAlexNet.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img_appendice/TrainingGoogLeNet.png, id=330, 1306.8825pt x 691.83469pt>
+<img_appendice/TrainingGoogLeNet.png, id=432, 1306.8825pt x 691.83469pt>
 File: img_appendice/TrainingGoogLeNet.png Graphic file (type png)
 <use img_appendice/TrainingGoogLeNet.png>
 Package pdftex.def Info: img_appendice/TrainingGoogLeNet.png  used on input lin
@@ -1838,7 +2054,7 @@ e 520.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img_appendice/TrainingResNet18.png, id=331, 1305.37688pt x 691.08188pt>
+<img_appendice/TrainingResNet18.png, id=433, 1305.37688pt x 691.08188pt>
 File: img_appendice/TrainingResNet18.png Graphic file (type png)
 <use img_appendice/TrainingResNet18.png>
 Package pdftex.def Info: img_appendice/TrainingResNet18.png  used on input line
@@ -1847,7 +2063,7 @@ Package pdftex.def Info: img_appendice/TrainingResNet18.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img_appendice/TrainingResNet50.png, id=332, 1444.64719pt x 783.67781pt>
+<img_appendice/TrainingResNet50.png, id=434, 1444.64719pt x 783.67781pt>
 File: img_appendice/TrainingResNet50.png Graphic file (type png)
 <use img_appendice/TrainingResNet50.png>
 Package pdftex.def Info: img_appendice/TrainingResNet50.png  used on input line
@@ -1857,59 +2073,59 @@ Package pdftex.def Info: img_appendice/TrainingResNet50.png  used on input line
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `trainingTaranto' on page 55 undefined on input line 5
-45.
+LaTeX Warning: Reference `fig:graficoResnet50' on page 79 undefined on input li
+ne 545.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 545--546
 
  []
 
-[55]
+[79]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[56 <./img_appendice/TrainingAlexNet.png> <./img_appendice/TrainingGoogLeNet.pn
+[80 <./img_appendice/TrainingAlexNet.png> <./img_appendice/TrainingGoogLeNet.pn
 g>]
 
-LaTeX Warning: Reference `ensemble' on page 57 undefined on input line 577.
+LaTeX Warning: Reference `ensemble' on page 81 undefined on input line 577.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57 <./img_appendice/TrainingResNet18.png> <./img_appendice/TrainingResNet50.p
+ [81 <./img_appendice/TrainingResNet18.png> <./img_appendice/TrainingResNet50.p
 ng>]
 
-LaTeX Warning: Reference `ensemble' on page 58 undefined on input line 579.
+LaTeX Warning: Reference `ensemble' on page 82 undefined on input line 579.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 579--580
 
  []
 
-<img_esperimenti/ensemble.png, id=343, 798.5835pt x 251.13824pt>
+<img_esperimenti/ensemble.png, id=445, 798.5835pt x 251.13824pt>
 File: img_esperimenti/ensemble.png Graphic file (type png)
 <use img_esperimenti/ensemble.png>
 Package pdftex.def Info: img_esperimenti/ensemble.png  used on input line 585.
 (pdftex.def)             Requested size: 341.43437pt x 107.3742pt.
-[58 <./img_esperimenti/ensemble.png>]
+[82 <./img_esperimenti/ensemble.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 600--603
 
  []
 
-<img_appendice/confMatAzzorreSMV.png, id=348, 462.528pt x 260.172pt>
+<img_appendice/confMatAzzorreSMV.png, id=450, 462.528pt x 260.172pt>
 File: img_appendice/confMatAzzorreSMV.png Graphic file (type png)
 <use img_appendice/confMatAzzorreSMV.png>
 Package pdftex.def Info: img_appendice/confMatAzzorreSMV.png  used on input lin
 e 635.
 (pdftex.def)             Requested size: 192.0548pt x 108.03287pt.
-<img_appendice/confMatAzzorreHMVT.png, id=349, 462.528pt x 260.172pt>
+<img_appendice/confMatAzzorreHMVT.png, id=451, 462.528pt x 260.172pt>
 File: img_appendice/confMatAzzorreHMVT.png Graphic file (type png)
 <use img_appendice/confMatAzzorreHMVT.png>
 Package pdftex.def Info: img_appendice/confMatAzzorreHMVT.png  used on input li
 ne 640.
 (pdftex.def)             Requested size: 192.0548pt x 108.03287pt.
-<img_esperimenti/testHMVT.png, id=350, 1145.7204pt x 582.978pt>
+<img_esperimenti/testHMVT.png, id=452, 1145.7204pt x 582.978pt>
 File: img_esperimenti/testHMVT.png Graphic file (type png)
 <use img_esperimenti/testHMVT.png>
 Package pdftex.def Info: img_esperimenti/testHMVT.png  used on input line 651.
@@ -1917,13 +2133,13 @@ Package pdftex.def Info: img_esperimenti/testHMVT.png  used on input line 651.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[59 <./img_appendice/confMatAzzorreSMV.png (PNG copy)> <./img_appendice/confMat
-AzzorreHMVT.png (PNG copy)>] [60 <./img_esperimenti/testHMVT.png (PNG copy)>]
+[83 <./img_appendice/confMatAzzorreSMV.png (PNG copy)> <./img_appendice/confMat
+AzzorreHMVT.png (PNG copy)>] [84 <./img_esperimenti/testHMVT.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 672--673
 
  []
 
-) [61] [62
+) [85] [86
 
 
 ]
@@ -1949,7 +2165,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[63
+[87
 
 
 ]
@@ -1967,29 +2183,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
-) [64]
-Overfull \hbox (14.36406pt too wide) in paragraph at lines 80--80
+) [88]
+Overfull \hbox (14.36406pt too wide) in paragraph at lines 81--81
 []\T1/cmr/m/n/12 Geoffrey E. Hin-ton et al.   Im-pro-ving neu-ral net-works by
  pre-ven-ting co-adaptation
  []
 
-[65
+[89
 
 
 ]
-Overfull \hbox (20.53067pt too wide) in paragraph at lines 80--80
+Overfull \hbox (20.53067pt too wide) in paragraph at lines 81--81
 []\T1/cmr/m/n/12 Flavio Fo-ren-za. \T1/cmr/m/it/12 Tec-ni-che in-no-va-ti-ve di
  Com-pu-ter Vi-sion per la Foto-Identificazione
  []
 
 
-Overfull \hbox (2.47537pt too wide) in paragraph at lines 80--80
+Overfull \hbox (2.47537pt too wide) in paragraph at lines 81--81
 []\T1/cmr/m/n/12 Nobuyuki Otsu.   A Th-re-shold Se-lec-tion Me-thod from Gray-
 Level Hi-sto-grams.
  []
 
-[66] [67] (tesi.aux (introduzione.aux) (teoria.aux) (teoria2.aux) (alexnet.aux)
-(googlenet.aux) (resnet.aux) (esperimenti.aux) (conclusioni.aux))
+[90] [91] (tesi.aux (introduzione.aux) (teoria.aux) (teoria2.aux) (teoria3.aux)
+(alexnet.aux) (googlenet.aux) (resnet.aux) (esperimenti.aux) (conclusioni.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1998,19 +2214,19 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 16060 strings out of 492895
- 283694 string characters out of 3123735
- 772025 words of memory out of 3000000
- 19530 multiletter control sequences out of 15000+200000
+ 16210 strings out of 492895
+ 286308 string characters out of 3123735
+ 776243 words of memory out of 3000000
+ 19652 multiletter control sequences out of 15000+200000
  32327 words of font info for 90 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,14n,79p,1396b,1710s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,14n,79p,1401b,1710s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 eccc1200.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecti1095.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecbi1440.pk> <C:\Users\tommy\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\tommy\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\tommy\AppData\Lo
+/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\tommy\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\tommy\AppData\Lo
 cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\tommy\
 AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Us
 ers\tommy\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1728.
@@ -2036,17 +2252,21 @@ b><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 ublic/amsfonts/cm/cmex10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tommy/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tommy/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/to
-mmy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/to
+mmy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
 <C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/tommy/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tesi.pdf (73 pages, 13152838 bytes).
+m/cmr10.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/tommy/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/tommy/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tommy/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/User
+s/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Users/tommy/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb>
+Output written on tesi.pdf (97 pages, 15841764 bytes).
 PDF statistics:
- 1147 PDF objects out of 1200 (max. 8388607)
+ 1299 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 376 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 471 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -204,6 +204,36 @@
       \field{title}{Learning multiple layers of features from tiny images}
       \field{year}{2009}
     \endentry
+    \entry{approximation}{article}{}
+      \name{author}{1}{}{%
+        {{hash=743aed8cb3e0d5dddafd15fc0421d6eb}{%
+           family={Cybenko},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media {LLC}}%
+      }
+      \strng{namehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{fullhash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{bibnamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authorbibnamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authornamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authorfullhash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematics of Control, Signals, and Systems}
+      \field{number}{4}
+      \field{title}{Approximation by superpositions of a sigmoidal function}
+      \field{volume}{2}
+      \field{year}{1989}
+      \field{pages}{303\bibrangedash 314}
+      \range{pages}{12}
+    \endentry
     \entry{alexnet}{incollection}{}
       \name{author}{3}{}{%
         {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
@@ -323,7 +353,6 @@
       \field{booktitle}{ICML}
       \field{title}{Rectified Linear Units Improve Restricted Boltzmann Machines}
       \field{year}{2010}
-      \keyw{dblp}
     \endentry
     \entry{PCA}{book}{}
       \name{author}{1}{}{%
@@ -444,8 +473,8 @@
       \strng{authorbibnamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
       \strng{authornamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
       \strng{authorfullhash}{64fbaf3c8a6b53523f74f0087b58e7e6}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -476,8 +505,8 @@
       \strng{authorbibnamehash}{e1066eda6080c3fe3aab9eb7d6746493}
       \strng{authornamehash}{e1066eda6080c3fe3aab9eb7d6746493}
       \strng{authorfullhash}{e1066eda6080c3fe3aab9eb7d6746493}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -619,8 +648,8 @@
       \strng{authorbibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
       \strng{authornamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
       \strng{authorfullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -718,8 +747,8 @@
       \strng{authorbibnamehash}{6fa17e6ab0c8a3cc23d6c39a38dd7fc5}
       \strng{authornamehash}{6fa17e6ab0c8a3cc23d6c39a38dd7fc5}
       \strng{authorfullhash}{6fa17e6ab0c8a3cc23d6c39a38dd7fc5}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Tesi di laurea triennale, a.a. 2017/2018, rel. prof. Giovanni Dimauro, correl. dr. Vito Renò}
@@ -806,12 +835,6 @@
       \field{year}{2018}
       \field{pages}{17185}
       \range{pages}{1}
-      \verb{urlraw}
-      \verb https://doi.org/10.1038/s41598-018-35492-3
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1038/s41598-018-35492-3
-      \endverb
     \endentry
     \entry{emanuele}{misc}{}
       \name{author}{1}{}{%
@@ -1076,8 +1099,8 @@
       \strng{authorbibnamehash}{3fb811a417bb40d9388a2c7c77b7870c}
       \strng{authornamehash}{3fb811a417bb40d9388a2c7c77b7870c}
       \strng{authorfullhash}{3fb811a417bb40d9388a2c7c77b7870c}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Polar Research}
@@ -1221,8 +1244,8 @@
       \strng{authorbibnamehash}{8ba3ccfdb2fef3e42589e7ae3b2c964a}
       \strng{authornamehash}{8ba3ccfdb2fef3e42589e7ae3b2c964a}
       \strng{authorfullhash}{59755200ef94ffc1362c28c17d315fe0}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv}

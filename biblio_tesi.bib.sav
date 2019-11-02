@@ -5,13 +5,11 @@
   title     = {Rectified Linear Units Improve Restricted Boltzmann Machines},
   booktitle = {ICML},
   year      = {2010},
-  crossref  = {conf/icml/2010},
-  keywords  = {dblp},
   timestamp = {2019-04-04T11:48:32.000+0200},
 }
 
 @Misc{flavio,
-  author = {Flavio Forenza},
+  author = {Forenza, Flavio},
   title  = {Tecniche innovative di Computer Vision per la Foto-Identificazione dei cetacei},
   year   = {2017},
   note   = {Tesi di laurea triennale, a.a. 2017/2018, rel. prof. Giovanni Dimauro, correl. dr. Vito Renò},
@@ -27,7 +25,7 @@
 }
 
 @Misc{cs231n,
-  author = {Andrej Karpathy},
+  author = {Karpathy, Andrej},
   title  = {Lectures of Stanford class CS231n: Convolutional Neural Networks for Visual Recognition},
   year   = {2019},
   note   = {Appunti del corso Stanford CS class C231n.},
@@ -131,7 +129,6 @@
   __markedentry = {[tommy:6]},
   abstract      = {The Risso’s dolphin is a widely distributed species, found in deep temperate and tropical waters. Estimates of its abundance are available in a few regions, details of its distribution are lacking, and its status in the Mediterranean Sea is ranked as Data Deficient by the IUCN Red List. In this paper, a synergy between bio-ecological analysis and innovative strategies has been applied to construct a digital platform, DolFin. It contains a collection of sighting data and geo-referred photos of Grampus griseus, acquired from 2013 to 2016 in the Gulf of Taranto (Northern Ionian Sea, North-eastern Central Mediterranean Sea), and the first automated tool for Smart Photo Identification of the Risso’s dolphin (SPIR). This approach provides the capability to collect and analyse significant amounts of data acquired over wide areas and extended periods of time. This effort establishes the baseline for future large-scale studies, essential to providing further information on the distribution of G. griseus. Our data and analysis results corroborate the hypothesis of a resident Risso’s dolphin population in the Gulf of Taranto, showing site fidelity in a relatively restricted area characterized by a steep slope to around 800 m in depth, north of the Taranto Valley canyon system.},
   refid         = {Maglietta2018},
-  url           = {https://doi.org/10.1038/s41598-018-35492-3},
 }
 
 @Article{imagenet,
@@ -183,7 +180,7 @@
 @Article{batchNorm,
   author     = {Sergey Ioffe and Christian Szegedy},
   title      = {Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift},
-  year       = {2},
+  year       = {2015},
   eprinttype = {arXiv},
 }
 
@@ -192,6 +189,81 @@
   title   = {How Does Batch Normalization Help Optimization?},
   journal = {NeurIPS},
   year    = {2018},
+}
+
+@Article{weightsResnet,
+  author     = {Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
+  title      = {Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification},
+  eprinttype = {arXiv},
+}
+
+@Book{computerVision,
+  title     = {Computer Vision: Algorithms and Applications},
+  publisher = {Springer},
+  year      = {2010},
+  author    = {Szelisky, Richard},
+  url       = {http://szeliski.org/Book/},
+}
+
+@Book{bishop,
+  title     = {Pattern Recognition and Machine Learning},
+  publisher = {Springer},
+  year      = {2006},
+  author    = {Christopher Bishop},
+}
+
+@Article{tl1,
+  author     = {Mark Thomas and Bruce Martin and Katie Kowarski and Briand Gaudet and Stan Matwin},
+  title      = {Marine Mammal Species Classification using Convolutional Neural Networks and a Novel Acoustic Representation},
+  year       = {2019},
+  eprinttype = {arXiv},
+}
+
+@Article{tl2,
+  author    = {Emilio Guirado and Siham Tabik and Marga L. Rivas and Domingo Alcaraz-Segura and Francisco Herrera},
+  title     = {Automatic whale counting in satellite images with deep learning},
+  year      = {2018},
+  publisher = {Cold Spring Harbor Laboratory},
+}
+
+@InProceedings{tl3,
+  author    = {Hung Nguyen and Sarah J. Maclagan and Tu Dinh Nguyen and Thin Nguyen and Paul Flemons and Kylie Andrews and Euan G. Ritchie and Dinh Phung},
+  title     = {Animal Recognition and Identification with Deep Convolutional Neural Networks for Automated Wildlife Monitoring},
+  booktitle = {International Conference on Data Science and Advanced Analytics},
+  year      = {2017},
+  publisher = {IEEE},
+}
+
+@Article{squali,
+  author    = {Benjamin Hughes and Tilo Burghardt},
+  title     = {Automated Visual Fin Identification of Individual Great White Sharks},
+  journal   = {International Journal of Computer Vision},
+  year      = {2016},
+  volume    = {122},
+  number    = {3},
+  pages     = {542--557},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Article{orche,
+  author    = {Brent G. Young and Jeff W. Higdon and Steven H. Ferguson},
+  title     = {Killer whale (Orcinus orca) photo-identification in the eastern Canadian Arctic},
+  journal   = {Polar Research},
+  year      = {2011},
+  volume    = {30},
+  number    = {1},
+  publisher = {Norwegian Polar Institute},
+}
+
+@Article{approximation,
+  author    = {G. Cybenko},
+  title     = {Approximation by superpositions of a sigmoidal function},
+  journal   = {Mathematics of Control, Signals, and Systems},
+  year      = {1989},
+  volume    = {2},
+  number    = {4},
+  pages     = {303--314},
+  publisher = {Springer Science and Business Media {LLC}},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

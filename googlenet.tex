@@ -73,7 +73,7 @@ Questi rami della rete ospitano dei classificatori ausiliari che consistono di
 \item Dropout layer (70\% di probabilità di dropout di ciascun output; vd. par. \ref{dropout})
 \item Softmax layer
 \end{itemize}
-Questa particolare architettura è stata ideata per attenuare il problema della scomparsa del gradiente (\textit{vanishing gradient problem}, par. \ref{vanishingGradientProblem}), tipico delle reti molto profonde. L'idea si basa su un'osservazione: le promettenti performance di reti meno profonde nei task di \textit{image classification} suggeriscono che le \textit{feature} estratte dagli strati intermedi della rete hanno un grande impatto sulla predizione finale. Pertanto, nel tentativo di propagare meglio il segnale gradiente all'indietro (cioè per amplificarlo), la funzione costo calcolata è amplificata sulla base delle predizioni dei classificatori intermedi.
+Questa particolare architettura è stata ideata per attenuare il problema della scomparsa del gradiente (\textit{vanishing gradient problem}, par. \ref{vanishingGradient}), tipico delle reti molto profonde. L'idea si basa su un'osservazione: le promettenti performance di reti meno profonde nei task di \textit{image classification} suggeriscono che le \textit{feature} estratte dagli strati intermedi della rete hanno un grande impatto sulla predizione finale. Pertanto, nel tentativo di propagare meglio il segnale gradiente all'indietro (cioè per amplificarlo), la funzione costo calcolata è amplificata sulla base delle predizioni dei classificatori intermedi.
 In fase di addestramento, dai valori di output dello strato softmax dei tre classificatori (i due intermedi e quello finale) viene calcolata la funzione costo (\textit{cross-entropy loss}). 
 Il costo totale sarà costituito dalla somma pesata del costo registrato dal classificatore finale (con peso 1) e quello registrato dai due classificatori ausiliari (con peso $0.3$).
 
@@ -92,7 +92,7 @@ La fig. \ref{fig:FCvsGAP} mostra un confronto tra il funzionamento di un FC laye
 
 \subsection{Data Augmentation}
 \label{googlenetAugmentation}
-Per ridurre ulteriormente l'overfitting al training set di ImageNet, GoogLeNet fa uso di una particolare tecnica di \textit{data augmentation} (par. \ref{dataAugmentation}). Al posto delle immagini originali, per l'addestramento sono stati utilizzati dei ritagli (uno per ciascuna immagine di un mini-batch) di dimensioni distribuite uniformemente tra l'8\% e il 100\% dell'intera immagine e con \textit{aspect ratio} (rapporto tra larghezza e altezza dell'immagine) distribuito uniformemente tra 3/4 e 4/3. In aggiunta, sono state operate alcune distorsioni fotometriche già adoperate in precedenza in \cite{photometric}.
+Per ridurre ulteriormente l'overfitting al training set di ImageNet, GoogLeNet fa uso di una particolare tecnica di \textit{data augmentation} (par. \ref{augmentation}). Al posto delle immagini originali, per l'addestramento sono stati utilizzati dei ritagli (uno per ciascuna immagine di un mini-batch) di dimensioni distribuite uniformemente tra l'8\% e il 100\% dell'intera immagine e con \textit{aspect ratio} (rapporto tra larghezza e altezza dell'immagine) distribuito uniformemente tra 3/4 e 4/3. In aggiunta, sono state operate alcune distorsioni fotometriche già adoperate in precedenza in \cite{photometric}.
 
 \subsection{Architettura di GoogLeNet}
 \label{architetturaGooglenet}
@@ -107,7 +107,7 @@ L'architettura di GoogLeNet è riportata in forma tabellare in tab. \ref{tab:tab
 
 \begin{figure}[tb] 
 \centering
-\includegraphics[width=0.9\textwidth, height=\textheight, keepaspectratio]{GoogLeNet.png}
+\includegraphics[width=0.9\textwidth, height=0.99\textheight, keepaspectratio]{GoogLeNet.png}
 \caption{Architettura di GoogLeNet}
 \label{fig:googlenet}
 \end{figure}

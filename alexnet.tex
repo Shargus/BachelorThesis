@@ -40,7 +40,7 @@ La funzione di max pooling in AlexNet è stata caratterizzata dalla scelta di un
 \subsection{Data Augmentation}
 \label{augmentationAlexnet}
 Una delle difficoltà che si incontrano spesso quando si vuole addestrare una rete neurale con moltissimi parametri avendo a disposizione un dataset relativamente piccolo è il rischio del sovradattamento (\textit{overfitting}) della rete al training set, che compromette anche seriamente le prestazioni della rete quando le vengono presentati nuovi dati.
-In AlexNet l'overfitting è stato ridotto grazie a tecniche di \textit{data augmentation}. In particolare, dopo aver ridimensionato a $256\times 256$ tutte le immagini del training set (scalando prima in modo tale che il lato più corto dell'immagine sia di 256 e in seguito ritagliando un quadrato centrale $256\times 256$ dall'immagine risultante) e sottraendo l'\textit{immagine media} da ciascuna immagine del training set (par. \ref{preprocessing}), il training set così ottenuto è stato "arricchito" con le seguenti immagini:
+In AlexNet l'overfitting è stato ridotto grazie a tecniche di \textit{data augmentation}. In particolare, dopo aver ridimensionato a $256\times 256$ tutte le immagini del training set (scalando prima in modo tale che il lato più corto dell'immagine sia di 256 e in seguito ritagliando un quadrato centrale $256\times 256$ dall'immagine risultante) e sottraendo l'\textit{immagine media} da ciascuna immagine del training set, il training set così ottenuto è stato "arricchito" con le seguenti immagini:
 \begin{itemize}
 \item Estrazione casuale di ritagli $224\times 224$\footnote{Le immagini vengono portate a $227\times 227$, cioè la risoluzione di input, attraverso uno \textit{zero-padding} (3 pixel aggiuntivi ai bordi)} dalle immagini
 \item Riflessione orizzontale ("a specchio") delle immagini (50\% di probabilità)
@@ -49,9 +49,16 @@ In AlexNet l'overfitting è stato ridotto grazie a tecniche di \textit{data augm
 
 \subsection{Dropout}
 \label{dropout}
-Un altro modo per ridurre il problema del sovradattamento è l'impiego di tecniche di regolarizzazione dei parametri. AlexNet utilizza la tecnica del \textit{dropout} \cite{dropout}. Questa tecnica consiste nel settare a zero l'attivazione di ciascun neurone di un layer intermedio con probabilità $p$ (AlexNet impiega un dropout con $p=0.5$. I neuroni "azzerati" sono essenzialmente eliminati dalla rete e non contribuiscono né alla propagazione all'indietro del gradiente né al calcolo delle attivazioni nello strato finale (in fase di addestramento). Questa tecnica riduce il \textit{co-adattamento} tra neuroni: ogni neurone non può fare affidamento sulla presenza di altri neuroni, ed è costretto ad apprendere feature utili in congiunzione con diversi sottoinsiemi casuali degli altri neuroni, e non con un solo particolare sottoinsieme, migliorando la generalizzazione su nuovi dati.
+Un altro modo per ridurre il problema del sovradattamento è l'impiego di tecniche di regolarizzazione dei parametri. AlexNet utilizza la tecnica del \textit{dropout} \cite{dropout}. Questa tecnica consiste nel settare a zero l'attivazione di ciascun neurone di un layer intermedio con probabilità $p$ (AlexNet impiega un dropout con $p=0.5$), e solo in fase di addestramento. I neuroni "azzerati" sono essenzialmente eliminati dalla rete e non contribuiscono né alla propagazione all'indietro del gradiente né al calcolo delle attivazioni nello strato finale (in fase di addestramento). Questa tecnica riduce il \textit{co-adattamento} tra neuroni: ogni neurone non può fare affidamento sulla presenza di altri neuroni, ed è costretto ad apprendere feature utili in congiunzione con diversi sottoinsiemi casuali degli altri neuroni, e non con un solo particolare sottoinsieme, migliorando la generalizzazione su nuovi dati. In fig. \ref{fig:dropout} è mostrato un esempio di dropout applicato ad una rete neurale standard.
 
-In AlexNet, il dropout dei neuroni è utilizzato nei primi due layer completamente connessi. In fase di test, i neuroni di questi due strati sono moltiplicati per 0.5 per tenere conto dell'impiego del dropout in addestramento.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{dropout}
+\caption{Figura tratta dal paper originale \cite{dropout}. Durante l'addestramento, il dropout può essere immaginato come una "sotto-rete" neurale, che è soggetta ad addestramento al posto della rete originale.}
+\label{fig:dropout}
+\end{figure}
+
+In AlexNet, il dropout dei neuroni è utilizzato nei primi due layer completamente connessi. In fase di test non si utilizza il dropout, e i neuroni di questi due strati sono moltiplicati per 0.5 per tenere conto dell'impiego del dropout in fase di addestramento.
 
 \subsection{Addestramento di AlexNet}
 Nella sua forma originale, AlexNet fu addestrato usando la discesa stocastica del gradiente con momento = 0.9, mini-batch = 128 e decadimento dei pesi (weight decay) = 0.0005. Il training set è ovviamente quello di ImageNet.

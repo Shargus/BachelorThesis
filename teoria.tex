@@ -76,6 +76,7 @@ im_lab = rgb2lab(im);
 I dettagli sulla conversione di spazio di colore possono essere letti al par. 2.1.1 di \cite{gianvito}.
 
 \subsection{Collezioni di immagini in Matlab}
+\label{datastore}
 Una delle necessità principali del lavoro affrontato è stata la gestione di grandi quantità di immagini. Si riportano i tipi di dato messi a dispozione da Matlab e utilizzati negli esperimenti del presente lavoro di tesi:
 
 \begin{itemize}
@@ -95,11 +96,12 @@ imds = imageDatastore(path,’IncludeSubfolders’,true,...
 \end{verbatim}
 L’elenco delle immagini è restituito nel campo \verb|imds.Files|.
 
-\item \verb|augmentedImageDatastore|: oggetto creato a partire da un \verb|imageDatastore| applicando operazioni di preprocessing specificate in un oggetto \verb|imageDataAugmenter|. La sintassi di questo oggetto verrà approfondita nel par. \ref{augmentation}. TODO
+\item \verb|augmentedImageDatastore|: oggetto creato a partire da un \verb|imageDatastore| applicando operazioni di preprocessing e augmentation specificate in un oggetto \verb|imageDataAugmenter|. La sintassi di questo oggetto verrà approfondita nel par. \ref{augmentation}.
 
 \end{itemize}
 
 \section{Trasformazioni}
+\label{trasformazioni}
 Si riportano le operazioni fondamentali che hanno consentito, nel presente lavoro di tesi, di trasformare le immagini in una forma maggiormente adatta ad un’analisi successiva, una strategia chiamata \textit{image augmentation} (par. \ref{augmentation}).
 
 \subsection{Ridimensionamento}
@@ -225,8 +227,9 @@ I risultati delle quattro trasformazioni finora viste sono visualizzate in figur
 \end{figure}
 
 \subsection{Convoluzione}
+\label{convoluzione}
 Nell’ambito dell’\textit{image processing} esiste una quantità notevole di operatori definiti "locali", che operano cioè non su un singolo pixel ma su un gruppo di pixel contigui.
-L’operatore locale maggiormente usato è l’operatore di convoluzione. Nell'ambito del presente lavoro, esso ha un'importanza centrale per la \textit{feature extraction} delle immagini, all'interno delle reti neurali convoluzionali (par. \ref{CNN}), e più specificamente nei layer convoluzionali (par. \ref{convLayer}).
+L’operatore locale maggiormente usato è l’operatore di convoluzione. Nell'ambito del presente lavoro, esso ha un'importanza centrale per la \textit{feature extraction} delle immagini, all'interno delle reti neurali convoluzionali (par. \ref{CNN}), e più specificamente nei layer convoluzionali (par. \ref{CONV}).
 
 
 Nel seguito si presenta, pertanto, una definizione rigorosa dell'operazione di convoluzione e si forniscono semplici esempi di implementazione.
@@ -242,7 +245,7 @@ Nell'ambito della \textit{computer vision} si utilizza una versione multidimensi
 \item il primo segnale $x$ è detto \textbf{input}, generalmente costituito da un'immagine od una sua elaborazione;
 \item il secondo segnale $w$ è detto \textbf{filtro} o \textbf{kernel}, solitamente costituito da una matrice
 di dimensioni ridotte rispetto all'input;
-\item il risultato $s$ è detto \textbf{feature map}, poiché l'operazione di filtraggio è spesso utilizzata per l'estrazione di feature a partire dall'input (par. \ref{TODO}).
+\item il risultato $s$ è detto \textbf{feature map}, poiché l'operazione di convoluzione è spesso utilizzata per l'estrazione di feature a partire dall'input (par. \ref{CONV}).
 \end{itemize}
 È ovvio che la somma di infiniti termini prevista dalla definizione di convoluzione con segnali discreti si riduce ad una somma limitata alle dimensioni dell'immagine. Nel caso in cui l'input sia una matrice bidimensionale, ad esempio un'immagine in scala di grigi $I\in\R^{h\times w}$, anche il kernel impiegato è solitamente una matrice bidimensionale di dimensioni ridotte $K\in\R^{a\times b}$, ottenendo l’operazione:
 \begin{equation*}
@@ -270,9 +273,10 @@ s(i,j)=(\mathcal{I}\oast\mathcal{K})(i,j,k)=\sum_{k=1}^a\sum_{r=1}^b\sum_{s=1}^c
 \end{equation*}
 Come si nota, la feature map ottenuta sarà sempre bidimensionale (a prescindere dalla profondità $c$ del tensore in input).
 
-Completeremo la trattazione sulla convoluzione nel par. \ref{convLayer} sul layer convoluzionale di una CNN.
+Completeremo la trattazione sulla convoluzione nel par. \ref{CONV} sul layer convoluzionale di una CNN.
 
 \section{Problemi di \textit{Computer Vision}}
+\label{computerVision}
 In questa sezione si riportano alcuni problemi caratteristici della \textit{computer vision}, affrontati nel corso del lavoro e finalizzati ad una comprensione di alto livello del contenuto delle immagini (e dei video) da parte del computer. Il nome italiano della disciplina, "visione artificiale", richiama in questo senso l'obiettivo di rendere artificiali i compiti svolti dal sistema visivo umano.
 
 TODO TODO TODO vd 2.3 gianvito
@@ -314,12 +318,13 @@ Il problema dell'\textbf{\textit{image classification}} è uno specifico problem
 
 In letteratura sono stati proposti numerosi metodi per la risoluzione efficiente dei task di \textit{object recognition}, attraverso l'impiego di diverse tecniche di \textit{machine learning} (ad esempio l'algoritmo di clustering \textit{k-Nearest Neighbor}). Negli ultimi anni i risultati più promettenti sono stati offerti dalle \textit{reti neurali convoluzionali}, di cui parleremo diffusamente nel seguito del capitolo (par. \ref{CNN}) e che verranno impiegate negli esperimenti (par. \ref{faseClassificazione}).
 
-\section{Object detection}
+\subsection{Object detection}
+\label{objectDetection}
 Un altro importante problema di \textit{computer vision} è l'\textbf{\textit{object detection}} (in italiano: rilevamento di oggetti). Esso consiste nella localizzazione di oggetti di categorie stabilite a priori ed in seguito (o talvolta in contemporanea) la loro classificazione, per mezzo di un opportuno modello di classificazione.
 
 Il compito si rivela, evidentemente, più difficile di quello della semplice classificazione di oggetti, essendo la localizzazione degli oggetti all'interno dell'immagine un problema anch'esso non banale.\\
 
-L'obiettivo di questo lavoro di tesi è la risoluzione di una particolare istanza (\textit{task} di \textit{object detection}: si vogliono identificare, localizzare e conseguentemente ritagliare, le eventuali porzioni di un'immagine contenenti pinne dorsali di delfini. La classe di oggetti di interesse è quindi una sola.
+L'obiettivo di questo lavoro di tesi è la risoluzione di una particolare istanza (\textit{task}) di \textit{object detection}: si vogliono identificare, localizzare e conseguentemente ritagliare, le eventuali porzioni di un'immagine contenenti pinne dorsali di delfini. La classe di oggetti di interesse è quindi una sola.
 
 Grazie al dominio ristretto del problema in esame, il task di rilevamento è risolto con un approccio in due fasi:
 \begin{itemize}
@@ -327,3 +332,20 @@ Grazie al dominio ristretto del problema in esame, il task di rilevamento è ris
 \item in seguito, i ritagli sono sottoposti ad una fase di classificazione, che ne conferma la natura di 'Pinna' o ne smentisce il contenuto informativo ('No pinna').
 \end{itemize}
 Si rimanda direttamente al cap. \ref{esperimenti} per la descrizione degli esperimenti condotti.
+
+\subsection{ImageNet Database e ILSVRC}
+\label{imagenet}
+\textbf{\textit{ImageNet}} è un'ampia base di dati di immagini, realizzata per l'utilizzo nel campo dell'\textit{object recognition} \cite{imagenet}. Il dataset consiste in più di 14 milioni di immagini con diverse risoluzioni che sono state annotate manualmente con l'indicazione degli oggetti in esse rappresentati e, per circa un milione di esse, della bounding box che li delimita. Gli oggetti individuati sono stati classificati in più di 22.000 categorie. Alcune categorie di oggetti frequenti, come ad esempio "pallone" o "fragola", consistono di diverse centinaia di immagini.
+Le immagini sono state raccolte nel web ed etichettate manualmente tramite il tool di crowd-souring Amazon’s Mechanical Turk.\\
+
+A partire dal 2010, ogni anno viene indetta una competizione di \textit{object recognition} e \textit{detection} denominata \textbf{\textit{ImageNet Large Scale Visual Recognition Challenge}} (ILSVRC): in tale occasione programmi software vengono fatti competere per classificare e rilevare correttamente oggetti e scene contenuti nelle immagini.
+
+Nell'ambito della competizione viene impiegata un sottoinsieme di immagini del database ImageNet, con immagini appartenenti a 1000 categorie e circa 1000 immagini per ciascuna categoria. In tutto ci sono circa 1.2 milioni di immagini per l'addestramento dei modelli, 50.000 per la validazione e 150.000 per il testing.
+
+Per i classificatori che competono nella ILSVRC le prestazioni vengono misurate sulla base di due parametri:
+\begin{itemize}
+\item \textit{top-5 error}: la frazione di immagini del test set per le quali la classe corretta non è tra le cinque classi considerati le più probabili dal modello
+\item \textit{top-1 error}: la frazione di immagini del test set classificate correttamente dal modello
+\end{itemize}
+
+Le tre reti neurali convoluzionali scelte per effettuare gli esperimenti presentati in questo lavoro sono risultate vincitrici della ILSVRC 2012 (Alexnet, par. \ref{alexnet}), ILSVRC 2014 (GoogLeNet, par. \ref{googlenet}) e ILSVRC 2015 (ResNet, par. \ref{resnet}).
