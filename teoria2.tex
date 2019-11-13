@@ -1,4 +1,5 @@
 \section{Machine Learning e Deep Learning}
+\label{machineLearning}
 Il \textbf{\textit{machine learning}} è una branca dell'intelligenza artificiale (AI) che si occupa in generale di fornire ad una macchina la capacità di apprendere automaticamente dall'esperienza, essendo esplicitamente programmata su "come imparare" ma non su "cosa imparare".
 
 Questa capacità è fornita da un certo algoritmo di machine learning, di cui T. Mitchell fornisce una celebre ed elegante definizione:
@@ -6,7 +7,7 @@ Questa capacità è fornita da un certo algoritmo di machine learning, di cui T.
 Si dice che un programma per computer impara dall’esperienza E rispetto ad una qualche classe di compiti T ed una misura di performance P se le sue prestazioni nei compiti in T, misurate attraverso P, migliorano con l’esperienza E.
 \end{quote}
 
-L'obiettivo principale dell'apprendimento automatico è che una macchina sia in grado di generalizzare dalla propria esperienza\cite{bishop}, ossia che sia in grado di svolgere ragionamenti induttivi. In questo contesto, per generalizzazione si intende l'abilità di una macchina di portare a termine in maniera accurata esempi o compiti nuovi, che non ha mai affrontato, dopo aver fatto esperienza su un insieme di dati di apprendimento.
+\noindent L'obiettivo principale dell'apprendimento automatico è che una macchina sia in grado di generalizzare dalla propria esperienza\cite{bishop}, ossia che sia in grado di svolgere ragionamenti induttivi. In questo contesto, per generalizzazione si intende l'abilità di una macchina di portare a termine in maniera accurata esempi o compiti nuovi, che non ha mai affrontato, dopo aver fatto esperienza su un insieme di dati di apprendimento.
 Gli esempi di addestramento (in inglese chiamati \textit{training examples}) si assume provengano da una qualche distribuzione di probabilità, generalmente sconosciuta e considerata rappresentativa dello spazio delle occorrenze del fenomeno da apprendere; la macchina ha il compito di costruire un modello probabilistico generale dello spazio delle occorrenze, in maniera tale da essere in grado di produrre previsioni sufficientemente accurate quando sottoposta a nuovi casi.
 
 Quasi tutti gli algoritmi di machine learning sono costruiti combinando almeno quattro
@@ -21,7 +22,7 @@ Il modello computazionale utilizzato in maniera esclusiva nel \textit{deep learn
 
 Il deep learning è inquadrato in una più ampia branca del machine learning, chiamata \textbf{\textit{representation learning}}. Nell'ambito del representation learning, l'approccio usato per la risoluzione dei problemi consiste non solo nel tentare di addestrare un computer a trovare una relazione tra dati e output, ma anche nel fornirgli strumenti per la rappresentazione stessa dei dati, in quanto in alcuni contesti il legame tra i dati in input e quelli attesi in output è tutt'altro che lineare ed è in generale complesso, e può essere più facile per la macchina acquisire diversi livelli di conoscenza e di astrazione dei dati in input per calcolare l'output.
 
-Si pensi ad esempio ad un task di \textit{image classification}. È impensabile descivere la presenza di un oggetto all’interno di un'immagine attraverso un legame lineare con i singoli pixel. È piuttosto la combinazione di pixel l'informazione da mappare (in maniera in generale non lineare) con la categoria di appartenenza di quell'oggetto.
+Si pensi ad esempio ad un task di \textit{image classification}. È impensabile descrivere la presenza di un oggetto all’interno di un'immagine attraverso un legame lineare con i singoli pixel. È piuttosto la combinazione di pixel l'informazione da mappare (in maniera in generale non lineare) con la categoria di appartenenza di quell'oggetto.
 
 Dagli studi scientifici sull'apparato visivo sappiamo che l'uomo riesce a riconoscere gli oggetti attraverso una rappresentazione gerarchica degli stessi:
 
@@ -100,7 +101,7 @@ Possiamo controllare la tendenza di un modello all'underfitting o all'overfittin
 
 In una rete neurale (par. \ref{ANN}) la capacità del modello può essere definita, ad esempio, come il numero di parametri addestrabili (pesi e bias) che la caratterizzano.
 
-Gli algoritmi di machine learning performeranno generalmente bene quando la loro capacità è appropriata rispetto alla reale complessità del task che devono svolgere e alla quantità di esempi $|X^{train}|$ forniti per l'addestramento. Modelli con una capacità insufficiente non riescono a risolvere task complessi. Modelli con alta capacità possono risolvere task complessi, ma se la loro capacità è eccessivamente alta rispetto alla complessità del task in esame potrebbero soffire di overfitting. La fig. \ref{fig:capacity} presenta bene la situazione.
+Gli algoritmi di machine learning performeranno generalmente bene quando la loro capacità è appropriata rispetto alla reale complessità del task che devono svolgere e alla quantità di esempi $|X^{train}|$ forniti per l'addestramento. Modelli con una capacità insufficiente non riescono a risolvere task complessi. Modelli con alta capacità possono risolvere task complessi, ma se la loro capacità è eccessivamente alta rispetto alla complessità del task in esame potrebbero soffrire di overfitting. La fig. \ref{fig:capacity} presenta bene la situazione.
 
 \begin{figure}[h]
 \centering
@@ -110,20 +111,6 @@ Gli algoritmi di machine learning performeranno generalmente bene quando la loro
 \end{figure}
 
 Negli esperimenti condotti una delle reti neurali utilizzate (ResNet-50) ha sofferto di overfitting a causa della sua enorme capacità di rappresentazione e del training set relativamente ristretto usato per il suo addestramento (par. \ref{addestramento}).
-
-\section{Classificazione}
-\label{classificazione}
-In un problema di classificazione l’insieme delle classi $Y$ è discreto e finito.
-Sulla base del numero di classi $|Y|$ si distinguono due tipi di classificazione: binaria ($|Y|=2$) o multiclasse ($|Y|>2$).
-
-TODO magari lo inserisco direttamente nel capitolo sulle reti neurali.
-
-
-
-
-
-
-
 
 \section{Classificatore lineare}
 \label{classificatoreLineare}
@@ -168,7 +155,7 @@ Le rette in figura devono in realtà essere pensate come degli iperpiani $(hwc-1
 Un altro modo di interpretare i pesi $\mathbf{W}$ può essere quello di far corrispondere ogni riga di $\mathbf{W}$ a un \textbf{prototipo} (in inglese \textbf{template}) per una delle classi. In questa interpretazione, il punteggio realizzato per ogni classe da un'immagine è ottenuto attraverso l'operazione di prodotto matriciale tra il prototipo della classe $j$ ($\mathbf{w}_j$) e l'immagine da classificare ($\mathbf{x}^{(i)}$).
 Usando la terminologia introdotta, possiamo affermare che ciò che sta facendo il classificatore lineare è un'operazione di \textit{template matching}, dove i \textit{templates} sono oggetto di apprendimento da parte del classificatore\footnote{Si introdurranno gli algoritmi di apprendimento (supervisionato) nel paragrafo \ref{supervisedLearning}.}.
 
-Ad esempio, analizziamo il dataset \textit{CIFAR-10} \cite{cifar10}. Esso contiene immagini $32\times 32$ ciascuna appartenente ad una di 10 classi. Visualizzando\footnote{TODO Per i dettagli su come "visualizzare" i pesi si veda \url{https://it.mathworks.com/help/deeplearning/examples/visualize-activations-of-a-convolutional-neural-network.html}.} i pesi (e quindi i 10 templates) di un classificatore lineare addestrato su CIFAR-10 si ottengono i risultati in figura seguente:
+Ad esempio, analizziamo il dataset \textit{CIFAR-10} \cite{cifar10}. Esso contiene immagini $32\times 32$ ciascuna appartenente ad una di 10 classi. Visualizzando\footnote{Per i dettagli su come "visualizzare" i pesi si veda \url{https://it.mathworks.com/help/deeplearning/examples/visualize-activations-of-a-convolutional-neural-network.html}.} i pesi (e quindi i 10 templates) di un classificatore lineare addestrato su CIFAR-10 si ottengono i risultati in figura seguente:
 
 \begin{figure}[h]
 \centering
@@ -187,7 +174,7 @@ di auto raffigurate in tante direzioni diverse. Inoltre, il template per l'auto 
 Come si vedrà nel seguito, questa operazione di \textit{template matching} presenta una forte analogia con il funzionamento di un \textit{Fully Connected Layer} di una rete neurale convoluzionale.
 
 \subsection*{Bias trick}
-Concludiamo questo capitolo menzionando un "trucco" matematico molto utilizzato per rappresentare $\mathbf{W}$ e $\mathbf{b}$ come un'unica matrice, semplificando la notazione \ref{eq_class_lin}.
+Concludiamo questo capitolo menzionando un modo molto utilizzato per rappresentare $\mathbf{W}$ e $\mathbf{b}$ come un'unica matrice, semplificando la notazione \ref{eq_class_lin}.
 Possiamo aggiungere il vettore dei bias in coda alla matrice dei pesi e aggiungere un "1" in coda al vettore che rappresenta l'immagine. In questo modo, il classificatore lineare è rappresentato dalla funzione di associazione
 \begin{equation} \label{eq_bias_trick}
 f(\mathbf{x}^{(i)};\mathbf{W})=\mathbf{W}\mathbf{x}^{(i)}
@@ -202,9 +189,5 @@ Tale utile passaggio, noto come \textit{bias trick}, è visualizzato nella segue
 \caption{Bias trick}
 \label{bias_trick}
 \end{figure}
-
-TODO: loss functions.
-
-TODO: valutazione delle prestazioni di una rete neurale (matrice di confusione)
 
 

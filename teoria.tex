@@ -1,10 +1,6 @@
-\chapter{Metodologie}\label{teoria}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[OL]{\rightmark}
-\cfoot{\thepage}
-
-Nel corso di questo capitolo saranno introdotti progressivamente i concetti principali su cui si fonda la \textit{computer vision} (visione artificiale) e il \textit{machine learning} (apprendimento automatico). Questi presupposti teorici permetteranno di comprendere da un punto di vista teorico quanto descritto nella sezione sperimentale della tesi (cap. \ref{esperimenti}.
+\chapter{Metodologie}
+\label{teoria}
+Nel corso di questo capitolo saranno introdotti progressivamente i concetti principali su cui si fonda la \textit{computer vision} (visione artificiale) e il \textit{machine learning} (apprendimento automatico). Questi contenuti permetteranno di comprendere da un punto di vista teorico quanto descritto nella sezione sperimentale della tesi (cap. \ref{esperimenti}).
 
 Per i primi paragrafi, dedicati all'\textit{image processing}, le principali fonti seguite sono \cite{gianvito} e \cite{computerVision}.
 
@@ -12,6 +8,7 @@ Per i paragrafi dedicati al \textit{machine} e \textit{deep learning} le fonti d
 
 
 \section{Immagini digitali}
+\label{imDig}
 Caratterizziamo intuitivamente il concetto di "immagine" dal punto di vista informatico.
 
 Un'\textbf{immagine digitale} è una rappresentazione binaria di un'immagine (in generale a colori) a due dimensioni\footnote{Ci riferiamo in questa sede solo alle immagini di tipo raster, quelle cioè con risoluzione e numero di canali di colore fissati a priori, come ad esempio le immagini digitali in formato jpg.}; essa può essere definita matematicamente come un tensore $\mathcal{I}\in\{0,\dots,255\}^{h\times w\times c}$, dove $h$ e $w$ sono rispettivamente dette \textbf{altezza} e \textbf{larghezza} dell'immagine, la coppia $(w,h)$ \textbf{risoluzione} mentre $c$ è il numero di \emph{canali di colore}\footnote{Spesso si scrive che $\mathcal{I}$ è un immagine $w\times h\times c$, o più semplicemente $w\times h$ (assumendo $c=3$)}. Nello \textbf{spazio di colore sRGB} (standard RGB, d'ora in avanti abbreviato in RGB), ampiamente adoperato, i canali di colore sono rosso (R, Red), verde (G, Green) e blu (B, Blue), quindi $c=3$. In mancanza di diverse indicazioni, ci si riferirà nel seguito allo spazio di colore RGB.
@@ -77,7 +74,7 @@ I dettagli sulla conversione di spazio di colore possono essere letti al par. 2.
 
 \subsection{Collezioni di immagini in Matlab}
 \label{datastore}
-Una delle necessità principali del lavoro affrontato è stata la gestione di grandi quantità di immagini. Si riportano i tipi di dato messi a dispozione da Matlab e utilizzati negli esperimenti del presente lavoro di tesi:
+Una delle necessità principali del lavoro affrontato è stata la gestione di grandi quantità di immagini. Si riportano i tipi di dato messi a disposizione da Matlab e utilizzati negli esperimenti del presente lavoro di tesi:
 
 \begin{itemize}
 
@@ -107,7 +104,7 @@ Si riportano le operazioni fondamentali che hanno consentito, nel presente lavor
 \subsection{Ridimensionamento}
 Il ridimensionamento consente, in generale, di ottenere una nuova immagine a risoluzione differente, riducendo o aumentando il numero di pixel utilizzati per rappresentarla.
 Nel caso del presente lavoro, le dimensioni delle immagini sono state ridotte (par. \ref{faseRitaglio}), per diminuire il costo computazionale delle operazioni successive.
-Per ridimensionare un'immagine \verb|im| in Matlab si può usare la funzione \verb|imresize|\footnote{La funzione imresize attua, per lo scopo, una tecnica avanzata di calcolo numerico: l’interpolazione bicubica. (TODO ? par. 2.2.1 di \cite{gianvito} per i dettagli.)}, specificando la nuova lunghezza \verb|w'| e la nuova altezza \verb|h'|:
+Per ridimensionare un'immagine \verb|im| in Matlab si può usare la funzione \verb|imresize|\footnote{La funzione imresize attua, per lo scopo, una tecnica avanzata di calcolo numerico: l’interpolazione bicubica. (par. 2.2.1 di \cite{gianvito} per i dettagli.)}, specificando la nuova lunghezza \verb|w'| e la nuova altezza \verb|h'|:
 \begin{verbatim}
 im_res = imresize(im,[h' w']);
 \end{verbatim}
@@ -279,17 +276,6 @@ Completeremo la trattazione sulla convoluzione nel par. \ref{CONV} sul layer con
 \label{computerVision}
 In questa sezione si riportano alcuni problemi caratteristici della \textit{computer vision}, affrontati nel corso del lavoro e finalizzati ad una comprensione di alto livello del contenuto delle immagini (e dei video) da parte del computer. Il nome italiano della disciplina, "visione artificiale", richiama in questo senso l'obiettivo di rendere artificiali i compiti svolti dal sistema visivo umano.
 
-TODO TODO TODO vd 2.3 gianvito
-
-\subsection{Segmentazione}
-TODO
-\paragraph*{Soglia di Otsu}
-TODO
-\paragraph*{Regioni connesse}
-TODO
-\paragraph*{Riempimento degli \textit{holes}}
-TODO
-
 \subsection{Object recognition}
 \label{objectRecognition}
 L'\textbf{\textit{object recognition}} (in italiano: riconoscimento di oggetti) nell'ambito della visione artificiale è il problema di assegnare una descrizione testuale o una o più etichette ad un'immagine, tipicamente sulla base di uno o più determinati oggetti che un computer riesce a riconoscere all'interno di essa.
@@ -345,7 +331,7 @@ Nell'ambito della competizione viene impiegata un sottoinsieme di immagini del d
 Per i classificatori che competono nella ILSVRC le prestazioni vengono misurate sulla base di due parametri:
 \begin{itemize}
 \item \textit{top-5 error}: la frazione di immagini del test set per le quali la classe corretta non è tra le cinque classi considerati le più probabili dal modello
-\item \textit{top-1 error}: la frazione di immagini del test set classificate correttamente dal modello
+\item \textit{top-1 error}: la frazione di immagini del test set classificate in maniera errata dal modello
 \end{itemize}
 
 Le tre reti neurali convoluzionali scelte per effettuare gli esperimenti presentati in questo lavoro sono risultate vincitrici della ILSVRC 2012 (Alexnet, par. \ref{alexnet}), ILSVRC 2014 (GoogLeNet, par. \ref{googlenet}) e ILSVRC 2015 (ResNet, par. \ref{resnet}).

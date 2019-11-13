@@ -1,7 +1,7 @@
 \section{ResNet}
 \label{resnet}
 ResNet (abbreviazione di \textit{residual network}) è il nome di un'ampia categoria di reti neurali convoluzionali profonde, caratterizzate dall'utilizzo di particolari blocchi di layer detti \textit{residual blocks}, ideati per risolvere alcuni problemi delle reti molto profonde.
-Le reti ResNet propriamente dette sono state introdotte da un gruppo di ricercatori Microsoft nel 2015 nel paper \cite{resnet}. Presentate nell'edizione del 2015 della \textit{ILSVRC} e risultate vincitrici con uno strabiliante errore \textit{top-5} su dataset ImageNet 3.57\% (più basso di quello umano, stimato a 5\%), queste reti sono considerate tutt'oggi lo stato dell'arte nell'ambito delle reti neurali convoluzionali profonde.\\
+Le reti ResNet propriamente dette sono state introdotte da un gruppo di ricercatori Microsoft nel 2015 nel paper \cite{resnet}. Presentate nell'edizione del 2015 della \textit{ILSVRC}\footnote{\url{http://image-net.org/challenges/LSVRC/2015/results}} e risultate vincitrici con uno strabiliante errore \textit{top-5} su dataset ImageNet 3.57\% (più basso di quello umano, stimato a 5\%), queste reti sono considerate tutt'oggi lo stato dell'arte nell'ambito delle reti neurali convoluzionali profonde.\\
 
 Nell'ambito dei problemi di visione artificiale proposti nella ILSVRC, in quegli anni cominciava ad essere evidente (\cite{googlenet},\cite{verydeep}) che la profondità delle reti neurali era di fondamentale importanza per il miglioramento delle prestazioni delle reti su dataset di grandi dimensioni, quali il database ImageNet (par. \ref{imagenet}).
 L'ovvia conseguenza di questa osservazione è stato il tentativo di aumentare progressivamente il numero di layer delle reti neurali, rendendole sempre più profonde e complesse, con l'aggravarsi di ostacoli già noti (quali ad esempio il problema della scomparsa del gradiente, par. \ref{vanishingGradient}) e il presentarsi di nuovi (un problema di degradazione esposto per la prima volta in \cite{highway}, e descritto nel seguito):
@@ -127,13 +127,13 @@ Il ramo che ospita i layer non lineari si compone delle seguenti operazioni:
 
 Inoltre, il ramo che realizza la \textit{shortcut connection} si compone eventualmente di una convoluzione $1\times 1$ seguita da batch normalization per garantire che il volume di attivazioni che attraversa la "scorciatoia" abbia dimensioni confrontabili con il volume uscente dal ramo che ospita i layer non lineari. Questa eventualità è rappresentata in fig. \ref{fig:architetturaResnet50} con un arco tratteggiato.\\
 
-L'evidente differenza rispetto al \textit{residual block} di ResNet-18 è motivata dalla premura di dover mantenere basso il tempo necessario ad addestrare la rete. Le convoluzioni $3\times 3$ sono computazionalmente costose, pertanto in reti molto profonde non si possono prevedere tutti \textit{residual blocks} ciascuno operante due convoluzioni $3\times 3$. Si decide allora di modificare il \textit{residual block} usato: si decide di operare un'unica convoluzione $3\times 3$ per blocco, preceduta e seguita da una convoluzione $1\times 1$ (par. \ref{conv1x1}) per rispettivamente ridurre e ripristinare la profondità del volume di attivazioni su cui la convoluzione $3\times 3$ lavora, abbassando così il costo computazionale associato all'addestramento di ciascun \textit{residual block}.\\
+L'evidente differenza rispetto al \textit{residual block} di ResNet-18 è motivata dalla premura di dover mantenere basso il tempo necessario ad addestrare la rete. Le convoluzioni $3\times 3$ sono computazionalmente costose, pertanto in reti molto profonde non si possono prevedere tutti \textit{residual blocks} ciascuno operante due convoluzioni $3\times 3$. Si decide allora di modificare il \textit{residual block} usato: si decide di operare un'unica convoluzione $3\times 3$ per blocco, preceduta e seguita da una convoluzione $1\times 1$ (par. \ref{1x1conv}) per rispettivamente ridurre e ripristinare la profondità del volume di attivazioni su cui la convoluzione $3\times 3$ lavora, abbassando così il costo computazionale associato all'addestramento di ciascun \textit{residual block}.\\
 
 L'architettura di ResNet-50 è riportata schematicamente nella figura \ref{fig:architetturaResnet50} e in forma tabellare, in confronto con quella di ResNet-18, in fig. \ref{fig:confrontoResnet} seguente.
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.9\textwidth, height=\textheight, keepaspectratio]{architetturaResnet.png}
+\includegraphics[width=0.8\textwidth, height=\textheight, keepaspectratio]{architetturaResnet.png}
 \caption{Le architetture di ResNet-18 e ResNet-50 a confronto}
 \label{fig:confrontoResnet}
 \end{figure}

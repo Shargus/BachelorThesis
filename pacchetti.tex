@@ -31,10 +31,17 @@
 \newcommand{\xii}{x_i}
 \newcommand{\xjj}{x_j}
 \newcommand{\abs}[1]{\left|#1\right|} %valore assoluto
-\usepackage[top=3cm, bottom=3cm, left=3.5cm, right=2.5cm]{geometry}
-\parindent=1cm
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry} %ORIGINALE: l=3.5 r=2.5
+\parindent=7mm
 \usepackage[swapnames]{frontespizio}
 \usepackage{changepage}
+\newcommand*\justify{%
+  \fontdimen2\font=0.4em% interword space
+  \fontdimen3\font=0.2em% interword stretch
+  \fontdimen4\font=0.1em% interword shrink
+  \fontdimen7\font=0.1em% extra space
+  \hyphenchar\font=`\-% allowing hyphenation
+}
 
 % per le immagini
 \usepackage{graphicx}
@@ -42,7 +49,6 @@
 \usepackage{subcaption}
 \usepackage{float}
 \newcommand{\rulesep}{\unskip\ \vrule\ }
-
 
 % per le tabelle
 \usepackage{caption} %vale anche per le immagini
@@ -57,6 +63,38 @@
 
 % per il codice sorgente
 \usepackage{verbatim}
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{lightgray}{gray}{0.99}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{lightgray},   
+	commentstyle=\color{Gray},
+	%keywordstyle=\color{Blue},
+	numberstyle=\tiny\color{gray},
+	%stringstyle=\color{purple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+
+% per l'epigrafe
+\makeatletter
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
 
 % per la bibliografia
 \usepackage[autostyle, italian=guillemets]{csquotes}

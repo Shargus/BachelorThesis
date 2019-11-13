@@ -53,7 +53,7 @@ Si rende perciò necessario filtrare in qualche modo le sole immagini che raffig
 
 \section{CropFin v1}
 \label{cropFin}
-Per ritagliare ed estrarre dalle immagini originali le sole pinne dorsali, è stata utilizzata la routine \textit{CropFin v1} in linguaggio MATLAB sviluppata dall'ing. Gianvito Losapio nel suo lavoro di tesi triennale \cite{gianvito} sulla base di un precedente lavoro di tesi dell'ing. Flavio Forenza \cite{flavio}.
+Per ritagliare ed estrarre dalle immagini originali le sole pinne dorsali, è stata utilizzata la routine \textit{CropFin v1} in linguaggio MATLAB sviluppata in \cite{gianvito} sulla base di un precedente lavoro  \cite{flavio}.
 Si può descrivere la routine in due fasi:
 \begin{enumerate}
 \item Segmentazione, filtraggio e ritaglio adattivo delle regioni delle immagini che possono verosimilmente contenere una pinna
@@ -74,9 +74,7 @@ Questa operazione di preprocessing è stata adottata per diminuire il costo comp
 \noindent Il risultato dell'operazione è visualizzato in figura \ref{fig:ridimensionamento}
 
 \begin{figure}[h]
-
   \centering
-  
   \begin{subfigure}[b]{0.475\textwidth}
     \includegraphics[width=\textwidth]{immagineDaProcessare.png}
     \caption{Prima del ridimensionamento}
@@ -86,7 +84,6 @@ Questa operazione di preprocessing è stata adottata per diminuire il costo comp
     \includegraphics[width=0.2\textwidth]{immagineDaProcessare.png}
     \caption{Dopo il ridimensionamento}
   \end{subfigure}
-  
   \caption{Ridimensionamento di un'immagine (scelta nel dataset degli scatti di Taranto)}
   \label{fig:ridimensionamento}
 \end{figure}
@@ -367,7 +364,7 @@ In questo lavoro di tesi si è tentato un approccio diverso alla classificazione
 
 \section{Classificazione mediante CNN e Transfer Learning}
 \label{esperimentoTL}
-Nel par. \ref{transferlearning} sono stati descritti molteplici motivazioni per le quali per risolvere un problema di classificazione (in particolare di \textit{image captioning}) può essere meglio usare la tecnica del \textit{transfer learning}, adattando al task in esame una rete neurale pre-addestrata piuttosto che creare una rete da zero.
+Nel par. \ref{transferLearning} sono state esposte molteplici motivazioni per le quali per risolvere un problema di classificazione (in particolare di \textit{image classification}) può essere meglio usare la tecnica del \textit{transfer learning}, adattando al task in esame una rete neurale pre-addestrata piuttosto che creare una rete da zero.
 Il nucleo principale di questo lavoro di tesi è quindi dedicato alla creazione di un nuovo modello di classificazione, basato su \textit{transfer learning}, che possa migliorare la fase di classificazione di CropFin v1. Questi "miglioramenti" sono da valutare con rigore ingegneristico sulla base di alcuni parametri, che consentono un confronto di prestazioni con il classificatore di CropFin v1; l'analisi delle prestazioni e quindi il confronto è svolto nel par. \ref{classEnsemble}.
 
 \subsection{Scelta delle CNN}
@@ -412,7 +409,7 @@ A ciascuna immagine del set sono applicate le seguenti trasformazioni, rappresen
 $[-60, 60]$ pixel.
 \end{itemize}
 
-Un oggetto \verb|augmentedImageDatastore| parametrizzato con l'\verb|imageDataAugmenter|  sopra descritto e l'\verb|inputSize| della rete è creato per rappresentare la versione "aumentata" di \verb|cropTrain|.
+\noindent Un oggetto \verb|augmentedImageDatastore| parametrizzato con l'\verb|imageDataAugmenter| sopra descritto e l'\verb|inputSize| della rete è creato per rappresentare la versione "aumentata" di \verb|cropTrain|.
 Le operazioni applicate in maniera casuale contribuiscono ad ottenere ulteriore variabilità del dataset impiegato per la fase di addestramento; i ritagli vengono inoltre ridimensionati all'input size della rete da addestrare. Si è ritenuto opportuno impiegare poche trasformazioni ad effetto limitato: le uniche che non alterassero eccessivamente il contenuto dei ritagli di classe Pinna rispetto al problema in esame ed al dataset a disposizione (già di per sè contenente grande variabilità relativa alla classe Pinna).
 
 \begin{figure}[h!]
@@ -428,7 +425,7 @@ Si noti che i due dataset "aumentati" hanno le stesse dimensioni dei loro omolog
 
 L'inizializzazione delle quattro CNN all'interno dell'ambiente Matlab è particolarmente semplice, e può essere effettuato richiamando la rete col suo nome (\verb|alexnet|, \verb|googlenet|, \verb|resnet18|, \verb|resnet50|) assegnandola ad una variabile, avendo cura di scaricare il relativo \textit{add-on} dall'\textit{add-on explorer} integrato di Matlab, estendendo il \textit{Deep Learning Toolbox}.
 
-Le quattro reti, come visto nei rispettivi paragrafi, sono in origine state addestrate sul database di immagini \textit{ImageNet} (par. \ref{imagenet}) per classificare un'immagine scegliendo tra le mille categorie diverse del dataset. Applicare la tecnica del \textit{transfer learning} (par. \ref{transferlearning}) per adattare ciascuna rete al problema di classificazione binaria delle pinne significa effettuare le seguenti operazioni
+Le quattro reti, come visto nei rispettivi paragrafi, sono in origine state addestrate sul database di immagini \textit{ImageNet} (par. \ref{imagenet}) per classificare un'immagine scegliendo tra le mille categorie diverse del dataset. Applicare la tecnica del \textit{transfer learning} (par. \ref{transferLearning}) per adattare ciascuna rete al problema di classificazione binaria delle pinne significa effettuare le seguenti operazioni
 
 \begin{itemize}
 \item analizzare l'architettura della rete e decidere quanti e quali layer (tra quelli dotati di parametri addestrabili) "congelare", cioè impedirne l'ulteriore \textit{fine-tuning} dei  parametri in fase di ri-addestramento azzerando il learning rate dei layer
@@ -464,7 +461,7 @@ options = trainingOptions('sgdm', ...
 
 Il numero di epoche di addestramento, relativamente basso, è accettabile in quanto utilizzando il transfer learning per ri-addestrare una rete pre-addestrata tipicamente sono necessarie poche iterazioni sull'intero dataset per ottenere un buon adattamento della rete al nuovo task di classificazione\footnote{come evidenziato in \url{https://it.mathworks.com/help/deeplearning/examples/transfer-learning-using-alexnet.html}}; inoltre un numero basso di epoche, assieme alle operazioni di augmentation, garantisce una discreta robustezza contro l'\textit{overfitting}, problema in cui si può facilmente incappare in presenza di un dataset di dimensioni relativamente ridotte come in questo caso.
 
-Per quanto riguarda gli altri iperparametri (\textit{learning rate} globale e dimensione del \textit{minibatch}), i loro valori sono stati scelti empiricamente, sulla base di alcune \textit{best practices} generali presenti in letteratura\textsuperscript{5}, che funzionano bene con un'ampia classe di reti neurali convoluzionali e di dataset.
+Per quanto riguarda gli altri iperparametri (\textit{learning rate} globale e dimensione del \textit{minibatch}), i loro valori sono stati scelti empiricamente, sulla base di alcune \textit{best practices} generali presenti in letteratura\textsuperscript{3}, che funzionano bene con un'ampia classe di reti neurali convoluzionali e di dataset.
 A rigore, i valori migliori per questi iperparametri possono essere trovati con la risoluzione di un preciso problema di ottimizzazione (che richiederebbe numerosi ri-addestramenti per ogni rete, con notevole dispendio di tempo). Tuttavia, come sarà evidente al momento della presentazione dei risultati, le prestazioni registrate dalle reti con questi iperparametri sono eccellenti, e non è necessario cercarne di migliori (un tale sforzo computazionale e di tempo non giustificherebbe un leggerissimo aumento dell'accuratezza).\\
 
 \noindent L’addestramento di ciascuna rete è stato lanciato mediante la funzione
@@ -669,6 +666,6 @@ Tuttavia non c'è un criterio oggettivo per valutare quantitativamente l'utilit�
 
 Si è infine potuto verificare che il tempo che l'ensemble impiega per effettuare una predizione su un ritaglio è leggermente più alto a quello impiegato dal classificatore di CropFin v1.
 
-I problemi evidenziati, soprattutto per quanto concerne le dimensioni del classificatore e il tempo necessario alla predizione (parametri molto "sentiti" dall'utilizzatore finale) sono però quasi ininfluenti su una macchina dal discreto potere computazionale e memoria disponibile.\\
+I problemi evidenziati, soprattutto per quanto concerne le dimensioni del classificatore e il tempo necessario ad effettuare una predizione (requisiti fondamentali per agevolare il lavoro del biologo) sono però quasi ininfluenti su una macchina dal discreto potere computazionale e memoria disponibile.\\
 
 \noindent I motivi sopracitati rendono il nuovo classificatore ensemble preferibile a quello nativo di CropFin v1.

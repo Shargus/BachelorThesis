@@ -1,19 +1,13 @@
+% !TEX encoding = UTF-8 Unicode
+
 %% INIZIO SORGENTE
+\RequirePackage{colortbl}
 \documentclass[a4paper,12pt,twoside]{book}
 
 \input{pacchetti}
 
-% DEFINIZIONE AMBIENTE ABSTRACT
-\newenvironment{abstract}%
-{\cleardoublepage%
-\thispagestyle{empty}%
-\null \vfill\begin{center}%
-\bfseries \abstractname \end{center}}%
-{\vfill\null}
-
 %% INIZIO TESI
 \frontmatter
-\pagestyle{empty}
 
 \begin{document}
 
@@ -22,8 +16,8 @@
 \Istituzione{POLITECNICO DI BARI}
 \Logo[5cm]{logo}
 \Dipartimento{Ingegneria Elettrica e dell'Informazione - DEI}
-\Corso[Laurea Triennale]{Ingegneria Informatica e dell'Automazione (D.M. 270/04)}
-\Titolo{ANALISI DI IMMAGINI CON RETI NEURALI CONVOLUZIONALI PER LA CLASSIFICAZIONE DEI CETACEI NEL GOLFO DI TARANTO}
+\Corso[Laurea Triennale]{Ingegneria Informatica e dell'Automazione}
+\Titolo{Analisi e classificazione di immagini mediante reti neurali convoluzionali per la foto-identificazione dei cetacei}
 \Titoletto{Tesi di laurea in CALCOLO NUMERICO}
 \Candidato[568581]{Tommaso MONOPOLI}
 \NCandidato{Laureando}
@@ -32,17 +26,43 @@
 \Annoaccademico{2018-2019}
 \Rientro{1.5cm}
 \Preambolo{\renewcommand{\frontlogosep}{10pt}}
+\Preambolo{\renewcommand{\frontpretitlefont}{\fontsize{14}{17}\rmfamily}}
+\Preambolo{\renewcommand{\fronttitlefont}{\fontsize{21}{24}\bfseries}}
 \end{frontespizio}
 
 %% SOMMARIO
-\begin{abstract}
-Il sistema terrestre è sempre stato soggetto alle conseguenze delle attività umane, e la biodiversità degli ecosistemi acquatici e marini è fortemente a rischio. Diversi studi cercano di capire in che modo la perdita della biodiversità possa alterare l’integrità e il funzionamento di tali ecosistemi.  Una risposta a questa domanda può essere ricercata negli studi effettuati sulla distribuzione e sullo stato di conservazione dei cetacei, oggetto di numerose ricerche negli ultimi anni.\\
-Un'attività mirata alla raccolta di informazioni rilevanti allo studio dei cetacei è la \textit{foto-identificazione degli individui} di una specie, che prevede il riconoscimento - automatico o manuale - di uno stesso individuo in diverse immagini collezionate nel tempo, mediante l’analisi di particolari segni distintivi (\emph{feature}) presenti nell'immagine.\\
-Questa attività può essere effettuata manualmente, ma con un grande costo in termini di tempo per i ricercatori, che spesso hanno a disposizione diverse migliaia o milioni di fotografie, scattate nel corso di anni. L'evidente difficoltà nell'approccio manuale alla foto-identificazione dei cetacei (tutt'oggi ancora ampiamente operata) suggerisce l’applicazione di metodologie di \emph{Computer Vision} per automatizzare tale attività.
-L’obiettivo del presente lavoro di tesi è la creazione di classificatori binari che ricevano in input un dataset di immagini bidimensionali collezionate nei pressi delle isole Azzorre (Oceano Atlantico settentrionale) e sappiano suddividere lo stesso dataset in due classi di immagini, a seconda che in ciascuna immagine sia rilevata o meno una \emph{feature} utile ad una successiva foto-identificazione. Nel caso dei cetacei, il criterio di classificazione è la presenza nell'immagine della pinna dorsale dell'individuo.\\
+%\begin{abstract}
+\chapter*{Sommario}
+Il sistema terrestre è sempre stato soggetto alle conseguenze delle attività umane, che mettono fortemente a rischio la biodiversità degli ecosistemi acquatici e marini. Diversi studi cercano di capire in che modo la perdita della biodiversità possa alterare l’integrità e il funzionamento di tali ecosistemi.
+
+Una risposta a questa domanda può essere ricercata negli studi effettuati sulla distribuzione e sullo stato di conservazione dei cetacei, oggetto di numerose ricerche negli ultimi anni.
+È noto, infatti, che lo stato di salute di ecosistemi con catene alimentari lunghe, come quello marino, si rifletta nella presenza e nell’abbondanza dei predatori dei livelli trofici superiori; tra questi figurano proprio i delfini.
+Studiare i delfini significa, quindi, conoscere indirettamente lo stato di salute dell’ecosistema
+marino in cui sono inseriti.
+
+Una tecnica non invasiva che permette di studiare i cetacei nel loro habitat naturale è la \emph{foto-identificazione} degli esemplari, che prevede il riconoscimento - automatico o manuale - di uno stesso individuo in diverse immagini collezionate nel tempo, mediante l’analisi di suoi particolari segni distintivi (ad esempio dei graffi sul dorso, o la forma delle pinne) catturati in uno scatto.
+Quest'attività può essere effettuata manualmente, ma con un grande costo in termini di tempo per i ricercatori, che spesso hanno a disposizione diverse migliaia o milioni di fotografie, scattate nel corso di anni. L'evidente difficoltà nell'approccio manuale alla foto-identificazione dei cetacei (tutt'oggi ancora ampiamente operata) suggerisce l’applicazione di metodologie di \emph{Computer Vision} e \emph{Machine Learning} per automatizzare tale attività.
+
+L’obiettivo del presente lavoro di tesi è la creazione di un modello di classificazione binario capace di discriminare la presenza o meno di una pinna dorsale di un delfino all'interno di un'immagine. Questa è una delle operazioni che i biologi svolgono prima di poter foto-identificare gli esemplari fotografati durante le campagne di avvistamento: renderla automatica significa permettere ai biologi di risparmiare tempo e risorse, nonché indirizzare il lavoro di ricerca su task più significativi e di più alto livello.
 Le metodologie impiegate sono quelle del \emph{machine learning}; in particolare, si è scelto di utilizzare la tecnica del \emph{transfer learning} per il riuso e l'adattamento di modelli pre-addestrati, usati per risolvere task di classificazione diversi da quello in esame.
-Gli esperimenti condotti su dati reali acquisiti in mare dimostrano l’utilità di tali tecniche di Computer Vision nel campo della foto-identificazione dei cetacei.
-\end{abstract}
+Gli esperimenti condotti su dati reali acquisiti in mare permettono di rilevare l’efficacia e le alte prestazioni del classificatore oggetto di sviluppo del presente elaborato.
+%\end{abstract}
+
+\chapter*{Ringraziamenti}
+Devo ringraziare innanzitutto le persone che mi hanno permesso di svolgere questo lavoro di tesi.
+
+Ringrazio il Dott. Vito Renò, per avermi concesso l'opportunità di intraprendere questo percorso di tirocinio, seguendomi con dedizione, professionalità, continui stimoli ed una buona dose di pazienza durante tutte le fasi dello sviluppo della mia tesi di laurea e nonostante le mie innumerevoli incertezze.
+
+Un ringraziamento al CNR per l'esperienza estremamente formativa che ho avuto il privilegio di intraprendere.
+
+Porgo un ringraziamento al Prof. Tiziano Politi, per la sua disponibilità in qualità di relatore e per i tanti consigli dispensati.
+
+Ringrazio tutte le persone conosciute in questi tre anni di università. In particolare, un sentito ringraziamento a Gianvito Losapio: la sua dedizione ed il rigore nello studio, la sua vivace curiosità e le innumerevoli altre qualità della sua persona sono stati per me un riferimento costante ed un inesauribile stimolo a migliorarmi.
+
+Ringrazio la mia famiglia, per dimostrare giorno dopo giorno nei miei confronti un supporto ed un affetto sempre maggiore di quello che io dimostro loro, e che però si meritano.
+
+Ringrazio i miei amici, scusandomi in anticipo con loro se per motivi di brevità non potrò citarli tutti. In particolare ringrazio la \emph{Corteccia} per la sincera e disinteressata amicizia che ci lega da anni. Ringrazio Marcello, per aver per primo infuso in me un po' della sua passione per lo studio e per aver condiviso con me tanti interessi in comune. Ringrazio Silvia, per i tanti bei momenti musicali che abbiamo passato e che passeremo insieme. Ringrazio Cristina, a cui se davvero potessi dedicherei 15 pagine di ringraziamenti (come tante volte le ho promesso).
+
 
 %% INDICE GENERALE
 \tableofcontents
@@ -68,14 +88,17 @@ Gli esperimenti condotti su dati reali acquisiti in mare dimostrano l’utilità
 %% 3 - Esperimenti e risultati
 \include{esperimenti}
 
+%% 4 - Conclusioni
+\include{conclusioni}
+
+%% 5 - Sorgenti
+\include{sorgenti}
+
 
 
 
 %% BIBLIOGRAFIA
 \backmatter
-
-\addcontentsline{toc}{chapter}{Conclusioni}	%aggiunge la voce non numerata "Conclusioni" all'indice
-\include{conclusioni}
 
 \nocite{*}
 \printbibliography[heading=bibintoc]		%stampa la bibliografia alla fine e la aggiunge all'indice generale

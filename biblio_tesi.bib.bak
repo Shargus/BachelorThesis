@@ -126,7 +126,7 @@
   pages         = {17185},
   month         = nov,
   issn          = {2045-2322},
-  __markedentry = {[tommy:6]},
+  __markedentry = {[tommy:]},
   abstract      = {The Risso’s dolphin is a widely distributed species, found in deep temperate and tropical waters. Estimates of its abundance are available in a few regions, details of its distribution are lacking, and its status in the Mediterranean Sea is ranked as Data Deficient by the IUCN Red List. In this paper, a synergy between bio-ecological analysis and innovative strategies has been applied to construct a digital platform, DolFin. It contains a collection of sighting data and geo-referred photos of Grampus griseus, acquired from 2013 to 2016 in the Gulf of Taranto (Northern Ionian Sea, North-eastern Central Mediterranean Sea), and the first automated tool for Smart Photo Identification of the Risso’s dolphin (SPIR). This approach provides the capability to collect and analyse significant amounts of data acquired over wide areas and extended periods of time. This effort establishes the baseline for future large-scale studies, essential to providing further information on the distribution of G. griseus. Our data and analysis results corroborate the hypothesis of a resident Risso’s dolphin population in the Gulf of Taranto, showing site fidelity in a relatively restricted area characterized by a steep slope to around 800 m in depth, north of the Taranto Valley canyon system.},
   refid         = {Maglietta2018},
 }
@@ -264,6 +264,72 @@
   number    = {4},
   pages     = {303--314},
   publisher = {Springer Science and Business Media {LLC}},
+}
+
+@InProceedings{densenet,
+  author    = {Gao Huang and Zhuang Liu and Laurens van der Maaten and Kilian Q. Weinberger},
+  title     = {Densely Connected Convolutional Networks},
+  booktitle = {2017 {IEEE} Conference on Computer Vision and Pattern Recognition ({CVPR})},
+  year      = {2017},
+  month     = {jul},
+  publisher = {{IEEE}},
+}
+
+@InProceedings{tiger,
+  author    = {Shukla, Ankita and anderson, connor and Sigh Cheema, Gullal and Gao, Pei and Onda, Suguru and Anshumaan, Divyam and Anand, Saket and Farrell, Ryan},
+  title     = {A Hybrid Approach to Tiger Re-Identification},
+  booktitle = {The IEEE International Conference on Computer Vision (ICCV) Workshops},
+  year      = {2019},
+  month     = oct,
+}
+
+@Article{whale,
+  author    = {Dmitry A. Konovalov and Suzanne Hillcoat and Genevieve Williams and R. Alastair Birtles and Naomi Gardiner and Matthew I. Curnock},
+  title     = {Individual Minke Whale Recognition Using Deep Learning Convolutional Neural Networks},
+  journal   = {Journal of Geoscience and Environment Protection},
+  year      = {2018},
+  volume    = {06},
+  number    = {05},
+  pages     = {25--36},
+  publisher = {Scientific Research Publishing, Inc,},
+}
+
+@Article{Moskvyak2019,
+  author        = {Olga Moskvyak and Fr{\'{e}}d{\'{e}}ric Maire and Asia O. Armstrong and Feras Dayoub and Mahsa Baktashmotlagh},
+  title         = {Robust Re-identification of Manta Rays from Natural Markings by Learning Pose Invariant Embeddings},
+  journal       = {CoRR},
+  year          = {2019},
+  volume        = {abs/1902.10847},
+  __markedentry = {[tommy:6]},
+  archiveprefix = {arXiv},
+  bibsource     = {dblp computer science bibliography, https://dblp.org},
+  biburl        = {https://dblp.org/rec/bib/journals/corr/abs-1902-10847},
+  eprint        = {1902.10847},
+  timestamp     = {Tue, 21 May 2019 18:03:40 +0200},
+  url           = {http://arxiv.org/abs/1902.10847},
+}
+
+@InProceedings{facenet,
+  author    = {Florian Schroff and Dmitry Kalenichenko and James Philbin},
+  title     = {{FaceNet}: A unified embedding for face recognition and clustering},
+  booktitle = {2015 {IEEE} Conference on Computer Vision and Pattern Recognition ({CVPR})},
+  year      = {2015},
+  month     = {jun},
+  publisher = {{IEEE}},
+}
+
+@Article{manta,
+  author = {Moskvyak, Olga and Maire, Frederic and Armstrong, Asia and Dayoub, Feras and Baktashmotlagh, Mahsa},
+  title  = {Robust Re-identification of Manta Rays from Natural Markings by Learning Pose Invariant Embeddings},
+  year   = {2019},
+  month  = feb,
+}
+
+@Book{hitchhiker,
+  title  = {Guida galattica per gli autostoppisti},
+  year   = {1999},
+  author = {Douglas Adams},
+  editor = {Mondadori},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

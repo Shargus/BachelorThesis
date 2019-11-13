@@ -5,7 +5,7 @@ Le reti neurali artificiali (ANN, \textit{artificial neural networks}), costitui
 
 Una rete neurale può essere interpretata come un insieme di strati (\textbf{\textit{layer}}) composti ciascuno da un certo numero di unità computazionali, dette \textbf{neuroni}, che nell'insieme sono in grado di fornire una nuova rappresentazione dell'input, secondo il paradigma del \textit{representation learning}. Le funzioni sono composte a formare una catena di rappresentazioni sconosciute (per questo dette \textit{hidden layers}), nel senso che ciascun layer calcola una funzione dell'output del layer precedente: a partire da rappresentazioni più semplici, esse vengono raggruppate fino ad un livello di arbitraria complessità
 \begin{equation*}
-\mathcal{F}(\mathbf{x})=f^{(d)}\underbrace{(\dots(\mathbf{h}^{(3)}(\mathbf{h}^{(2)}(\mathbf{h}^{(1)}(\mathbf{x})))))}
+\mathcal{F}(\mathbf{x})=\mathbf{f}^{(d)}\underbrace{(\dots(\mathbf{h}^{(3)}(\mathbf{h}^{(2)}(\mathbf{h}^{(1)}(\mathbf{x})))))}_{\text{hidden layers}}
 \end{equation*}
 in cui
 \begin{itemize}
@@ -28,16 +28,11 @@ fino a giungere all'output layer:
 \begin{equation*}
 \mathbf{\widehat{y}}=\mathbf{W}\mathbf{h}^{(d-1)}+\mathbf{b}
 \end{equation*}
-\item Layer di output sigmoide: viene applicata una trasformazione affine, quindi usata la funzione sigmoide $\sigma$ per convertire il risultato in una probabilità:
-\begin{equation*}
-\widehat{y}=\sigma\left(\mathbf{W}\mathbf{h}^{(d-1)}+\mathbf{b}\right)
-\end{equation*}
-Questo approccio è usato nel caso di classificazione binaria, come descritto al par. \ref{classificazione}.
 \item Layer di output softmax: viene calcolata una trasformazione affine
 \begin{equation*}
 \mathbf{z}=\mathbf{W}\mathbf{h}^{(d-1)}+\mathbf{b}
 \end{equation*}
-e viene quindi applicata la funzione softmax (par. \ref{classificazione})
+e viene quindi applicata la \textbf{funzione softmax}
 \begin{equation*}
 \mathbf{\widehat{y}}=\text{softmax}(\mathbf{z})_i=\frac{e^{z_i}}{\sum\nolimits_{j}e^{z_j}}
 \end{equation*}
@@ -75,7 +70,7 @@ Nel modello computazionale (fig. \ref{fig:neuroneComputazionale}) del neurone, i
 \caption{Modello computazionale di un neurone}
 \label{fig:neuroneComputazionale}
 \end{subfigure}
-\caption{Neuroni}
+\caption{Neuroni. Immagini tratte da: (a) \protect\url{https://thenounproject.com/term/neuron/214105/}, (b) \cite{cs231n}}
 \label{fig:neurone}
 \end{figure}
 
@@ -127,7 +122,7 @@ Una rete neurale convoluzionale è costituita da uno stack di layers, mostrato i
 L'architettura di una CNN può comporsi di strati di tipologie diverse\footnote{Va comunque notato che esistono numerosi altri strati che non sono presentati in questa sede. Alcuni di questi sono descritti nei paragrafi sulle tre CNN usate negli esperimenti, a cui pertanto si rimanda. Per una descrizione accurata di molti altri tipi di layer si rimanda a \url{https://code.google.com/archive/p/cuda-convnet/wikis/LayerParams.wiki}}
 
 \begin{itemize}
-	\item Input: generalmente un immagine di dimensioni contenute (es. 224x224). (par. \ref{INPUT})
+	\item Input: generalmente un'immagine di dimensioni contenute (es. $224\times 224$). (par. \ref{INPUT})
 	\item \textit{Convolutional layer} (CONV): vengono eseguiti diversi filtraggi sull'input, in maniera indipendente l'uno dall'altro, cioè un certo numero di convoluzioni con lo stesso dato in input ma con diversi kernel. (par. \ref{CONV}). Viene prodotto un set di \textit{feature map}.
 	\item \textit{Activation layer} (detto anche \textit{ detector stage}): ciascun neurone dello strato precedente è passato ad una funzione di attivazione, tipicamente la ReLU. (par. \ref{RELU})
 	\item \textit{Pooling layer} (POOL): viene eseguito un sottocampionamento dell'immagine attraverso una statistica riassuntiva delle regioni. (par. \ref{POOL})
@@ -167,7 +162,7 @@ Ogni tipo di layer esiste in Matlab come un tipo di dato complesso a se stante, 
 In Matlab è possibile definire l'architettura di una CNN in due modi diversi:
 \begin{enumerate}
 \item Le reti i cui layer sono tutti "in serie" tra loros (es. AlexNet, par. \ref{alexnet}) sono rappresentate da un oggetto di tipo \verb|SeriesNetwork|, il quale contiene come campo un array di tipo \verb|Layer| che contiene (in ordine) gli strati della rete.
-\item Le reti che hanno in generale un grafo aciclico diretto (es. GoogLeNet, par. \ref{googlenet}, ResNet-18 e 50, par. \ref{resnet}) sono rappresentate da un oggetto di tipo \verb|DAGNetwork|, il quale oltre al campo di tipo \verb|Layer| sopra citato contiene anche un altro campo di tipo \verb|table| di dimensioni $p\times 2$, dove $p$ è il numero di connessioni da stabilire tra i layer e le due colonne specificano rispettivamente il layer di partenza e quello di arrivo di ciascuna connessione.
+\item Le reti che hanno in generale un grafo aciclico diretto ma non in serie (es. GoogLeNet, par. \ref{googlenet}, ResNet-18 e 50, par. \ref{resnet}) sono rappresentate da un oggetto di tipo \verb|DAGNetwork|, il quale oltre al campo di tipo \verb|Layer| sopra citato contiene anche un altro campo di tipo \verb|table| di dimensioni $p\times 2$, dove $p$ è il numero di connessioni da stabilire tra i layer e le due colonne specificano rispettivamente il layer di partenza e quello di arrivo di ciascuna connessione.
 \end{enumerate}
 
 Entrambi questi oggetti possono essere passati come argomento della funzione \verb|trainNetwork| al fine di addestrare la rete.
@@ -199,7 +194,7 @@ Il layer di convoluzione è il "cuore" delle reti neurali convoluzionali, in cui
 	\label{fig:cr}
 \end{figure}
 
-In Matlab, la creazione del layer avviene attraverso la funzione \verb|convolution2dLayer|:
+In Matlab, la creazione del layer avviene attraverso la funzione \texttt{\justify{convolution2dLayer}}:
 
 \begin{verbatim}
 layer = convolution2dLayer(filterSize,numFilters,'Property',Value)
@@ -427,13 +422,13 @@ Tra le operazioni di \textit{image augmentation} più comuni citiamo:
 
 Bisogna comunque osservare che per dataset grandi ed eterogenei solitamente si fanno poche operazioni di augmentation di questo tipo, poichè si lascia imparare al modello a quale tipo di fattori di variazione esso deve essere invariante.\\
 
-In Matlab è possibile aumentare un dataset con un oggetto \verb|augmentedImageDatastore|. Esso consente di trasformare un dataset, definito in un oggetto \verb|imageDatastore| (vd. par. \ref{datastore}) con eventuali operazioni di preprocessing e augmentation specificate in un oggetto di tipo \verb|imageDataAugmenter|.
-Un oggetto \verb|augmentedImageDatastore| può essere passato semplicemente come argomento della funzione \verb|trainNetwork| (vd. par. \ref{addestramento}), per essere utilizzato come \textit{training set} di una rete neurale. In tal caso, per ogni epoch (quindi a \textit{runtime}), i dati di training vengono casualmente perturbati e ridimensionati all'input size della rete\footnote{Il ridimensionamento è necessario affinchè tutte le immagini rispettino la dimensione di input della rete neurale, che è fisso.}, in modo che ciascuna epoch usi un training set leggermente diverso. Il numero effettivo di immagini usate per ciascuna epoch non cambia. Le immagini trasformate non vengono memorizzate. L'\verb|imageInputLayer| di una CNN normalizza le immagini ad ogni epoch, sottraendo un'intensità media costante calcolata un'unica volta, subito dopo la augmentation relativa alla prima epoch. In fig. \ref{fig:augmentationTraining} viene mostrato il processo di addestramento di una rete neurale adoperando un augmentedImageDatastore.\\
+In Matlab è possibile ottenere la versione aumentata di un dataset con un oggetto di tipo \verb|augmentedImageDatastore|. Esso consente di trasformare un dataset, definito in un oggetto \verb|imageDatastore| (vd. par. \ref{datastore}) con eventuali operazioni di preprocessing e augmentation specificate in un oggetto di tipo \verb|imageDataAugmenter|.
+Un oggetto \verb|augmentedImageDatastore| può essere passato semplicemente come argomento della funzione \verb|trainNetwork| (vd. par. \ref{addestramento}), per essere utilizzato come \textit{training set} di una rete neurale. In tal caso, per ogni \textit{epoch} (quindi a \textit{runtime}), i dati di training vengono casualmente perturbati e ridimensionati all'input size della rete\footnote{Il ridimensionamento è necessario affinché tutte le immagini rispettino la dimensione di input della rete neurale, che è fisso.}, in modo che ciascuna \textbf{\textit{epoch}} (epoca), cioè un ciclo di addestramento sull'intero training set, usi un training set leggermente diverso. Il numero effettivo di immagini usate per ciascuna \textit{epoch} non cambia. Le immagini trasformate non vengono memorizzate. L'\verb|imageInputLayer| di una CNN normalizza le immagini ad ogni \textit{epoch}, sottraendo un'intensità media costante calcolata un'unica volta, subito dopo la augmentation relativa alla prima \textit{epoch}. In fig. \ref{fig:augmentationTraining} viene mostrato il processo di addestramento di una rete neurale adoperando un augmentedImageDatastore.\\
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\textwidth]{augmentationTraining}
-\caption{Processo di addestramento (mediante \textit{stochastic gradient descent} con dimensione del mini-batch = 3) il cui training set è definito con un oggetto augmentedImageDatastore}
+\caption{Processo di addestramento (mediante \textit{stochastic gradient descent} con dimensione del mini-batch = 3) in cui il training set è definito con un oggetto augmentedImageDatastore}
 \label{fig:augmentationTraining}
 \end{figure}
 
@@ -447,7 +442,7 @@ Altri argomenti opzionali sono:
 
 \begin{itemize}
 
-	\item \verb|NumObservations|: numero totale di "osservazioni" nella collezione di immagini aumentate. Coincide con la lunghezza di ogni training epoch, quindi coincide con l'omonima proprietà dell'oggetto \verb|trainingOptions| (vd. par. \ref{addestramento}) e può essere modificato solo di lì (proprietà READ-ONLY).
+	\item \verb|NumObservations|: numero totale di "osservazioni" nella collezione di immagini aumentate. Coincide con la lunghezza di ogni training \textit{epoch}, quindi coincide con l'omonima proprietà dell'oggetto \verb|trainingOptions| (vd. par. \ref{addestramento}) e può essere modificato solo di lì (proprietà READ-ONLY).
 	
 	\item \verb|Files|: oggetto \verb|cell array| contenente le directory delle immagini ereditate dall'oggetto \verb|imageDatastore| con cui è stato costruito)
 	
@@ -490,10 +485,10 @@ in cui è possibile definire le opzioni di \textit{image augmentation} esprimend
 \end{itemize}
 
 \section{Addestrare una rete neurale}
-Per poter essere impiegata per risolvere un certo task, una rete neurale deve essere addestrata. Addestrare una rete neurale significa individuare un set di valori per i parametri addestrabili della rete che le permettono di approssimare la funzione desiderata (cioè che le permettono di risolvere efficacemente il task).
+Per poter essere impiegata per risolvere un certo task, una rete neurale deve essere opportunamente addestrata. Addestrare una rete neurale significa individuare un set di valori per i parametri addestrabili della rete che le permettono di approssimare la funzione desiderata (cioè che le permettano di risolvere efficacemente il task).
 Un addestramento efficace rende la rete capace di generalizzare in modo appropriato, cioè di dare risposte plausibili per input che non ha mai visto.\\
 
-Riferendoci ad una rete che svolge un task di \textit{image classification} (ma si può facilmente estendere la spiegazione ad una ANN standard), l'addestramento di una rete avviene in due diversi stadi: \textit{forward-pass} (propagazione in avanti) e \textit{backward-pass} (propagazione all'indietro.
+Riferendoci ad una rete che svolge un task di \textit{image classification} (ma si può facilmente estendere la spiegazione ad una ANN standard), l'addestramento della rete avviene in due diversi stadi: \textit{forward-pass} (propagazione in avanti) e \textit{backward-pass} (propagazione all'indietro).
 \begin{itemize}
 \item Nel \textit{forward-pass} a partire dalle immagini in input si calcolano di strato in strato tutti i volumi intermedi fino al volume finale, che permette la classificazione. Durante questa fase i valori dei parametri addestrabili sono tutti fissati.
 \item Nel \textit{backward-pass} la risposta della rete (la distribuzione di probabilità della predizione) viene confrontata con l'uscita desiderata (la distribuzione di probabilità che assegna probabilità 1 alla effettiva classe di appartenenza dell'immagine e 0 alle rimanenti) ottenendo il segnale d'errore, calcolato per mezzo della funzione costo (par. \ref{loss}). L'errore calcolato è propagato nella direzione inversa rispetto a quella del \textit{forward-pass}. I parametri sono aggiornati ad ogni iterazione in modo da minimizzare la funzione costo, tramite un metodo di minimizzazione come la discesa stocastica del gradiente (par. \ref{SGD}), che calcola il gradiente della funzione costo rispetto ad ogni parametro con l'algoritmo di backpropagation (par. \ref{backpropagation}).
@@ -511,9 +506,9 @@ Delle scelte comuni per i pesi sono:
 
 \subsection{Loss function}
 \label{loss}
-Abbiamo visto che una rete neurale per l'\textit{image classification} accetta in input un'immagine e restituisce un punteggio per ogni classe da predire, o equivalentemente una probabilità per ogni classe (calcolata dalla funzione di attivazione softmax). In fig. \ref{class_lin} si era visto che quel particolare classificatore lineare assegnava all'immagine di un gatto un punteggio molto alto alla classe 'cane' ed uno molto basso alla classe 'gatto', classificandola pertanto come 'cane'. Il set di parametri costituito da $\mathbf{W}$ e $\mathbf{b}$ non è molto buono. Per misurare la "gravità" dell'errore commesso dalla rete nella classificazione definiamo una \textbf{funzione costo} (\textbf{\textit{loss function}}) anche detta funzione obiettivo (\textit{objective}).
+Abbiamo visto che una rete neurale per l'\textit{image classification} accetta in input un'immagine e restituisce un punteggio per ogni classe da predire, o equivalentemente una probabilità per ogni classe (calcolata dalla funzione di attivazione softmax). In fig. \ref{class_lin} si era visto che quel particolare classificatore lineare assegnava all'immagine di un gatto un punteggio molto alto alla classe 'cane' ed uno molto basso alla classe 'gatto', classificandola pertanto come 'cane'. Il set di parametri costituito da $\mathbf{W}$ e $\mathbf{b}$ non è molto buono. Per misurare l'entità dell'errore commesso dalla rete nella classificazione definiamo una \textbf{funzione costo} (\textbf{\textit{loss function}}) anche detta funzione obiettivo (\textit{objective}).
 
-Tra le varie loss function che si possono adoperare noi utilizzeremo la \textbf{\textit{cross-entropy loss}}, che è quella tipica delle reti che sfruttano la funzione softmax per effettuare la predizione.
+Tra le varie loss function che si possono adoperare, quella utilizzata nel presente lavoro è la \textbf{\textit{cross-entropy loss}}, che è quella tipica delle reti che sfruttano la funzione softmax per effettuare la predizione.
 Dato un training set (eventualmente aumentato) $X$ contenente $|X|$ immagini $\mathbf{x}^{(i)}$ ($i=1,\dots,|X|$), ciascuna appartenente alla classe $i$-esima, uno spazio delle etichette $Y$ e una rete neurale che associa all'immagine $|Y|$ punteggi diversi $s_j$ per ciascuna classe $j$-esima ($j=1,\dots,|Y|$), si definisce cross-entropy loss relativa al training set $X$ la funzione
 \[
 L=\underbrace{\frac{1}{|X|}\sum_{i=1}^{|X|}L_i}_{\text{data loss}}+\underbrace{\lambda R(\mathcal{W})}_{\text{regularization loss}}
@@ -521,7 +516,7 @@ L=\underbrace{\frac{1}{|X|}\sum_{i=1}^{|X|}L_i}_{\text{data loss}}+\underbrace{\
 dove
 \begin{itemize}
 \item \begin{align*}
-L_i=-\log\left(\frac{e^{s_i}}{\sum\nolimits_{j}e^{s_j}}\right) & \text{o equivalentemente} & L_i=-s_i+\log\left(\sum\nolimits_{j}e^{s_j}\right)
+L_i=-\log\left(\frac{e^{s_i}}{\sum\nolimits_{j}e^{s_j}}\right) & \text{ o equivalentemente} & L_i=-s_i+\log\left(\sum\nolimits_{j}e^{s_j}\right)
 \end{align*}
 è il contributo alla cross-entropy loss di un singolo esempio del dataset. Esso è tanto maggiore quanto più la rete si comporta "male" sull'esempio $\mathbf{x}^{(i)}$. Si noti che nella prima parentesi è utilizzata la funzione softmax($s_j$).
 
@@ -536,9 +531,9 @@ $\lambda R(\mathcal{W})$
 
 \end{itemize}
 
-È evidente che addestrare la rete significa allora risolvere un problema di ottimizzazione, che consiste nel trovare minimizzare la loss function calcolata su tutto il training set. La minimizzazione può avvenire con il classico metodo del calcolo numerico della discesa del gradiente, visualizzato in fig. \ref{fig:gd}.
+È evidente che addestrare la rete significa allora risolvere un problema di ottimizzazione, che consiste nel minimizzare la loss function calcolata su tutto il training set. La minimizzazione può avvenire con il classico metodo del calcolo numerico della discesa del gradiente, visualizzato in fig. \ref{fig:gd}.
 
-Nella pratica, tuttavia, pensare di calcolare la loss function su tutto il training set è impensabile se il training set è grande. Allora, ad ogni iterazione dell'addestramento, si preferisce utilizzare una versione approssimata della loss function, calcolata su un sottoinsieme piccolo di esempi del training set. La minimizzazione della loss function avviene in questo caso con il metodo della discesa stocastica del gradiente (par. \ref{SGD} e fig. \ref{fig:sgd}).
+Nella pratica, tuttavia, pensare di calcolare la loss function su tutto il training set è impensabile se la cardinalità del training set è molto elevata. Allora, ad ogni iterazione dell'addestramento, si preferisce utilizzare una versione approssimata della loss function, calcolata su un sottoinsieme piccolo di esempi del training set. La minimizzazione della loss function avviene in questo caso con il metodo della discesa stocastica del gradiente (par. \ref{SGD} e fig. \ref{fig:sgd}).
 
 \subsection{Stochastic gradient descent}
 \label{SGD}
@@ -551,9 +546,9 @@ Si può immaginare il grafico della funzione $L$ come una "vallata multidimensio
 \label{vallata}
 \end{figure}
 
-Minimizzare la loss function significa individuare il (un) suo punto di minimo globale, partendo da un punto casuale e seguendo la direzione opposta a quella del \textbf{gradiente di $L(\mathcal{W})$} (la "discesa" verso il punto di minimo è cioè "guidata" dal gradiente di $L$). Il gradiente di $L(\mathcal{W})$ si indica con $\nabla L(\mathcal{W})$.
+Minimizzare la loss function significa individuare un\footnote{l'esistenza di un minimo globale non ne implica l'unicità: possono esserci più minimi locali di $L$ di uguale valore, che potrebbero anche essere minimi globali di $L$.} suo punto di minimo globale, partendo da un punto casuale e seguendo la direzione opposta a quella del \textbf{gradiente di $L(\mathcal{W})$} (la "discesa" verso il punto di minimo è cioè "guidata" dal gradiente di $L$). Il gradiente di $L(\mathcal{W})$ si indica con $\nabla L(\mathcal{W})$.
 
-Il metodo della \textbf{discesa stocastica del gradiente} (\textit{stochastic gradient descent}, SGD), usato per minimizzare la loss function, prevede di calcolare $L$ non più sull'intero training set ma su un suo sottoinsieme detto \textbf{\textit{mini-batch}}, costituito da un numero ridotto di esempi (valori tipici sono 16, 32, 64, 128 o 256). La $L^{*}$ così ottenuta è ovviamente una approssimazione della $L$, tanto più buona quanto più il mini-batch è grande e "vario" (cioè quanto più gli esempi di ogni classe sono proporzionalmente presenti nel mini-batch). L'addestramento prevede allora che una \textbf{\textit{epoch}} (epoca), cioè un ciclo di addestramento sull'intero dataset, sia in realtà diviso in $\frac{|X|}{|\text{mini-batch}|}$ iterazioni per epoca, in ognuna delle quali si presenta alla rete un mini-batch, si calcola la relativa $L^{*(i)}(\mathcal{W})$, si calcola il gradiente $\nabla L^{*(i)}(\mathcal{W})$ e si effettua un "salto" $\Delta \mathcal{W}^{(i)}$ da un punto (calcolato all'iterazione precedente in base alla $L^{*(i-1)}$) ad un altro del dominio di $L^{*(i)}$. Il salto $\Delta \mathcal{W}^{(i)}$ è un vettore di $|\mathcal{W}|$ componenti, ciascuna delle quali rappresenta l'aggiornamento $\Delta w^{(i)}$ del parametro $w^{(i)}$ ed è dato da (supponendo $w^{(i)}$ appartenente all'$l$-esimo layer):
+Il metodo della \textbf{discesa stocastica del gradiente} (\textit{stochastic gradient descent}, SGD), usato per minimizzare la loss function, prevede di calcolare $L$ non più sull'intero training set ma su un suo sottoinsieme detto \textbf{\textit{mini-batch}}, costituito da un numero ridotto di esempi (valori tipici sono 16, 32, 64, 128 o 256). La $L^{*}$ così ottenuta è ovviamente una approssimazione della $L$, tanto più buona quanto più il mini-batch è grande e "vario" (cioè quanto più gli esempi di ogni classe sono proporzionalmente presenti nel mini-batch). L'addestramento prevede allora che un'epoca di addestramento sia in realtà divisa in $\frac{|X|}{|\text{mini-batch}|}$ iterazioni per epoca, in ognuna delle quali si presenta alla rete un mini-batch, si calcola la relativa $L^{*(i)}(\mathcal{W})$, si calcola il gradiente $\nabla L^{*(i)}(\mathcal{W})$ e si effettua un "salto" $\Delta \mathcal{W}^{(i)}$ da un punto (calcolato all'iterazione precedente in base alla $L^{*(i-1)}$) ad un altro del dominio di $L^{*(i)}$. Il salto $\Delta \mathcal{W}^{(i)}$ è un vettore di $|\mathcal{W}|$ componenti, ciascuna delle quali rappresenta l'aggiornamento $\Delta w^{(i)}$ del parametro $w^{(i)}$ ed è dato da (supponendo $w^{(i)}$ appartenente all'$l$-esimo layer):
 \[
 \Delta w^{(i)}=-\text{glr}\times \text{llr}_l\times \frac{\partial L^{*(i)}}{\partial w^{(i)}}
 \]
@@ -581,7 +576,7 @@ Il metodo della discesa del gradiente classico e quello stocastico sono confront
 
 \begin{itemize}
 
-\item La discesa del gradiente converge verso uno dei punti di minimo globale di $L$, non necessariamente in un punto di massimo globale come invece si desidera. Si può dimostrare che la regolarizzazione dei parametri aiuta ad appiattire il grafico di $L$, rendendo i minimi locali e il minimo globale tanto più vicini quanto più i parametri sono "regolarizzati". In queste condizioni, non è un problema il particolare punto di minimo locale in cui la rete converge alla fine dell'addestramento.
+\item La discesa del gradiente converge verso uno dei punti di minimo locale di $L$, non necessariamente in un punto di minimo globale come invece si desidera. Si può dimostrare che la regolarizzazione dei parametri aiuta ad appiattire il grafico di $L$, rendendo i minimi locali e il minimo globale tanto più vicini quanto più i parametri sono "regolarizzati". In queste condizioni, non è un problema il particolare punto di minimo locale in cui la rete converge alla fine dell'addestramento.
 
 \item Nel metodo SGD, ad ogni iterazione il grafico della loss function varia. Se il mini-batch è, come discusso in precedenza, abbastanza grande e vario, le approssimazioni $L^{*(i)}$ sono abbastanza simili tra loro e a $L$ stessa, quindi in questa ipotesi possiamo affermare con buona approssimazione che il punto di minimo verso cui il metodo SGD sta convergendo rimane inalterato ad ogni iterazione.
 
@@ -607,7 +602,7 @@ La differenza con l'SGD classico consiste nel salto da compiere nel dominio di $
 \Delta w^{(i)}=-\text{glr}\times \text{llr}_l\times \frac{\partial L^{*(i)}}{\partial w^{(i)}}+\underbrace{\mu\times\Delta w^{(i-1)}}_{\text{momento}}
 \]
 
-L'effetto del momento è simile a quello che in fisica ha la quantità di moto (in inglese \textit{momentum}) nello spostamento di un oggetto: così come una forza che sposta un oggetto in una direzione gli fa acquistare velocità (quindi quantità di moto) in quella direzione, l'opposto del gradiente della loss function fa acquistare "velocità" nello spostamento verso il punto di minimo di $L^{*(i)}$, cosicché se il gradiente ha una certa stabilità nella sua direzione per più iterazioni, nell'iterazione successiva il salto avrà una componente lungo quella direzione, a prescindere dal particolare comportamento del gradiente in quella iterazione.
+L'effetto del momento è simile a quello che in fisica ha la quantità di moto (in inglese \textit{momentum}) nello spostamento di un oggetto: così come una forza che sposta un oggetto in una direzione gli fa acquistare velocità (quindi quantità di moto) in quella direzione, l'opposto del gradiente della loss function fa acquistare "velocità" nello spostamento verso il punto di minimo di $L^{*(i)}$, cosicché se il gradiente ha una certa stabilità nella sua direzione per più iterazioni, nell'iterazione successiva il salto avrà una componente lungo quella direzione, a prescindere dal particolare comportamento del gradiente in quella iterazione, "per inerzia".
 
 Questo metodo introduce un ulteriore iperparametro $\mu$ (compreso tra 0 e 1) per controllare l'effetto del momento, ovvero l'importanza dell'iterazione passata: più è grande $\mu$ e più il termine momento assume importanza nell'aggiornamento $\Delta \mathcal{W}^{(i)}$. Un valore empirico per tale parametro è solitamente fissato intorno a 0.9.\\
 
@@ -644,4 +639,70 @@ Quando invece il gradiente delle funzioni di attivazione può assumere valori el
 Come si vedrà nei paragrafi dedicati alla descrizione delle reti neurali convoluzionali utilizzate negli esperimenti, il problema della scomparsa e dell'esplosione del gradiente viene risolto tipicamente usando funzioni di attivazioni ReLU e, dall'avvento di ResNet, le cosiddette \textit{skip connections} (par. \ref{residualBlock}).
 
 \section{Transfer Learning}
-TODO
+\label{transferLearning}
+Nella pratica, poche persone costruiscono e addestrano reti neurali da zero con inizializzazione casuale dei parametri (\textit{from scratch}) per risolvere un task, poiché è relativamente raro disporre di un training set di dimensioni adeguate. Un'alternativa è riutilizzare una rete addestrata su un dataset molto grande (es. ImageNet, par. \ref{imagenet}) e ri-addestrandola per risolvere il task di interesse, con dovuti accorgimenti che saranno spiegati nel seguito.
+Questa tecnica si chiama \textbf{\textit{transfer learning}}.
+
+Per esempio, possiamo riutilizzare una rete che è stata addestrata a classificare gatti e cani ri-addestrandola per riconoscere invece formiche e vespe. Se il dataset utilizzato nel task originale è più grande di quello disponibile per il secondo task, il transfer learning è in grado di aumentare significativamente la capacità di generalizzazione (e quindi le performance) del classificatore.
+Il motivo per cui il transfer learning funziona è che molte categorie condividono alcune caratteristiche di basso livello come bordi, forme geometriche, cambi nell'intensità dell'illuminazione ecc \cite{howtransferable}. In generale, quindi, il transfer learning è una forma di representation learning usata con successo quando esistono concetti comuni ad un basso livello di astrazione tra le categorie del primo e del secondo task.
+
+L'applicazione del transfer learning è schematizzata in fig. \ref{fig:transferLearning}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{transferLearning}
+\caption{Schema di applicazione del transfer learning}
+\label{fig:transferLearning}
+\end{figure}
+
+Il metodo del transfer learning per l'addestramento di un modello di classificazione consiste nei seguenti passi:
+\begin{enumerate}
+\item Selezione di una rete pre-addestrata
+
+Al giorno d'oggi è estremamente facile reperire reti pre-addestrate: molte istituzioni di ricerca rendono pubblici modelli addestrati su dataset ampi e complessi (es. ImageNet), che possono essere riutilizzati per la tecnica del transfer learning.
+
+\item (Opzionale) Azzerare i learning rate dei layer addestrabili più bassi
+
+Questo passaggio ha l'obiettivo di "congelare" l'apprendimento dei layer che rappresentano le feature di livello più basso delle immagini, cioè inibire modifiche ai parametri addestrabili di quei layer. Generalmente, più piccolo è il training set a disposizione per il task di interesse e più layer iniziali andrebbero congelati; con pochi dati, infatti, c'è il rischio di overfitting della rete, problema aggirabile limitando la capacità di rappresentazione del modello che si vuole addestrare.
+
+\item (Opzionale) Aumentare i learning rate dei layer addestrabili finali
+
+Questo passaggio ha l'obiettivo di velocizzare l'apprendimento dei layer che rappresentano le feature di livello più alto delle immagini, al fine di migliorare la capacità della rete di mettere insieme le feature estratte nei livelli intermedi per effettuare la predizione.
+
+\item Rimpiazzare il layer di classificazione finale
+
+Si rimpiazza questo layer per cambiare le classi da predire: non più le classi del task originale (es. le mille classi di ImageNet) ma quelle del task di interesse (es. 'Pinna' e 'No Pinna').
+
+\item Addestrare la rete.
+
+La rete pre-addestrata, opzionalmente modificata a livello dei suoi learning rate locali, è usata come punto di partenza per il nuovo addestramento, che la porterà ad adattarsi al task di interesse.
+
+\item Misurare le prestazioni del modello "trasferito" con un test set.
+
+\end{enumerate}
+
+Il transfer learning è utilizzato nel presente lavoro per adattare quattro modelli pre-addestrati al task di classificazione delle pinne dorsali dei cetacei (cap. \ref{esperimenti}).
+
+\section{Ensemble learning}
+\label{ensemble}
+Al fine di migliorare l'accuratezza della classificazione, spesso si ricorre ad una strategia conosciuta come \textbf{apprendimento ensemble} (\textit{ensemble learning}). L'idea chiave è quella di creare un insieme (\textit{ensemble}) di classificatori di immagini, ciascuno dei quali è chiamato a "votare" circa l'esito della predizione; a seconda dello "schema di consenso" (\textit{consensus scheme}) scelto per l'ensemble, cioè a seconda di quanto peso assume ciascun voto nella classificazione finale, l'output complessivo sarà la classe che avrà ricevuto "democraticamente" il maggior consenso. La fig. \ref{fig:ensembleSchema} mostra lo schema di funzionamento di un classificatore ensemble.
+\vspace{3mm}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{ensembleSchema}
+\caption{Schema di un classificatore ensemble}
+\label{fig:ensembleSchema}
+\end{figure}
+
+Gli schemi di consenso più utilizzati sono i seguenti:
+
+\begin{itemize}
+\item \textbf{\textit{Hard major voting}} (HMV): la classe predetta per l'immagine in input è quella che ha ricevuto il maggior numero di "voti" (predizioni) da parte delle reti dell'ensemble.
+
+\item \textbf{\textit{Soft major voting}} (SVM): la classe predetta per l'immagine in input è quella la cui probabilità di classificazione media (cioè la media delle probabilità softmax relative a quella classe attribuite dalle reti dell'ensemble) è la più grande.
+\end{itemize}
+
+L'efficacia dei metodi ensemble è dovuta al fatto che, solitamente, differenti modelli addestrati per risolvere uno stesso problema di classificazione non faranno tutti gli stessi errori sul \textit{test set} (gli errori si possono cioè considerare, in buona sostanza, incorrelati). Se lo schema di consenso applicato è il \textit{major voting}, si dimostra che l'ensemble di classificatori ha sempre prestazioni migliori o almeno uguali a quelle di ciascuna rete dell'ensemble presa singolarmente; il miglioramento delle prestazioni (specificamente della \textit{test accuracy}\footnote{training/validation/test accuracy = 1 -- training/validation/test error, par. \ref{overfitting}}) è tanto migliore quanto più gli errori commessi dalle reti dell'ensemble sono tra loro incorrelati.\cite{dlbook}\cite{ensembles}\\
+
+Il nuovo classificatore per i ritagli delle pinne, oggetto di sviluppo in questo lavoro di tesi, è in realtà un \textit{ensemble} di tre reti neurali convoluzionali ri-addestrate con la tecnica del \textit{transfer learning} (par. \ref{esperimentoTL}).
