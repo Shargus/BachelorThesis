@@ -419,9 +419,9 @@ Le operazioni applicate in maniera casuale contribuiscono ad ottenere ulteriore 
   \label{fig:augmentation}
 \end{figure}
 
-Un secondo oggetto \verb|augmentedImageDatastore| è usato per rappresentare \verb|cropValidation|, ma in questo caso parametrizzato solo con \verb|inputSize|, viene cioè effettuato solamente un ridimensionamento dei ritagli all'input size della rete da addestrare, senza operazioni di augmentation.
+Un secondo oggetto \verb|augmentedImageDatastore| è usato per rappresentare la versione "aumentata" di \verb|cropValidation|, ma in questo caso è parametrizzato solo con \verb|inputSize| (viene cioè effettuato solamente un ridimensionamento dei ritagli all'input size della rete da addestrare, senza operazioni di augmentation).
 
-Si noti che i due dataset "aumentati" hanno le stesse dimensioni dei loro omologhi dataset "non aumentati", nel senso che ogni ritaglio del dataset originale è presente esattamente una volta nel relativo dataset aumentato: l'unica differenza tra il ritaglio originale e quello nel dataset aumentato è appunto l'applicazione (a \textit{runtime}) delle operazioni di ridimensionamento e (nel caso del \textit{training set}) augmentation a ciascun ritaglio. Si tratta quindi di una semplice "perturbazione" dei due dataset, senza eliminazione di suoi elementi o aggiunta di nuovi.\\
+Si noti che i due dataset "aumentati" hanno le stesse dimensioni dei loro omologhi dataset "non aumentati", nel senso che ogni ritaglio del dataset originale è presente esattamente una volta nel relativo dataset aumentato: l'unica differenza tra il ritaglio originale e quello nel dataset aumentato è appunto l'applicazione (a \textit{runtime}) delle operazioni di ridimensionamento e -- nel caso del \textit{training set} -- augmentation a ciascun ritaglio. Si tratta quindi di una semplice "perturbazione" dei due dataset, senza eliminazione di suoi elementi o aggiunta di nuovi.\\
 
 L'inizializzazione delle quattro CNN all'interno dell'ambiente Matlab è particolarmente semplice, e può essere effettuato richiamando la rete col suo nome (\verb|alexnet|, \verb|googlenet|, \verb|resnet18|, \verb|resnet50|) assegnandola ad una variabile, avendo cura di scaricare il relativo \textit{add-on} dall'\textit{add-on explorer} integrato di Matlab, estendendo il \textit{Deep Learning Toolbox}.
 

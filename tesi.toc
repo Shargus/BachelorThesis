@@ -2,184 +2,184 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione}{1}% 
+\contentsline {chapter}{\numberline {1}Introduzione}{1}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Interessi scientifici}{2}% 
+\contentsline {section}{\numberline {1.1}Interessi scientifici}{2}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Foto-identificazione automatica del \\\textit {Grampus griseus}}{3}% 
+\contentsline {section}{\numberline {1.2}Foto-identificazione automatica del \\\textit {Grampus griseus}}{3}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Problema ed obiettivi}{6}% 
+\contentsline {section}{\numberline {1.3}Problema ed obiettivi}{6}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Lavori simili}{7}% 
+\contentsline {section}{\numberline {1.4}Lavori simili}{7}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Metodologie}{11}% 
+\contentsline {chapter}{\numberline {2}Metodologie}{11}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Immagini digitali}{11}% 
+\contentsline {section}{\numberline {2.1}Immagini digitali}{11}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Spazio di colore Lab}{13}% 
+\contentsline {subsection}{\numberline {2.1.1}Spazio di colore Lab}{13}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Collezioni di immagini in Matlab}{13}% 
+\contentsline {subsection}{\numberline {2.1.2}Collezioni di immagini in Matlab}{13}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Trasformazioni}{14}% 
+\contentsline {section}{\numberline {2.2}Trasformazioni}{14}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Ridimensionamento}{14}% 
+\contentsline {subsection}{\numberline {2.2.1}Ridimensionamento}{14}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Rotazione}{14}% 
+\contentsline {subsection}{\numberline {2.2.2}Rotazione}{14}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Riflessione}{14}% 
+\contentsline {subsection}{\numberline {2.2.3}Riflessione}{14}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Traslazione}{15}% 
+\contentsline {subsection}{\numberline {2.2.4}Traslazione}{15}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.5}Convoluzione}{15}% 
+\contentsline {subsection}{\numberline {2.2.5}Convoluzione}{15}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Problemi di \textit {Computer Vision}}{17}% 
+\contentsline {section}{\numberline {2.3}Problemi di \textit {Computer Vision}}{17}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Object recognition}{17}% 
+\contentsline {subsection}{\numberline {2.3.1}Object recognition}{17}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Object detection}{19}% 
+\contentsline {subsection}{\numberline {2.3.2}Object detection}{19}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}ImageNet Database e ILSVRC}{19}% 
+\contentsline {subsection}{\numberline {2.3.3}ImageNet Database e ILSVRC}{19}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Machine Learning e Deep Learning}{21}% 
+\contentsline {section}{\numberline {2.4}Machine Learning e Deep Learning}{21}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Supervised Learning}{22}% 
+\contentsline {subsection}{\numberline {2.4.1}Supervised Learning}{22}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Underfitting e overfitting}{24}% 
+\contentsline {subsection}{\numberline {2.4.2}Underfitting e overfitting}{24}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Classificatore lineare}{26}% 
+\contentsline {section}{\numberline {2.5}Classificatore lineare}{26}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Reti Neurali}{30}% 
+\contentsline {section}{\numberline {2.6}Reti Neurali}{30}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}I neuroni}{31}% 
+\contentsline {subsection}{\numberline {2.6.1}I neuroni}{31}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.2}Architettura delle reti neurali artificiali}{32}% 
+\contentsline {subsection}{\numberline {2.6.2}Architettura delle reti neurali artificiali}{32}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Reti neurali convoluzionali}{33}% 
+\contentsline {section}{\numberline {2.7}Reti neurali convoluzionali}{33}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.1}Input Layer}{36}% 
+\contentsline {subsection}{\numberline {2.7.1}Input Layer}{36}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.2}Convolution Layer}{36}% 
+\contentsline {subsection}{\numberline {2.7.2}Convolution Layer}{36}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.3}Activation layer}{40}% 
+\contentsline {subsection}{\numberline {2.7.3}Activation layer}{40}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.4}Pooling layer}{40}% 
+\contentsline {subsection}{\numberline {2.7.4}Pooling layer}{40}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.5}Fully Connected Layer}{41}% 
+\contentsline {subsection}{\numberline {2.7.5}Fully Connected Layer}{41}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.6}Softmax layer}{42}% 
+\contentsline {subsection}{\numberline {2.7.6}Softmax layer}{42}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Image preprocessing e augmentation}{42}% 
+\contentsline {section}{\numberline {2.8}Image preprocessing e augmentation}{42}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.9}Addestrare una rete neurale}{46}% 
+\contentsline {section}{\numberline {2.9}Addestrare una rete neurale}{46}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9.1}Inizializzazione dei parametri}{46}% 
+\contentsline {subsection}{\numberline {2.9.1}Inizializzazione dei parametri}{46}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9.2}Loss function}{47}% 
+\contentsline {subsection}{\numberline {2.9.2}Loss function}{47}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9.3}Stochastic gradient descent}{48}% 
+\contentsline {subsection}{\numberline {2.9.3}Stochastic gradient descent}{48}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{SGD with momentum}{50}% 
+\contentsline {subsubsection}{SGD with momentum}{50}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9.4}Backpropagation}{51}% 
+\contentsline {subsection}{\numberline {2.9.4}Backpropagation}{51}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9.5}Scomparsa ed esplosione del gradiente}{52}% 
+\contentsline {subsection}{\numberline {2.9.5}Scomparsa ed esplosione del gradiente}{52}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.10}Transfer Learning}{52}% 
+\contentsline {section}{\numberline {2.10}Transfer Learning}{52}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.11}Ensemble learning}{54}% 
+\contentsline {section}{\numberline {2.11}Ensemble learning}{54}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.12}AlexNet}{56}% 
+\contentsline {section}{\numberline {2.12}AlexNet}{56}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.1}Architettura di AlexNet}{56}% 
+\contentsline {subsection}{\numberline {2.12.1}Architettura di AlexNet}{56}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.2}Funzione di attivazione ReLU}{57}% 
+\contentsline {subsection}{\numberline {2.12.2}Funzione di attivazione ReLU}{57}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.3}Local Response Normalization}{57}% 
+\contentsline {subsection}{\numberline {2.12.3}Local Response Normalization}{57}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.4}Overlapping Max Pooling}{57}% 
+\contentsline {subsection}{\numberline {2.12.4}Overlapping Max Pooling}{57}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.5}Data Augmentation}{58}% 
+\contentsline {subsection}{\numberline {2.12.5}Data Augmentation}{58}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.6}Dropout}{58}% 
+\contentsline {subsection}{\numberline {2.12.6}Dropout}{58}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.12.7}Addestramento di AlexNet}{59}% 
+\contentsline {subsection}{\numberline {2.12.7}Addestramento di AlexNet}{59}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.13}GoogLeNet}{61}% 
+\contentsline {section}{\numberline {2.13}GoogLeNet}{61}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.13.1}Convoluzione $1\times 1$}{62}% 
+\contentsline {subsection}{\numberline {2.13.1}Convoluzione $1\times 1$}{62}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.13.2}Modulo \textit {Inception}}{63}% 
+\contentsline {subsection}{\numberline {2.13.2}Modulo \textit {Inception}}{63}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.13.3}Classificatori ausiliari}{63}% 
+\contentsline {subsection}{\numberline {2.13.3}Classificatori ausiliari}{63}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.13.4}Global Average Pooling}{64}% 
+\contentsline {subsection}{\numberline {2.13.4}Global Average Pooling}{64}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.13.5}Data Augmentation}{65}% 
+\contentsline {subsection}{\numberline {2.13.5}Data Augmentation}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.13.6}Architettura di GoogLeNet}{65}% 
+\contentsline {subsection}{\numberline {2.13.6}Architettura di GoogLeNet}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.13.7}Addestramento di GoogLeNet}{66}% 
+\contentsline {subsection}{\numberline {2.13.7}Addestramento di GoogLeNet}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.14}ResNet}{68}% 
+\contentsline {section}{\numberline {2.14}ResNet}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.14.1}\textit {Batch Normalization}}{68}% 
+\contentsline {subsection}{\numberline {2.14.1}\textit {Batch Normalization}}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.14.2}Residual blocks}{70}% 
+\contentsline {subsection}{\numberline {2.14.2}Residual blocks}{70}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.14.3}Architettura di ResNet-18}{71}% 
+\contentsline {subsection}{\numberline {2.14.3}Architettura di ResNet-18}{71}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.14.4}Architettura di ResNet-50}{72}% 
+\contentsline {subsection}{\numberline {2.14.4}Architettura di ResNet-50}{72}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.14.5}Data Augmentation}{74}% 
+\contentsline {subsection}{\numberline {2.14.5}Data Augmentation}{74}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.14.6}Addestramento di ResNet-18 e ResNet-50}{74}% 
+\contentsline {subsection}{\numberline {2.14.6}Addestramento di ResNet-18 e ResNet-50}{74}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Esperimenti e risultati}{77}% 
+\contentsline {chapter}{\numberline {3}Esperimenti e risultati}{77}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Descrizione dei dataset utilizzati}{77}% 
+\contentsline {section}{\numberline {3.1}Descrizione dei dataset utilizzati}{77}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}CropFin v1}{78}% 
+\contentsline {section}{\numberline {3.2}CropFin v1}{78}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.1}Fase di ritaglio}{79}% 
+\contentsline {subsection}{\numberline {3.2.1}Fase di ritaglio}{79}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Fase di classificazione}{85}% 
+\contentsline {subsection}{\numberline {3.2.2}Fase di classificazione}{85}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Classificazione mediante CNN e Transfer Learning}{86}% 
+\contentsline {section}{\numberline {3.3}Classificazione mediante CNN e Transfer Learning}{86}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Scelta delle CNN}{87}% 
+\contentsline {subsection}{\numberline {3.3.1}Scelta delle CNN}{87}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Addestramento}{87}% 
+\contentsline {subsection}{\numberline {3.3.2}Addestramento}{87}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Classificatore ensemble}{94}% 
+\contentsline {subsection}{\numberline {3.3.3}Classificatore ensemble}{94}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusioni e sviluppi futuri}{99}% 
+\contentsline {chapter}{\numberline {4}Conclusioni e sviluppi futuri}{99}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Listato del codice sorgente}{101}% 
+\contentsline {chapter}{\numberline {5}Listato del codice sorgente}{101}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Funzioni utili per il transfer learning}{101}% 
+\contentsline {section}{\numberline {5.1}Funzioni utili per il transfer learning}{101}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}createLgraphUsingConnections.m}{101}% 
+\contentsline {subsection}{\numberline {5.1.1}createLgraphUsingConnections.m}{101}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}findLayersToReplace.m}{101}% 
+\contentsline {subsection}{\numberline {5.1.2}findLayersToReplace.m}{101}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}freezeWeights.m}{102}% 
+\contentsline {subsection}{\numberline {5.1.3}freezeWeights.m}{102}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.4}plotConfusionMatrix.m}{103}% 
+\contentsline {subsection}{\numberline {5.1.4}plotConfusionMatrix.m}{103}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Ri-addestramento CNN}{103}% 
+\contentsline {section}{\numberline {5.2}Ri-addestramento CNN}{103}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}AlexNet}{103}% 
+\contentsline {subsection}{\numberline {5.2.1}AlexNet}{103}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}GoogLeNet}{106}% 
+\contentsline {subsection}{\numberline {5.2.2}GoogLeNet}{106}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.3}ResNet-18}{108}% 
+\contentsline {subsection}{\numberline {5.2.3}ResNet-18}{108}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.4}ResNet-50}{110}% 
+\contentsline {subsection}{\numberline {5.2.4}ResNet-50}{110}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Test sul dataset delle Azzorre}{112}% 
+\contentsline {section}{\numberline {5.3}Test sul dataset delle Azzorre}{112}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Singoli classificatori}{112}% 
+\contentsline {subsection}{\numberline {5.3.1}Singoli classificatori}{112}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Classificatore ensemble}{114}% 
+\contentsline {subsection}{\numberline {5.3.2}Classificatore ensemble}{114}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{117}% 
+\contentsline {chapter}{Bibliografia}{117}{}%
